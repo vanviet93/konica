@@ -1,0 +1,48 @@
+.page-menu-container {
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FFF;
+  box-shadow: 3px 0px 3px #DDD;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition-property: width;
+  transition-duration: 200ms;
+  display: flex;
+  flex-direction: column;
+}
+.page-menu-items-container {
+  width: 100%;
+  overflow-y: hidden;
+  transition-property: height;
+  transition-duration: 200ms;
+}
+.page-menu-item-header-container,
+.page-menu-item-container {
+  height: 48px;
+  border-bottom: solid 1px #DDD;
+  font-size: 16px;
+  color: #444;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition-property: padding-left;
+  transition-duration: 200ms;
+}
+.page-menu-item-header-container {
+  justify-content: flex-end;
+}
+.page-menu-item-icon {
+  font-size: 18px;
+  width: 48px;
+  min-width: 48px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.page-menu-item-text {
+  overflow-x: hidden;
+  white-space: nowrap;
+}

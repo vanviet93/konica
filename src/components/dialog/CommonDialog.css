@@ -1,0 +1,79 @@
+.common-dialog-container {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  max-height: 80%;
+}
+@media (orientation: portrait) {
+  .common-dialog-container {
+    width: 80%;
+    min-width: 320px;
+  }
+}
+
+@media (orientation: landscape) {
+  .common-dialog-container {
+    width: 60%;
+  }
+}
+
+.common-dialog-header {
+  display: flex;
+  align-items: center;
+  background-color: #777;
+  height: 36px;
+  min-height: 36px;
+  padding: 0px 16px;
+  border-radius: 5px 5px 0px 0px;
+}
+.common-dialog-header-text {
+  color: #FFF;
+  font-size: 18px;
+  width: 100%;
+}
+.common-dialog-body {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  background-color: #FFF;
+  border-radius: 0px 0px 5px 5px;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.common-dialog-content-text {
+  font-size: 16px;
+  color: #444;
+  padding: 8px 0px;
+  width: 100%;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  letter-spacing: 0.00938em;
+  line-height: 1.5;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  overflow-y:auto;
+  margin: 0px;
+}
+
+.common-dialog-button {
+	height: 32px;
+	border: solid 1px #000;
+	border-radius: 19px;
+	background-color: #F0F0F0;
+	color: #444;
+	margin: 8px 0px 8px 8px;
+  padding: 0px 20px;
+}
+
+.common-dialog-button:focus {
+	background-color: #000;
+	color: #FFF;
+}
+
+.common-dialog-buttons-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  height: 42px;
+  min-height: 42px;
+}

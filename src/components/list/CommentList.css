@@ -1,0 +1,70 @@
+.comment-list-container {
+  width: 320px;
+  height: calc(100vh - 48px);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: #FFF;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px #DDD;
+	transition-property: width;
+	transition-duration: 200ms;
+	overflow-x: hidden;
+	z-index: 3;
+}
+.comment-list-message-container {
+	display: flex;
+	flex-direction: column;
+	border-bottom: solid 1px #DDD;
+	padding: 8px;
+}
+.comment-list-message-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 8px 0px 4px 0px;
+}
+.comment-list-message-writer {
+	display: flex;
+	color: #444;
+	font-size: 16px;
+	font-weight: 600;
+	width: calc(100% - 140px);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	text-align: left;
+}
+.comment-list-message-datetime {
+	display: flex;
+	color: #BBB;
+	font-size: 13px;
+	width: 132px;
+	min-width: 132px;
+}
+.comment-list-message-content-container {
+	display: flex;
+	flex-direction: row;
+}
+.comment-list-message-content {
+	display: flex;
+	color: #444;
+	font-size: 14px;
+	text-align: left;
+	width: calc(100% - 36px);
+	overflow-wrap: anywhere;
+	white-space: pre-wrap;
+}
+.comment-list-message-remove-button {
+	width: 36px;
+	border: none;
+	background-color: transparent;
+	font-size: 15px;
+	opacity: 0.3;
+}
+.comment-list-message-remove-button:hover {
+	opacity: 1;
+}

@@ -1,0 +1,16 @@
+.page-content-full-container,
+.page-content-shrunk-container {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  transition-property: width, left;
+  transition-duration: 200ms;
+}
+.page-content-full-container {
+  width: calc(100% - 48px);
+  left: 48px;
+}
+.page-content-shrunk-container {
+  width: calc(100% - 320px);
+  left: 320px;
+}
