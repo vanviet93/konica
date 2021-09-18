@@ -1,0 +1,32 @@
+.progress-bar-container {
+	width: calc(100% - 2px);
+	height: 20px;
+	border: solid 1px #BBB;
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+}
+.progress-bar-progress {
+	border-radius: 2px;
+	background-color: #AAA;
+	height: 100%;
+}
+.progress-bar-first-light,
+.progress-bar-second-light {
+	position: absolute;
+	height: 100%;
+	width: 40px;
+	top: 0px;
+	background-color: #EEE;
+	transform: translateX(-50%);
+	opacity: 0.3;
+	clip-path: polygon(10px 0px, 100% 0px, calc(100% - 10px) 100%, 0px 100%);
+	animation: inifinite-translation 4s linear infinite;
+}
+@keyframes inifinite-translation {
+	from { left: -20px;	}
+	to { left: calc(100% + 20px);}
+}
+.progress-bar-second-light {
+	animation-delay: 2s;
+}
