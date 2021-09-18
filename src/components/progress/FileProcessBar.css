@@ -1,0 +1,32 @@
+.file-process-bar-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.file-process-bar-action-container {
+	display: flex;
+	flex-direction: row;
+	height: 32px;
+}
+.file-process-bar-progress-bar-container {
+	height: 100%;
+	padding: 0px 8px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.file-process-bar-filename {
+	font-size: 14px;
+	color: #444;
+	padding: 4px 8px 8px 8px;
+}
+.file-process-bar-button-container {
+	width: 32px;
+	min-width: 32px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #AAA;
+	font-size: 18px;
+}

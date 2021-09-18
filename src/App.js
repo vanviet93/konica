@@ -9,6 +9,10 @@ import PageMenu from './components/menu/PageMenu';
 import PageContentContainer from './pages/base_page/PageContentContainer';
 import DatePicker from './components/dialog/DatePicker';
 import TimePicker from './components/dialog/TimePicker';
+import DottedLoadingIcon from './components/progress/DottedLoadingIcon';
+import FanLoadingIcon from './components/progress/FanLoadingIcon';
+import ProgressBar from './components/progress/ProgressBar';
+import FileProcessBar from './components/progress/FileProcessBar';
 
 function App() {
 	const pageRef = React.useRef(null);
@@ -21,13 +25,7 @@ function App() {
 	return <BasePage 
 	isOpen={true}
 	ref={pageRef}>
-		<DatePicker 
-		isOpen={timePickerOpen}
-		onClose={(e)=>{setTimePickerOpen(!timePickerOpen)}}/>
-		<button
-		onClick={(e)=>{setTimePickerOpen(!timePickerOpen)}}>
-			OK
-		</button>
+		<FileProcessBar />
 	</BasePage>
 }
 
