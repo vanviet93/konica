@@ -19,6 +19,7 @@
 	font-size: 14px;
 	color: #444;
 	padding: 4px 8px 8px 8px;
+	line-break: anywhere;
 }
 .file-process-bar-button-container {
 	width: 32px;
@@ -27,6 +28,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #AAA;
+	color: #444;
 	font-size: 18px;
 }

@@ -1,0 +1,48 @@
+:root {
+  --base-red: #EB5757;
+	--base-translucent-red: rgba(235, 87, 87, 0.2);
+	--base-blue: #5669FF;
+	
+	--base-input-font-family: Roboto;
+	--base-input-font-size: 15px;
+	--base-input-font-weight: 400;
+	--base-input-line-height: 22px;
+	
+	--base-list-footnote-font-size: 12px;
+	--base-list-footnote-color: #888;
+	--base-list-text-font-size: 15px;
+	--base-list-text-color: #666;
+	--base-list-bold-text-font-size: 14px;
+	--base-list-bold-text-color: #444;
+	--base-list-bold-text-font-weight: 550;
+	
+	--base-body-text-font-size: 14px;
+	--base-body-text-dark-color: #333;
+	--base-body-big-text-font-size: 16px;
+	--base-body-text-light-dark-color: #666;
+	
+	--base-page-bold-title-font-size: 16px;
+	--base-page-bold-big-title-font-size: 18px;
+	--base-page-bold-title-font-weight: 550;
+	--base-page-bold-page-title-font-size: 22px;
+	--base-page-bold-page-title-font-weight: 550;
+	--base-page-bold-page-title-dark-color: #333;
+	
+	--base-icon-dark-gray-color: #666;
+	--base-icon-neutral-gray-color: #888;
+	--base-icon-light-gray-color: #AAA;
+
+	--base-button-font-size: 16px;
+}
+div.align-col-full-center, 
+div.align-row-full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.align-col-full-center {
+  flex-direction: column;
+}
+div.align-row-full-center {
+  flex-direction: row;
+}

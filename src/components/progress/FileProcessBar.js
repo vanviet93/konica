@@ -9,6 +9,8 @@ const propTypes = {
 	onResume: PropTypes.func,
 	onPause: PropTypes.func,
 	onStop: PropTypes.func,
+	pauseEnabled: PropTypes.bool,
+	stopEnabled: PropTypes.bool,
 };
 const defaultProps = {
 	progress: 10,
@@ -16,6 +18,8 @@ const defaultProps = {
 	onResume:  () => {},
 	onPause:  () => {},
 	onStop: () => {},
+	pauseEnabled: false,
+	stopEnabled: false
 };
 
 const FileProcessBar = (props) => {
@@ -33,19 +37,18 @@ const FileProcessBar = (props) => {
 		}
 	}
 	/*** Main Render ***/
-	console.log("FILE NAME", props.fileName, props.progress);
 	return <div className="file-process-bar-container">
 		<div className="file-process-bar-action-container">
 			<div className="file-process-bar-progress-bar-container">
 				<ProgressBar progress={props.progress}/>
 			</div>
-			<div className="file-process-bar-button-container"
+			{props.pauseEnabled?<div className="file-process-bar-button-container"
 				onClick={onButtonResumePauseClick}>
 				<i className={processing?"far fa-pause-circle":"far fa-play-circle"}/>
-			</div>
-			<div className="file-process-bar-button-container">
+			</div>:null}
+			{props.stopEnabled?<div className="file-process-bar-button-container">
 				<i className="far fa-times-circle"></i>
-			</div>
+			</div>:null}
 		</div>
 		<label className="file-process-bar-filename">
 			{props.fileName}

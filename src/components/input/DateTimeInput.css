@@ -1,0 +1,39 @@
+.date-time-input-container {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #E0E0E0;
+  border-radius: 8px;
+  height: 36px;
+}
+.date-time-input-enabled-label,
+.date-time-input-disabled-label {
+  width: calc(100% - 36px);
+  margin: 0px;
+  font-size: var(--base-input-font-size);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+}
+.date-time-input-enabled-label {
+  cursor: pointer;
+  color: var(--base-body-text-light-dark-color);
+}
+.date-time-input-enabled-icon, 
+.date-time-input-disabled-icon {
+  height: 100%;
+  width: 36px;
+  height: 34px;
+  font-size: 22px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.date-time-input-enabled-icon {
+  color: var(--base-red);
+  cursor: pointer;
+}
+.date-time-input-disabled-label, 
+.date-time-input-disabled-icon {
+  color: #E0E0E0;
+}

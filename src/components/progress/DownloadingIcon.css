@@ -1,0 +1,28 @@
+.downloading-icon-container {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.downloading-icon-subcontainer {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  animation: infinite-transition 2s linear infinite;
+}
+.downloading-icon-up-main-icon,
+.downloading-icon-up-icon-cover, 
+.downloading-icon-up-icon {
+  position: absolute;
+}
+.downloading-icon-up-icon-cover {
+  color: #FFF;
+  -webkit-text-stroke: 6px #FFF;
+}
+@keyframes infinite-transition {
+  from { top : 100%; }
+  to { top : -100%; }
+}

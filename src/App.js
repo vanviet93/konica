@@ -11,21 +11,28 @@ import DatePicker from './components/dialog/DatePicker';
 import TimePicker from './components/dialog/TimePicker';
 import DottedLoadingIcon from './components/progress/DottedLoadingIcon';
 import FanLoadingIcon from './components/progress/FanLoadingIcon';
+import DownloadingIcon from './components/progress/DownloadingIcon';
 import ProgressBar from './components/progress/ProgressBar';
 import FileProcessBar from './components/progress/FileProcessBar';
-
+import FileDownUploadPanel from './components/progress/FileDownUploadPanel';
+import Checkbox from './components/select/Checkbox';
+import FoldingEffect from './components/effect/FoldingEffect';
+import TurningEffect from './components/effect/TurningEffect';
+import InfiniteList from './components/list/InfiniteList';
+import ImageBoard from './components/grid/ImageBoard';
+import "./components/ComponentStyle.css"
+import imageTest from './images/test.png'
+import KeywordInput from './components/input/KeywordInput';
 function App() {
 	const pageRef = React.useRef(null);
-	const [timePickerOpen, setTimePickerOpen] = React.useState(false);
-	React.useEffect(()=>{
-		// console.log("HELLO WORLD")
-		// pageRef.current.error("Hello World");
-	}, [])
+	
 	
 	return <BasePage 
 	isOpen={true}
 	ref={pageRef}>
-		<FileProcessBar />
+		<div style={{width:"400px", height: "512px"}}>
+			<KeywordInput />
+		</div>
 	</BasePage>
 }
 

@@ -1,0 +1,22 @@
+.folding-effect-frontside,
+.folding-effect-backside,
+.folding-effect-container {
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  position: relative;
+  overflow: hidden;
+}
+.folding-effect-frontside,
+.folding-effect-backside {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: solid 1px #AAA;
+}
+.folding-effect-frontside {
+  background-color: #FFF;
+}
+.folding-effect-backside {
+  background-color: #FFF;
+  transform-origin: top left;
+}

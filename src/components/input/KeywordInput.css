@@ -1,0 +1,42 @@
+.keyword-input-container {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+  background-color: transparent;
+  cursor: text;
+  overflow-x: hidden;
+}
+.keyword-input-textbox {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  min-width: 1ch;
+  font-size: 15px;
+  color: #444;
+}
+.keyword-input-textbox:focus {
+  outline: none;
+}
+.keyword-input-keyword-container {
+  width: max-content;
+  border: solid 1px #AAA;
+  border-radius: 4px;
+  background-color: #FFF;
+  padding: 1px 2px;
+  margin: 0px 0.5ch 0px 0px;
+  display: flex;
+  flex-direction: row;
+}
+.keyword-input-keyword {
+  font-size: 15px;
+  color: #444;
+  padding: 0px 4px;
+}
+.keyword-input-button-remove-keyword {
+  padding: 0px 4px 0px 0px;
+  margin: 0px;
+  font-size: 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
