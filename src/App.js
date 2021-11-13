@@ -23,6 +23,7 @@ import ImageBoard from './components/grid/ImageBoard';
 import "./components/ComponentStyle.css"
 import imageTest from './images/test.png'
 import KeywordInput from './components/input/KeywordInput';
+import KeywordSearchbox from './components/input/KeywordSearchbox';
 function App() {
 	const pageRef = React.useRef(null);
 	
@@ -31,7 +32,7 @@ function App() {
 	isOpen={true}
 	ref={pageRef}>
 		<div style={{width:"400px", height: "512px"}}>
-			<KeywordInput />
+			<KeywordSearchbox onSearch={(e)=>{console.log(e)}}/>
 		</div>
 	</BasePage>
 }
