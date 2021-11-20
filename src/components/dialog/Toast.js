@@ -6,39 +6,35 @@ const MIN_DISPLAY_DURATION = 1000;
 const MAX_DISPLAY_DURATION = 5000;
 const propTypes = {
   duration: PropTypes.number,
-  content: PropTypes.string
+  content: PropTypes.string,
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func
 }
 const defaultProps = {
   duration: 3000,
-  content: null
+  content: null,
+  isOpen: false,
+  onClose: () => {}
 }
 const Toast = (props) => {
   /*** States ***/
-  const hideToastTask = React.useRef(null);
-  const [toastDisplayed, setToastDisplayed] = React.useState(false);
-  const [toastVisible, setToastVisible] = React.useState(false);
+  const hideTaskRef = React.useRef(null);
   /*** Processing ***/
   React.useEffect(()=>{
-    if(!props.content) return;
-    if(hideToastTask.current){
-      clearTimeout(hideToastTask.current);
+    if(props.isOpen) {
+      if(hideTaskRef.current){
+        clearTimeout(hideTaskRef.current);
+        hideTaskRef.current = null;
+      }
+      hideTaskRef.current = setTimeout(()=>{
+        props.onClose();
+        hideTaskRef.current = null;
+      }, props.duration)
     }
-    setToastDisplayed(true);
-    setToastVisible(true);
-    let displayDuration = props.duration;
-    displayDuration = displayDuration? displayDuration: MIN_DISPLAY_DURATION;
-    displayDuration = displayDuration<MIN_DISPLAY_DURATION? MIN_DISPLAY_DURATION: displayDuration;
-    displayDuration = displayDuration>MAX_DISPLAY_DURATION? MAX_DISPLAY_DURATION: displayDuration;
-    hideToastTask.current = setTimeout(()=>{
-      setToastVisible(false);
-      setTimeout(()=>{
-        setToastDisplayed(false);
-      }, 200)
-    }, [displayDuration])
-  }, [props.content])
+  }, [props.isOpen, props.duration, props.onClose])
   /*** Main Render ***/
   return <div 
-  style={{opacity: toastVisible? 1: 0, display: toastDisplayed? "block": "none"}}
+  style={{opacity: props.isOpen? 1: 0, display: props.isOpen? "block": "none"}}
   className="toast-container">
     <label className="toast-text">
       {props.content}

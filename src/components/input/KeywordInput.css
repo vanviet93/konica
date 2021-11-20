@@ -1,15 +1,20 @@
 .keyword-input-container {
   display: flex;
   flex-direction: row;
-  height: 24px;
-  background-color: transparent;
-  cursor: text;
+  height: max-content;
   overflow-x: hidden;
+	cursor: text;
+}
+.keyword-input-subcontainer {
+	display: flex;
+  flex-direction: row;
+	background-color: transparent;
+  width: max-content;
 }
 .keyword-input-textbox {
   border: none;
   margin: 0px;
-  padding: 0px;
+  padding: 3px 0px;
   min-width: 1ch;
   font-size: 15px;
   color: #444;
@@ -21,7 +26,7 @@
   width: max-content;
   border: solid 1px #AAA;
   border-radius: 4px;
-  background-color: #FFF;
+  background-color: transparent;
   padding: 1px 2px;
   margin: 0px 0.5ch 0px 0px;
   display: flex;
@@ -39,4 +44,5 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+	color: var(--base-icon-neutral-gray-color);
 }

@@ -56,9 +56,6 @@ const ImageBoard = (props) => {
             <img 
             className="image-board-cell-image"
             src={image.source} />
-            <label 
-            style={{color:selected?"#FFF": undefined}}
-            className="image-board-cell-label">{image.name}</label>
           </DoubleClickableDiv>})}
         </div>)
       }

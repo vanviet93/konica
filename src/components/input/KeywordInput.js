@@ -3,26 +3,43 @@ import PropTypes from 'prop-types';
 import "./KeywordInput.css";
 const propTypes={
 	separator: PropTypes.string,
-	width: PropTypes.string
+	width: PropTypes.string	,
+	onFocus: PropTypes.func,
+	onBlur: PropTypes.func,
 };
 const defaultProps={
 	separator: ',',
-	width: '100%'
+	width: '100%',
+	onFocus: ()=>{},
+	onBlur: ()=>{}
 };
-const KeywordInput = (props) => {
+const KeywordInput = React.forwardRef((props, ref) => {
 	/*** States and Variables ***/
 	const fullTextRef = React.useRef('');
 	const [leftKeywords, setLeftKeywords] = React.useState([]);
 	const [rightKeywords, setRightKeywords] = React.useState([]);
 	const [text, setText] = React.useState('');
 	const inputRef = React.useRef(null);
+	const containerRef = React.useRef(null);	
 	/*** Processing ***/
+	React.useImperativeHandle(ref, () => ({
+    getKeywords: () => {
+			if(!text) return leftKeywords.concat(rightKeywords);
+			return [...leftKeywords, text, ...rightKeywords];
+    }
+  }));
 	/*** Sub Components ***/
 	const renderKeywords = () => {
 		return <>
-			{leftKeywords.map(keyword=><div className="keyword-input-keyword-container">
-				<label className="keyword-input-keyword">{keyword}</label>
-				<button className="keyword-input-button-remove-keyword">
+			{leftKeywords.map((keyword, i)=><div 
+			key={i + "," + keyword}
+			className="keyword-input-keyword-container">
+				<label 
+				onClick={(e)=>{onClickKeyword(true, i)}}
+				className="keyword-input-keyword">{keyword}</label>
+				<button 
+				onClick={(e)=>{onDeleteKeyword(true, i)}}
+				className="keyword-input-button-remove-keyword">
 					<i className="fas fa-times"/>
 				</button>
 			</div>)}
@@ -33,10 +50,18 @@ const KeywordInput = (props) => {
 			className="keyword-input-textbox"
 			onChange={onTextChange}
 			onKeyDown={onKeyDown}
+			onFocus={props.onFocus}
+			onBlur={props.onBlur}
 			value={text}/>
-			{rightKeywords.map(keyword=><div className="keyword-input-keyword-container">
-				<label className="keyword-input-keyword">{keyword}</label>
-				<button className="keyword-input-button-remove-keyword">
+			{rightKeywords.map((keyword, i)=><div 
+			key={i + "," + keyword}
+			className="keyword-input-keyword-container">
+				<label 
+				onClick={(e)=>{onClickKeyword(false, i)}}
+				className="keyword-input-keyword">{keyword}</label>
+				<button 
+				onClick={(e)=>{onDeleteKeyword(false, i)}}
+				className="keyword-input-button-remove-keyword">
 					<i className="fas fa-times"/>
 				</button>
 			</div>)}
@@ -73,7 +98,7 @@ const KeywordInput = (props) => {
 			}
 			else if(e.key==="Backspace"){
 				setLeftKeywords(leftKeywords.slice(0, leftLen-1));
-			}
+			}	
 		}
 		else{
 			const cursorPos = e.target.selectionStart;
@@ -84,7 +109,7 @@ const KeywordInput = (props) => {
 				setLeftKeywords(leftKeywords.slice(0,leftLen-1));
 				setTimeout(()=>{
 					inputRef.current.setSelectionRange(newText.length, newText.length);
-				}, 100);
+				}, 50);
 			}
 			else if(e.key==="ArrowRight" && cursorPos===text.length && rightLen){
 				setLeftKeywords(leftKeywords.concat([text]));
@@ -93,18 +118,90 @@ const KeywordInput = (props) => {
 				setRightKeywords(rightKeywords.slice(1, rightLen));
 				setTimeout(()=>{
 					inputRef.current.setSelectionRange(0,0);
-				},100);
+				},50);
 			}
+			else if(e.key==="Enter"){
+				const newLeftKeywords = leftKeywords.concat([text])
+				setLeftKeywords(newLeftKeywords);
+				setText('');				
+			}
+		}
+		// solve the problem when input tag is hidden
+		setTimeout(()=>{
+			const inputBounds = inputRef.current.getBoundingClientRect();
+			const container = containerRef.current;
+			const containerBounds = container.getBoundingClientRect();
+			const dLeft = containerBounds.left - inputBounds.left;
+			if(dLeft>0){
+				container.scroll(-dLeft, 0);
+			}
+		}, 50);		
+	}
+	const onClickKeyword = (left, index) => {		
+		const leftLen = leftKeywords.length;
+		const rightLen = rightKeywords.length;
+		if(left){
+			setText(leftKeywords[index]);
+			setLeftKeywords(leftKeywords.slice(0, index));
+			if(rightLen){
+				if(text){
+					setRightKeywords([...leftKeywords.slice(index+1, leftLen), text, ...rightKeywords]);
+				}
+				else{
+					setRightKeywords([...leftKeywords.slice(index+1, leftLen), ...rightKeywords]);
+				}				
+			}
+			else{
+				if(text){
+					setRightKeywords([...leftKeywords.slice(index+1, leftLen), text]);
+				}
+				else{
+					setRightKeywords(leftKeywords.slice(index+1, leftLen));
+				}				
+			}
+		}
+		else{
+			setText(rightKeywords[index]);
+			setRightKeywords(rightKeywords.slice(index+1,rightLen));
+			if(leftLen){
+				if(text){
+					setLeftKeywords([...leftKeywords, text, ...rightKeywords.slice(0, index)]);
+				}
+				else{
+					setLeftKeywords([...leftKeywords, ...rightKeywords.slice(0, index)]);
+				}
+			}
+			else{
+				if(text){
+					setLeftKeywords([text, ...rightKeywords.slice(0, index)]);
+				}
+				else{
+					setLeftKeywords(rightKeywords.slice(0, index));
+				}
+			}
+		}
+	}
+	const onDeleteKeyword = (left, index) => {
+		if(left){
+			leftKeywords.splice(index,1);
+			setLeftKeywords(Object.assign([], leftKeywords));
+		}
+		else{
+			rightKeywords.splice(index,1);
+			setRightKeywords(Object.assign([], rightKeywords));
 		}
 	}
 	/*** Main Render ***/
 	return <div 
 	style={{width:props.width}}
+	ref={containerRef}
 	className="keyword-input-container"
 	onClick={onClick}>
-		{renderKeywords()}
+		<div className="keyword-input-subcontainer">
+			{renderKeywords()}
+		</div>		
 	</div>;
-}
+})
 KeywordInput.propTypes = propTypes;
 KeywordInput.defaultProps = defaultProps;
 export default KeywordInput;

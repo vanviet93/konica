@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DialogBackground from './DialogBackground2';
+import DialogBackground from './DialogBackground';
 import "./CommonDialog.css";
 import { props } from 'bluebird';
 

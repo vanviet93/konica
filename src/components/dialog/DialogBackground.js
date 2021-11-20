@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import "./DialogBackground.css";
-import { Dialog } from '@material-ui/core';
 
 const propTypes = {
 	isOpen: PropTypes.bool,
@@ -12,25 +11,20 @@ const defaultProps = {
 	onClose: () => {}
 }
 const DialogBackground = (props) => {
-	/*** Variables ***/
-	// TODO: fix: stop using Dialog, and settimeout
-	/*** Processing ***/
+	/*** Event Handlers ***/
+	const onBackGroundClick = (e) => {
+		if(e.target.id==="dialog-background"){
+			props.onClose();
+		}
+	}
 	/*** Main Render ***/
-	return <Dialog
-			open={props.isOpen}
-			onClose={props.onClose}>
-				<div style={container}>
-					{props.children}
-				</div>
-		</Dialog>;
-}
-
-const container = {
-	backgroundColor: "#FFF",
-	borderRadius: "4px",
-	display:"flex",
-	flexDirection:"column",
-	padding:"8px"
+	if(!props.isOpen) return null;
+	return <div 
+	id="dialog-background"
+	className="dialog-background"
+	onClick={onBackGroundClick}>
+		{props.children}
+	</div>;
 }
 DialogBackground.propTypes = propTypes;
 DialogBackground.defaultProps = defaultProps;

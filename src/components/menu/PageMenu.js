@@ -28,7 +28,6 @@ const PageMenu = (props) => {
 		}
 		initOpenState(props.menuItems);
 		setOpenState(opens);
-		console.log("OPEN", opens)
 	}, [props.menuItems])
 	/*** Sub Components ***/
 	const renderItems = (items, level=0) => {
@@ -37,7 +36,9 @@ const PageMenu = (props) => {
 			className="page-menu-item-container"
 			style={{paddingLeft: props.isOpen?level*15: 0}}
 			onClick={(e)=>{onMenuItemClick(item)}}>
-				<i className={item.icon + " page-menu-item-icon"}></i>
+				<i 
+				style={{color: item.color}}
+				className={item.icon + " page-menu-item-icon"}></i>
 				<label className="page-menu-item-text">{item.text}</label>
 			</div>
 			{item.children && openState[item.id]?
