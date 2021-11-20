@@ -15,21 +15,15 @@ const KeywordSearchbox = (props)=>{
 	const inputRef = React.useRef(null);
 	const [active, setActive] = React.useState(false);
 	/*** Event Handlers ***/
-	const onKeyDown = (e) => {
-		if(e.key==="Enter"){
-			props.onSearch(inputRef.current.getKeywords());
-		}
-	}
 	/*** Main Render ***/
 	return <div 
-	tabIndex={100}
-	onKeyDown={onKeyDown}
 	className={active?"keyword-searchbox-active-container":"keyword-searchbox-container"}>
 		<KeywordInput 
 		ref={inputRef}
 		width="calc(100% - 36px)"
 		onFocus={(e)=>{setActive(true)}}
-		onBlur={(e)=>{setActive(false)}}/>
+		onBlur={(e)=>{setActive(false)}}
+		onPressKeyEnter={(e)=>{props.onSearch(e)}}/>
 		<button 
 		onClick={(e)=>{props.onSearch(inputRef.current.getKeywords())}}
 		className="keyword-searchbox-button-search">

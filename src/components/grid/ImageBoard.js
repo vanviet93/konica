@@ -26,7 +26,6 @@ const ImageBoard = (props) => {
 	React.useEffect(()=>{
 		const container = containerRef.current;
 		const resizeObserver = new ResizeObserver((entries)=>{
-			console.log("VANVIET WIDTH", container.clientWidth);
 			if(containerWidthRef.current!==container.clientWidth){
 				containerWidthRef.current = container.clientWidth;
 				setContainerWidth(containerWidthRef.current);
@@ -41,7 +40,6 @@ const ImageBoard = (props) => {
 	const renderRows = () => {
 		if(containerWidth && props.images && props.images.length){
 			const nCols = Math.floor(containerWidth / props.minColumnWidth);
-			console.log("VANVIET COLs", nCols)
 			const nRows = Math.ceil(props.images.length/nCols);
 			const result = [];
 			for(let row=0;row<nRows;row++){

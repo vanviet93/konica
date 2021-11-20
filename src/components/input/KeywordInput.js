@@ -6,21 +6,24 @@ const propTypes={
 	width: PropTypes.string	,
 	onFocus: PropTypes.func,
 	onBlur: PropTypes.func,
+	onPressKeyEnter: PropTypes.func
 };
 const defaultProps={
 	separator: ',',
 	width: '100%',
 	onFocus: ()=>{},
-	onBlur: ()=>{}
+	onBlur: ()=>{},
+	onPressKeyEnter: (keywords) => {}
 };
 const KeywordInput = React.forwardRef((props, ref) => {
 	/*** States and Variables ***/
-	const fullTextRef = React.useRef('');
 	const [leftKeywords, setLeftKeywords] = React.useState([]);
 	const [rightKeywords, setRightKeywords] = React.useState([]);
 	const [text, setText] = React.useState('');
 	const inputRef = React.useRef(null);
+	const [inputWidth, setInputWidth] = React.useState("1ch");
 	const containerRef = React.useRef(null);	
+	const compositioningRef = React.useRef(false);
 	/*** Processing ***/
 	React.useImperativeHandle(ref, () => ({
     getKeywords: () => {
@@ -28,6 +31,13 @@ const KeywordInput = React.forwardRef((props, ref) => {
 			return [...leftKeywords, text, ...rightKeywords];
     }
   }));
+
+	const configInputSize = () => {
+		const inputNode = inputRef.current;
+		if(inputNode.clientWidth<inputNode.scrollWidth){
+			setInputWidth((inputNode.scrollWidth + 8) + "px");
+		}
+	}
 	/*** Sub Components ***/
 	const renderKeywords = () => {
 		return <>
@@ -46,10 +56,12 @@ const KeywordInput = React.forwardRef((props, ref) => {
 			<input
 			type="text"
 			ref={inputRef}
-			style={{width: text.length + 'ch'}}
+			style={{width: inputWidth}}
 			className="keyword-input-textbox"
 			onChange={onTextChange}
 			onKeyDown={onKeyDown}
+			onCompositionStart={onCompositionStart}
+			onCompositionEnd={onCompositionEnd}
 			onFocus={props.onFocus}
 			onBlur={props.onBlur}
 			value={text}/>
@@ -69,22 +81,31 @@ const KeywordInput = React.forwardRef((props, ref) => {
 	}
 	/*** Event Handlers ***/
 	const onTextChange = (e) => {
-		const newText = e.target.value;
-		if(newText.endsWith(props.separator)){
-			const leftKeyword = newText.replaceAll(props.separator, '');
-			if(leftKeyword){
-				setLeftKeywords(leftKeywords.concat(leftKeyword));
-				setText('');
-			}
+		if(compositioningRef.current){
+			setText(e.target.value);
+			configInputSize();
 		}
 		else{
-			setText(newText);
+			const newText = e.target.value;
+			if(newText.endsWith(props.separator)){
+				const leftKeyword = newText.replaceAll(props.separator, '');
+				if(leftKeyword){
+					setLeftKeywords(leftKeywords.concat(leftKeyword));
+					setText('');
+					setInputWidth('1ch');
+				}
+			}
+			else{
+				setText(newText);
+				configInputSize();
+			}
 		}
 	}
 	const onClick = () => {
 		inputRef.current.focus();
 	}
 	const onKeyDown = (e) => {
+		if(compositioningRef.current) return;
 		const leftLen = leftKeywords.length;
 		const rightLen = rightKeywords.length;
 		if(!text){
@@ -99,6 +120,9 @@ const KeywordInput = React.forwardRef((props, ref) => {
 			else if(e.key==="Backspace"){
 				setLeftKeywords(leftKeywords.slice(0, leftLen-1));
 			}	
+			else if(e.key==="Enter"){
+				props.onPressKeyEnter(leftKeywords.concat(rightKeywords));
+			}
 		}
 		else{
 			const cursorPos = e.target.selectionStart;
@@ -121,7 +145,7 @@ const KeywordInput = React.forwardRef((props, ref) => {
 				},50);
 			}
 			else if(e.key==="Enter"){
-				const newLeftKeywords = leftKeywords.concat([text])
+				const newLeftKeywords = leftKeywords.concat([text]);
 				setLeftKeywords(newLeftKeywords);
 				setText('');				
 			}
@@ -190,6 +214,12 @@ const KeywordInput = React.forwardRef((props, ref) => {
 			rightKeywords.splice(index,1);
 			setRightKeywords(Object.assign([], rightKeywords));
 		}
+	}
+	const onCompositionStart = () => {
+		compositioningRef.current = true;
+	}
+	const onCompositionEnd = () => {
+		compositioningRef.current = false;
 	}
 	/*** Main Render ***/
 	return <div 
