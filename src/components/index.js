@@ -9,6 +9,7 @@ import ImageBoard from "./grid/ImageBoard";
 import DateInput from "./input/DateInput";
 import TimeInput from "./input/TimeInput";
 import KeywordInput from "./input/KeywordInput";
+import KeywordSearchBox from "./input/KeywordSearchbox";
 import DropMenuWrapper from "./menu/DropMenuWrapper";
 import PageMenu from "./menu/PageMenu";
 import DoubleClickableDiv from "./page/DoubleClickableDiv";
@@ -33,6 +34,7 @@ export {
   DateInput,
   TimeInput,
   KeywordInput,
+  KeywordSearchBox,
   DropMenuWrapper,
   PageMenu,
   DoubleClickableDiv,

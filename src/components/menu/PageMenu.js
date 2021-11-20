@@ -41,8 +41,10 @@ const PageMenu = (props) => {
 				className={item.icon + " page-menu-item-icon"}></i>
 				<label className="page-menu-item-text">{item.text}</label>
 			</div>
-			{item.children && openState[item.id]?
-			<div className="page-menu-items-container">
+			{item.children?
+			<div 
+			style={{height: openState[item.id]? item.children.length*49 + "px": "0px"}}
+			className="page-menu-items-container">
 				{renderItems(item.children, level+1)}
 			</div>:null}
 		</>)
@@ -52,6 +54,9 @@ const PageMenu = (props) => {
 		if(item.children){
 			openState[item.id] = !openState[item.id];
 			setOpenState(Object.assign([], openState));
+		}
+		else {
+			props.onMenuItemClick(item);
 		}
 	}
 	/*** Main Render ***/

@@ -11,22 +11,25 @@
 .image-board-row {
   display: flex;
   flex-direction: row;
-  margin-bottom: 8px;
 }
 .image-board-cell {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  position: relative;
 }
 .image-board-cell-image {
-  height: calc(100% - 24px);
-  object-fit: contain;
-  padding: 8px;
+  height: 100%;
+  object-fit: cover;
 }
-.image-board-cell-label {
+.image-board-icon-select-container {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
-  height: 24px;
-  font-size: 16px;
-  color: #666;
+  align-items: center;
+  color: var(--base-red);
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }

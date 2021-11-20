@@ -5,13 +5,14 @@
   overflow-x: hidden;
   background-color: #FFF;
   box-shadow: 3px 0px 3px #DDD;
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  bottom: 0px;
   left: 0px;
   transition-property: width;
   transition-duration: 200ms;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 .page-menu-items-container {
   width: 100%;
