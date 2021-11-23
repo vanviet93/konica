@@ -27,7 +27,8 @@ import {
   FileProcessBar,
   ProgressBar,
   Checkbox,
-  RadioButtonGroup
+  RadioButtonGroup,
+	ScatteredFloatingEffect
 } from './components';
 import "./App.css";
 
@@ -133,11 +134,34 @@ function App() {
 		</>
 	}
 
+	///// Render Scattered Floating Effect /////
+	const [scatteredFloatingEffectActive, setScatteredFloatingEffectActive] = React.useState(false)
+	const renderScatterFloatingEffect = () => {
+		return <>
+			<label className="app-label">SCATTERED FLOATING EFFECT</label>
+			<button 
+			className="app-button"
+			onClick={(e)=>{setScatteredFloatingEffectActive(true)}}>ACTIVATE</button>
+			<div style={{width: "200px", height: "200px", minHeight: "200px", position: "relative"}}>
+				<div style={{width: 0, height: 0, position: "relative", top: 150, left: 100}}>
+					<ScatteredFloatingEffect 
+					isActive={scatteredFloatingEffectActive}
+					onEnd={(e)=>{setScatteredFloatingEffectActive(false)}}
+					renderContent={()=><i 
+					style={{fontSize: '20px', color: '#EB5757'}}
+					className="fas fa-thumbs-up"></i>}/>
+				</div>
+			</div>
+		</>
+	}
+
 	/*** Main Render ***/
 	return <div className="app-page-container">
 		{renderPageMenu()}
 		{renderImageBoard()}
+		{renderScatterFloatingEffect()}
 		{renderKeywordSearchBox()}
+
 	</div>
 }
 

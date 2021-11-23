@@ -13,6 +13,10 @@
 .app-label {
 	padding: 8px;
 }
+.app-button {
+	padding: 8px;
+	width: max-content;
+}
 .app-keyword-searchbox-container {
 	height: 48px;
 	display: flex;

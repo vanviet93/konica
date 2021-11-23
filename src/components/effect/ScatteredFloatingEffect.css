@@ -1,0 +1,48 @@
+.scattered-floating-effect-container {
+  width: 0px;
+  height: 0px;
+  position: relative;
+}
+
+.scattered-floating-effect-element-container {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background-color: red;
+  animation: scattered-floating-effect-bottom-top linear;
+  animation-fill-mode: forwards;
+}
+.scattered-floating-effect-element,
+.scattered-floating-opposite-effect-element {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background-color: red;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scattered-floating-effect-element {
+  animation: scattered-floating-effect-sin-left-right linear;
+}
+.scattered-floating-opposite-effect-element {
+  animation: scattered-floating-opposite-effect-sin-left-right linear;
+}
+@keyframes scattered-floating-effect-bottom-top {
+  from {bottom: 0px; opacity: 1;}
+  to {bottom: 200px; opacity: 0;}
+}
+@keyframes scattered-floating-effect-sin-left-right {
+  0% {left: 50%;}
+  25% {left: 100%;}
+  75% {left: 0%;}
+  100% {left: 50%;}
+}
+@keyframes scattered-floating-opposite-effect-sin-left-right {
+  0% {left: 50%;}
+  25% {left: 0%;}
+  75% {left: 100%;}
+  100% {left: 50%;}
+}

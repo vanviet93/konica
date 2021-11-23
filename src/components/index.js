@@ -19,6 +19,7 @@ import FileProcessBar from "./progress/FileProcessBar";
 import ProgressBar from "./progress/ProgressBar";
 import Checkbox from "./select/Checkbox";
 import RadioButtonGroup from "./select/RadioButtonGroup";
+import ScatteredFloatingEffect from "./effect/ScatteredFloatingEffect";
 
 import "./ComponentStyle.css";
 
@@ -43,5 +44,6 @@ export {
   FileProcessBar,
   ProgressBar,
   Checkbox,
-  RadioButtonGroup
+  RadioButtonGroup,
+  ScatteredFloatingEffect
 }
