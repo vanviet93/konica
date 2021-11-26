@@ -3,6 +3,9 @@
 	height: 100vh;
 	overflow: auto;
 	padding-left: 48px;
+}
+.app-page-subcontainer {
+	height: max-content;
 	display: flex;
 	flex-direction: column;
 }
@@ -18,7 +21,7 @@
 	width: max-content;
 }
 .app-keyword-searchbox-container {
-	height: 48px;
+	height: 36px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

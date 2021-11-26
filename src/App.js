@@ -155,13 +155,27 @@ function App() {
 		</>
 	}
 
+	////// Render Folding Effect //////
+	const renderFoldingEffect = () => {
+		return <>
+			<label className="app-label">FOLDING EFFECT</label>
+			<div style={{width:"480px", height: "360px", minHeight: "360px", backgroundColor:"gray"}}>
+				<FoldingEffect>
+					<button>OK</button>
+				</FoldingEffect>
+			</div>
+		</>
+	}
+
 	/*** Main Render ***/
 	return <div className="app-page-container">
 		{renderPageMenu()}
-		{renderImageBoard()}
-		{renderScatterFloatingEffect()}
-		{renderKeywordSearchBox()}
-
+		<div className="app-page-subcontainer">
+			{renderImageBoard()}
+			{renderScatterFloatingEffect()}
+			{renderKeywordSearchBox()}
+			{renderFoldingEffect()}
+		</div>
 	</div>
 }
 
