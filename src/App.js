@@ -167,6 +167,105 @@ function App() {
 		</>
 	}
 
+	///// Render Date Picker /////
+	const [datePickerOpen, setDatePickerOpen] = React.useState(false);
+	const renderDatePicker = () => {
+		return <>
+		<label className="app-label">DATE PICKER</label>
+		<DatePicker isOpen={datePickerOpen}
+		onClose={(e)=>{setDatePickerOpen(false)}}/>
+		<button 
+		className="app-button"
+		onClick={(e)=>{setDatePickerOpen(true)}}>
+			SHOW DATE
+		</button>
+		</>
+	}
+
+	///// Render Time Picker /////
+	const [timePickerOpen, setTimePickerOpen] = React.useState(false);
+	const renderTimePicker = () => {
+		return <>
+		<label className="app-label">TIME PICKER</label>
+		<TimePicker isOpen={timePickerOpen}
+		onClose={(e)=>{setTimePickerOpen(false)}}/>
+		<button 
+		onClick={(e)=>{setTimePickerOpen(true)}}
+		className="app-button">
+			SHOW TIME
+		</button>
+		</>
+	} 
+
+	///// Render Radio Button Group ////
+	const [radioLabels, setRadioLabels] = React.useState(["LABEL 1", "LABEL 2", "LABEL 3"])
+	const [radioValue, setRadioValue] = React.useState("LABEL1");
+	const renderRadioButtonGroup = () => {
+		return <>
+		<label className="app-label">RADIO BUTTON GROUP</label>
+		<RadioButtonGroup 
+			labels={radioLabels}
+			onChange={(e)=>{setRadioValue(e)}}
+			value={radioValue}/>
+		</>
+	} 
+
+	///// Render Toast /////
+	const [toastOpen, setToastOpen] = React.useState(false);
+	const renderToast = () => {
+		return <>
+			<label className="app-label">TOAST</label>
+			<button 
+			onClick={(e)=>{setToastOpen(true)}}
+			className="app-button">SHOW TOAST</button>
+			<Toast 
+			duration={3000}
+			content="This is toast content"
+			isOpen={toastOpen}
+			onClose={() => {setToastOpen(false)}} />
+		</>
+	}
+
+	///// Render Date/ Time Input /////
+	const [dateTime, setDateTime] = React.useState(new Date());
+	const renderDateTimeInput = () => {
+		return <>
+			<label className="app-label">DATE/TIME INPUT</label>
+			<DateInput 
+			date={dateTime }
+			onClick={(e)=>{setDatePickerOpen(true)}}/>
+			<TimeInput 
+			time={dateTime }
+			onClick={(e)=>{setTimePickerOpen(true)}}/>
+		</>
+	}
+	///// Render Progress Bar /////
+	const renderProgressBar = () => {
+		return <>
+			<label className="app-label">PROGRESS BAR</label>
+			<ProgressBar progress={30}/>
+		</>
+	}
+
+	///// Render Checkbox /////
+	const [checked, setChecked] = React.useState(false);
+	const renderCheckbox = () => {
+		return <>
+			<label className="app-label">CHECKBOX</label>
+			<Checkbox 
+			label="CHECKBOX"
+			onCheck={()=>{setChecked(!checked)}}
+			checked={checked}/>
+		</>
+	}
+	///// Render Loading Icon /////
+	const renderLoadingIcon = () => {
+		return <>
+			<label className="app-label">LOADING ICON</label>
+			<FanLoadingIcon />
+			<DottedLoadingIcon />
+		</>
+	}
 	/*** Main Render ***/
 	return <div className="app-page-container">
 		{renderPageMenu()}
@@ -175,6 +274,13 @@ function App() {
 			{renderScatterFloatingEffect()}
 			{renderKeywordSearchBox()}
 			{renderFoldingEffect()}
+			{renderDatePicker()}
+			{renderTimePicker()}
+			{renderRadioButtonGroup()}
+			{renderToast()}
+			{renderDateTimeInput()}
+			{renderProgressBar()}
+			{renderCheckbox()}
 		</div>
 	</div>
 }

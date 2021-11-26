@@ -21,6 +21,8 @@ const DottedLoadingIcon = (props) => {
 		width: props.size+'px', 
 		height: props.size+'px',
 		color: props.color,
+		top: `calc(50% - ${props.size/2}px)`,
+		left: `calc(50% - ${props.size/2}px)`,
 		animation: 'inifinite-rotation ' + props.duration + 's linear infinite'}}>
 		<i className="fas fa-spinner" 
 		style={{fontSize: props.size+'px'}}/>

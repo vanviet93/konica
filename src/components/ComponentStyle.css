@@ -34,6 +34,16 @@
 	--base-icon-light-gray-color: #AAA;
 
 	--base-button-font-size: 16px;
+
+	--base-checkbox-size: 16px;
+	--base-checkbox-unchecked-background-color: #FFF;
+	--base-checkbox-unchecked-border-color: #888;
+	--base-checkbox-checked-background-color: #EB5757;
+	--base-checkbox-checked-border-color: #EB5757;
+	--base-checkbox-label-color: #666;
+  --base-checkbox-label-fontsize: 16px;
+	--base-checkbox-icon-fontsize: 16px;
+	--base-checkbox-checked-icon-color: #FFF;
 }
 div.align-col-full-center, 
 div.align-row-full-center {

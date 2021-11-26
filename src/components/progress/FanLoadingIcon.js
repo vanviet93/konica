@@ -22,6 +22,8 @@ const FanLoadingIcon = (props) => {
 	style={{
 		width: props.size+'px', 
 		height: props.size+'px',
+		top: `calc(50% - ${props.size/2}px)`,
+		left: `calc(50% - ${props.size/2}px)`,
 		border: 'solid ' + props.strokeWidth + 'px '+ props.color,
 		animation: 'inifinite-rotation ' + props.duration +'s linear infinite'}}>
 	</div>
