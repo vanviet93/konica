@@ -8,6 +8,7 @@
 	height: max-content;
 	display: flex;
 	flex-direction: column;
+	padding: 8px;
 }
 .app-image-board-container {
 	width: 100%;
@@ -26,4 +27,16 @@
 	justify-content: center;
 	align-items: center;
 	padding: 8px;
+}
+.app-info-comment-container {
+	height: 360px;
+	margin: 8px;
+	border: solid 1px #AAA;
+	position: relative;
+}
+.app-floating-pointer-container {
+	height: 360px;
+	margin: 8px;
+	border: solid 1px #AAA;
+	position: relative;
 }

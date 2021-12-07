@@ -4,7 +4,7 @@
   display: flex;
 }
 .date-picker-header {
-  background-color: #444;
+  background-color: var(--base-red);
   display: flex;
   flex-direction: column;
   padding: 8px;
@@ -19,7 +19,7 @@
     flex-direction: column;
   }
   .date-picker-header {
-    height: 80px;
+    height: max-content;
     min-height: 80px;
     border-radius: 4px 4px 0px 0px;
   }
@@ -94,9 +94,13 @@
   justify-content: center;
   align-items: center;
 }
+.date-picker-day {
+  color: var(--base-list-text-color);
+}
 .date-picker-selected-day {
-  background-color: #DDD;
-  border: solid 1px #444;
+  background-color: var(--base-translucent-red);
+  border: solid 1px var(--base-red);
+  color: #FFF;
 }
 .date-picker-month-selector-button:hover, 
 .date-picker-day:hover {
@@ -108,6 +112,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 6px 8px;
+  color: var(--base-list-text-color);
 }
 .date-picker-action-container {
   display: flex;
@@ -117,17 +122,17 @@
 }
 .date-picker-button {
 	height: 32px;
-	border: solid 1px #000;
+	border: solid 1px var(--base-red);
 	border-radius: 19px;
-	background-color: #F0F0F0;
-	color: #444;
+	background-color: #FFF;
+	color: var(--base-red);
 	margin-left: 8px;
   padding: 0px 20px;
   font-size: 15px;
 }
 
 .date-picker-button:focus {
-	background-color: #000;
+	background-color: var(--base-red);
 	color: #FFF;
 }
 .date-picker-year-container {

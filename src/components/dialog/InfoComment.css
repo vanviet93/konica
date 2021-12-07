@@ -118,6 +118,7 @@
 	height: 32px;
 	border-radius: 50%;
 	transform: translate(-50%, -50%);
+	border: none;
 }
 .info-comment-message-content-container {
 	display: flex;

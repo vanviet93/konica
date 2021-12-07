@@ -8,7 +8,8 @@ const propTypes = {
 	onClose: PropTypes.func,
 	onTimeChange: PropTypes.func,
 	initTime: PropTypes.object,
-	timeFormat: PropTypes.string
+	timeFormat: PropTypes.string,
+	isEnabled: PropTypes.bool
 }
 const defaultProps = {
 	isOpen: false,
@@ -64,6 +65,8 @@ const TimePicker = (props) => {
 	
 	const renderClockNumbers = () => {
 		const numberViews = [];
+		const curHour = selectedTime.getHours();
+		const curMin  = selectedTime.getMinutes();
 		for(let i=0; i<12; i++) {
 			const rotateAngle = 30 * i;
 			const outerHour = i===0 && hourModeEnabled?12:i;
@@ -75,14 +78,16 @@ const TimePicker = (props) => {
 			style={{transform: "translateY(-50%) rotate(" + rotateAngle + "deg)"}}>
 				<div className="time-picker-clock-number-container">
 					<label
-					style={{transform: "rotate(-" + rotateAngle + "deg)"}}>
+					style={{transform: "rotate(-" + rotateAngle + "deg)"}}
+					className={hourModeEnabled?(curHour===outerHour?"time-picker-selected-number-label": "time-picker-number-label"):(curMin===minute?"time-picker-selected-number-label": "time-picker-number-label")}>
 						{hourModeEnabled?outerHour: minute}
 					</label>
 				</div>
 				{hourModeEnabled?
 				<div className="time-picker-clock-inner-number-container">
 					<label
-					style={{transform: "rotate(-" + rotateAngle + "deg)"}}>
+					style={{transform: "rotate(-" + rotateAngle + "deg)"}}
+					className={hourModeEnabled && curHour===innerHour?"time-picker-selected-number-label": "time-picker-number-label"}>
 						{innerHour}
 					</label>
 				</div>:null}
@@ -133,7 +138,8 @@ const TimePicker = (props) => {
 			}, 250)
 		}
 		else { 
-			let minute = Math.round(angle/6);
+			let minute = Math.round(angle/6)
+			minute = minute>=60? 0: minute;
 			selectedTime.setMinutes(minute);
 			setSelectedTime(new Date(selectedTime));
 		}

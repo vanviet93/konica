@@ -28,7 +28,10 @@ import {
   ProgressBar,
   Checkbox,
   RadioButtonGroup,
-	ScatteredFloatingEffect
+	ScatteredFloatingEffect,
+	InfoComment,
+	FloatingPointer,
+	DistanceStrictButton
 } from './components';
 import "./App.css";
 
@@ -266,6 +269,60 @@ function App() {
 			<DottedLoadingIcon />
 		</>
 	}
+	///// Render Floating Pointer /////
+	const [floatingPointerPosition, setFloatingPointerPosition] = React.useState({x:0, y:0});
+	const renderFloatingPointer = () => {
+		return <>
+			<label className="app-label">FLOATING POINTER</label>
+			<div className="app-floating-pointer-container">
+				<FloatingPointer 
+				position={floatingPointerPosition}
+				onMove={(e)=>{setFloatingPointerPosition(e)}}>
+					<button onClick={(e)=>{console.log("CLICK")}}>OK</button>
+				</FloatingPointer>
+			</div>
+		</>
+	}
+	
+	///// Render Comment /////
+	const [infoPosition, setInfoPosition] = React.useState({x: 0, y: 0});
+	const [infoCommentOpen, setInfoCommentOpen] = React.useState(false);
+	const [infoCommentSelected, setInfoCommentSelected] = React.useState(false);
+	const [selectedMessageId, setSelectedMessageId] = React.useState(null);
+	const [infoMessages, setInfoMessages] = React.useState([]);
+	const renderInfoComment = () => {
+		return <>
+			<label className="app-label">INFO COMMENT</label>
+			<div className="app-info-comment-container">
+				<InfoComment 
+				id={1}
+				isOpen={infoCommentOpen}
+				isSelected={infoCommentSelected}
+				selectedMessageId={selectedMessageId}
+				position={infoPosition}
+				messages={infoMessages}
+				onClick={(e)=>{setInfoCommentOpen(!infoCommentOpen)}}
+				onSelect={(e)=>{setInfoCommentSelected(true)}}
+				onMessageSend={(e)=>{setInfoMessages(infoMessages.concat([{
+					id: infoMessages.length,
+					writer: "Writer",
+					content: "Hello World",
+					datetime: "Mon Dec 06 2021 14:45:59 GMT+0900",
+				}]))}}
+				onMessageRemove={(e)=>{console.log(e)}}/>
+			</div>
+		</>
+	}
+	///// Render Distance Strict Button /////
+	const renderDistanceStrictButton = () => {
+		return <>
+			<label className="app-label">DISTANCE STRICT BUTTON</label>
+			<DistanceStrictButton 
+			onClick={(e)=>{console.log("CLICK")}}>
+				CLICK ME
+			</DistanceStrictButton>
+		</>
+	}
 	/*** Main Render ***/
 	return <div className="app-page-container">
 		{renderPageMenu()}
@@ -281,6 +338,9 @@ function App() {
 			{renderDateTimeInput()}
 			{renderProgressBar()}
 			{renderCheckbox()}
+			{renderFloatingPointer()}
+			{renderDistanceStrictButton()}
+			{renderInfoComment()}
 		</div>
 	</div>
 }

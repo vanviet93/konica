@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import './InfoComment.css';
+import { DistanceStrictButton, FloatingPointer } from '..';
 
 const propTypes = {
 	id: PropTypes.string,
@@ -20,26 +21,22 @@ const defaultProps = {
 	isOpen: false,
 	isSelected: false,
 	selectedMessageId: undefined,
-	position: null,
+	position: {x:0, y:0},
 	messages: [],
-	onClick: (commentId) => {},
-	onSelect: (commentId) => {},
+	onClick: (commentId, x, y) => {},
+	onSelect: (commentId, x, y) => {},
 	onMessageSend: (commentId, x, y, message) => {},
 	onMessageRemove: (commentId, messageId) => {}
 }
 
 const InfoComment = (props)=>{
 	/*** States and Variables ***/
-	const startPosRef = React.useRef(null);
-	const currentPosRef = React.useRef(null);
-	const iconRef = React.useRef(null);
 	const messageContainerRef = React.useRef(null);
-	const [position, setPosition] = React.useState(null);
+	const [position, setPosition] = React.useState({x:0, y:0});
 	const [message, setMessage] = React.useState("");
 	/*** Processing ***/
 	React.useEffect(()=>{
 		setPosition(props.position);
-		currentPosRef.current = props.position;
 	}, [props.position])
 
 	React.useEffect(()=>{
@@ -65,74 +62,6 @@ const InfoComment = (props)=>{
 			}
 		}
 	}, [props.selectedMessageId])
-
-	React.useEffect(()=>{
-		const onMouseDown = (e) => {
-			startPosRef.current = {
-				x: e.clientX,
-				y: e.clientY};
-		}
-		const onMouseMove = (e) => {
-			if(!startPosRef.current) return;
-			const x = e.clientX;
-			const y = e.clientY;
-			let targetX = x - startPosRef.current.x + currentPosRef.current.x;
-			targetX = targetX<0? 0: targetX;
-			let targetY = y - startPosRef.current.y + currentPosRef.current.y;
-			targetY = targetY<0? 0: targetY;
-			if(iconRef.current){
-				const parentNode = iconRef.current.parentNode;
-				targetX = targetX>parentNode.clientWidth? parentNode.clientWidth: targetX;
-				targetY = targetY>parentNode.clientHeight? parentNode.clientHeight: targetY;
-			}
-			setPosition({
-				x: targetX,
-				y: targetY
-			})
-		}
-		const onRightClick = () => {
-			startPosRef.current = null;
-		}
-		const onMouseLeave = (e) => {
-			if(!startPosRef.current) return;
-			const x = e.clientX;
-			const y = e.clientY;
-			let targetX = x - startPosRef.current.x + currentPosRef.current.x;
-			targetX = targetX<0? 0: targetX;
-			let targetY = y - startPosRef.current.y + currentPosRef.current.y;
-			targetY = targetY<0? 0: targetY;
-			if(iconRef.current){
-				const parentNode = iconRef.current.parentNode;
-				targetX = targetX>parentNode.clientWidth? parentNode.clientWidth: targetX;
-				targetY = targetY>parentNode.clientHeight? parentNode.clientHeight: targetY;
-			}
-			const dx = Math.abs(x - targetX);
-			const dy = Math.abs(y - targetY);
-			if(dx > 16 || dy > 16) {
-				startPosRef.current = null;
-				currentPosRef.current = {
-					x: targetX,
-					y: targetY
-				}
-			}
-			setPosition({
-				x: targetX,
-				y: targetY
-			})
-		}
-		iconRef.current.addEventListener('contextmenu', onRightClick);
-		iconRef.current.addEventListener('mousedown', onMouseDown);
-		iconRef.current.addEventListener('mousemove', onMouseMove);
-		iconRef.current.addEventListener('mouseleave', onMouseLeave);
-		return () => {
-			if(iconRef.current){
-				iconRef.current.removeEventListener('contextmenu', onRightClick);
-				iconRef.current.removeEventListener('mousedown', onMouseDown);
-				iconRef.current.removeEventListener('mousemove', onMouseMove);
-				iconRef.current.removeEventListener('mouseleave', onMouseLeave);
-			}
-		}
-	}, [])
 
 	React.useEffect(()=>{
 		if(messageContainerRef.current){
@@ -164,33 +93,6 @@ const InfoComment = (props)=>{
 		</div>)
 	}
 	/*** Event Handlers ***/
-	const onMouseUp = (e) => {
-		if(!startPosRef.current) return;
-		const x = e.clientX;
-		const y = e.clientY;
-		let targetX = x - startPosRef.current.x + currentPosRef.current.x;
-		targetX = targetX<0? 0: targetX;
-		let targetY = y - startPosRef.current.y + currentPosRef.current.y;
-		targetY = targetY<0? 0: targetY;
-		if(iconRef.current){
-			const parentNode = iconRef.current.parentNode;
-			targetX = targetX>parentNode.clientWidth? parentNode.clientWidth: targetX;
-			targetY = targetY>parentNode.clientHeight? parentNode.clientHeight: targetY;
-		}
-		currentPosRef.current = {
-			x: targetX,
-			y: targetY
-		}
-		if(Math.abs(x - startPosRef.current.x) < 5 && Math.abs(y - startPosRef.current.y) < 5) {
-			props.onClick(props.id);
-		}
-		setPosition({
-			x: currentPosRef.current.x,
-			y: currentPosRef.current.y
-		})
-		startPosRef.current = null;
-	}
-
 	const onMessageSend = () => {
 		if(message && message.trim()!==""){
 			props.onMessageSend(props.id, position.x, position.y, message);
@@ -204,27 +106,18 @@ const InfoComment = (props)=>{
 		}
 	}
 	
+	const onMoved = (e) => {
+		const parentNode = messageContainerRef.current && messageContainerRef.current.parentNode && messageContainerRef.current.parentNode.parentNode;
+		if(parentNode){
+			const targetX = e.x<0?0:(e.x>parentNode.clientWidth?parentNode.clientWidth:e.x);
+			const targetY = e.y<0?0:(e.y>parentNode.clientHeight?parentNode.clientHeight:e.y);
+			setPosition({x: targetX, y: targetY});
+		}
+	}
 	/*** Main Render ***/
-	const style = {};
-	if(position){
-		style.left = position.x;
-		style.top = position.y;
-		style.opacity = 1;
-	}
-	else{
-		style.left = -16;
-		style.top = -16;
-		style.opacity = 0;
-	}
-	if(props.isSelected){
-		style.zIndex=1;
-	}
-	else{
-		style.zIndex = undefined;
-	}
 	return <>
 		<div 
-		style={style}
+		style={{zIndex: props.isSelected? 1: undefined, left: position.x, top: position.y}}
 		onClick={(e)=>props.onSelect(props.id)}
 		className={props.isOpen?"info-comment-container-open": "info-comment-container-hidden"}>
 			<div 
@@ -246,14 +139,19 @@ const InfoComment = (props)=>{
 				</button>
 			</div>
 		</div>
-		<div 
-		style={style}
-		ref={iconRef}
-		className="info-comment-icon-container"
-		onMouseUp={onMouseUp}>
-			<i className={"fas fa-comment-dots info-comment-anchor-icon " + (props.isSelected? "info-comment-selected-anchor-icon": "")}/>
-			<i className={(props.isOpen?"fas fa-minus-circle":"fas fa-plus-circle") + " info-comment-status-icon " + (props.isSelected? "info-comment-selected-status-icon": "")}/>
-		</div>
+		<FloatingPointer
+		position={position}
+		onMove={(e)=>{setPosition(e);}}
+		onMoved={onMoved}>
+			<DistanceStrictButton 
+			style={{zIndex: props.isSelected? 1: undefined}}
+			className="info-comment-icon-container"
+			onClick={props.onClick}>
+				<i className={"fas fa-comment-dots info-comment-anchor-icon " + (props.isSelected? "info-comment-selected-anchor-icon": "")}/>
+				<i className={(props.isOpen?"fas fa-minus-circle":"fas fa-plus-circle") + " info-comment-status-icon " + (props.isSelected? "info-comment-selected-status-icon": "")}/>
+			</DistanceStrictButton>
+		</FloatingPointer>
+		
 	</>
 }
 

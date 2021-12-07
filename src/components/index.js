@@ -20,6 +20,9 @@ import ProgressBar from "./progress/ProgressBar";
 import Checkbox from "./select/Checkbox";
 import RadioButtonGroup from "./select/RadioButtonGroup";
 import ScatteredFloatingEffect from "./effect/ScatteredFloatingEffect";
+import InfoComment from "./dialog/InfoComment";
+import FloatingPointer from "./dialog/FloatingPointer";
+import DistanceStrictButton from "./input/DistanceStrictButton";
 
 import "./ComponentStyle.css";
 
@@ -45,5 +48,8 @@ export {
   ProgressBar,
   Checkbox,
   RadioButtonGroup,
-  ScatteredFloatingEffect
+  ScatteredFloatingEffect,
+  InfoComment,
+  FloatingPointer,
+  DistanceStrictButton
 }
