@@ -31,7 +31,8 @@ import {
 	ScatteredFloatingEffect,
 	InfoComment,
 	FloatingPointer,
-	DistanceStrictButton
+	DistanceStrictButton,
+	FloatView
 } from './components';
 import "./App.css";
 
@@ -323,6 +324,29 @@ function App() {
 			</DistanceStrictButton>
 		</>
 	}
+
+	///// Render Floating View /////
+	const [floatViewOpen, setFloatViewOpen] = React.useState(false);
+	const [floatViewMinimized, setFloatViewMinimized] = React.useState(false);
+	const renderFloatingView = () => {
+		return <>
+			<label className="app-label">FLOATING VIEW</label>
+			<div className="app-floating-view-container">
+				<button onClick={(e)=>{setFloatViewOpen(true)}}>SHOW</button>
+				<FloatView 
+				isOpen={floatViewOpen}
+				minimized={floatViewMinimized}
+				onButtonCloseClick={(e)=>{setFloatViewOpen(false)}}
+				isButtonRestoreVisible={true}
+				onButtonRestoreClick={()=>{}}
+				isButtonMinimizeVisible={true}
+				onButtonMinimizeClick={(e)=>{setFloatViewMinimized(true)}}
+				onButtonMaximizeClick={(e)=>{setFloatViewMinimized(false)}}
+				maximizeIcon="fas fa-paw"/>
+			</div>
+		</>
+	}
+
 	/*** Main Render ***/
 	return <div className="app-page-container">
 		{renderPageMenu()}
@@ -341,6 +365,7 @@ function App() {
 			{renderFloatingPointer()}
 			{renderDistanceStrictButton()}
 			{renderInfoComment()}
+			{renderFloatingView()}
 		</div>
 	</div>
 }

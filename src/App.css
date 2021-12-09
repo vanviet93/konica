@@ -40,3 +40,9 @@
 	border: solid 1px #AAA;
 	position: relative;
 }
+.app-floating-view-container {
+	height: 360px;
+	margin: 8px;
+	border: solid 1px #AAA;
+	position: relative;
+}

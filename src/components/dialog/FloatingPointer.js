@@ -112,7 +112,7 @@ const FloatingPointer = (props) => {
 	return <div 
 	className="floating-pointer-container"
 	id="floating-pointer-container"
-	style={{left: props.position.x, top: props.position.y, width: moving? 300: 0, height: moving? 300: 0}}
+	style={{left: props.position.x, top: props.position.y, width: moving? 300: undefined, height: moving? 300: undefined}}
 	ref={containerRef}>
 		<div className="floating-pointer-children-anchor">
 			{props.children}

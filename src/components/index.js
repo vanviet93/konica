@@ -23,6 +23,7 @@ import ScatteredFloatingEffect from "./effect/ScatteredFloatingEffect";
 import InfoComment from "./dialog/InfoComment";
 import FloatingPointer from "./dialog/FloatingPointer";
 import DistanceStrictButton from "./input/DistanceStrictButton";
+import FloatView from "./page/FloatView";
 
 import "./ComponentStyle.css";
 
@@ -51,5 +52,6 @@ export {
   ScatteredFloatingEffect,
   InfoComment,
   FloatingPointer,
-  DistanceStrictButton
+  DistanceStrictButton,
+  FloatView
 }
