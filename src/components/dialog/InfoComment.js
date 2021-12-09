@@ -141,7 +141,7 @@ const InfoComment = (props)=>{
 		</div>
 		<FloatingPointer
 		position={position}
-		onMove={(e)=>{setPosition(e);}}
+		onMoving={(e)=>{setPosition(e);}}
 		onMoved={onMoved}>
 			<DistanceStrictButton 
 			style={{zIndex: props.isSelected? 1: undefined}}

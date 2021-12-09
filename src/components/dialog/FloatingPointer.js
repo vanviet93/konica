@@ -3,43 +3,27 @@ import "./FloatingPointer.css";
 import PropTypes from 'prop-types';
 const propTypes={
 	position: PropTypes.object,
-	onMove: PropTypes.func,
+	onMoving: PropTypes.func,
 	onMoved: PropTypes.func
 };
 const defaultProps={
 	position: {x: 0, y: 0},
-	onMove: ({x,y}) => {},
+	onMoving: ({x,y}) => {},
 	onMoved: ({x,y}) => {}
 };
 const FloatingPointer = (props) => {
 	/*** States and Variables ***/
-	const movingRef = React.useRef(false);
-	const [moving, setMoving] = React.useState(movingRef.current);
 	const startMouseRef = React.useRef({x: 0, y: 0});
 	const startPosRef = React.useRef({x: 0, y: 0});
 	const  containerRef = React.useRef(null);
+	const positionRef = React.useRef({x:0, y:0});
+	const pointerInfoRef = React.useRef({x: 0, y:0, moving: false})
+	const [pointerInfo, setPointerInfo] = React.useState(pointerInfoRef.current);
 	/*** Processing ***/
-	React.useEffect(() => {
-		const container = containerRef.current;
-		const onTouchEnd = (e) => {
-			movingRef.current = false;
-			setMoving(movingRef.current);
-			props.onMoved({x: e.changedTouches[0].clientX - startMouseRef.current.x + startPosRef.current.x, y: e.changedTouches[0].clientY - startMouseRef.current.y + startPosRef.current.y});
-		}
-		const onMouseUp = (e) => {
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			movingRef.current = false;
-			setMoving(movingRef.current);
-			props.onMoved({x: e.clientX - startMouseRef.current.x + startPosRef.current.x, y: e.clientY - startMouseRef.current.y + startPosRef.current.y});
-		}
-		container.addEventListener('touchend', onTouchEnd, {passive: false});
-		container.addEventListener('mouseup', onMouseUp, {passive: false});
-		return () => {
-			container.removeEventListener('touchend', onTouchEnd);
-			container.removeEventListener('mouseup', onMouseUp);
-		}
-	}, [props.onMoved]);
+	React.useEffect(()=>{
+		positionRef.current = props.position;
+	}, [props.position])
+
 	React.useEffect(()=>{
 		const container = containerRef.current;
 		const onMouseDown = (e) => {
@@ -48,11 +32,16 @@ const FloatingPointer = (props) => {
 				y: e.clientY
 			}
 			startPosRef.current = {
-				x: props.position.x,
-				y: props.position.y
+				x: positionRef.current.x,
+				y: positionRef.current.y
 			}
-			movingRef.current = true;
-			setMoving(movingRef.current);
+			const containerPos = container.getBoundingClientRect();
+			pointerInfoRef.current = {
+				x: e.clientX - containerPos.x,
+				y: e.clientY - containerPos.y,
+				moving: true
+			}
+			setPointerInfo(pointerInfoRef.current);
 			e.preventDefault();
 		}
 		const onTouchStart = (e) => {
@@ -61,11 +50,16 @@ const FloatingPointer = (props) => {
 				y: e.touches[0].clientY
 			}
 			startPosRef.current = {
-				x: props.position.x,
-				y: props.position.y
+				x: positionRef.current.x,
+				y: positionRef.current.y
 			}
-			movingRef.current = true;
-			setMoving(movingRef.current);
+			const containerPos = container.getBoundingClientRect();
+			pointerInfoRef.current = {
+				x: e.touches[0].clientX - containerPos.x,
+				y: e.touches[0].clientY - containerPos.y,
+				moving: true
+			}
+			setPointerInfo(pointerInfoRef.current);
 			e.preventDefault();
 		}
 		container.addEventListener('mousedown', onMouseDown, {passive: false});
@@ -74,14 +68,14 @@ const FloatingPointer = (props) => {
 			container.removeEventListener('mousedown', onMouseDown);
 			container.removeEventListener('touchstart', onTouchStart);
 		}
-	}, [props.position])
+	}, [])
 
 	React.useEffect(()=>{
 		const container = containerRef.current;
 		const onMouseMove = (e) => {
 			e.preventDefault();
-			if(movingRef.current){
-				props.onMove({
+			if(pointerInfoRef.current.moving){
+				props.onMoving({
 					x: e.clientX - startMouseRef.current.x + startPosRef.current.x,
 					y: e.clientY - startMouseRef.current.y + startPosRef.current.y
 				})
@@ -89,8 +83,8 @@ const FloatingPointer = (props) => {
 		}
 		const onTouchMove = (e) => {
 			e.preventDefault();
-			if(movingRef.current){
-				props.onMove({
+			if(pointerInfoRef.current.moving){
+				props.onMoving({
 					x: e.touches[0].clientX - startMouseRef.current.x + startPosRef.current.x,
 					y: e.touches[0].clientY - startMouseRef.current.y + startPosRef.current.y
 				});
@@ -102,21 +96,53 @@ const FloatingPointer = (props) => {
 			container.removeEventListener('mousemove', onMouseMove);
 			container.removeEventListener('touchmove', onTouchMove);
 		}
-	}, [props.onMove])
+	}, [props.onMoving])
+
+	React.useEffect(() => {
+		const container = containerRef.current;
+		const onTouchEnd = (e) => {
+			pointerInfoRef.current.moving = false;
+			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
+			setPointerInfo(pointerInfoRef.current);
+			props.onMoved({x: e.changedTouches[0].clientX - startMouseRef.current.x + startPosRef.current.x, y: e.changedTouches[0].clientY - startMouseRef.current.y + startPosRef.current.y});
+		}
+		const onMouseUp = (e) => {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			pointerInfoRef.current.moving = false;
+			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
+			setPointerInfo(pointerInfoRef.current);
+			props.onMoved({x: e.clientX - startMouseRef.current.x + startPosRef.current.x, y: e.clientY - startMouseRef.current.y + startPosRef.current.y});
+		}
+		container.addEventListener('touchend', onTouchEnd, {passive: false});
+		container.addEventListener('mouseup', onMouseUp, {passive: false});
+		return () => {
+			container.removeEventListener('touchend', onTouchEnd);
+			container.removeEventListener('mouseup', onMouseUp);
+		}
+	}, [props.onMoved]);
 	/*** Sub Components ***/
 	/*** Event Handlers ***/
-	
-	
-	
 	/*** Main Render ***/
+	console.log("VANVIET INFO", pointerInfo)
 	return <div 
-	className="floating-pointer-container"
-	id="floating-pointer-container"
-	style={{left: props.position.x, top: props.position.y, width: moving? 300: undefined, height: moving? 300: undefined}}
-	ref={containerRef}>
-		<div className="floating-pointer-children-anchor">
-			{props.children}
-		</div>
+		ref={containerRef}
+		className="floating-pointer-container-anchor"
+		style={{
+		left: props.position.x, 
+		top: props.position.y}}>
+			<div className="floating-pointer-children-anchor">
+				{props.children}
+			</div>
+			{/* this is a big pointer to make sure mouse won't move out of the element */}
+			<div 
+			style={{
+				left: pointerInfo.x,
+				top: pointerInfo.y,
+				width: pointerInfo.moving? 300: 0, 
+				height: pointerInfo.moving? 300: 0
+			}}
+			className="floating-pointer-cover"/>
 	</div>;
 }
 FloatingPointer.propTypes = propTypes;

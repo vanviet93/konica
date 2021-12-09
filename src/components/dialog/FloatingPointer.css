@@ -1,5 +1,10 @@
-.floating-pointer-container {
-  background-color: transparent;
+.floating-pointer-container-anchor {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.floating-pointer-cover {
+  background-color: red;
   position: absolute;
   top: 0px;
   left: 0px;

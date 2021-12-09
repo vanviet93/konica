@@ -272,13 +272,17 @@ function App() {
 	}
 	///// Render Floating Pointer /////
 	const [floatingPointerPosition, setFloatingPointerPosition] = React.useState({x:0, y:0});
+	const onFloatingPointerMove = (e) => {
+		setFloatingPointerPosition(e)
+	}
 	const renderFloatingPointer = () => {
 		return <>
 			<label className="app-label">FLOATING POINTER</label>
 			<div className="app-floating-pointer-container">
 				<FloatingPointer 
 				position={floatingPointerPosition}
-				onMove={(e)=>{setFloatingPointerPosition(e)}}>
+				onMoving={onFloatingPointerMove}
+				onMoved={onFloatingPointerMove}>
 					<button onClick={(e)=>{console.log("CLICK")}}>OK</button>
 				</FloatingPointer>
 			</div>
@@ -336,7 +340,7 @@ function App() {
 				<FloatView 
 				isOpen={floatViewOpen}
 				minimized={floatViewMinimized}
-				onButtonCloseClick={(e)=>{setFloatViewOpen(false)}}
+				onButtonCloseClick={(e)=>{console.log("VANVIET CLOSE"); setFloatViewOpen(false)}}
 				isButtonRestoreVisible={true}
 				onButtonRestoreClick={()=>{}}
 				isButtonMinimizeVisible={true}
