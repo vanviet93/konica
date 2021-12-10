@@ -1,13 +1,16 @@
 import React from 'react';
+import { isBrowser } from 'react-device-detect';
 import "./FloatingPointer.css";
 import PropTypes from 'prop-types';
 const propTypes={
 	position: PropTypes.object,
+	onMove: PropTypes.func,
 	onMoving: PropTypes.func,
 	onMoved: PropTypes.func
 };
 const defaultProps={
 	position: {x: 0, y: 0},
+	onMove: () => {},
 	onMoving: ({x,y}) => {},
 	onMoved: ({x,y}) => {}
 };
@@ -27,6 +30,7 @@ const FloatingPointer = (props) => {
 	React.useEffect(()=>{
 		const container = containerRef.current;
 		const onMouseDown = (e) => {
+			props.onMove();
 			startMouseRef.current = {
 				x: e.clientX,
 				y: e.clientY
@@ -42,9 +46,9 @@ const FloatingPointer = (props) => {
 				moving: true
 			}
 			setPointerInfo(pointerInfoRef.current);
-			e.preventDefault();
 		}
 		const onTouchStart = (e) => {
+			props.onMove();
 			startMouseRef.current = {
 				x: e.touches[0].clientX,
 				y: e.touches[0].clientY
@@ -60,15 +64,14 @@ const FloatingPointer = (props) => {
 				moving: true
 			}
 			setPointerInfo(pointerInfoRef.current);
-			e.preventDefault();
 		}
-		container.addEventListener('mousedown', onMouseDown, {passive: false});
-		container.addEventListener('touchstart', onTouchStart, {passive: false});
+		if(isBrowser) {container.addEventListener('mousedown', onMouseDown);}
+		else {container.addEventListener('touchstart', onTouchStart);}
 		return () => {
-			container.removeEventListener('mousedown', onMouseDown);
-			container.removeEventListener('touchstart', onTouchStart);
+			if(isBrowser){container.removeEventListener('mousedown', onMouseDown);}
+			else {container.removeEventListener('touchstart', onTouchStart);}
 		}
-	}, [])
+	}, [props.onMove])
 
 	React.useEffect(()=>{
 		const container = containerRef.current;
@@ -90,59 +93,56 @@ const FloatingPointer = (props) => {
 				});
 			}
 		}
-		container.addEventListener('mousemove', onMouseMove, {passive: false});
-		container.addEventListener('touchmove', onTouchMove, {passive: false});
+		if( isBrowser){container.addEventListener('mousemove', onMouseMove, {passive: false});}
+		else {container.addEventListener('touchmove', onTouchMove, {passive: false});}
 		return ()=>{
-			container.removeEventListener('mousemove', onMouseMove);
-			container.removeEventListener('touchmove', onTouchMove);
+			if(isBrowser){container.removeEventListener('mousemove', onMouseMove);}
+			else {container.removeEventListener('touchmove', onTouchMove);}
 		}
 	}, [props.onMoving])
 
 	React.useEffect(() => {
 		const container = containerRef.current;
+		const onMouseUp = (e) => {
+			pointerInfoRef.current.moving = false;
+			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
+			setPointerInfo(pointerInfoRef.current);
+			props.onMoved({x: e.clientX - startMouseRef.current.x + startPosRef.current.x, y: e.clientY - startMouseRef.current.y + startPosRef.current.y});
+		}
 		const onTouchEnd = (e) => {
 			pointerInfoRef.current.moving = false;
 			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
 			setPointerInfo(pointerInfoRef.current);
 			props.onMoved({x: e.changedTouches[0].clientX - startMouseRef.current.x + startPosRef.current.x, y: e.changedTouches[0].clientY - startMouseRef.current.y + startPosRef.current.y});
 		}
-		const onMouseUp = (e) => {
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			pointerInfoRef.current.moving = false;
-			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
-			setPointerInfo(pointerInfoRef.current);
-			props.onMoved({x: e.clientX - startMouseRef.current.x + startPosRef.current.x, y: e.clientY - startMouseRef.current.y + startPosRef.current.y});
-		}
-		container.addEventListener('touchend', onTouchEnd, {passive: false});
-		container.addEventListener('mouseup', onMouseUp, {passive: false});
+		if (isBrowser){container.addEventListener('mouseup', onMouseUp);}
+		else {container.addEventListener('touchend', onTouchEnd);}
 		return () => {
-			container.removeEventListener('touchend', onTouchEnd);
-			container.removeEventListener('mouseup', onMouseUp);
+			if(isBrowser){container.removeEventListener('mouseup', onMouseUp);}
+			else {container.removeEventListener('touchend', onTouchEnd);}
 		}
 	}, [props.onMoved]);
 	/*** Sub Components ***/
 	/*** Event Handlers ***/
 	/*** Main Render ***/
-	console.log("VANVIET INFO", pointerInfo)
 	return <div 
 		ref={containerRef}
 		className="floating-pointer-container-anchor"
 		style={{
 		left: props.position.x, 
 		top: props.position.y}}>
-			<div className="floating-pointer-children-anchor">
-				{props.children}
-			</div>
 			{/* this is a big pointer to make sure mouse won't move out of the element */}
 			<div 
 			style={{
 				left: pointerInfo.x,
 				top: pointerInfo.y,
-				width: pointerInfo.moving? 300: 0, 
-				height: pointerInfo.moving? 300: 0
+				width: pointerInfo.moving? 160: 0, 
+				height: pointerInfo.moving? 160: 0
 			}}
 			className="floating-pointer-cover"/>
+			<div className="floating-pointer-children-anchor">
+				{props.children}
+			</div>
 	</div>;
 }
 FloatingPointer.propTypes = propTypes;

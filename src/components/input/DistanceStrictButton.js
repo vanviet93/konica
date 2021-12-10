@@ -1,4 +1,5 @@
 import React from 'react';
+import { isBrowser } from 'react-device-detect';
 import PropTypes from 'prop-types';
 const propTypes={
 	style: PropTypes.object,
@@ -29,11 +30,19 @@ const DistanceStrictButton = (props) => {
         y: e.touches[0].clientY
       }
 		}
-		buttonNode.addEventListener('mousedown', onMouseDown);
-		buttonNode.addEventListener('touchstart', onTouchStart);
+		if (isBrowser) {
+			buttonNode.addEventListener('mousedown', onMouseDown);
+		}
+		else {
+			buttonNode.addEventListener('touchstart', onTouchStart);	
+		}
 		return () => {
-			buttonNode.removeEventListener('mousedown', onMouseDown);
-			buttonNode.removeEventListener('touchstart', onTouchStart);
+			if (isBrowser){
+				buttonNode.removeEventListener('mousedown', onMouseDown);
+			}
+			else {
+				buttonNode.removeEventListener('touchstart', onTouchStart);
+			}
 		}
 	}, []);
 	React.useEffect(()=>{
@@ -48,11 +57,19 @@ const DistanceStrictButton = (props) => {
 				props.onClick(e);
 			}
 		}
-		buttonNode.addEventListener('mouseup', onMouseUp);
-		buttonNode.addEventListener('touchend', onTouchEnd);
+		if (isBrowser){
+			buttonNode.addEventListener('mouseup', onMouseUp);
+		}
+		else{
+			buttonNode.addEventListener('touchend', onTouchEnd);
+		}
 		return () => {
-			buttonNode.removeEventListener('mouseup', onMouseUp);
-			buttonNode.removeEventListener('touchend', onTouchEnd);
+			if (isBrowser) {
+				buttonNode.removeEventListener('mouseup', onMouseUp);
+			}
+			else {
+				buttonNode.removeEventListener('touchend', onTouchEnd);
+			}
 		}
 	}, [props.onClick])
 	/*** Sub Components ***/

@@ -290,7 +290,7 @@ function App() {
 	}
 	
 	///// Render Comment /////
-	const [infoPosition, setInfoPosition] = React.useState({x: 0, y: 0});
+	const [infoPosition, setInfoPosition] = React.useState({x: 100, y: 100});
 	const [infoCommentOpen, setInfoCommentOpen] = React.useState(false);
 	const [infoCommentSelected, setInfoCommentSelected] = React.useState(false);
 	const [selectedMessageId, setSelectedMessageId] = React.useState(null);
@@ -319,11 +319,14 @@ function App() {
 		</>
 	}
 	///// Render Distance Strict Button /////
+	const onButtonDistanceStrictClick = React.useCallback((e)=>{
+		console.log("CLICK");
+	}, [])
 	const renderDistanceStrictButton = () => {
 		return <>
 			<label className="app-label">DISTANCE STRICT BUTTON</label>
 			<DistanceStrictButton 
-			onClick={(e)=>{console.log("CLICK")}}>
+			onClick={onButtonDistanceStrictClick}>
 				CLICK ME
 			</DistanceStrictButton>
 		</>

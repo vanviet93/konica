@@ -3,13 +3,6 @@ import PropTypes from 'prop-types';
 import FloatingPointer from '../dialog/FloatingPointer';
 import "./FloatingView.css";
 
-const NOTHING = 0;
-const UP_ARROW = 1;
-const DOWN_ARROW = 2;
-const LEFT_ARROW = 3;
-const RIGHT_ARROW = 4;
-const HEADER = 5;
-
 const propTypes = {
 	isOpen: PropTypes.bool,
 	minimized: PropTypes.bool,
@@ -35,58 +28,29 @@ const defaultProps = {
 
 const BrowserFloatingView = (props) => {
 	/*** State ***/
-	const startX = React.useRef(0);
-	const startY = React.useRef(0);
-	const currentX = React.useRef(0);
-	const currentY = React.useRef(0);
-	const currentWidth = React.useRef(200);
-	const currentHeight = React.useRef(240);
-	const [pageInfo, setPageInfo] = React.useState({
-		top: startY.current,
-		left: startX.current,
-		width: currentWidth.current,
-		height: currentHeight.current
-	});
 	const containerRef = React.useRef(null);
-	const leftResizerRef = React.useRef(null);
-	const rightResizerRef = React.useRef(null);
-	const topResizerRef = React.useRef(null);
-	const bottomResizerRef = React.useRef(null);
-	const taskHideArrowRef = React.useRef({arrow: undefined, task: undefined})
-	const draggedObjRef = React.useRef(NOTHING);
-	const deleteMouseClickTask = React.useRef(null);
 	const positionRef = React.useRef({x: 0, y: 0})
 	const [position, setPosition] = React.useState(positionRef.current);
 	const sizeRef = React.useRef({width: 200, height: 200});
 	const [size, setSize] = React.useState(sizeRef.current);
 
 	/*** Processing ***/
-	React.useEffect(()=>{
-		// register event listeners for resizers
-		let resizers = [];
-		if(!props.minimized){
-			resizers = [topResizerRef.current, bottomResizerRef.current, leftResizerRef.current, rightResizerRef.current];
-			for(const resizer of resizers){
-				// resizer.addEventListener('mousedown', onMouseDownOnResizer);
-				// resizer.addEventListener('mousemove', onMouseMoveOnResizer);
-				// resizer.addEventListener('mouseup', onMouseUpOnResizer);
-				// resizer.addEventListener('mouseenter', onMouseEnterOnResizer);
-				// resizer.addEventListener('mouseleave', onMouseLeaveOnResizer);
-			}
-		}
-		return () => {
-			if(!props.minimized){
-				for(const resizer of resizers){
-					// resizer.removeEventListener('mousedown', onMouseDownOnResizer);
-					// resizer.removeEventListener('mousemove', onMouseMoveOnResizer);
-					// resizer.removeEventListener('mouseup', onMouseUpOnResizer);
-					// resizer.removeEventListener('mouseenter', onMouseEnterOnResizer);
-					// resizer.addEventListener('mouseleave', onMouseLeaveOnResizer);
-				}
-			}
-		}
-	}, [props.minimized])
 	/*** Event Handlers ***/
+	const onHeaderMoving = React.useCallback((e)=>{
+		setPosition({
+			x: positionRef.current.x + e.x,
+			y: positionRef.current.y + e.y
+		});
+	}, [])
+
+	const onHeaderMoved = React.useCallback((e)=>{
+		positionRef.current = {
+			x: positionRef.current.x + e.x,
+			y: positionRef.current.y + e.y
+		}
+		setPosition(positionRef.current);
+	}, [])
+
 	const onLeftResizerMoving = React.useCallback((e) => {
 		setPosition({
 			x: positionRef.current.x + e.x,
@@ -185,8 +149,8 @@ const BrowserFloatingView = (props) => {
 			<div 
 			className="floating-page-header-anchor">
 					<FloatingPointer
-					onMoving={(e)=>{setPosition(e);}}
-					onMoved={(e)=>{positionRef.current=e; setPosition(positionRef.current);}}>
+					onMoving={onHeaderMoving}
+					onMoved={onHeaderMoved}>
 					<div 
 					style={{width: props.minimized? undefined: size.width}}
 					className={!props.minimized?"floating-page-browser-header":"floating-page-minimized-header"}>
@@ -227,13 +191,9 @@ const BrowserFloatingView = (props) => {
 					onMoving={onLeftResizerMoving}
 					onMoved={onLeftResizerMoved}>
 					<div 
-					id="left-resizer"
 					style={{display:props.minimized? "none": "flex", height: size.height}}
-					className="floating-page-resizer floating-page-left-resizer"
-					ref={leftResizerRef}>
-						<i 
-						id="left-resizer-arrow"
-						className="far fa-arrow-alt-circle-left floating-page-arrow-icon"></i>
+					className="floating-page-resizer floating-page-left-resizer">
+						<i className="far fa-arrow-alt-circle-left floating-page-arrow-icon"></i>
 					</div>
 				</FloatingPointer>
 			</div>
@@ -247,13 +207,9 @@ const BrowserFloatingView = (props) => {
 					onMoving={onRightResizerMoving}
 					onMoved={onRightResizerMoved}>
 					<div 
-					id="right-resizer"
 					style={{display:props.minimized? "none": "flex", height: size.height}}
-					className="floating-page-resizer floating-page-right-resizer"
-					ref={rightResizerRef}>
-						<i 
-						id="right-resizer-arrow"
-						className="far fa-arrow-alt-circle-right floating-page-arrow-icon"></i>
+					className="floating-page-resizer floating-page-right-resizer">
+						<i className="far fa-arrow-alt-circle-right floating-page-arrow-icon"></i>
 					</div>
 				</FloatingPointer>
 			</div>
@@ -264,10 +220,8 @@ const BrowserFloatingView = (props) => {
 					onMoving={onTopResizerMoving}
 					onMoved={onTopResizerMoved}>
 					<div
-					id="top-resizer"
 					style={{display:props.minimized? "none": "flex", width: size.width}}
-					className="floating-page-resizer floating-page-top-resizer"
-					ref={topResizerRef}>
+					className="floating-page-resizer floating-page-top-resizer">
 						<i className="far fa-arrow-alt-circle-up floating-page-arrow-icon"/>
 					</div>
 				</FloatingPointer>
@@ -281,8 +235,7 @@ const BrowserFloatingView = (props) => {
 					onMoved={onBottomResizerMoved}>
 					<div 
 					style={{display:props.minimized? "none": "flex", width: size.width}}
-					className="floating-page-resizer floating-page-bottom-resizer"
-					ref={bottomResizerRef}>
+					className="floating-page-resizer floating-page-bottom-resizer">
 						<i className="far fa-arrow-alt-circle-down floating-page-arrow-icon"/>
 					</div>
 				</FloatingPointer>

@@ -29,7 +29,7 @@
 	box-shadow: 0px 0px 3px;
 }
 .floating-page-browser-header {
-	opacity: 0.5;
+	opacity: 0;
 }
 .floating-page-browser-header:hover {
 	opacity: 1;
