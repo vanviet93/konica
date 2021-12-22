@@ -46,3 +46,9 @@
 	border: solid 1px #AAA;
 	position: relative;
 }
+.test-page-drop-down-select-container {
+	height: 256px;
+	width: 320px;
+	border: solid 1px #DDD;
+	padding: 8px;
+}

@@ -32,7 +32,8 @@ import {
 	InfoComment,
 	FloatingPointer,
 	DistanceStrictButton,
-	FloatView
+	FloatView,
+	DropDownSelect
 } from '../../components';
 import "./TestPage.css";
 
@@ -354,6 +355,20 @@ function TestPage() {
 		</>
 	}
 
+	///// Render Drop Down Select /////
+	const [dropdownSelectItems, setDropdownSelectItems] = React.useState(["1", "2", "3", "4", "5", "6", "7"]);
+	const [selectedDropdownItem, setSelectedDropDownItem] = React.useState("1");
+	const renderDropDownSelect = () => {
+		return <>
+		<label className='test-page-label'>DROP DOWN SELECT</label>
+		<div className='test-page-drop-down-select-container'>
+			<DropDownSelect 
+			items={dropdownSelectItems}
+			value={selectedDropdownItem}
+			onChange={(e)=>{setSelectedDropDownItem(e)}}/>
+		</div>
+		</>
+	}
 	/*** Main Render ***/
 	return <div className="test-page-page-container">
 		{renderPageMenu()}
@@ -373,6 +388,7 @@ function TestPage() {
 			{renderDistanceStrictButton()}
 			{renderInfoComment()}
 			{renderFloatingView()}
+			{renderDropDownSelect()}
 		</div>
 	</div>
 }

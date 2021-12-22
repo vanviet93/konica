@@ -24,6 +24,7 @@ import InfoComment from "./dialog/InfoComment";
 import FloatingPointer from "./dialog/FloatingPointer";
 import DistanceStrictButton from "./input/DistanceStrictButton";
 import FloatView from "./page/FloatView";
+import DropDownSelect from "./select/DropDownSelect";
 
 import "./ComponentStyle.css";
 
@@ -53,5 +54,6 @@ export {
   InfoComment,
   FloatingPointer,
   DistanceStrictButton,
-  FloatView
+  FloatView,
+  DropDownSelect
 }
