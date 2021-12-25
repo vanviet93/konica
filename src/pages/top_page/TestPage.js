@@ -33,7 +33,9 @@ import {
 	FloatingPointer,
 	DistanceStrictButton,
 	FloatView,
-	DropDownSelect
+	DropDownSelect,
+	VirtualKey,
+	DropDownMultiSelect
 } from '../../components';
 import "./TestPage.css";
 
@@ -356,8 +358,15 @@ function TestPage() {
 	}
 
 	///// Render Drop Down Select /////
-	const [dropdownSelectItems, setDropdownSelectItems] = React.useState(["1", "2", "3", "4", "5", "6", "7"]);
-	const [selectedDropdownItem, setSelectedDropDownItem] = React.useState("1");
+	const [dropdownSelectItems, setDropdownSelectItems] = React.useState([
+		"Item 1", 
+		"Item 2", 
+		"Item 3", 
+		"Item 4", 
+		"Item 5", 
+		"Item 6", 
+		"Item 7"]);
+	const [selectedDropdownItem, setSelectedDropDownItem] = React.useState("Item 1");
 	const renderDropDownSelect = () => {
 		return <>
 		<label className='test-page-label'>DROP DOWN SELECT</label>
@@ -369,6 +378,39 @@ function TestPage() {
 		</div>
 		</>
 	}
+	///// Render DropDown MultiSelect ////
+	const [selectedDropdownItems, setSelectedDropdownItems] = React.useState([]);
+	const renderDropDownMultiSelect = () => {
+		return <>
+		<label className='test-page-label'>DROP DOWN  MULTI SELECT</label>
+		<div className='test-page-drop-down-select-container'>
+			<DropDownMultiSelect 
+				items={dropdownSelectItems}
+				values={selectedDropdownItems}
+				onChange={(e)=>{setSelectedDropdownItems(e)}}/>
+		</div>
+		</>
+	}
+
+
+	///// Render Virtual Key /////
+	const renderVirtualKey = () => {
+		return <>
+			<label className='test-page-label'>VIRTUAL KEY</label>
+			<div className='test-page-virtual-keys-container'>
+				<VirtualKey 
+				inputKey="C"
+				onClick={()=>{console.log("CLICK")}}/>
+				<VirtualKey 
+				inputKey="S"
+				onClick={()=>{console.log("CLICK")}}/>
+				<VirtualKey 
+				inputKey="S"
+				onClick={()=>{console.log("CLICK")}}/>
+			</div>
+		</>
+	}
+
 	/*** Main Render ***/
 	return <div className="test-page-page-container">
 		{renderPageMenu()}
@@ -389,6 +431,8 @@ function TestPage() {
 			{renderInfoComment()}
 			{renderFloatingView()}
 			{renderDropDownSelect()}
+			{renderDropDownMultiSelect()}
+			{renderVirtualKey()}
 		</div>
 	</div>
 }

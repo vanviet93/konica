@@ -31,7 +31,9 @@ const DropDownSelect = (props) => {
 					key={item}
 					onClick={(e)=>{props.onChange(item)}}
 					className={item===props.value?'drop-down-select-selected-item-container': 'drop-down-select-item-container'}>
-						<label className='drop-down-select-item-text'>{item}</label>
+						<label className={item===props.value?'drop-down-selected-item-text': 'drop-down-select-item-text'}>
+							{item}
+						</label>
 					</div>
 				})}
 			</div>
@@ -45,7 +47,9 @@ const DropDownSelect = (props) => {
 	onBlur={(e)=>{setIsOpen(false)}}
 	className={isOpen?'drop-down-select-open-container':'drop-down-select-container'}>
 		<div className='drop-down-select-value'>
-		<label className='drop-down-select-item-text'>{props.value}</label>
+			<label className={'drop-down-select-item-text'}>
+				{props.value}
+			</label>
 		</div>
 		<button className='drop-down-select-button-drop'>
 			<i className="fas fa-chevron-down"></i>

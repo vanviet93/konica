@@ -25,7 +25,8 @@ import FloatingPointer from "./dialog/FloatingPointer";
 import DistanceStrictButton from "./input/DistanceStrictButton";
 import FloatView from "./page/FloatView";
 import DropDownSelect from "./select/DropDownSelect";
-
+import DropDownMultiSelect from "./select/DropDownMultiSelect";
+import VirtualKey from "./input/VirtualKey";
 import "./ComponentStyle.css";
 
 export {
@@ -55,5 +56,7 @@ export {
   FloatingPointer,
   DistanceStrictButton,
   FloatView,
-  DropDownSelect
+  DropDownSelect,
+  VirtualKey,
+  DropDownMultiSelect
 }

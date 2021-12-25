@@ -1,0 +1,43 @@
+/* 
+reference : https://www.youtube.com/watch?v=H_vE1mY2j2g&list=LL&index=9&t=36s 
+*/
+.virtual-key-container {
+	position: relative;
+	display: inline;
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	background: linear-gradient(180deg, #282828, #202020);
+	box-shadow: inset -8px 0px 8px rgba(0,0,0,0.15), inset -8px 0px 8px rgba(0,0,0,0.25), 0px 0px 0px 2px rgba(0,0,0,0.75), 10px 20px 25px rgba(0,0,0,0.4);
+	overflow: hidden;
+	margin: 4px;
+}
+.virtual-key-container::before {
+	content: attr(inputkey);
+	position: absolute;
+	top: 3px;
+	left: 4px;
+	bottom: 8px;
+	right: 6px;
+	background: linear-gradient(90deg, #232323, #4a4a4a);
+	border-radius: 10px;
+	box-shadow: -10px -10px 10px rgba(255,255,255,0.25), 10px 5px 10px rgba(0,0,0,15);
+	border-left: 1px solid #0004;
+	border-bottom: 1px solid #0004;
+	border-top: 1px solid #0009;
+	color: #FFF;
+	padding: 4px 0px 0px 8px;
+	color: #FFF;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 24px;
+	user-select: none;
+}
+.virtual-key-container:hover::before { 
+	box-shadow: -10px -10px 10px rgba(128,128,128,0.25), 10px 5px 10px rgba(0,0,0,15);
+	background: linear-gradient(90deg, #232323, #252525);
+	top: 5px;
+	left: 6px;
+	bottom: 6px;
+	right: 4px;
+}

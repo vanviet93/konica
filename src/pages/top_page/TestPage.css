@@ -52,3 +52,7 @@
 	border: solid 1px #DDD;
 	padding: 8px;
 }
+.test-page-virtual-keys-container {
+	display: flex;
+	flex-direction: row;
+}
