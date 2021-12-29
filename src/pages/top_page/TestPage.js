@@ -35,7 +35,9 @@ import {
 	FloatView,
 	DropDownSelect,
 	VirtualKey,
-	DropDownMultiSelect
+	DropDownMultiSelect,
+	PyramidModel,
+	MagicNavigationMenu
 } from '../../components';
 import "./TestPage.css";
 
@@ -411,6 +413,45 @@ function TestPage() {
 		</>
 	}
 
+	///// Render Pyramid Model /////
+	const renderPyramidModel = () => {
+		return <>
+			<label className='test-page-label'>PYRAMID MODEL</label>
+			<PyramidModel />
+		</>
+	}
+
+	///// MAGIC NAVIGATION MENU /////
+	const [magicNavigationMenuItems, setMagicNavigationMenuItems] = React.useState([
+		{
+			icon: "fas fa-home",
+			text: "HOME"
+		},
+		{
+			icon: "fas fa-user",
+			text: "USER"
+		}, 
+		{
+			icon: "fas fa-cogs",
+			text: "SETTING"
+		}, 
+		{
+			icon: "fas fa-comments",
+			text: "COMMENT"
+		}
+	]);
+	const [magicNavigationMenuValues, setMagicNavigationMenuValues] = React.useState([]);
+	const renderMagicNavigationMenu = () => {
+		return <>
+			<label className='test-page-label'>MAGIC NAVIGATION MENU</label>
+			<div className='test-page-magic-navigation-menu-container'>
+				<MagicNavigationMenu 
+				items={magicNavigationMenuItems}
+				values={magicNavigationMenuValues}
+				onChange={setMagicNavigationMenuValues}/>
+			</div>
+		</>
+	}
 	/*** Main Render ***/
 	return <div className="test-page-page-container">
 		{renderPageMenu()}
@@ -433,6 +474,7 @@ function TestPage() {
 			{renderDropDownSelect()}
 			{renderDropDownMultiSelect()}
 			{renderVirtualKey()}
+			{renderMagicNavigationMenu()}
 		</div>
 	</div>
 }

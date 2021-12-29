@@ -11,6 +11,7 @@ import TimeInput from "./input/TimeInput";
 import KeywordInput from "./input/KeywordInput";
 import KeywordSearchBox from "./input/KeywordSearchbox";
 import DropMenuWrapper from "./menu/DropMenuWrapper";
+import MagicNavigationMenu from "./menu/MagicNavigationMenu";
 import PageMenu from "./menu/PageMenu";
 import DoubleClickableDiv from "./page/DoubleClickableDiv";
 import DottedLoadingIcon from "./progress/DottedLoadingIcon";
@@ -27,6 +28,7 @@ import FloatView from "./page/FloatView";
 import DropDownSelect from "./select/DropDownSelect";
 import DropDownMultiSelect from "./select/DropDownMultiSelect";
 import VirtualKey from "./input/VirtualKey";
+import PyramidModel from "./3dmodel/PyramidModel";
 import "./ComponentStyle.css";
 
 export {
@@ -58,5 +60,7 @@ export {
   FloatView,
   DropDownSelect,
   VirtualKey,
-  DropDownMultiSelect
+  DropDownMultiSelect,
+  MagicNavigationMenu,
+  PyramidModel
 }

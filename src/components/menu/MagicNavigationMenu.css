@@ -1,0 +1,79 @@
+.magic-navigation-menu-anchor {
+  width: 100%;
+  height: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.magic-navigation-menu-bottom-filler {
+  width: 100%;
+  height: 12px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+}
+.magic-navigation-menu-top-left-filler, 
+.magic-navigation-menu-top-right-filler {
+  position: absolute;
+  bottom: 12px;
+  height: 36px;
+  width: 10px;
+  background-color: red;
+}
+
+.magic-navigation-menu-top-left-filler {
+  left: 0px;
+}
+.magic-navigation-menu-top-right-filler {
+  right: 0px;
+}
+.magic-navigation-menu-buttons-container {
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.magic-navigation-menu-selected-button, 
+.magic-navigation-menu-button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  transition: all 200ms;
+  height: 48px;
+  padding-bottom: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.magic-navigation-menu-button {
+  height: 48px;
+  padding-bottom: 0px;
+  bottom: 0px;
+}
+.magic-navigation-menu-selected-button {
+  height: 60px;
+  padding-bottom: 28px;
+  bottom: 0px;
+}
+.magic-navigation-menu-indicator {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 200ms;
+  bottom: 4px;
+  transform: translateX(-50%);
+  border: solid 20px red;
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100% )
+}

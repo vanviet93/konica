@@ -1,0 +1,24 @@
+.model3d-pyramid-model-container {
+  transform: scale(1.85);
+  float: right;
+  margin-right: 120px;
+  margin-top: 30px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+.model3d-pyramid-model-subcontainer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: rotateX(75deg) rotate(65deg);
+  animation: turnPyramid 10s linear infinite;
+}
+
+.model3d-pyramid-model-side1 {}
+.model3d-pyramid-model-side2 {}
+.model3d-pyramid-model-side3 {}
+.model3d-pyramid-model-side4 {}
