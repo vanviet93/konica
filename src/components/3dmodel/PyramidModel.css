@@ -29,3 +29,7 @@
   left: 50%;
   background-color: blue;
 }
+.model3d-pyramid-model-origin {
+  transform-style: preserve-3d;
+  perspective-origin: 50% 50%;
+}

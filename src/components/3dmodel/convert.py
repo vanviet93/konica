@@ -212,6 +212,13 @@ def write_files(objects, file_name):
 	css_text += '\tjustify-content: center;\n'
 	css_text += '\talign-items: center;\n'
 	css_text += '}\n'
+	css_text += '.model3d-' + file_name.lower() + '-model-origin {\n'
+	css_text += '\twidth: 0px;\n'
+	css_text += '\theight: 0px;\n'
+	css_text += '\tperspective: 1200px;\n'
+	css_text += '\ttransform-style: preserve-3d;\n'
+	css_text += '\tperspective-origin: 50% 50%;\n'
+	css_text += '}\n'
 	js_text = 'import React from "react";\n'
 	js_text += 'import PropTypes from "prop-types";\n'
 	js_text += 'import "./' + file_name + '.css";\n'
@@ -219,6 +226,7 @@ def write_files(objects, file_name):
 	js_text += 'const defaultProps={};\n'
 	js_text += 'const ' + file_name + ' = (props) => {\n'
 	js_text += '\treturn <div className="model3d-' + file_name.lower() + '-model-container">\n'
+	js_text += '\t\t<div className="model3d-' + file_name.lower() + '-model-origin">\n'
 
 	for object_name in objects.keys():
 		object = objects[object_name]
@@ -229,7 +237,7 @@ def write_files(objects, file_name):
 			para = compute_css_rotate(face, norm)
 			classname = 'model3d-' + object_name.lower() + '-model-face' + str(count)
 			count += 1
-			js_text += '\t\t<div className="' + classname + '"/>\n'
+			js_text += '\t\t\t<div className="' + classname + '"/>\n'
 			css_text += '.' + classname + ' {\n'
 			css_text += '\tposition: absolute;\n'
 			css_text += '\tbackground-color: rgb(' + str(np.random.randint(255)) + ',' +str(np.random.randint(255)) + ',' +str(np.random.randint(255)) + ');\n'
@@ -259,13 +267,8 @@ def write_files(objects, file_name):
 			bounds = [str(point[0])+'px ' + str(point[1])+'px' for point in bounds]
 			bounds = 'polygon(' + (', '.join(bounds)) + ')'
 			css_text += '\tclip-path: ' + bounds + ';\n'
-			dx = min_x*VIEW_SIZE/2
-			dy = min_y*VIEW_SIZE/2
-			dz = para["z"]*VIEW_SIZE/2
 			css_text += '\ttop: 50%;\n'
 			css_text += '\tleft: 50%;\n'
-			#css_text += '\ttransform-origin: ' + str(-dx) + 'px ' + str(-dy) + 'px ' + str(-dz) + 'px;\n'
-			#transition = 'translateX(' + str(dx) + 'px) translateY('+ str(dy) + 'px) translateZ(' + str(dz) + 'px)'
 			transition = 'translateX(' + str(ori_center[0] - width/2) + 'px) translateY('+ str(ori_center[1] - height/2) + 'px) translateZ(' + str(ori_center[2]) + 'px)'
 			rx, ry, rz = para["rotation"]["x"], para["rotation"]["y"], para["rotation"]["z"]
 			rx = rx / np.pi * 180
@@ -276,8 +279,8 @@ def write_files(objects, file_name):
 			css_text += '}\n'
 
 
-
-	js_text += '\t</div>;\n'
+	js_text += '\t\t</div>\n'
+	js_text += '\t</div>\n'
 	js_text += '}\n'
 	js_text += file_name + '.propTypes = propTypes;\n'
 	js_text += file_name + '.defaultProps = defaultProps;\n'

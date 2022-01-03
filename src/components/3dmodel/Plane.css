@@ -8,9 +8,16 @@
 	justify-content: center;
 	align-items: center;
 }
+.model3d-plane-model-origin {
+	width: 0px;
+	height: 0px;
+	perspective: 1200px;
+	transform-style: preserve-3d;
+	perspective-origin: 50% 50%;
+}
 .model3d-sphere-model-face0 {
 	position: absolute;
-	background-color: rgb(97,73,123);
+	background-color: rgb(1,7,24);
 	width: 141.65496826171875px;
 	height: 156.39168977737427px;
 	clip-path: polygon(0.0px 18.777819px, 6.4725404px 156.3917px, 141.65497px 129.8357px, 95.58837px 0.0px);
@@ -20,7 +27,7 @@
 }
 .model3d-sphere-model-face1 {
 	position: absolute;
-	background-color: rgb(179,118,36);
+	background-color: rgb(208,63,86);
 	width: 137.7299952507019px;
 	height: 91.88693404197693px;
 	clip-path: polygon(32.350296px 91.88693px, 137.73px 3.148192px, 0.0px 0.0px);
@@ -30,7 +37,7 @@
 }
 .model3d-sphere-model-face2 {
 	position: absolute;
-	background-color: rgb(138,105,32);
+	background-color: rgb(56,5,24);
 	width: 94.58020448684692px;
 	height: 136.78319692611694px;
 	clip-path: polygon(16.42614px 0.0px, 0.0px 136.7832px, 94.58021px 113.45233px);
@@ -40,7 +47,7 @@
 }
 .model3d-sphere-model-face3 {
 	position: absolute;
-	background-color: rgb(183,120,3);
+	background-color: rgb(135,0,142);
 	width: 151.53815746307373px;
 	height: 164.1302490234375px;
 	clip-path: polygon(0.0px 39.241833px, 58.15836px 164.13025px, 151.53816px 136.382px, 132.05904px 0.0px);
@@ -50,7 +57,7 @@
 }
 .model3d-sphere-model-face4 {
 	position: absolute;
-	background-color: rgb(188,97,69);
+	background-color: rgb(93,203,145);
 	width: 167.55045175552368px;
 	height: 175.37701964378357px;
 	clip-path: polygon(0.0px 45.39725px, 45.658493px 175.37701px, 167.55045px 111.175705px, 86.19054px 0.0px);
@@ -60,7 +67,7 @@
 }
 .model3d-sphere-model-face5 {
 	position: absolute;
-	background-color: rgb(81,141,151);
+	background-color: rgb(225,165,38);
 	width: 137.75975704193115px;
 	height: 92.10169315338135px;
 	clip-path: polygon(0.0px 90.79213px, 137.75975px 92.10169px, 35.305996px 0.0px);
@@ -70,7 +77,7 @@
 }
 .model3d-sphere-model-face6 {
 	position: absolute;
-	background-color: rgb(9,221,173);
+	background-color: rgb(98,122,109);
 	width: 121.46145343780518px;
 	height: 129.09834623336792px;
 	clip-path: polygon(0.0px 0.0px, 48.094776px 129.09834px, 121.46146px 65.01207px);
@@ -80,7 +87,7 @@
 }
 .model3d-sphere-model-face7 {
 	position: absolute;
-	background-color: rgb(106,51,182);
+	background-color: rgb(60,221,165);
 	width: 171.91346168518066px;
 	height: 177.87227869033813px;
 	clip-path: polygon(0.0px 72.94612px, 89.2748px 177.87228px, 171.91347px 126.29151px, 116.86883px 0.0px);
@@ -90,7 +97,7 @@
 }
 .model3d-sphere-model-face8 {
 	position: absolute;
-	background-color: rgb(107,220,246);
+	background-color: rgb(198,120,28);
 	width: 171.89743280410767px;
 	height: 177.86388874053955px;
 	clip-path: polygon(0.0px 51.5556px, 55.00627px 177.86389px, 171.89743px 104.95307px, 82.65435px 0.0px);
@@ -100,7 +107,7 @@
 }
 .model3d-sphere-model-face9 {
 	position: absolute;
-	background-color: rgb(48,240,164);
+	background-color: rgb(162,142,204);
 	width: 121.4558207988739px;
 	height: 129.10272359848022px;
 	clip-path: polygon(0.0px 64.07981px, 121.45582px 129.10272px, 73.37263px 0.0px);
@@ -110,7 +117,7 @@
 }
 .model3d-sphere-model-face10 {
 	position: absolute;
-	background-color: rgb(94,183,205);
+	background-color: rgb(31,64,159);
 	width: 137.76057243347168px;
 	height: 92.03037858009338px;
 	clip-path: polygon(0.0px 0.0px, 102.51761px 92.03038px, 137.76057px 1.21378px);
@@ -120,7 +127,7 @@
 }
 .model3d-sphere-model-face11 {
 	position: absolute;
-	background-color: rgb(169,22,117);
+	background-color: rgb(221,126,138);
 	width: 167.54636406898499px;
 	height: 175.3745412826538px;
 	clip-path: polygon(0.0px 64.19355px, 81.35261px 175.37454px, 167.54637px 129.98291px, 121.896355px 0.0px);
@@ -130,7 +137,7 @@
 }
 .model3d-sphere-model-face12 {
 	position: absolute;
-	background-color: rgb(60,206,130);
+	background-color: rgb(65,24,117);
 	width: 151.54538869857788px;
 	height: 164.13565635681152px;
 	clip-path: polygon(0.0px 27.755177px, 19.489462px 164.13565px, 151.5454px 124.88407px, 93.37771px 0.0px);
@@ -140,7 +147,7 @@
 }
 .model3d-sphere-model-face13 {
 	position: absolute;
-	background-color: rgb(93,111,96);
+	background-color: rgb(48,125,213);
 	width: 94.58099842071533px;
 	height: 136.78263902664185px;
 	clip-path: polygon(0.0px 23.327528px, 78.150154px 136.78264px, 94.581px 0.0px);
@@ -150,7 +157,7 @@
 }
 .model3d-sphere-model-face14 {
 	position: absolute;
-	background-color: rgb(48,241,78);
+	background-color: rgb(200,246,44);
 	width: 137.73612141609192px;
 	height: 91.82032942771912px;
 	clip-path: polygon(0.0px 88.954865px, 137.73611px 91.82033px, 105.19732px 0.0px);
@@ -160,7 +167,7 @@
 }
 .model3d-sphere-model-face15 {
 	position: absolute;
-	background-color: rgb(141,29,188);
+	background-color: rgb(213,14,141);
 	width: 141.657532453537px;
 	height: 156.39384627342224px;
 	clip-path: polygon(0.0px 26.559063px, 46.069637px 156.39384px, 141.65753px 137.61372px, 135.18161px 0.0px);
@@ -170,7 +177,7 @@
 }
 .model3d-sphere-model-face16 {
 	position: absolute;
-	background-color: rgb(124,41,40);
+	background-color: rgb(118,118,53);
 	width: 151.53815746307373px;
 	height: 164.1302490234375px;
 	clip-path: polygon(58.15836px 0.0px, 0.0px 124.88843px, 132.05904px 164.13025px, 151.53816px 27.748245px);
@@ -180,7 +187,7 @@
 }
 .model3d-sphere-model-face17 {
 	position: absolute;
-	background-color: rgb(126,242,105);
+	background-color: rgb(202,115,42);
 	width: 94.58020448684692px;
 	height: 136.78319692611694px;
 	clip-path: polygon(0.0px 0.0px, 16.42614px 136.7832px, 94.58021px 23.330862px);
@@ -190,7 +197,7 @@
 }
 .model3d-sphere-model-face18 {
 	position: absolute;
-	background-color: rgb(62,53,131);
+	background-color: rgb(112,190,232);
 	width: 137.7299952507019px;
 	height: 91.88693404197693px;
 	clip-path: polygon(137.73px 88.73874px, 32.350296px 0.0px, 0.0px 91.88693px);
@@ -200,7 +207,7 @@
 }
 .model3d-sphere-model-face19 {
 	position: absolute;
-	background-color: rgb(24,9,1);
+	background-color: rgb(230,188,238);
 	width: 141.65496826171875px;
 	height: 156.39168977737427px;
 	clip-path: polygon(6.4725404px 0.0px, 0.0px 137.61388px, 95.58837px 156.3917px, 141.65497px 26.556px);
@@ -210,7 +217,7 @@
 }
 .model3d-sphere-model-face20 {
 	position: absolute;
-	background-color: rgb(159,123,1);
+	background-color: rgb(252,168,143);
 	width: 167.55040884017944px;
 	height: 175.37701964378357px;
 	clip-path: polygon(45.658493px 0.0px, 0.0px 129.97977px, 86.19054px 175.37701px, 167.55042px 64.20134px);
@@ -220,7 +227,7 @@
 }
 .model3d-sphere-model-face21 {
 	position: absolute;
-	background-color: rgb(27,156,197);
+	background-color: rgb(28,254,19);
 	width: 171.91346168518066px;
 	height: 177.87219285964966px;
 	clip-path: polygon(89.2748px 0.0px, 0.0px 104.92616px, 116.86886px 177.8722px, 171.91347px 51.58076px);
@@ -230,7 +237,7 @@
 }
 .model3d-sphere-model-face22 {
 	position: absolute;
-	background-color: rgb(156,150,239);
+	background-color: rgb(134,216,94);
 	width: 121.46145343780518px;
 	height: 129.09834623336792px;
 	clip-path: polygon(48.094776px 0.0px, 0.0px 129.09834px, 121.46146px 64.08628px);
@@ -240,7 +247,7 @@
 }
 .model3d-sphere-model-face23 {
 	position: absolute;
-	background-color: rgb(44,133,207);
+	background-color: rgb(165,123,213);
 	width: 137.75975704193115px;
 	height: 92.10169315338135px;
 	clip-path: polygon(137.75975px 0.0px, 0.0px 1.3095644px, 35.305996px 92.10169px);
@@ -250,7 +257,7 @@
 }
 .model3d-sphere-model-face24 {
 	position: absolute;
-	background-color: rgb(250,122,111);
+	background-color: rgb(219,93,219);
 	width: 121.4558207988739px;
 	height: 129.1025948524475px;
 	clip-path: polygon(121.45582px 0.0px, 0.0px 65.02292px, 73.37258px 129.1026px);
@@ -260,7 +267,7 @@
 }
 .model3d-sphere-model-face25 {
 	position: absolute;
-	background-color: rgb(0,170,235);
+	background-color: rgb(213,105,102);
 	width: 171.89728260040283px;
 	height: 177.86381363868713px;
 	clip-path: polygon(55.00635px 0.0px, 0.0px 126.30821px, 82.65435px 177.86382px, 171.89728px 72.91063px);
@@ -270,7 +277,7 @@
 }
 .model3d-sphere-model-face26 {
 	position: absolute;
-	background-color: rgb(158,71,183);
+	background-color: rgb(148,175,78);
 	width: 167.54611730575562px;
 	height: 175.37433743476868px;
 	clip-path: polygon(81.35248px 0.0px, 0.0px 111.18098px, 121.8961px 175.37434px, 167.54611px 45.391598px);
@@ -280,7 +287,7 @@
 }
 .model3d-sphere-model-face27 {
 	position: absolute;
-	background-color: rgb(225,221,151);
+	background-color: rgb(216,168,210);
 	width: 137.76057243347168px;
 	height: 92.03037858009338px;
 	clip-path: polygon(102.51761px 0.0px, 0.0px 92.03038px, 137.76057px 90.81659px);
@@ -290,7 +297,7 @@
 }
 .model3d-sphere-model-face28 {
 	position: absolute;
-	background-color: rgb(130,35,82);
+	background-color: rgb(218,118,32);
 	width: 94.58097696304321px;
 	height: 136.78263902664185px;
 	clip-path: polygon(78.15012px 0.0px, 0.0px 113.454994px, 94.58098px 136.78264px);
@@ -300,7 +307,7 @@
 }
 .model3d-sphere-model-face29 {
 	position: absolute;
-	background-color: rgb(93,134,28);
+	background-color: rgb(177,51,108);
 	width: 151.54538869857788px;
 	height: 164.1356348991394px;
 	clip-path: polygon(19.489424px 0.0px, 0.0px 136.38046px, 93.37771px 164.13564px, 151.5454px 39.251568px);
@@ -310,7 +317,7 @@
 }
 .model3d-sphere-model-face30 {
 	position: absolute;
-	background-color: rgb(27,211,237);
+	background-color: rgb(160,58,245);
 	width: 141.65754318237305px;
 	height: 156.39382481575012px;
 	clip-path: polygon(46.069645px 0.0px, 0.0px 129.8346px, 135.18161px 156.39383px, 141.65755px 18.780098px);
@@ -320,7 +327,7 @@
 }
 .model3d-sphere-model-face31 {
 	position: absolute;
-	background-color: rgb(134,14,94);
+	background-color: rgb(1,198,46);
 	width: 137.73612141609192px;
 	height: 91.82032942771912px;
 	clip-path: polygon(137.73611px 0.0px, 0.0px 2.8654628px, 105.19732px 91.82033px);
