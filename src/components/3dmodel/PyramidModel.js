@@ -10,12 +10,11 @@ const PyramidModel = (props) => {
 	/*** Event Handlers ***/
 	/*** Main Render ***/
 	return <div className='model3d-pyramid-model-container'>
-		<div className='model3d-pyramid-model-subcontainer'>
-			<div className='model3d-pyramid-model-side1'/>
-			<div className='model3d-pyramid-model-side2'/>
-			<div className='model3d-pyramid-model-side3'/>
-			<div className='model3d-pyramid-model-side4'/>
-		</div>
+			<div className='model3d-pyramid-model-child1' />
+			<div className='model3d-pyramid-model-child2'>
+				123
+			</div>
+		
 	</div>;
 }
 PyramidModel.propTypes = propTypes;

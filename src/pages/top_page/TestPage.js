@@ -37,6 +37,7 @@ import {
 	VirtualKey,
 	DropDownMultiSelect,
 	PyramidModel,
+	Plane,
 	MagicNavigationMenu
 } from '../../components';
 import "./TestPage.css";
@@ -417,7 +418,7 @@ function TestPage() {
 	const renderPyramidModel = () => {
 		return <>
 			<label className='test-page-label'>PYRAMID MODEL</label>
-			<PyramidModel />
+			<Plane />
 		</>
 	}
 
@@ -474,6 +475,7 @@ function TestPage() {
 			{renderDropDownSelect()}
 			{renderDropDownMultiSelect()}
 			{renderVirtualKey()}
+			{renderPyramidModel()}
 			{renderMagicNavigationMenu()}
 		</div>
 	</div>
