@@ -1,6 +1,7 @@
 import numpy as np
 
-def load_data(obj_file):
+def load_data(obj_file, color_file):
+	# load point positions
 	f = open(obj_file)
 	s = f.read()
 	f.close()
@@ -31,7 +32,20 @@ def load_data(obj_file):
 			norm = vertex_norms[norm_id-1]
 			norm = norm[[0,2,1]]
 			current_obj.append({"face": face, "norm": norm})
-	return objs
+	# load colors
+	colors = {}
+	if color_file:
+		f = open(color_file, "r")
+		elements = f.read()
+		f.close()
+		elements = elements.split("\n")
+		for element in elements:
+			object_name, r, g, b = element.split(" ")
+			colors[object_name] = np.float32([r,g,b])
+	for object_name in objs.keys():
+		if object_name not in colors.keys():
+			colors[object_name] = np.float32([255,255,255])
+	return objs, colors
 
 def make_rotation_matx(angle):
 	return np.float32([
@@ -53,46 +67,6 @@ def make_rotation_matz(angle):
 		[np.sin(angle), np.cos(angle), 0],
 		[0, 0, 1]
 	])
-
-'''
-def compute_rotate(face_norm):
-	# init norm : [0,0,1]
-	# after rotate rx: 
-	# [1        0         0       ]
-	# [0        cos(rx)   -sin(rx)]
-	# [0        sin(rx)   cos(rx) ]
-
-	# after rotate ry: 
-	# [cos(ry)   0         sin(ry)]
-	# [0         1         0      ]
-	# [-sin(ry)  0         cos(ry)]
-
-	# after rotate rz: 
-	# [cos(rz)   -sin(rz)  0]
-	# [sin(rz)   cos(rz)   0]
-	# [0         0         1]
-
-	# rotatet ry, rz : rz * ry
-	# [cos(rz)*cos(ry) -sin(rz) cos(rz)*sin(ry)]
-	# [sin(rz)*cos(ry) cos(rz)  sin(rz)*sin(ry)]
-	# [-sin(ry)        0        cos(ry)]
-	# (1, 0, 0) => first column
-
-
-	# find ry and rz (rz=0) to rotate (0,0,1) to face_norm
-	ry = np.arcsin(-face_norm[2])
-	cos_ry = np.cos(ry)
-	sin_rz = face_norm[1]/(cos_ry+1e-4)
-	cos_rz = face_norm[0]/(cos_ry+1e-4)
-	rz = np.arcsin(sin_rz)
-	if cos_rz>0 and (rz<-np.pi/2 or rz>np.pi/2):
-		rz = np.pi - rz
-	elif cos_rz<0 and (rz>-np.pi/2 and rz<np.pi/2): 
-		rz = np.pi - rz
-	rt = np.matmul(make_rotation_maty(-ry), make_rotation_matz(-rz))
-	r = np.linalg.inv(rt)
-	return rt, r
-'''
 
 def compute_rotate(face_norm):
 	# init norm : [0,0,1]
@@ -164,30 +138,21 @@ def compute_css_rotate(face_points, face_norm):
 	dz = np.mean(ori_points[2])
 	bounds = ori_points.T[:,:2]
 	mat_rz = np.matmul(r, np.linalg.inv(mat_r_xy)) # mat_rz
-	#print("------ MAT R ------\n", r)
-	print("------ MAT R_XY ------\n", mat_r_xy)
-	print("------ MAT RZ 1 ------\n", mat_rz)
-	# 0.sin_a + (wx**2 - 1)cos_a = mat_rx[0,0] - wx**2
-	# wz*sin_a - wx*wy*cos_a     = mat_rx[1,0] - wx*wy
 	wx, wy, wz = face_norm
 	try:
 		a = np.float32([[wz, -wx*wy],[-wy, -wx*wz]])
 		b = np.float32([mat_rz[1,0]-wx*wy, mat_rz[2,0]-wx*wz])
-		print("----- A, B -----\n", a, "\n", b)
 		temp_sin_rz, temp_cos_rz = np.linalg.solve(a, b)
 		sin_rz = temp_sin_rz/np.sqrt(temp_sin_rz**2 + temp_cos_rz**2)
 		cos_rz = temp_cos_rz/np.sqrt(temp_sin_rz**2 + temp_cos_rz**2)
 		rz = np.arcsin(sin_rz)
-		print("----- SIN, COS, RZ -----\n", sin_rz, "\n", cos_rz, "\n", rz)
 		if cos_rz>0 and (rz<-np.pi/2 or rz>np.pi/2):
 			rz = np.pi - rz
 		elif cos_rz<0 and (rz>-np.pi/2 and rz<np.pi/2): 
 			rz = np.pi - rz
 	except:
 		rz = 0
-	print("----- NORM ----\n", face_norm)
 	mat_rz = make_rodrigue_rotation_mat(face_norm, rz)
-	print("------ MAT RZ 2 ------\n", mat_rz)
 	r_css = np.matmul(mat_rz, mat_r_xy)
 	return {
 		"transform_mat": r_css,
@@ -200,24 +165,27 @@ def compute_css_rotate(face_points, face_norm):
 		}
 	}
 
-def write_files(objects, file_name):
+def write_files(objects, colors, file_name):
 	VIEW_SIZE = 360
 	css_text = '.model3d-' + file_name.lower() + '-model-container {\n'
-	css_text += '\twidth: ' + str(VIEW_SIZE) + 'px;\n'
-	css_text += '\theight: ' + str(VIEW_SIZE) + 'px;\n'
-	css_text += '\tperspective: 1200px;\n'
+	css_text += '\twidth: ' + str('{:.2f}'.format(VIEW_SIZE)) + 'px;\n'
+	css_text += '\theight: ' + str('{:.2f}'.format(VIEW_SIZE)) + 'px;\n'
+	css_text += '\tperspective: 10000px;\n'
 	css_text += '\ttransform-style: preserve-3d;\n'
 	css_text += '\tperspective-origin: 50% 50%;\n'
 	css_text += '\tdisplay: flex;\n'
 	css_text += '\tjustify-content: center;\n'
 	css_text += '\talign-items: center;\n'
+	css_text += '\ttransform-origin: 50% 50%;\n'
+	css_text += '\tanimation: rotate360 10s infinite linear;\n'
 	css_text += '}\n'
-	css_text += '.model3d-' + file_name.lower() + '-model-origin {\n'
-	css_text += '\twidth: 0px;\n'
-	css_text += '\theight: 0px;\n'
-	css_text += '\tperspective: 1200px;\n'
-	css_text += '\ttransform-style: preserve-3d;\n'
-	css_text += '\tperspective-origin: 50% 50%;\n'
+	css_text += '@keyframes rotate360 {\n'
+	css_text += '\tfrom {\n'
+	css_text += '\t\ttransform: rotateY(0deg);\n'
+	css_text += '\t}\n'
+	css_text += '\tto {\n'
+	css_text += '\t\ttransform: rotateY(360deg);\n'
+	css_text += '\t}\n'
 	css_text += '}\n'
 	js_text = 'import React from "react";\n'
 	js_text += 'import PropTypes from "prop-types";\n'
@@ -226,21 +194,25 @@ def write_files(objects, file_name):
 	js_text += 'const defaultProps={};\n'
 	js_text += 'const ' + file_name + ' = (props) => {\n'
 	js_text += '\treturn <div className="model3d-' + file_name.lower() + '-model-container">\n'
-	js_text += '\t\t<div className="model3d-' + file_name.lower() + '-model-origin">\n'
-
+	
 	for object_name in objects.keys():
 		object = objects[object_name]
 		count = 0
+		color = colors[object_name]
 		for plane in object:
 			norm = plane['norm']
 			face = plane['face']
+			
 			para = compute_css_rotate(face, norm)
-			classname = 'model3d-' + object_name.lower() + '-model-face' + str(count)
+			classname = 'model3d-' + file_name.lower() + '-model-' + object_name.lower() + '-face' + str(count)
 			count += 1
-			js_text += '\t\t\t<div className="' + classname + '"/>\n'
+			js_text += '\t\t<div className="' + classname + '"/>\n'
 			css_text += '.' + classname + ' {\n'
 			css_text += '\tposition: absolute;\n'
-			css_text += '\tbackground-color: rgb(' + str(np.random.randint(255)) + ',' +str(np.random.randint(255)) + ',' +str(np.random.randint(255)) + ');\n'
+			color_shade = (np.sum(np.float32([-1,-1,1])*norm)/np.sqrt(3) + 1) / 2
+			color_shade = 0.6 + 0.35*color_shade
+			r,g,b = color * color_shade
+			css_text += '\tbackground-color: rgb(' + str('{:.2f}'.format(r)) + ',' +str('{:.2f}'.format(g)) + ',' +str('{:.2f}'.format(b)) + ');\n'
 			min_x = np.min(para["bounds"][:,0])
 			max_x = np.max(para["bounds"][:,0])
 			min_y = np.min(para["bounds"][:,1])
@@ -250,36 +222,28 @@ def write_files(objects, file_name):
 			center_y = (max_y + min_y)/2
 			ori_center = np.matmul(para["transform_mat"], [[center_x], [center_y], [para["z"]]])
 			ori_center = np.reshape(ori_center, [3]) * VIEW_SIZE/2
-			print("---------", object_name, "ORI_CENTER", "---------")
-			print(para["bounds"])
-			print(min_x, max_x, min_y, max_y)
-			print(center_x, center_y, para["z"])
-			print(ori_center)
-			print(para["transform_mat"])
-
+			
 			xs = (para["bounds"][:,0] - min_x) * (VIEW_SIZE/2)
 			ys = (para["bounds"][:,1] - min_y) * (VIEW_SIZE/2)
 			width = (max_x-min_x)*VIEW_SIZE/2
 			height = (max_y-min_y)*VIEW_SIZE/2
-			css_text += '\twidth: ' + str(width) + 'px;\n'
-			css_text += '\theight: ' + str(height) + 'px;\n'
+			css_text += '\twidth: ' + str('{:.2f}'.format(width)) + 'px;\n'
+			css_text += '\theight: ' + str('{:.2f}'.format(height)) + 'px;\n'
 			bounds = list(zip(xs,ys))
-			bounds = [str(point[0])+'px ' + str(point[1])+'px' for point in bounds]
+			bounds = [str('{:.2f}'.format(point[0]))+'px ' + str('{:.2f}'.format(point[1]))+'px' for point in bounds]
 			bounds = 'polygon(' + (', '.join(bounds)) + ')'
 			css_text += '\tclip-path: ' + bounds + ';\n'
 			css_text += '\ttop: 50%;\n'
 			css_text += '\tleft: 50%;\n'
-			transition = 'translateX(' + str(ori_center[0] - width/2) + 'px) translateY('+ str(ori_center[1] - height/2) + 'px) translateZ(' + str(ori_center[2]) + 'px)'
+			transition = 'translateX(' + str('{:.2f}'.format(ori_center[0] - width/2)) + 'px) translateY('+ str('{:.2f}'.format(ori_center[1] - height/2)) + 'px) translateZ(' + str('{:.2f}'.format(ori_center[2])) + 'px)'
 			rx, ry, rz = para["rotation"]["x"], para["rotation"]["y"], para["rotation"]["z"]
 			rx = rx / np.pi * 180
 			ry = ry / np.pi*180
 			rz = rz / np.pi*180
-			rotation = 'rotateX(' + str(rx) + 'deg) rotateY(' + str(ry) + 'deg) rotateZ(' + str(rz) + 'deg)' 
+			rotation = 'rotateX(' + str('{:.2f}'.format(rx)) + 'deg) rotateY(' + str('{:.2f}'.format(ry)) + 'deg) rotateZ(' + str('{:.2f}'.format(rz)) + 'deg)' 
 			css_text += '\ttransform: ' + transition + ' ' + rotation + '\n'
 			css_text += '}\n'
 
-
-	js_text += '\t\t</div>\n'
 	js_text += '\t</div>\n'
 	js_text += '}\n'
 	js_text += file_name + '.propTypes = propTypes;\n'
@@ -294,8 +258,7 @@ def write_files(objects, file_name):
 	css_file.write(css_text)
 	css_file.close()
 
-objs = load_data('plane.obj')
-
+objs, colors = load_data('Christmax.obj', 'Christmax.txt')
 # face = objs["Plane2"][0]["face"]
 # norm = objs["Plane2"][0]["norm"]
 # rt, r = compute_rotate(norm)
@@ -311,5 +274,5 @@ objs = load_data('plane.obj')
 # print("----- ROT MAT 2 -----\n", para["transform_mat"])
 # print("----- ROT ANGLES -----\n", para["rotation"])
 
-#print(objs)
-write_files(objs, "Plane")
+#print(colors)
+write_files(objs, colors, "ChristmaxModel")

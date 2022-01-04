@@ -9,7 +9,7 @@
 .magic-navigation-menu-bottom-filler {
   width: 100%;
   height: 12px;
-  background-color: red;
+  background-color: var(--base-red);
   position: absolute;
   bottom: 0px;
 }
@@ -19,14 +19,16 @@
   bottom: 12px;
   height: 36px;
   width: 10px;
-  background-color: red;
+  background-color: var(--base-red);
+  transition: width 200ms;
 }
-
 .magic-navigation-menu-top-left-filler {
   left: 0px;
+  clip-path: polygon(0% 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%);
 }
 .magic-navigation-menu-top-right-filler {
   right: 0px;
+  clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .magic-navigation-menu-buttons-container {
   width: 100%;
@@ -62,18 +64,32 @@
 }
 .magic-navigation-menu-selected-button {
   height: 60px;
-  padding-bottom: 28px;
+  padding-bottom: 40px;
   bottom: 0px;
 }
 .magic-navigation-menu-indicator {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: transparent;
   transition: all 200ms;
-  bottom: 4px;
+  bottom: 8px;
   transform: translateX(-50%);
-  border: solid 20px red;
-  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100% )
+  border: solid 15px var(--base-red);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+  transition: all 200ms;
+}
+.magic-navigation-menu-icon,
+.magic-navigation-menu-selected-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+}
+.magic-navigation-menu-selected-icon {
+  background-color: var(--base-red);
 }

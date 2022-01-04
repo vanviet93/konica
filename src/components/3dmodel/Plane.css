@@ -1,337 +1,340 @@
 .model3d-plane-model-container {
-	width: 360px;
-	height: 360px;
+	width: 360.00px;
+	height: 360.00px;
 	perspective: 1200px;
 	transform-style: preserve-3d;
 	perspective-origin: 50% 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transform-origin: 50% 50%;
+	animation: rotate360 10s infinite linear;
 }
-.model3d-plane-model-origin {
-	width: 0px;
-	height: 0px;
-	perspective: 1200px;
-	transform-style: preserve-3d;
-	perspective-origin: 50% 50%;
+@keyframes rotate360 {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
 }
-.model3d-sphere-model-face0 {
+.model3d-plane-model-sphere-face0 {
 	position: absolute;
-	background-color: rgb(1,7,24);
-	width: 141.65496826171875px;
-	height: 156.39168977737427px;
-	clip-path: polygon(0.0px 18.777819px, 6.4725404px 156.3917px, 141.65497px 129.8357px, 95.58837px 0.0px);
+	background-color: rgb(177.72,177.72,177.72);
+	width: 141.65px;
+	height: 156.39px;
+	clip-path: polygon(0.00px 18.78px, 6.47px 156.39px, 141.65px 129.84px, 95.59px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(37.25621510192484px) translateY(-65.80924450326954px) translateZ(111.34860472062319px) rotateX(-9.257220061788502deg) rotateY(40.73035437941573deg) rotateZ(6.070631819238191deg)
+	transform: translateX(37.26px) translateY(-65.81px) translateZ(111.35px) rotateX(-9.26deg) rotateY(40.73deg) rotateZ(6.07deg)
 }
-.model3d-sphere-model-face1 {
+.model3d-plane-model-sphere-face1 {
 	position: absolute;
-	background-color: rgb(208,63,86);
-	width: 137.7299952507019px;
-	height: 91.88693404197693px;
-	clip-path: polygon(32.350296px 91.88693px, 137.73px 3.148192px, 0.0px 0.0px);
+	background-color: rgb(141.49,141.49,141.49);
+	width: 137.73px;
+	height: 91.89px;
+	clip-path: polygon(32.35px 91.89px, 137.73px 3.15px, 0.00px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-61.5695741875965px) translateY(118.60018362775895px) translateZ(-13.49828437094681px) rotateX(259.8842373695839deg) rotateY(5.911950063940461deg) rotateZ(150.0013515420059deg)
+	transform: translateX(-61.57px) translateY(118.60px) translateZ(-13.50px) rotateX(259.88deg) rotateY(5.91deg) rotateZ(150.00deg)
 }
-.model3d-sphere-model-face2 {
+.model3d-plane-model-sphere-face2 {
 	position: absolute;
-	background-color: rgb(56,5,24);
-	width: 94.58020448684692px;
-	height: 136.78319692611694px;
-	clip-path: polygon(16.42614px 0.0px, 0.0px 136.7832px, 94.58021px 113.45233px);
+	background-color: rgb(204.09,204.09,204.09);
+	width: 94.58px;
+	height: 136.78px;
+	clip-path: polygon(16.43px 0.00px, 0.00px 136.78px, 94.58px 113.45px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(31.23242222820869px) translateY(-169.62256941625543px) translateZ(103.67527058876018px) rotateX(41.36838948389337deg) rotateY(24.525614460344592deg) rotateZ(-20.080040684130495deg)
+	transform: translateX(31.23px) translateY(-169.62px) translateZ(103.68px) rotateX(41.37deg) rotateY(24.53deg) rotateZ(-20.08deg)
 }
-.model3d-sphere-model-face3 {
+.model3d-plane-model-sphere-face3 {
 	position: absolute;
-	background-color: rgb(135,0,142);
-	width: 151.53815746307373px;
-	height: 164.1302490234375px;
-	clip-path: polygon(0.0px 39.241833px, 58.15836px 164.13025px, 151.53816px 136.382px, 132.05904px 0.0px);
+	background-color: rgb(153.20,153.20,153.20);
+	width: 151.54px;
+	height: 164.13px;
+	clip-path: polygon(0.00px 39.24px, 58.16px 164.13px, 151.54px 136.38px, 132.06px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-1.004024428590057px) translateY(36.68766318040275px) translateZ(67.17494720999079px) rotateX(-60.925703520207094deg) rotateY(32.0257290747197deg) rotateZ(43.644455236140296deg)
+	transform: translateX(-1.00px) translateY(36.69px) translateZ(67.17px) rotateX(-60.93deg) rotateY(32.03deg) rotateZ(43.64deg)
 }
-.model3d-sphere-model-face4 {
+.model3d-plane-model-sphere-face4 {
 	position: absolute;
-	background-color: rgb(93,203,145);
-	width: 167.55045175552368px;
-	height: 175.37701964378357px;
-	clip-path: polygon(0.0px 45.39725px, 45.658493px 175.37701px, 167.55045px 111.175705px, 86.19054px 0.0px);
+	background-color: rgb(158.38,158.38,158.38);
+	width: 167.55px;
+	height: 175.38px;
+	clip-path: polygon(0.00px 45.40px, 45.66px 175.38px, 167.55px 111.18px, 86.19px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(68.5259311011404px) translateY(-110.98147440405705px) translateZ(20.462070714574104px) rotateX(38.625638735072435deg) rotateY(77.90458442784266deg) rotateZ(-37.999956591392184deg)
+	transform: translateX(68.53px) translateY(-110.98px) translateZ(20.46px) rotateX(38.63deg) rotateY(77.90deg) rotateZ(-38.00deg)
 }
-.model3d-sphere-model-face5 {
+.model3d-plane-model-sphere-face5 {
 	position: absolute;
-	background-color: rgb(225,165,38);
-	width: 137.75975704193115px;
-	height: 92.10169315338135px;
-	clip-path: polygon(0.0px 90.79213px, 137.75975px 92.10169px, 35.305996px 0.0px);
+	background-color: rgb(133.02,133.02,133.02);
+	width: 137.76px;
+	height: 92.10px;
+	clip-path: polygon(0.00px 90.79px, 137.76px 92.10px, 35.31px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-20.006581550434177px) translateY(86.99880096112727px) translateZ(-85.19868830017705px) rotateX(243.62790757209245deg) rotateY(14.211384214522417deg) rotateZ(153.6571372912848deg)
+	transform: translateX(-20.01px) translateY(87.00px) translateZ(-85.20px) rotateX(243.63deg) rotateY(14.21deg) rotateZ(153.66deg)
 }
-.model3d-sphere-model-face6 {
+.model3d-plane-model-sphere-face6 {
 	position: absolute;
-	background-color: rgb(98,122,109);
-	width: 121.46145343780518px;
-	height: 129.09834623336792px;
-	clip-path: polygon(0.0px 0.0px, 48.094776px 129.09834px, 121.46146px 65.01207px);
+	background-color: rgb(195.62,195.62,195.62);
+	width: 121.46px;
+	height: 129.10px;
+	clip-path: polygon(0.00px 0.00px, 48.09px 129.10px, 121.46px 65.01px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(43.472224072322206px) translateY(-175.1004382278015px) translateZ(64.28526976915697px) rotateX(59.05399763944959deg) rotateY(33.88998481244508deg) rotateZ(-42.92240577775662deg)
+	transform: translateX(43.47px) translateY(-175.10px) translateZ(64.29px) rotateX(59.05deg) rotateY(33.89deg) rotateZ(-42.92deg)
 }
-.model3d-sphere-model-face7 {
+.model3d-plane-model-sphere-face7 {
 	position: absolute;
-	background-color: rgb(60,221,165);
-	width: 171.91346168518066px;
-	height: 177.87227869033813px;
-	clip-path: polygon(0.0px 72.94612px, 89.2748px 177.87228px, 171.91347px 126.29151px, 116.86883px 0.0px);
+	background-color: rgb(133.86,133.86,133.86);
+	width: 171.91px;
+	height: 177.87px;
+	clip-path: polygon(0.00px 72.95px, 89.27px 177.87px, 171.91px 126.29px, 116.87px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(46.74639507232783px) translateY(-11.32125632189694px) translateZ(-22.62547765936464px) rotateX(250.57101382843922deg) rotateY(58.82608339662367deg) rotateZ(112.40409173430946deg)
+	transform: translateX(46.75px) translateY(-11.32px) translateZ(-22.63px) rotateX(250.57deg) rotateY(58.83deg) rotateZ(112.40deg)
 }
-.model3d-sphere-model-face8 {
+.model3d-plane-model-sphere-face8 {
 	position: absolute;
-	background-color: rgb(198,120,28);
-	width: 171.89743280410767px;
-	height: 177.86388874053955px;
-	clip-path: polygon(0.0px 51.5556px, 55.00627px 177.86389px, 171.89743px 104.95307px, 82.65435px 0.0px);
+	background-color: rgb(158.01,158.01,158.01);
+	width: 171.90px;
+	height: 177.86px;
+	clip-path: polygon(0.00px 51.56px, 55.01px 177.86px, 171.90px 104.95px, 82.65px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(30.273643679486597px) translateY(-166.54346971496366px) translateZ(-67.88444968465431px) rotateX(130.5703533324121deg) rotateY(50.00495214016016deg) rotateZ(221.8209334040552deg)
+	transform: translateX(30.27px) translateY(-166.54px) translateZ(-67.88px) rotateX(130.57deg) rotateY(50.00deg) rotateZ(221.82deg)
 }
-.model3d-sphere-model-face9 {
+.model3d-plane-model-sphere-face9 {
 	position: absolute;
-	background-color: rgb(162,142,204);
-	width: 121.4558207988739px;
-	height: 129.10272359848022px;
-	clip-path: polygon(0.0px 64.07981px, 121.45582px 129.10272px, 73.37263px 0.0px);
+	background-color: rgb(132.85,132.85,132.85);
+	width: 121.46px;
+	height: 129.10px;
+	clip-path: polygon(0.00px 64.08px, 121.46px 129.10px, 73.37px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-22.231673521190572px) translateY(46.01636509184203px) translateZ(-116.2350396988742px) rotateX(226.09051340508034deg) rotateY(8.7892257353031deg) rotateZ(170.98068315087045deg)
+	transform: translateX(-22.23px) translateY(46.02px) translateZ(-116.24px) rotateX(226.09deg) rotateY(8.79deg) rotateZ(170.98deg)
 }
-.model3d-sphere-model-face10 {
+.model3d-plane-model-sphere-face10 {
 	position: absolute;
-	background-color: rgb(31,64,159);
-	width: 137.76057243347168px;
-	height: 92.03037858009338px;
-	clip-path: polygon(0.0px 0.0px, 102.51761px 92.03038px, 137.76057px 1.21378px);
+	background-color: rgb(195.45,195.45,195.45);
+	width: 137.76px;
+	height: 92.03px;
+	clip-path: polygon(0.00px 0.00px, 102.52px 92.03px, 137.76px 1.21px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(23.339756573125015px) translateY(-179.05895329755958px) translateZ(33.82220195180775px) rotateX(78.7915957270836deg) rotateY(27.697279395784417deg) rotateZ(-66.9100447561158deg)
+	transform: translateX(23.34px) translateY(-179.06px) translateZ(33.82px) rotateX(78.79deg) rotateY(27.70deg) rotateZ(-66.91deg)
 }
-.model3d-sphere-model-face11 {
+.model3d-plane-model-sphere-face11 {
 	position: absolute;
-	background-color: rgb(221,126,138);
-	width: 167.54636406898499px;
-	height: 175.3745412826538px;
-	clip-path: polygon(0.0px 64.19355px, 81.35261px 175.37454px, 167.54637px 129.98291px, 121.896355px 0.0px);
+	background-color: rgb(133.49,133.49,133.49);
+	width: 167.55px;
+	height: 175.37px;
+	clip-path: polygon(0.00px 64.19px, 81.35px 175.37px, 167.55px 129.98px, 121.90px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(19.677571648346543px) translateY(-64.39531145414706px) translateZ(-113.60626460028382px) rotateX(189.8427123032947deg) rotateY(40.07576612483464deg) rotateZ(173.62660134187703deg)
+	transform: translateX(19.68px) translateY(-64.40px) translateZ(-113.61px) rotateX(189.84deg) rotateY(40.08deg) rotateZ(173.63deg)
 }
-.model3d-sphere-model-face12 {
+.model3d-plane-model-sphere-face12 {
 	position: absolute;
-	background-color: rgb(65,24,117);
-	width: 151.54538869857788px;
-	height: 164.13565635681152px;
-	clip-path: polygon(0.0px 27.755177px, 19.489462px 164.13565px, 151.5454px 124.88407px, 93.37771px 0.0px);
+	background-color: rgb(176.82,176.82,176.82);
+	width: 151.55px;
+	height: 164.14px;
+	clip-path: polygon(0.00px 27.76px, 19.49px 164.14px, 151.55px 124.88px, 93.38px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-61.68880125534261px) translateY(-200.8327791559647px) translateZ(-99.5344359936078px) rotateX(131.53981644410646deg) rotateY(8.128865970873342deg) rotateZ(189.06792846463082deg)
+	transform: translateX(-61.69px) translateY(-200.83px) translateZ(-99.53px) rotateX(131.54deg) rotateY(8.13deg) rotateZ(189.07deg)
 }
-.model3d-sphere-model-face13 {
+.model3d-plane-model-sphere-face13 {
 	position: absolute;
-	background-color: rgb(48,125,213);
-	width: 94.58099842071533px;
-	height: 136.78263902664185px;
-	clip-path: polygon(0.0px 23.327528px, 78.150154px 136.78264px, 94.581px 0.0px);
+	background-color: rgb(141.10,141.10,141.10);
+	width: 94.58px;
+	height: 136.78px;
+	clip-path: polygon(0.00px 23.33px, 78.15px 136.78px, 94.58px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-53.79376183162631px) translateY(32.86168052335513px) translateZ(-129.92345729385852px) rotateX(217.27968183237417deg) rotateY(-6.944046715929572deg) rotateZ(185.25831098892158deg)
+	transform: translateX(-53.79px) translateY(32.86px) translateZ(-129.92px) rotateX(217.28deg) rotateY(-6.94deg) rotateZ(185.26deg)
 }
-.model3d-sphere-model-face14 {
+.model3d-plane-model-sphere-face14 {
 	position: absolute;
-	background-color: rgb(200,246,44);
-	width: 137.73612141609192px;
-	height: 91.82032942771912px;
-	clip-path: polygon(0.0px 88.954865px, 137.73611px 91.82033px, 105.19732px 0.0px);
+	background-color: rgb(203.69,203.69,203.69);
+	width: 137.74px;
+	height: 91.82px;
+	clip-path: polygon(0.00px 88.95px, 137.74px 91.82px, 105.20px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-54.66036548309512px) translateY(-210.47788696789405px) translateZ(5.499270473042497px) rotateX(86.050793417986deg) rotateY(11.02282309862327deg) rotateZ(-70.14704489842507deg)
+	transform: translateX(-54.66px) translateY(-210.48px) translateZ(5.50px) rotateX(86.05deg) rotateY(11.02deg) rotateZ(-70.15deg)
 }
-.model3d-sphere-model-face15 {
+.model3d-plane-model-sphere-face15 {
 	position: absolute;
-	background-color: rgb(213,14,141);
-	width: 141.657532453537px;
-	height: 156.39384627342224px;
-	clip-path: polygon(0.0px 26.559063px, 46.069637px 156.39384px, 141.65753px 137.61372px, 135.18161px 0.0px);
+	background-color: rgb(152.30,152.30,152.30);
+	width: 141.66px;
+	height: 156.39px;
+	clip-path: polygon(0.00px 26.56px, 46.07px 156.39px, 141.66px 137.61px, 135.18px 0.00px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-59.61861642104916px) translateY(-90.58592738296534px) translateZ(-154.79853230607554px) rotateX(172.9972356777061deg) rotateY(1.1001465737418874deg) rotateZ(180.1351263401731deg)
+	transform: translateX(-59.62px) translateY(-90.59px) translateZ(-154.80px) rotateX(173.00deg) rotateY(1.10deg) rotateZ(180.14deg)
 }
-.model3d-sphere-model-face16 {
+.model3d-plane-model-sphere-face16 {
 	position: absolute;
-	background-color: rgb(118,118,53);
-	width: 151.53815746307373px;
-	height: 164.1302490234375px;
-	clip-path: polygon(58.15836px 0.0px, 0.0px 124.88843px, 132.05904px 164.13025px, 151.53816px 27.748245px);
+	background-color: rgb(203.80,203.80,203.80);
+	width: 151.54px;
+	height: 164.13px;
+	clip-path: polygon(58.16px 0.00px, 0.00px 124.89px, 132.06px 164.13px, 151.54px 27.75px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-150.53658539887266px) translateY(-200.82496200697148px) translateZ(-67.18216670435967px) rotateX(119.07429647979289deg) rotateY(-32.0257290747197deg) rotateZ(136.3555450742289deg)
+	transform: translateX(-150.54px) translateY(-200.82px) translateZ(-67.18px) rotateX(119.07deg) rotateY(-32.03deg) rotateZ(136.36deg)
 }
-.model3d-sphere-model-face17 {
+.model3d-plane-model-sphere-face17 {
 	position: absolute;
-	background-color: rgb(202,115,42);
-	width: 94.58020448684692px;
-	height: 136.78319692611694px;
-	clip-path: polygon(0.0px 0.0px, 16.42614px 136.7832px, 94.58021px 23.330862px);
+	background-color: rgb(152.91,152.91,152.91);
+	width: 94.58px;
+	height: 136.78px;
+	clip-path: polygon(0.00px 0.00px, 16.43px 136.78px, 94.58px 23.33px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-125.81831305964889px) translateY(32.85557243975032px) translateZ(-103.69695477227488px) rotateX(221.36838948389337deg) rotateY(-24.525614460344592deg) rotateZ(200.08004145791278deg)
+	transform: translateX(-125.82px) translateY(32.86px) translateZ(-103.70px) rotateX(221.37deg) rotateY(-24.53deg) rotateZ(200.08deg)
 }
-.model3d-sphere-model-face18 {
+.model3d-plane-model-sphere-face18 {
 	position: absolute;
-	background-color: rgb(112,190,232);
-	width: 137.7299952507019px;
-	height: 91.88693404197693px;
-	clip-path: polygon(137.73px 88.73874px, 32.350296px 0.0px, 0.0px 91.88693px);
+	background-color: rgb(215.51,215.51,215.51);
+	width: 137.73px;
+	height: 91.89px;
+	clip-path: polygon(137.73px 88.74px, 32.35px 0.00px, 0.00px 91.89px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-76.16099108044753px) translateY(-210.49776812506232px) translateZ(13.500525826318839px) rotateX(79.88423736958391deg) rotateY(-5.911950063940461deg) rotateZ(29.998648059354686deg)
+	transform: translateX(-76.16px) translateY(-210.50px) translateZ(13.50px) rotateX(79.88deg) rotateY(-5.91deg) rotateZ(30.00deg)
 }
-.model3d-sphere-model-face19 {
+.model3d-plane-model-sphere-face19 {
 	position: absolute;
-	background-color: rgb(230,188,238);
-	width: 141.65496826171875px;
-	height: 156.39168977737427px;
-	clip-path: polygon(6.4725404px 0.0px, 0.0px 137.61388px, 95.58837px 156.3917px, 141.65497px 26.556px);
+	background-color: rgb(179.28,179.28,179.28);
+	width: 141.65px;
+	height: 156.39px;
+	clip-path: polygon(6.47px 0.00px, 0.00px 137.61px, 95.59px 156.39px, 141.65px 26.56px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-178.9080531075429px) translateY(-90.58129459114065px) translateZ(-111.33896630334536px) rotateX(170.74277993821153deg) rotateY(-40.73035437941573deg) rotateZ(173.9293706108832deg)
+	transform: translateX(-178.91px) translateY(-90.58px) translateZ(-111.34px) rotateX(170.74deg) rotateY(-40.73deg) rotateZ(173.93deg)
 }
-.model3d-sphere-model-face20 {
+.model3d-plane-model-sphere-face20 {
 	position: absolute;
-	background-color: rgb(252,168,143);
-	width: 167.55040884017944px;
-	height: 175.37701964378357px;
-	clip-path: polygon(45.658493px 0.0px, 0.0px 129.97977px, 86.19054px 175.37701px, 167.55042px 64.20134px);
+	background-color: rgb(198.62,198.62,198.62);
+	width: 167.55px;
+	height: 175.38px;
+	clip-path: polygon(45.66px 0.00px, 0.00px 129.98px, 86.19px 175.38px, 167.55px 64.20px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-236.07619620519245px) translateY(-64.39556725750546px) translateZ(-20.46145638223881px) rotateX(218.62563873507244deg) rotateY(-77.90458442784266deg) rotateZ(217.99995782296946deg)
+	transform: translateX(-236.08px) translateY(-64.40px) translateZ(-20.46px) rotateX(218.63deg) rotateY(-77.90deg) rotateZ(218.00deg)
 }
-.model3d-sphere-model-face21 {
+.model3d-plane-model-sphere-face21 {
 	position: absolute;
-	background-color: rgb(28,254,19);
-	width: 171.91346168518066px;
-	height: 177.87219285964966px;
-	clip-path: polygon(89.2748px 0.0px, 0.0px 104.92616px, 116.86886px 177.8722px, 171.91347px 51.58076px);
+	background-color: rgb(223.14,223.14,223.14);
+	width: 171.91px;
+	height: 177.87px;
+	clip-path: polygon(89.27px 0.00px, 0.00px 104.93px, 116.87px 177.87px, 171.91px 51.58px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-218.6573589880759px) translateY(-166.5483377925194px) translateZ(22.613581265057707px) rotateX(70.57101382843922deg) rotateY(-58.82608339662367deg) rotateZ(67.59591668577939deg)
+	transform: translateX(-218.66px) translateY(-166.55px) translateZ(22.61px) rotateX(70.57deg) rotateY(-58.83deg) rotateZ(67.60deg)
 }
-.model3d-sphere-model-face22 {
+.model3d-plane-model-sphere-face22 {
 	position: absolute;
-	background-color: rgb(134,216,94);
-	width: 121.46145343780518px;
-	height: 129.09834623336792px;
-	clip-path: polygon(48.094776px 0.0px, 0.0px 129.09834px, 121.46146px 64.08628px);
+	background-color: rgb(161.38,161.38,161.38);
+	width: 121.46px;
+	height: 129.10px;
+	clip-path: polygon(48.09px 0.00px, 0.00px 129.10px, 121.46px 64.09px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-164.94123165686224px) translateY(46.02076487719549px) translateZ(-64.30570174198013px) rotateX(239.0539976394496deg) rotateY(-33.88998481244508deg) rotateZ(222.9224063389947deg)
+	transform: translateX(-164.94px) translateY(46.02px) translateZ(-64.31px) rotateX(239.05deg) rotateY(-33.89deg) rotateZ(222.92deg)
 }
-.model3d-sphere-model-face23 {
+.model3d-plane-model-sphere-face23 {
 	position: absolute;
-	background-color: rgb(165,123,213);
-	width: 137.75975704193115px;
-	height: 92.10169315338135px;
-	clip-path: polygon(137.75975px 0.0px, 0.0px 1.3095644px, 35.305996px 92.10169px);
+	background-color: rgb(223.98,223.98,223.98);
+	width: 137.76px;
+	height: 92.10px;
+	clip-path: polygon(137.76px 0.00px, 0.00px 1.31px, 35.31px 92.10px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-117.75394980851732px) translateY(-179.10589819241733px) translateZ(85.20181559169168px) rotateX(63.62790757209243deg) rotateY(-14.211384214522417deg) rotateZ(26.342865959222458deg)
+	transform: translateX(-117.75px) translateY(-179.11px) translateZ(85.20px) rotateX(63.63deg) rotateY(-14.21deg) rotateZ(26.34deg)
 }
-.model3d-sphere-model-face24 {
+.model3d-plane-model-sphere-face24 {
 	position: absolute;
-	background-color: rgb(219,93,219);
-	width: 121.4558207988739px;
-	height: 129.1025948524475px;
-	clip-path: polygon(121.45582px 0.0px, 0.0px 65.02292px, 73.37258px 129.1026px);
+	background-color: rgb(224.15,224.15,224.15);
+	width: 121.46px;
+	height: 129.10px;
+	clip-path: polygon(121.46px 0.00px, 0.00px 65.02px, 73.37px 129.10px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-99.22250339522796px) translateY(-175.10393294867077px) translateZ(116.2200685049653px) rotateX(46.09051340508036deg) rotateY(-8.7892257353031deg) rotateZ(9.019319138453127deg)
+	transform: translateX(-99.22px) translateY(-175.10px) translateZ(116.22px) rotateX(46.09deg) rotateY(-8.79deg) rotateZ(9.02deg)
 }
-.model3d-sphere-model-face25 {
+.model3d-plane-model-sphere-face25 {
 	position: absolute;
-	background-color: rgb(213,105,102);
-	width: 171.89728260040283px;
-	height: 177.86381363868713px;
-	clip-path: polygon(55.00635px 0.0px, 0.0px 126.30821px, 82.65435px 177.86382px, 171.89728px 72.91063px);
+	background-color: rgb(198.99,198.99,198.99);
+	width: 171.90px;
+	height: 177.86px;
+	clip-path: polygon(55.01px 0.00px, 0.00px 126.31px, 82.65px 177.86px, 171.90px 72.91px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-202.17331249331778px) translateY(-11.317340308816753px) translateZ(67.89143245220949px) rotateX(-49.42964666758789deg) rotateY(-50.00495214016016deg) rotateZ(-41.82093501192955deg)
+	transform: translateX(-202.17px) translateY(-11.32px) translateZ(67.89px) rotateX(-49.43deg) rotateY(-50.00deg) rotateZ(-41.82deg)
 }
-.model3d-sphere-model-face26 {
+.model3d-plane-model-sphere-face26 {
 	position: absolute;
-	background-color: rgb(148,175,78);
-	width: 167.54611730575562px;
-	height: 175.37433743476868px;
-	clip-path: polygon(81.35248px 0.0px, 0.0px 111.18098px, 121.8961px 175.37434px, 167.54611px 45.391598px);
+	background-color: rgb(223.51,223.51,223.51);
+	width: 167.55px;
+	height: 175.37px;
+	clip-path: polygon(81.35px 0.00px, 0.00px 111.18px, 121.90px 175.37px, 167.55px 45.39px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-187.2286195594184px) translateY(-110.98116883411895px) translateZ(113.62149519464243px) rotateX(9.842712303294675deg) rotateY(-40.07576612483464deg) rotateZ(6.37339974133341deg)
+	transform: translateX(-187.23px) translateY(-110.98px) translateZ(113.62px) rotateX(9.84deg) rotateY(-40.08deg) rotateZ(6.37deg)
 }
-.model3d-sphere-model-face27 {
+.model3d-plane-model-sphere-face27 {
 	position: absolute;
-	background-color: rgb(216,168,210);
-	width: 137.76057243347168px;
-	height: 92.03037858009338px;
-	clip-path: polygon(102.51761px 0.0px, 0.0px 92.03038px, 137.76057px 90.81659px);
+	background-color: rgb(161.55,161.55,161.55);
+	width: 137.76px;
+	height: 92.03px;
+	clip-path: polygon(102.52px 0.00px, 0.00px 92.03px, 137.76px 90.82px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-161.09881163477579px) translateY(87.02295016433976px) translateZ(-33.81702717789937px) rotateX(258.79159572708363deg) rotateY(-27.697279395784417deg) rotateZ(246.91003725320786deg)
+	transform: translateX(-161.10px) translateY(87.02px) translateZ(-33.82px) rotateX(258.79deg) rotateY(-27.70deg) rotateZ(246.91deg)
 }
-.model3d-sphere-model-face28 {
+.model3d-plane-model-sphere-face28 {
 	position: absolute;
-	background-color: rgb(218,118,32);
-	width: 94.58097696304321px;
-	height: 136.78263902664185px;
-	clip-path: polygon(78.15012px 0.0px, 0.0px 113.454994px, 94.58098px 136.78264px);
+	background-color: rgb(215.90,215.90,215.90);
+	width: 94.58px;
+	height: 136.78px;
+	clip-path: polygon(78.15px 0.00px, 0.00px 113.45px, 94.58px 136.78px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-40.78957624714725px) translateY(-169.62070925861215px) translateZ(129.8920612780746px) rotateX(37.27968183237417deg) rotateY(6.944046715929572deg) rotateZ(-5.258311140342654deg)
+	transform: translateX(-40.79px) translateY(-169.62px) translateZ(129.89px) rotateX(37.28deg) rotateY(6.94deg) rotateZ(-5.26deg)
 }
-.model3d-sphere-model-face29 {
+.model3d-plane-model-sphere-face29 {
 	position: absolute;
-	background-color: rgb(177,51,108);
-	width: 151.54538869857788px;
-	height: 164.1356348991394px;
-	clip-path: polygon(19.489424px 0.0px, 0.0px 136.38046px, 93.37771px 164.13564px, 151.5454px 39.251568px);
+	background-color: rgb(180.18,180.18,180.18);
+	width: 151.55px;
+	height: 164.14px;
+	clip-path: polygon(19.49px 0.00px, 0.00px 136.38px, 93.38px 164.14px, 151.55px 39.25px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-89.8551307733247px) translateY(36.68186781091498px) translateZ(99.52059404393334px) rotateX(-48.46018355589356deg) rotateY(-8.128865970873342deg) rotateZ(-9.06792842825633deg)
+	transform: translateX(-89.86px) translateY(36.68px) translateZ(99.52px) rotateX(-48.46deg) rotateY(-8.13deg) rotateZ(-9.07deg)
 }
-.model3d-sphere-model-face30 {
+.model3d-plane-model-sphere-face30 {
 	position: absolute;
-	background-color: rgb(160,58,245);
-	width: 141.65754318237305px;
-	height: 156.39382481575012px;
-	clip-path: polygon(46.069645px 0.0px, 0.0px 129.8346px, 135.18161px 156.39383px, 141.65755px 18.780098px);
+	background-color: rgb(204.70,204.70,204.70);
+	width: 141.66px;
+	height: 156.39px;
+	clip-path: polygon(46.07px 0.00px, 0.00px 129.83px, 135.18px 156.39px, 141.66px 18.78px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-82.03866568209864px) translateY(-65.81116608321484px) translateZ(154.77190836063676px) rotateX(-7.002764322293905deg) rotateY(-1.1001465737418874deg) rotateZ(-0.13512633732771043deg)
+	transform: translateX(-82.04px) translateY(-65.81px) translateZ(154.77px) rotateX(-7.00deg) rotateY(-1.10deg) rotateZ(-0.14deg)
 }
-.model3d-sphere-model-face31 {
+.model3d-plane-model-sphere-face31 {
 	position: absolute;
-	background-color: rgb(1,198,46);
-	width: 137.73612141609192px;
-	height: 91.82032942771912px;
-	clip-path: polygon(137.73611px 0.0px, 0.0px 2.8654628px, 105.19732px 91.82033px);
+	background-color: rgb(153.31,153.31,153.31);
+	width: 137.74px;
+	height: 91.82px;
+	clip-path: polygon(137.74px 0.00px, 0.00px 2.87px, 105.20px 91.82px);
 	top: 50%;
 	left: 50%;
-	transform: translateX(-83.07530488363918px) translateY(118.65318205865233px) translateZ(-5.4977426432587695px) rotateX(266.05079341798603deg) rotateY(-11.02282309862327deg) rotateZ(250.14703499780754deg)
+	transform: translateX(-83.08px) translateY(118.65px) translateZ(-5.50px) rotateX(266.05deg) rotateY(-11.02deg) rotateZ(250.15deg)
 }

@@ -38,7 +38,8 @@ import {
 	DropDownMultiSelect,
 	PyramidModel,
 	Plane,
-	MagicNavigationMenu
+	MagicNavigationMenu,
+	ChristmaxModel
 } from '../../components';
 import "./TestPage.css";
 
@@ -422,6 +423,13 @@ function TestPage() {
 		</>
 	}
 
+	///// Render Pyramid Model /////
+	const renderChristmaxModel = () => {
+		return <>
+			<label className='test-page-label'>CHRISTMAX MODEL</label>
+			<ChristmaxModel />
+		</>
+	}
 	///// MAGIC NAVIGATION MENU /////
 	const [magicNavigationMenuItems, setMagicNavigationMenuItems] = React.useState([
 		{
@@ -475,7 +483,7 @@ function TestPage() {
 			{renderDropDownSelect()}
 			{renderDropDownMultiSelect()}
 			{renderVirtualKey()}
-			{renderPyramidModel()}
+			{renderChristmaxModel()}
 			{renderMagicNavigationMenu()}
 		</div>
 	</div>

@@ -15,7 +15,7 @@ const defaultProps={
 const MagicNavigationMenu = (props) => {
 	/*** States and Variables ***/
 	const [indicatorConfig, setIndicatorConfig] = React.useState({
-		pos: 0,
+		pos: 12.5,
 		open: false,
 	})
 	/*** Processing ***/
@@ -47,18 +47,24 @@ const MagicNavigationMenu = (props) => {
 		return <div 
 		style={{
 			left: indicatorConfig.pos + "%", 
-			width: indicatorConfig.open? 40: 0,
-			height: indicatorConfig.open? 40: 0}}
+			width: indicatorConfig.open? undefined: 0,
+			height: indicatorConfig.open? undefined: 0}}
 		className='magic-navigation-menu-indicator' />
 	}
 	const renderTopFillers = () => {
-		const leftSize = indicatorConfig.pos + indicatorConfig.open?150/props.items.length: 50/props.items.length;
+		const halfButton = 100/props.items.length/ 2;
+		let leftSize = indicatorConfig.pos;
+		let rightSize = 100 - indicatorConfig.pos;
+		if(!indicatorConfig.open){
+			leftSize = indicatorConfig.pos + halfButton;
+			rightSize = 100 - indicatorConfig.pos + halfButton;
+		}
 		return <>
 			<div 
 			style={{width: leftSize + "%"}}
 			className='magic-navigation-menu-top-left-filler' />
 			<div 
-			style={{width: (100 - leftSize) + "%"}}
+			style={{width: rightSize + "%"}}
 			className='magic-navigation-menu-top-right-filler' />
 		</>
 	}
@@ -69,7 +75,7 @@ const MagicNavigationMenu = (props) => {
 				return <button 
 				onClick={(e)=>{onItemClick(item)}}
 				className={selected?'magic-navigation-menu-selected-button': 'magic-navigation-menu-button'}>
-					<i className={item.icon} />
+					<i className={item.icon + (selected? " magic-navigation-menu-selected-icon": " magic-navigation-menu-icon")} />
 				</button>
 			})}
 		</div>

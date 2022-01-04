@@ -30,6 +30,7 @@ import DropDownMultiSelect from "./select/DropDownMultiSelect";
 import VirtualKey from "./input/VirtualKey";
 import PyramidModel from "./3dmodel/PyramidModel";
 import Plane from "./3dmodel/Plane";
+import ChristmaxModel from "./3dmodel/ChristmaxModel";
 import "./ComponentStyle.css";
 
 export {
@@ -64,5 +65,6 @@ export {
   DropDownMultiSelect,
   MagicNavigationMenu,
   PyramidModel,
-  Plane
+  Plane,
+  ChristmaxModel
 }
