@@ -1,0 +1,43 @@
+.book-open-effect-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	perspective: 2000px;
+	transform-style: preserve-3d;
+}
+.book-open-effect-left-page ,
+.book-open-effect-right-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all 2000ms;
+}
+.book-open-effect-left-page {
+	left: 0%;
+	clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+}
+.book-open-effect-right-page {
+	right: 0%;
+	clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+.book-open-effect-left-active-page ,
+.book-open-effect-right-active-page {
+	transform: translateZ(0px) rotateY(0deg);
+	opacity: 1;
+}
+.book-open-effect-left-left-inactive-page {
+	transform: translateZ(-1px) rotateY(0deg);
+	opacity: 1;
+}
+.book-open-effect-right-left-inactive-page {
+	transform: translateZ(-1px) rotateY(-180deg);
+	opacity: 1;
+}
+.book-open-effect-left-right-inactive-page {
+	transform: translateZ(-1px) rotateY(180deg);
+	opacity: 1;
+}
+.book-open-effect-right-right-inactive-page {
+	transform: translateZ(-1px) rotateY(0deg);
+	opacity: 1;
+}

@@ -97,6 +97,14 @@ def compute_rotate(face_norm):
 	cos_rx = np.cos(rx)
 	sin_ry = face_norm[0]/(cos_rx+1e-4)
 	cos_ry = face_norm[2]/(cos_rx+1e-4)
+	if sin_ry>1:
+		sin_ry=1
+	elif sin_ry<-1:
+		sin_ry=-1
+	if cos_ry>1:
+		cos_ry=1
+	elif cos_ry<-1:
+		cos_ry=-1
 	ry = np.arcsin(sin_ry)
 	if cos_ry>0 and (ry<-np.pi/2 or ry>np.pi/2):
 		ry = np.pi - ry
@@ -179,12 +187,17 @@ def write_files(objects, colors, file_name):
 	css_text += '\ttransform-origin: 50% 50%;\n'
 	css_text += '\tanimation: rotate360 10s infinite linear;\n'
 	css_text += '}\n'
+	css_text += '.model3d-' + file_name.lower() + '-model-face {\n'
+	css_text += '\tposition: absolute;\n'
+	css_text += '\ttop: 50%;\n'
+	css_text += '\tleft: 50%;\n'
+	css_text += '}\n'
 	css_text += '@keyframes rotate360 {\n'
 	css_text += '\tfrom {\n'
-	css_text += '\t\ttransform: rotateY(0deg);\n'
+	css_text += '\t\ttransform: translateY(-20px) rotateX(-10deg) rotateY(0deg);\n'
 	css_text += '\t}\n'
 	css_text += '\tto {\n'
-	css_text += '\t\ttransform: rotateY(360deg);\n'
+	css_text += '\t\ttransform: translateY(-20px) rotateX(-10deg) rotateY(360deg);\n'
 	css_text += '\t}\n'
 	css_text += '}\n'
 	js_text = 'import React from "react";\n'
@@ -206,9 +219,8 @@ def write_files(objects, colors, file_name):
 			para = compute_css_rotate(face, norm)
 			classname = 'model3d-' + file_name.lower() + '-model-' + object_name.lower() + '-face' + str(count)
 			count += 1
-			js_text += '\t\t<div className="' + classname + '"/>\n'
+			js_text += '\t\t<div className="model3d-' + file_name.lower()  + '-model-face ' + classname + '"/>\n'
 			css_text += '.' + classname + ' {\n'
-			css_text += '\tposition: absolute;\n'
 			color_shade = (np.sum(np.float32([-1,-1,1])*norm)/np.sqrt(3) + 1) / 2
 			color_shade = 0.6 + 0.35*color_shade
 			r,g,b = color * color_shade
@@ -233,8 +245,6 @@ def write_files(objects, colors, file_name):
 			bounds = [str('{:.2f}'.format(point[0]))+'px ' + str('{:.2f}'.format(point[1]))+'px' for point in bounds]
 			bounds = 'polygon(' + (', '.join(bounds)) + ')'
 			css_text += '\tclip-path: ' + bounds + ';\n'
-			css_text += '\ttop: 50%;\n'
-			css_text += '\tleft: 50%;\n'
 			transition = 'translateX(' + str('{:.2f}'.format(ori_center[0] - width/2)) + 'px) translateY('+ str('{:.2f}'.format(ori_center[1] - height/2)) + 'px) translateZ(' + str('{:.2f}'.format(ori_center[2])) + 'px)'
 			rx, ry, rz = para["rotation"]["x"], para["rotation"]["y"], para["rotation"]["z"]
 			rx = rx / np.pi * 180
@@ -258,7 +268,7 @@ def write_files(objects, colors, file_name):
 	css_file.write(css_text)
 	css_file.close()
 
-objs, colors = load_data('Christmax.obj', 'Christmax.txt')
+objs, colors = load_data('Sakura.obj', 'Sakura.txt')
 # face = objs["Plane2"][0]["face"]
 # norm = objs["Plane2"][0]["norm"]
 # rt, r = compute_rotate(norm)
@@ -275,4 +285,4 @@ objs, colors = load_data('Christmax.obj', 'Christmax.txt')
 # print("----- ROT ANGLES -----\n", para["rotation"])
 
 #print(colors)
-write_files(objs, colors, "ChristmaxModel")
+write_files(objs, colors, "SakuraModel")

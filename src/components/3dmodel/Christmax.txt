@@ -2,8 +2,8 @@ PineLeaf 51 153 102
 PineStem 153 153 102
 SnowmanNose 255 153 0
 GiftboxRibbon1 0 204 0
-GiftboxRibbon2 0 204 0
+GiftboxRibbon2 252 78 3
 Giftbox1 255 51 26
-Giftbox2 255 71 26
+Giftbox2 252 207 3
 SnowmanLeftHand 102 51 0
 SnowmanRightHand 102 51 0

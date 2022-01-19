@@ -1,0 +1,14 @@
+.model-page-page-container {
+	width: calc(100% - 48px);
+	height: 100vh;
+	overflow: auto;
+}
+.model-page-page-subcontainer {
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+}
+.model-page-label {
+	padding: 8px;
+}

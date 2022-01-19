@@ -1,0 +1,1026 @@
+.model3d-lotusmodel-model-container {
+	width: 360.00px;
+	height: 360.00px;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	perspective-origin: 50% 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-origin: 50% 50%;
+	animation: rotate360 10s infinite linear;
+}
+.model3d-lotusmodel-model-face {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+@keyframes rotate360 {
+	from {
+		transform: translateY(-20px) rotateX(-10deg) rotateY(0deg);
+	}
+	to {
+		transform: translateY(-20px) rotateX(-10deg) rotateY(360deg);
+	}
+}
+.model3d-lotusmodel-model-circle-face0 {
+	background-color: rgb(204.36,204.36,204.36);
+	width: 4.18px;
+	height: 86.54px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.00px 86.54px, 4.18px 86.54px);
+	transform: translateX(-5.89px) translateY(-41.95px) translateZ(2.99px) rotateX(0.00deg) rotateY(34.34deg) rotateZ(0.00deg)
+}
+.model3d-lotusmodel-model-circle-face1 {
+	background-color: rgb(225.26,225.26,225.26);
+	width: 4.18px;
+	height: 86.54px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.00px 86.54px, 4.18px 86.54px);
+	transform: translateX(-11.55px) translateY(-41.95px) translateZ(0.26px) rotateX(-0.00deg) rotateY(-85.64deg) rotateZ(0.00deg)
+}
+.model3d-lotusmodel-model-circle-face2 {
+	background-color: rgb(169.99,169.99,169.99);
+	width: 4.18px;
+	height: 86.54px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.00px 86.54px, 4.18px 86.54px);
+	transform: translateX(-4.32px) translateY(-41.95px) translateZ(-0.28px) rotateX(180.00deg) rotateY(85.64deg) rotateZ(180.00deg)
+}
+.model3d-lotusmodel-model-circle-face3 {
+	background-color: rgb(232.00,232.00,232.00);
+	width: 4.18px;
+	height: 86.54px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.00px 86.54px, 4.18px 86.54px);
+	transform: translateX(-9.51px) translateY(-41.95px) translateZ(3.27px) rotateX(0.00deg) rotateY(-25.66deg) rotateZ(0.00deg)
+}
+.model3d-lotusmodel-model-circle-face4 {
+	background-color: rgb(190.89,190.89,190.89);
+	width: 4.18px;
+	height: 86.54px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.00px 86.54px, 4.18px 86.54px);
+	transform: translateX(-9.98px) translateY(-41.95px) translateZ(-2.99px) rotateX(180.00deg) rotateY(-34.34deg) rotateZ(180.00deg)
+}
+.model3d-lotusmodel-model-circle-face5 {
+	background-color: rgb(163.25,163.25,163.25);
+	width: 4.18px;
+	height: 86.54px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.00px 86.54px, 4.18px 86.54px);
+	transform: translateX(-6.37px) translateY(-41.95px) translateZ(-3.27px) rotateX(180.00deg) rotateY(25.66deg) rotateZ(180.00deg)
+}
+.model3d-lotusmodel-model-circle-face6 {
+	background-color: rgb(168.14,168.14,168.14);
+	width: 4.18px;
+	height: 12.75px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 4.18px 12.75px);
+	transform: translateX(-4.80px) translateY(44.57px) translateZ(-0.24px) rotateX(224.58deg) rotateY(83.93deg) rotateZ(135.58deg)
+}
+.model3d-lotusmodel-model-circle-face7 {
+	background-color: rgb(191.83,191.83,191.83);
+	width: 4.91px;
+	height: 11.44px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 4.91px 11.44px);
+	transform: translateX(-10.76px) translateY(44.58px) translateZ(-2.96px) rotateX(177.47deg) rotateY(-34.32deg) rotateZ(178.57deg)
+}
+.model3d-lotusmodel-model-circle-face8 {
+	background-color: rgb(227.07,227.07,227.07);
+	width: 4.19px;
+	height: 11.47px;
+	clip-path: polygon(4.19px 0.00px, 0.00px 11.47px, 4.18px 11.47px);
+	transform: translateX(-11.97px) translateY(44.57px) translateZ(0.29px) rotateX(43.96deg) rotateY(-83.99deg) rotateZ(43.80deg)
+}
+.model3d-lotusmodel-model-circle-face9 {
+	background-color: rgb(203.41,203.41,203.41);
+	width: 4.96px;
+	height: 12.08px;
+	clip-path: polygon(4.96px 0.00px, 0.77px 0.00px, 0.00px 12.08px);
+	transform: translateX(-6.72px) translateY(44.58px) translateZ(3.03px) rotateX(-2.56deg) rotateY(34.32deg) rotateZ(1.44deg)
+}
+.model3d-lotusmodel-model-circle-face10 {
+	background-color: rgb(232.93,232.93,232.93);
+	width: 4.18px;
+	height: 12.08px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 3.41px 12.08px);
+	transform: translateX(-9.60px) translateY(44.58px) translateZ(3.47px) rotateX(2.35deg) rotateY(-25.64deg) rotateZ(1.02deg)
+}
+.model3d-lotusmodel-model-circle-face11 {
+	background-color: rgb(162.30,162.30,162.30);
+	width: 4.14px;
+	height: 12.72px;
+	clip-path: polygon(3.36px 0.00px, 0.00px 12.72px, 4.14px 12.08px);
+	transform: translateX(-7.16px) translateY(44.58px) translateZ(-3.40px) rotateX(182.35deg) rotateY(25.70deg) rotateZ(178.98deg)
+}
+.model3d-lotusmodel-model-circle-face12 {
+	background-color: rgb(202.31,202.31,202.31);
+	width: 14.88px;
+	height: 70.08px;
+	clip-path: polygon(14.88px 0.64px, 10.75px 0.00px, 0.00px 69.44px, 4.13px 70.08px);
+	transform: translateX(-18.32px) translateY(56.52px) translateZ(3.53px) rotateX(-6.07deg) rotateY(33.81deg) rotateZ(3.39deg)
+}
+.model3d-lotusmodel-model-circle-face13 {
+	background-color: rgb(161.20,161.20,161.20);
+	width: 14.88px;
+	height: 70.08px;
+	clip-path: polygon(4.13px 0.00px, 0.00px 0.64px, 10.75px 70.08px, 14.88px 69.44px);
+	transform: translateX(-18.80px) translateY(56.52px) translateZ(-2.73px) rotateX(185.57deg) rotateY(25.16deg) rotateZ(177.62deg)
+}
+.model3d-lotusmodel-model-circle-face14 {
+	background-color: rgb(229.37,229.37,229.37);
+	width: 4.20px;
+	height: 70.27px;
+	clip-path: polygon(4.20px 0.00px, 0.01px 0.00px, 0.00px 70.27px, 4.18px 70.27px);
+	transform: translateX(-18.55px) translateY(55.47px) translateZ(0.79px) rotateX(67.05deg) rotateY(-78.99deg) rotateZ(66.66deg)
+}
+.model3d-lotusmodel-model-circle-face15 {
+	background-color: rgb(234.05,234.05,234.05);
+	width: 14.88px;
+	height: 70.08px;
+	clip-path: polygon(14.88px 0.64px, 10.75px 0.00px, 0.00px 69.44px, 4.14px 70.08px);
+	transform: translateX(-21.88px) translateY(55.89px) translateZ(3.80px) rotateX(5.57deg) rotateY(-25.16deg) rotateZ(2.38deg)
+}
+.model3d-lotusmodel-model-circle-face16 {
+	background-color: rgb(192.94,192.94,192.94);
+	width: 14.88px;
+	height: 70.08px;
+	clip-path: polygon(4.13px 0.00px, 0.00px 0.64px, 10.75px 70.08px, 14.88px 69.44px);
+	transform: translateX(-22.35px) translateY(55.89px) translateZ(-2.46px) rotateX(173.93deg) rotateY(-33.81deg) rotateZ(176.61deg)
+}
+.model3d-lotusmodel-model-circle-face17 {
+	background-color: rgb(165.88,165.88,165.88);
+	width: 4.20px;
+	height: 70.27px;
+	clip-path: polygon(4.18px 0.00px, 0.00px 0.00px, 0.01px 70.27px, 4.20px 70.27px);
+	transform: translateX(-11.44px) translateY(56.75px) translateZ(0.25px) rotateX(247.05deg) rotateY(78.99deg) rotateZ(113.34deg)
+}
+.model3d-lotusmodel-model-circle-face18 {
+	background-color: rgb(162.31,162.31,162.31);
+	width: 4.18px;
+	height: 12.72px;
+	clip-path: polygon(0.82px 12.72px, 4.18px 0.00px, 0.00px 0.00px);
+	transform: translateX(-6.47px) translateY(44.58px) translateZ(-3.05px) rotateX(182.37deg) rotateY(25.64deg) rotateZ(178.97deg)
+}
+.model3d-lotusmodel-model-circle-face19 {
+	background-color: rgb(168.14,168.14,168.14);
+	width: 4.18px;
+	height: 12.75px;
+	clip-path: polygon(4.18px 12.75px, 0.00px 0.00px, 0.00px 12.75px);
+	transform: translateX(-4.80px) translateY(44.57px) translateZ(-0.24px) rotateX(224.58deg) rotateY(83.93deg) rotateZ(135.58deg)
+}
+.model3d-lotusmodel-model-circle-face20 {
+	background-color: rgb(227.07,227.07,227.07);
+	width: 4.19px;
+	height: 11.47px;
+	clip-path: polygon(0.00px 11.47px, 4.19px 0.00px, 0.00px 0.00px);
+	transform: translateX(-11.97px) translateY(44.57px) translateZ(0.29px) rotateX(43.96deg) rotateY(-83.99deg) rotateZ(43.80deg)
+}
+.model3d-lotusmodel-model-circle-face21 {
+	background-color: rgb(203.36,203.36,203.36);
+	width: 4.96px;
+	height: 12.72px;
+	clip-path: polygon(0.00px 12.08px, 4.14px 12.72px, 4.96px 0.00px);
+	transform: translateX(-6.73px) translateY(44.58px) translateZ(3.02px) rotateX(-2.59deg) rotateY(34.37deg) rotateZ(1.46deg)
+}
+.model3d-lotusmodel-model-circle-face22 {
+	background-color: rgb(232.94,232.94,232.94);
+	width: 4.14px;
+	height: 12.08px;
+	clip-path: polygon(4.14px 12.08px, 0.72px 0.00px, 0.00px 11.44px);
+	transform: translateX(-10.25px) translateY(44.58px) translateZ(3.14px) rotateX(2.32deg) rotateY(-25.71deg) rotateZ(1.01deg)
+}
+.model3d-lotusmodel-model-circle-face23 {
+	background-color: rgb(191.88,191.88,191.88);
+	width: 4.91px;
+	height: 12.08px;
+	clip-path: polygon(4.91px 11.44px, 0.00px 0.00px, 0.77px 12.08px);
+	transform: translateX(-10.77px) translateY(44.58px) translateZ(-2.97px) rotateX(177.43deg) rotateY(-34.38deg) rotateZ(178.55deg)
+}
+.model3d-lotusmodel-model-circle-face24 {
+	background-color: rgb(196.42,196.42,196.42);
+	width: 15.73px;
+	height: 12.24px;
+	clip-path: polygon(5.77px 12.24px, 9.96px 12.24px, 15.73px 0.00px, 0.00px 0.00px);
+	transform: translateX(-17.44px) translateY(-51.61px) translateZ(7.77px) rotateX(-57.50deg) rotateY(-14.47deg) rotateZ(-21.42deg)
+}
+.model3d-lotusmodel-model-circle-face25 {
+	background-color: rgb(172.69,172.69,172.69);
+	width: 15.73px;
+	height: 12.24px;
+	clip-path: polygon(5.77px 12.24px, 9.95px 12.24px, 15.73px 0.00px, 0.00px 0.00px);
+	transform: translateX(-18.58px) translateY(-51.61px) translateZ(-7.12px) rotateX(239.74deg) rotateY(-19.00deg) rotateZ(209.16deg)
+}
+.model3d-lotusmodel-model-circle-face26 {
+	background-color: rgb(180.47,180.47,180.47);
+	width: 15.73px;
+	height: 12.24px;
+	clip-path: polygon(5.77px 12.24px, 9.95px 12.24px, 15.73px 0.00px, 0.00px 0.00px);
+	transform: translateX(-8.84px) translateY(-51.61px) translateZ(7.12px) rotateX(-59.74deg) rotateY(19.00deg) rotateZ(29.16deg)
+}
+.model3d-lotusmodel-model-circle-face27 {
+	background-color: rgb(234.65,234.65,234.65);
+	width: 45.18px;
+	height: 48.06px;
+	clip-path: polygon(0.00px 48.01px, 45.18px 48.06px, 22.64px 0.00px);
+	transform: translateX(-47.97px) translateY(-170.97px) translateZ(1.42px) rotateX(86.92deg) rotateY(-35.34deg) rotateZ(84.68deg)
+}
+.model3d-lotusmodel-model-circle-face28 {
+	background-color: rgb(222.52,222.52,222.52);
+	width: 45.18px;
+	height: 48.04px;
+	clip-path: polygon(0.00px 48.04px, 45.18px 48.04px, 22.59px 0.00px);
+	transform: translateX(-17.40px) translateY(-170.96px) translateZ(16.15px) rotateX(59.55deg) rotateY(19.10deg) rotateZ(-29.10deg)
+}
+.model3d-lotusmodel-model-circle-face29 {
+	background-color: rgb(198.67,198.67,198.67);
+	width: 45.18px;
+	height: 48.04px;
+	clip-path: polygon(0.00px 48.04px, 45.18px 48.04px, 22.59px 0.00px);
+	transform: translateX(-19.96px) translateY(-170.98px) translateZ(-17.66px) rotateX(122.70deg) rotateY(14.55deg) rotateZ(201.37deg)
+}
+.model3d-lotusmodel-model-circle-face30 {
+	background-color: rgb(214.70,214.70,214.70);
+	width: 45.18px;
+	height: 48.04px;
+	clip-path: polygon(0.00px 48.04px, 45.18px 48.04px, 22.59px 0.00px);
+	transform: translateX(-39.48px) translateY(-170.96px) translateZ(-16.15px) rotateX(120.45deg) rotateY(-19.10deg) rotateZ(150.90deg)
+}
+.model3d-lotusmodel-model-circle-face31 {
+	background-color: rgb(238.56,238.56,238.56);
+	width: 45.18px;
+	height: 48.04px;
+	clip-path: polygon(0.00px 48.04px, 45.18px 48.04px, 22.59px 0.00px);
+	transform: translateX(-36.91px) translateY(-170.96px) translateZ(17.65px) rotateX(57.30deg) rotateY(-14.55deg) rotateZ(21.37deg)
+}
+.model3d-lotusmodel-model-circle-face32 {
+	background-color: rgb(202.58,202.58,202.58);
+	width: 45.18px;
+	height: 48.06px;
+	clip-path: polygon(0.00px 48.01px, 45.18px 48.06px, 22.64px 0.00px);
+	transform: translateX(-8.91px) translateY(-170.97px) translateZ(-1.44px) rotateX(93.08deg) rotateY(35.34deg) rotateZ(264.68deg)
+}
+.model3d-lotusmodel-model-circle-face33 {
+	background-color: rgb(186.48,186.48,186.48);
+	width: 41.01px;
+	height: 24.42px;
+	clip-path: polygon(12.72px 24.42px, 28.45px 24.37px, 41.01px 0.00px, 0.00px 0.14px);
+	transform: translateX(-50.88px) translateY(-66.54px) translateZ(1.70px) rotateX(-87.90deg) rotateY(-25.75deg) rotateZ(-85.18deg)
+}
+.model3d-lotusmodel-model-circle-face34 {
+	background-color: rgb(162.39,162.39,162.39);
+	width: 41.01px;
+	height: 24.42px;
+	clip-path: polygon(12.72px 24.42px, 28.45px 24.37px, 41.01px 0.00px, 0.00px 0.14px);
+	transform: translateX(-1.82px) translateY(-66.54px) translateZ(-1.75px) rotateX(267.90deg) rotateY(25.75deg) rotateZ(94.82deg)
+}
+.model3d-lotusmodel-model-circle-face35 {
+	background-color: rgb(171.50,171.50,171.50);
+	width: 41.01px;
+	height: 24.32px;
+	clip-path: polygon(12.64px 24.32px, 28.37px 24.32px, 41.01px 0.00px, 0.00px 0.00px);
+	transform: translateX(-40.21px) translateY(-66.48px) translateZ(-20.28px) rotateX(248.22deg) rotateY(-14.23deg) rotateZ(211.59deg)
+}
+.model3d-lotusmodel-model-circle-face36 {
+	background-color: rgb(176.85,176.85,176.85);
+	width: 50.43px;
+	height: 13.69px;
+	clip-path: polygon(4.71px 13.69px, 45.72px 13.69px, 50.43px 0.00px, 0.00px 0.00px);
+	transform: translateX(-53.40px) translateY(-71.96px) translateZ(-32.69px) rotateX(221.98deg) rotateY(-26.93deg) rotateZ(202.17deg)
+}
+.model3d-lotusmodel-model-circle-face37 {
+	background-color: rgb(154.66,154.66,154.66);
+	width: 50.43px;
+	height: 13.69px;
+	clip-path: polygon(4.71px 13.69px, 45.72px 13.69px, 50.43px 0.00px, 0.00px 0.00px);
+	transform: translateX(-13.92px) translateY(-71.96px) translateZ(-35.69px) rotateX(219.49deg) rotateY(20.34deg) rotateZ(164.02deg)
+}
+.model3d-lotusmodel-model-circle-face38 {
+	background-color: rgb(187.67,187.67,187.67);
+	width: 50.43px;
+	height: 13.69px;
+	clip-path: polygon(4.71px 13.69px, 45.72px 13.69px, 50.43px 0.00px, 0.00px 0.00px);
+	transform: translateX(-8.72px) translateY(-71.96px) translateZ(32.69px) rotateX(-41.98deg) rotateY(26.93deg) rotateZ(22.17deg)
+}
+.model3d-lotusmodel-model-circle-face39 {
+	background-color: rgb(204.45,204.45,204.45);
+	width: 50.43px;
+	height: 13.76px;
+	clip-path: polygon(4.73px 13.76px, 45.74px 13.70px, 50.43px 0.00px, 0.00px 0.08px);
+	transform: translateX(-70.55px) translateY(-71.99px) translateZ(2.88px) rotateX(-84.18deg) rotateY(-53.17deg) rotateZ(-82.74deg)
+}
+.model3d-lotusmodel-model-circle-face40 {
+	background-color: rgb(160.07,160.07,160.07);
+	width: 50.43px;
+	height: 13.76px;
+	clip-path: polygon(4.73px 13.76px, 45.74px 13.70px, 50.43px 0.00px, 0.00px 0.08px);
+	transform: translateX(8.43px) translateY(-71.99px) translateZ(-2.91px) rotateX(264.18deg) rotateY(53.17deg) rotateZ(97.26deg)
+}
+.model3d-lotusmodel-model-circle-face41 {
+	background-color: rgb(209.86,209.86,209.86);
+	width: 50.43px;
+	height: 13.69px;
+	clip-path: polygon(4.71px 13.69px, 45.72px 13.69px, 50.43px 0.00px, 0.00px 0.00px);
+	transform: translateX(-48.21px) translateY(-71.96px) translateZ(35.69px) rotateX(-39.49deg) rotateY(-20.34deg) rotateZ(-15.98deg)
+}
+.model3d-lotusmodel-model-circle-face42 {
+	background-color: rgb(168.18,168.18,168.18);
+	width: 52.92px;
+	height: 29.52px;
+	clip-path: polygon(1.24px 29.52px, 51.68px 29.51px, 52.92px 0.00px, 0.00px 0.00px);
+	transform: translateX(12.33px) translateY(-100.08px) translateZ(-3.35px) rotateX(224.00deg) rotateY(83.99deg) rotateZ(136.16deg)
+}
+.model3d-lotusmodel-model-circle-face43 {
+	background-color: rgb(230.03,230.03,230.03);
+	width: 52.92px;
+	height: 29.51px;
+	clip-path: polygon(1.24px 29.51px, 51.67px 29.51px, 52.92px 0.00px, 0.00px 0.00px);
+	transform: translateX(-51.68px) translateY(-100.08px) translateZ(40.34px) rotateX(-4.64deg) rotateY(-25.58deg) rotateZ(-2.01deg)
+}
+.model3d-lotusmodel-model-circle-face44 {
+	background-color: rgb(189.02,189.02,189.02);
+	width: 52.92px;
+	height: 29.51px;
+	clip-path: polygon(1.24px 29.51px, 51.67px 29.51px, 52.92px 0.00px, 0.00px 0.00px);
+	transform: translateX(-57.55px) translateY(-100.08px) translateZ(-36.95px) rotateX(185.06deg) rotateY(-34.24deg) rotateZ(182.85deg)
+}
+.model3d-lotusmodel-model-circle-face45 {
+	background-color: rgb(161.46,161.46,161.46);
+	width: 52.92px;
+	height: 29.51px;
+	clip-path: polygon(1.24px 29.51px, 51.67px 29.51px, 52.92px 0.00px, 0.00px 0.00px);
+	transform: translateX(-12.93px) translateY(-100.08px) translateZ(-40.34px) rotateX(184.64deg) rotateY(25.58deg) rotateZ(177.99deg)
+}
+.model3d-lotusmodel-model-circle-face46 {
+	background-color: rgb(202.47,202.47,202.47);
+	width: 52.92px;
+	height: 29.51px;
+	clip-path: polygon(1.24px 29.51px, 51.67px 29.51px, 52.92px 0.00px, 0.00px 0.00px);
+	transform: translateX(-7.05px) translateY(-100.08px) translateZ(36.95px) rotateX(-5.06deg) rotateY(34.24deg) rotateZ(2.85deg)
+}
+.model3d-lotusmodel-model-circle-face47 {
+	background-color: rgb(223.31,223.31,223.31);
+	width: 52.92px;
+	height: 29.52px;
+	clip-path: polygon(1.24px 29.52px, 51.68px 29.51px, 52.92px 0.00px, 0.00px 0.00px);
+	transform: translateX(-76.93px) translateY(-100.08px) translateZ(3.33px) rotateX(-44.00deg) rotateY(-83.99deg) rotateZ(-43.84deg)
+}
+.model3d-lotusmodel-model-circle-face48 {
+	background-color: rgb(169.06,169.06,169.06);
+	width: 52.92px;
+	height: 33.64px;
+	clip-path: polygon(0.00px 33.64px, 52.92px 33.64px, 49.05px 0.00px, 3.87px 0.00px);
+	transform: translateX(-13.91px) translateY(-133.35px) translateZ(-38.30px) rotateX(167.30deg) rotateY(25.11deg) rotateZ(185.46deg)
+}
+.model3d-lotusmodel-model-circle-face49 {
+	background-color: rgb(209.36,209.36,209.36);
+	width: 52.92px;
+	height: 33.64px;
+	clip-path: polygon(0.00px 33.64px, 52.92px 33.64px, 49.05px 0.00px, 3.87px 0.00px);
+	transform: translateX(-8.34px) translateY(-133.34px) translateZ(35.07px) rotateX(13.82deg) rotateY(33.57deg) rotateZ(-7.75deg)
+}
+.model3d-lotusmodel-model-circle-face50 {
+	background-color: rgb(229.84,229.84,229.84);
+	width: 52.92px;
+	height: 33.65px;
+	clip-path: polygon(0.00px 33.64px, 52.92px 33.65px, 49.06px 0.01px, 3.87px 0.00px);
+	transform: translateX(-74.67px) translateY(-133.35px) translateZ(3.16px) rotateX(69.56deg) rotateY(-77.74deg) rotateZ(69.12deg)
+}
+.model3d-lotusmodel-model-circle-face51 {
+	background-color: rgb(175.67,175.67,175.67);
+	width: 52.92px;
+	height: 33.65px;
+	clip-path: polygon(0.00px 33.64px, 52.92px 33.65px, 49.06px 0.01px, 3.87px 0.00px);
+	transform: translateX(10.06px) translateY(-133.35px) translateZ(-3.19px) rotateX(110.44deg) rotateY(77.74deg) rotateZ(249.12deg)
+}
+.model3d-lotusmodel-model-circle-face52 {
+	background-color: rgb(236.45,236.45,236.45);
+	width: 52.92px;
+	height: 33.64px;
+	clip-path: polygon(0.00px 33.64px, 52.92px 33.64px, 49.05px 0.00px, 3.87px 0.00px);
+	transform: translateX(-50.70px) translateY(-133.34px) translateZ(38.29px) rotateX(12.70deg) rotateY(-25.11deg) rotateZ(5.46deg)
+}
+.model3d-lotusmodel-model-circle-face53 {
+	background-color: rgb(196.15,196.15,196.15);
+	width: 52.92px;
+	height: 33.64px;
+	clip-path: polygon(0.00px 33.64px, 52.92px 33.64px, 49.05px 0.00px, 3.87px 0.00px);
+	transform: translateX(-56.28px) translateY(-133.35px) translateZ(-35.09px) rotateX(166.18deg) rotateY(-33.57deg) rotateZ(172.25deg)
+}
+.model3d-lotusmodel-model-circle-face54 {
+	background-color: rgb(193.32,193.32,193.32);
+	width: 44.98px;
+	height: 49.95px;
+	clip-path: polygon(0.00px 49.95px, 44.98px 45.70px, 17.97px 0.00px);
+	transform: translateX(9.90px) translateY(-165.17px) translateZ(-14.99px) rotateX(114.20deg) rotateY(35.25deg) rotateZ(232.10deg)
+}
+.model3d-lotusmodel-model-circle-face55 {
+	background-color: rgb(207.09,207.09,207.09);
+	width: 44.98px;
+	height: 49.95px;
+	clip-path: polygon(0.00px 45.70px, 44.98px 49.95px, 27.01px 0.00px);
+	transform: translateX(11.73px) translateY(-165.16px) translateZ(9.27px) rotateX(71.88deg) rotateY(38.40deg) rotateZ(-62.22deg)
+}
+.model3d-lotusmodel-model-circle-face56 {
+	background-color: rgb(171.35,171.35,171.35);
+	width: 40.29px;
+	height: 29.17px;
+	clip-path: polygon(7.90px 26.24px, 23.36px 29.17px, 40.29px 7.61px, 0.00px 0.00px);
+	transform: translateX(9.23px) translateY(-63.44px) translateZ(8.72px) rotateX(-78.14deg) rotateY(16.07deg) rotateZ(52.81deg)
+}
+.model3d-lotusmodel-model-circle-face57 {
+	background-color: rgb(161.01,161.01,161.01);
+	width: 40.29px;
+	height: 29.16px;
+	clip-path: polygon(16.93px 29.16px, 32.39px 26.24px, 40.29px 0.00px, 0.00px 7.61px);
+	transform: translateX(7.53px) translateY(-63.44px) translateZ(-13.70px) rotateX(255.85deg) rotateY(14.11deg) rotateZ(135.95deg)
+}
+.model3d-lotusmodel-model-circle-face58 {
+	background-color: rgb(153.61,153.61,153.61);
+	width: 50.25px;
+	height: 17.56px;
+	clip-path: polygon(5.87px 17.56px, 46.73px 14.04px, 50.25px 0.00px, 0.00px 4.32px);
+	transform: translateX(14.31px) translateY(-66.46px) translateZ(-22.75px) rotateX(236.66deg) rotateY(35.63deg) rotateZ(138.48deg)
+}
+.model3d-lotusmodel-model-circle-face59 {
+	background-color: rgb(172.67,172.67,172.67);
+	width: 50.25px;
+	height: 17.57px;
+	clip-path: polygon(3.52px 14.04px, 44.38px 17.57px, 50.25px 4.33px, 0.00px 0.00px);
+	transform: translateX(17.25px) translateY(-66.46px) translateZ(15.89px) rotateX(-62.48deg) rotateY(40.04deg) rotateZ(51.00deg)
+}
+.model3d-lotusmodel-model-circle-face60 {
+	background-color: rgb(181.37,181.37,181.37);
+	width: 53.46px;
+	height: 32.76px;
+	clip-path: polygon(0.00px 29.53px, 50.33px 32.76px, 53.46px 3.39px, 0.65px 0.00px);
+	transform: translateX(22.66px) translateY(-93.44px) translateZ(17.83px) rotateX(-22.69deg) rotateY(62.01deg) rotateZ(20.26deg)
+}
+.model3d-lotusmodel-model-circle-face61 {
+	background-color: rgb(157.69,157.69,157.69);
+	width: 53.46px;
+	height: 32.76px;
+	clip-path: polygon(3.13px 32.76px, 53.46px 29.53px, 52.81px 0.00px, 0.00px 3.39px);
+	transform: translateX(19.35px) translateY(-93.44px) translateZ(-25.72px) rotateX(197.87deg) rotateY(53.85deg) rotateZ(165.41deg)
+}
+.model3d-lotusmodel-model-circle-face62 {
+	background-color: rgb(164.37,164.37,164.37);
+	width: 52.81px;
+	height: 36.67px;
+	clip-path: polygon(0.00px 36.67px, 52.81px 33.33px, 46.83px 0.00px, 1.73px 2.85px);
+	transform: translateX(20.79px) translateY(-126.43px) translateZ(-26.12px) rotateX(170.71deg) rotateY(55.83deg) rotateZ(187.71deg)
+}
+.model3d-lotusmodel-model-circle-face63 {
+	background-color: rgb(187.63,187.63,187.63);
+	width: 52.81px;
+	height: 36.67px;
+	clip-path: polygon(0.00px 33.33px, 52.81px 36.67px, 51.08px 2.85px, 5.98px 0.00px);
+	transform: translateX(24.15px) translateY(-126.43px) translateZ(18.06px) rotateX(12.10deg) rotateY(64.37deg) rotateZ(-10.94deg)
+}
+.model3d-lotusmodel-model-circle-face64 {
+	background-color: rgb(225.84,225.84,225.84);
+	width: 45.02px;
+	height: 49.80px;
+	clip-path: polygon(0.00px 49.80px, 45.02px 45.92px, 18.39px 0.00px);
+	transform: translateX(-71.53px) translateY(-162.64px) translateZ(-32.62px) rotateX(108.71deg) rotateY(-36.08deg) rotateZ(119.91deg)
+}
+.model3d-lotusmodel-model-circle-face65 {
+	background-color: rgb(204.65,204.65,204.65);
+	width: 45.10px;
+	height: 49.34px;
+	clip-path: polygon(0.00px 46.55px, 45.10px 49.34px, 25.52px 0.00px);
+	transform: translateX(-53.75px) translateY(-162.41px) translateZ(-47.67px) rotateX(129.77deg) rotateY(-8.35deg) rotateZ(170.10deg)
+}
+.model3d-lotusmodel-model-circle-face66 {
+	background-color: rgb(165.05,165.05,165.05);
+	width: 40.75px;
+	height: 27.35px;
+	clip-path: polygon(9.83px 25.59px, 25.46px 27.35px, 40.75px 4.61px, 0.00px 0.00px);
+	transform: translateX(-50.10px) translateY(-59.49px) translateZ(-45.02px) rotateX(249.08deg) rotateY(-1.50deg) rotateZ(183.92deg)
+}
+.model3d-lotusmodel-model-circle-face67 {
+	background-color: rgb(180.96,180.96,180.96);
+	width: 40.56px;
+	height: 28.25px;
+	clip-path: polygon(16.10px 28.25px, 31.65px 25.92px, 40.56px 0.00px, 0.00px 6.07px);
+	transform: translateX(-67.92px) translateY(-60.23px) translateZ(-30.49px) rotateX(265.31deg) rotateY(-21.07deg) rotateZ(257.14deg)
+}
+.model3d-lotusmodel-model-circle-face68 {
+	background-color: rgb(193.51,193.51,193.51);
+	width: 50.30px;
+	height: 16.97px;
+	clip-path: polygon(5.69px 16.97px, 46.59px 14.00px, 50.30px 0.00px, 0.00px 3.66px);
+	transform: translateX(-86.93px) translateY(-63.95px) translateZ(-35.02px) rotateX(251.17deg) rotateY(-46.10deg) rotateZ(244.67deg)
+}
+.model3d-lotusmodel-model-circle-face69 {
+	background-color: rgb(164.20,164.20,164.20);
+	width: 50.36px;
+	height: 16.12px;
+	clip-path: polygon(3.97px 13.92px, 44.92px 16.12px, 50.36px 2.71px, 0.00px 0.00px);
+	transform: translateX(-57.07px) translateY(-63.15px) translateZ(-60.08px) rotateX(221.84deg) rotateY(-6.11deg) rotateZ(185.45deg)
+}
+.model3d-lotusmodel-model-circle-face70 {
+	background-color: rgb(172.82,172.82,172.82);
+	width: 52.87px;
+	height: 31.59px;
+	clip-path: polygon(0.04px 29.54px, 50.43px 31.59px, 52.87px 2.15px, 0.00px 0.00px);
+	transform: translateX(-60.55px) translateY(-90.49px) translateZ(-66.60px) rotateX(189.29deg) rotateY(-9.72deg) rotateZ(181.58deg)
+}
+.model3d-lotusmodel-model-circle-face71 {
+	background-color: rgb(209.24,209.24,209.24);
+	width: 53.24px;
+	height: 32.34px;
+	clip-path: polygon(2.88px 32.34px, 53.24px 29.54px, 52.83px 0.00px, 0.00px 2.94px);
+	transform: translateX(-94.17px) translateY(-91.26px) translateZ(-38.44px) rotateX(204.50deg) rotateY(-68.72deg) rotateZ(203.00deg)
+}
+.model3d-lotusmodel-model-circle-face72 {
+	background-color: rgb(215.82,215.82,215.82);
+	width: 52.83px;
+	height: 36.31px;
+	clip-path: polygon(0.00px 36.31px, 52.83px 33.37px, 47.11px 0.00px, 1.99px 2.51px);
+	transform: translateX(-94.09px) translateY(-124.34px) translateZ(-38.66px) rotateX(160.64deg) rotateY(-68.50deg) rotateZ(161.90deg)
+}
+.model3d-lotusmodel-model-circle-face73 {
+	background-color: rgb(180.03,180.03,180.03);
+	width: 52.87px;
+	height: 35.60px;
+	clip-path: polygon(0.00px 33.46px, 52.87px 35.60px, 50.37px 1.83px, 5.22px 0.00px);
+	transform: translateX(-60.60px) translateY(-123.64px) translateZ(-67.05px) rotateX(173.40deg) rotateY(-10.42deg) rotateZ(178.80deg)
+}
+.model3d-lotusmodel-model-circle-face74 {
+	background-color: rgb(222.69,222.69,222.69);
+	width: 46.57px;
+	height: 54.64px;
+	clip-path: polygon(0.00px 54.64px, 46.57px 47.05px, 15.25px 0.00px);
+	transform: translateX(-10.36px) translateY(-175.35px) translateZ(51.64px) rotateX(44.05deg) rotateY(20.55deg) rotateZ(-18.76deg)
+}
+.model3d-lotusmodel-model-circle-face75 {
+	background-color: rgb(239.23,239.23,239.23);
+	width: 46.57px;
+	height: 54.64px;
+	clip-path: polygon(0.00px 47.05px, 46.57px 54.64px, 31.31px 0.00px);
+	transform: translateX(-39.06px) translateY(-175.35px) translateZ(53.82px) rotateX(42.19deg) rotateY(-14.21deg) rotateZ(12.54deg)
+}
+.model3d-lotusmodel-model-circle-face76 {
+	background-color: rgb(180.68,180.68,180.68);
+	width: 51.83px;
+	height: 22.98px;
+	clip-path: polygon(7.38px 22.98px, 49.52px 15.40px, 51.83px 0.00px, 0.00px 9.33px);
+	transform: translateX(-7.69px) translateY(-68.87px) translateZ(49.47px) rotateX(-54.36deg) rotateY(26.90deg) rotateZ(32.25deg)
+}
+.model3d-lotusmodel-model-circle-face77 {
+	background-color: rgb(203.45,203.45,203.45);
+	width: 51.83px;
+	height: 22.99px;
+	clip-path: polygon(2.31px 15.40px, 44.45px 22.99px, 51.83px 9.33px, 0.00px 0.00px);
+	transform: translateX(-47.26px) translateY(-68.87px) translateZ(52.47px) rotateX(-51.24deg) rotateY(-21.64deg) rotateZ(-24.67deg)
+}
+.model3d-lotusmodel-model-circle-face78 {
+	background-color: rgb(224.16,224.16,224.16);
+	width: 57.42px;
+	height: 39.17px;
+	clip-path: polygon(0.00px 32.50px, 52.24px 39.17px, 57.42px 7.00px, 2.61px 0.00px);
+	transform: translateX(-52.35px) translateY(-97.32px) translateZ(61.68px) rotateX(-17.18deg) rotateY(-25.83deg) rotateZ(-7.67deg)
+}
+.model3d-lotusmodel-model-circle-face79 {
+	background-color: rgb(196.54,196.54,196.54);
+	width: 57.42px;
+	height: 39.17px;
+	clip-path: polygon(5.18px 39.17px, 57.42px 32.50px, 54.81px 0.00px, 0.00px 7.00px);
+	transform: translateX(-6.83px) translateY(-97.33px) translateZ(58.22px) rotateX(-18.72deg) rotateY(34.10deg) rotateZ(10.76deg)
+}
+.model3d-lotusmodel-model-circle-face80 {
+	background-color: rgb(204.44,204.44,204.44);
+	width: 55.11px;
+	height: 43.18px;
+	clip-path: polygon(0.27px 43.18px, 55.11px 36.43px, 46.83px 0.00px, 0.00px 5.76px);
+	transform: translateX(-4.23px) translateY(-133.05px) translateZ(62.73px) rotateX(-0.87deg) rotateY(33.70deg) rotateZ(0.49deg)
+}
+.model3d-lotusmodel-model-circle-face81 {
+	background-color: rgb(231.54,231.54,231.54);
+	width: 55.11px;
+	height: 43.18px;
+	clip-path: polygon(0.00px 36.43px, 54.84px 43.18px, 55.11px 5.76px, 8.28px 0.00px);
+	transform: translateX(-51.94px) translateY(-133.05px) translateZ(66.35px) rotateX(-0.80deg) rotateY(-25.01deg) rotateZ(-0.34deg)
+}
+.model3d-lotusmodel-model-circle-face82 {
+	background-color: rgb(191.66,191.66,191.66);
+	width: 46.33px;
+	height: 55.07px;
+	clip-path: polygon(0.00px 55.07px, 46.33px 46.11px, 13.65px 0.00px);
+	transform: translateX(-19.10px) translateY(-168.42px) translateZ(-49.06px) rotateX(142.45deg) rotateY(2.78deg) rotateZ(182.13deg)
+}
+.model3d-lotusmodel-model-circle-face83 {
+	background-color: rgb(184.43,184.43,184.43);
+	width: 46.32px;
+	height: 55.07px;
+	clip-path: polygon(0.00px 46.11px, 46.32px 55.07px, 32.69px 0.00px);
+	transform: translateX(8.19px) translateY(-168.43px) translateZ(-35.95px) rotateX(131.20deg) rotateY(36.00deg) rotateZ(213.88deg)
+}
+.model3d-lotusmodel-model-circle-face84 {
+	background-color: rgb(165.63,165.63,165.63);
+	width: 51.25px;
+	height: 25.35px;
+	clip-path: polygon(8.10px 25.35px, 49.78px 15.50px, 51.25px 0.00px, 0.00px 12.12px);
+	transform: translateX(-28.57px) translateY(-63.68px) translateZ(-44.92px) rotateX(229.90deg) rotateY(-8.68deg) rotateZ(190.16deg)
+}
+.model3d-lotusmodel-model-circle-face85 {
+	background-color: rgb(155.69,155.69,155.69);
+	width: 51.26px;
+	height: 25.34px;
+	clip-path: polygon(1.48px 15.50px, 43.16px 25.34px, 51.26px 12.10px, 0.00px 0.00px);
+	transform: translateX(6.87px) translateY(-63.67px) translateZ(-27.89px) rotateX(249.67deg) rotateY(36.26deg) rotateZ(122.07deg)
+}
+.model3d-lotusmodel-model-circle-face86 {
+	background-color: rgb(155.75,155.75,155.75);
+	width: 58.21px;
+	height: 40.74px;
+	clip-path: polygon(0.00px 32.40px, 52.00px 40.74px, 58.21px 8.76px, 3.65px 0.00px);
+	transform: translateX(10.52px) translateY(-91.08px) translateZ(-35.40px) rotateX(211.56deg) rotateY(53.12deg) rotateZ(153.84deg)
+}
+.model3d-lotusmodel-model-circle-face87 {
+	background-color: rgb(167.81,167.81,167.81);
+	width: 58.21px;
+	height: 40.75px;
+	clip-path: polygon(6.22px 40.75px, 58.21px 32.39px, 54.56px 0.00px, 0.00px 8.76px);
+	transform: translateX(-30.65px) translateY(-91.08px) translateZ(-55.18px) rotateX(198.40deg) rotateY(-5.78deg) rotateZ(181.92deg)
+}
+.model3d-lotusmodel-model-circle-face88 {
+	background-color: rgb(172.01,172.01,172.01);
+	width: 55.98px;
+	height: 44.51px;
+	clip-path: polygon(1.35px 44.51px, 55.98px 36.17px, 46.64px 0.00px, 0.00px 7.12px);
+	transform: translateX(-27.65px) translateY(-126.20px) translateZ(-61.57px) rotateX(183.68deg) rotateY(-3.76deg) rotateZ(180.24deg)
+}
+.model3d-lotusmodel-model-circle-face89 {
+	background-color: rgb(160.17,160.17,160.17);
+	width: 55.98px;
+	height: 44.51px;
+	clip-path: polygon(0.00px 36.17px, 54.62px 44.51px, 55.98px 7.12px, 9.33px 0.00px);
+	transform: translateX(15.45px) translateY(-126.20px) translateZ(-40.86px) rotateX(186.40deg) rotateY(54.91deg) rotateZ(174.75deg)
+}
+.model3d-lotusmodel-model-circle-face90 {
+	background-color: rgb(234.08,234.08,234.08);
+	width: 45.01px;
+	height: 49.81px;
+	clip-path: polygon(0.00px 49.81px, 45.01px 45.91px, 18.35px 0.00px);
+	transform: translateX(-64.03px) translateY(-165.15px) translateZ(-3.07px) rotateX(89.77deg) rotateY(-41.85deg) rotateZ(89.65deg)
+}
+.model3d-lotusmodel-model-circle-face91 {
+	background-color: rgb(214.16,214.16,214.16);
+	width: 44.98px;
+	height: 49.95px;
+	clip-path: polygon(0.00px 45.70px, 44.98px 49.95px, 27.02px 0.00px);
+	transform: translateX(-53.65px) translateY(-165.16px) translateZ(-24.41px) rotateX(124.94deg) rotateY(-24.67deg) rotateZ(149.15deg)
+}
+.model3d-lotusmodel-model-circle-face92 {
+	background-color: rgb(169.09,169.09,169.09);
+	width: 40.30px;
+	height: 29.16px;
+	clip-path: polygon(7.91px 26.24px, 23.37px 29.16px, 40.30px 7.60px, 0.00px 0.00px);
+	transform: translateX(-47.37px) translateY(-63.43px) translateZ(-21.52px) rotateX(251.81deg) rotateY(-8.15deg) rotateZ(203.34deg)
+}
+.model3d-lotusmodel-model-circle-face93 {
+	background-color: rgb(184.05,184.05,184.05);
+	width: 40.28px;
+	height: 29.20px;
+	clip-path: polygon(16.96px 29.20px, 32.42px 26.26px, 40.28px 0.00px, 0.00px 7.67px);
+	transform: translateX(-57.07px) translateY(-63.46px) translateZ(-1.29px) rotateX(-84.88deg) rotateY(-19.23deg) rotateZ(-74.79deg)
+}
+.model3d-lotusmodel-model-circle-face94 {
+	background-color: rgb(201.39,201.39,201.39);
+	width: 50.25px;
+	height: 17.57px;
+	clip-path: polygon(5.87px 17.57px, 46.73px 14.04px, 50.25px 0.00px, 0.00px 4.33px);
+	transform: translateX(-76.74px) translateY(-66.47px) translateZ(0.77px) rotateX(-81.82deg) rotateY(-46.69deg) rotateZ(-78.83deg)
+}
+.model3d-lotusmodel-model-circle-face95 {
+	background-color: rgb(173.82,173.82,173.82);
+	width: 50.25px;
+	height: 17.56px;
+	clip-path: polygon(3.52px 14.04px, 44.38px 17.56px, 50.25px 4.33px, 0.00px 0.00px);
+	transform: translateX(-60.05px) translateY(-66.45px) translateZ(-34.20px) rotateX(227.28deg) rotateY(-22.45deg) rotateZ(202.47deg)
+}
+.model3d-lotusmodel-model-circle-face96 {
+	background-color: rgb(186.14,186.14,186.14);
+	width: 53.46px;
+	height: 32.76px;
+	clip-path: polygon(0.00px 29.53px, 50.33px 32.76px, 53.46px 3.39px, 0.65px 0.00px);
+	transform: translateX(-66.78px) translateY(-93.44px) translateZ(-39.37px) rotateX(192.52deg) rotateY(-33.39deg) rotateZ(186.97deg)
+}
+.model3d-lotusmodel-model-circle-face97 {
+	background-color: rgb(220.40,220.40,220.40);
+	width: 53.46px;
+	height: 32.77px;
+	clip-path: polygon(3.13px 32.77px, 53.46px 29.53px, 52.81px 0.00px, 0.00px 3.40px);
+	transform: translateX(-85.60px) translateY(-93.44px) translateZ(-0.01px) rotateX(-64.84deg) rotateY(-78.46deg) rotateZ(-64.39deg)
+}
+.model3d-lotusmodel-model-circle-face98 {
+	background-color: rgb(227.33,227.33,227.33);
+	width: 52.81px;
+	height: 36.67px;
+	clip-path: polygon(0.00px 36.67px, 52.81px 33.33px, 46.83px 0.00px, 1.74px 2.85px);
+	transform: translateX(-86.44px) translateY(-126.43px) translateZ(-0.23px) rotateX(52.78deg) rotateY(-83.46deg) rotateZ(52.60deg)
+}
+.model3d-lotusmodel-model-circle-face99 {
+	background-color: rgb(193.67,193.67,193.67);
+	width: 52.81px;
+	height: 36.67px;
+	clip-path: polygon(0.00px 33.33px, 52.81px 36.67px, 51.08px 2.85px, 5.98px 0.00px);
+	transform: translateX(-67.35px) translateY(-126.44px) translateZ(-40.16px) rotateX(173.65deg) rotateY(-34.85deg) rotateZ(176.36deg)
+}
+.model3d-lotusmodel-model-circle-face100 {
+	background-color: rgb(240.68,240.68,240.68);
+	width: 45.02px;
+	height: 49.79px;
+	clip-path: polygon(0.00px 49.79px, 45.02px 45.93px, 18.41px 0.00px);
+	transform: translateX(-73.46px) translateY(-162.63px) translateZ(39.37px) rotateX(57.02deg) rotateY(-24.14deg) rotateZ(32.21deg)
+}
+.model3d-lotusmodel-model-circle-face101 {
+	background-color: rgb(233.12,233.12,233.12);
+	width: 45.10px;
+	height: 49.31px;
+	clip-path: polygon(0.00px 46.59px, 45.10px 49.31px, 25.44px 0.00px);
+	transform: translateX(-83.10px) translateY(-162.41px) translateZ(18.37px) rotateX(92.36deg) rotateY(-40.44deg) rotateZ(93.64deg)
+}
+.model3d-lotusmodel-model-circle-face102 {
+	background-color: rgb(180.76,180.76,180.76);
+	width: 40.75px;
+	height: 27.36px;
+	clip-path: polygon(9.82px 25.59px, 25.45px 27.36px, 40.75px 4.61px, 0.00px 0.00px);
+	transform: translateX(-78.03px) translateY(-59.49px) translateZ(17.50px) rotateX(265.63deg) rotateY(-20.53deg) rotateZ(257.72deg)
+}
+.model3d-lotusmodel-model-circle-face103 {
+	background-color: rgb(186.45,186.45,186.45);
+	width: 40.54px;
+	height: 28.30px;
+	clip-path: polygon(16.15px 28.30px, 31.70px 25.94px, 40.54px 0.00px, 0.00px 6.15px);
+	transform: translateX(-68.90px) translateY(-60.26px) translateZ(38.57px) rotateX(-70.72deg) rotateY(-9.83deg) rotateZ(-26.01deg)
+}
+.model3d-lotusmodel-model-circle-face104 {
+	background-color: rgb(207.60,207.60,207.60);
+	width: 50.30px;
+	height: 16.99px;
+	clip-path: polygon(5.70px 16.99px, 46.60px 14.00px, 50.30px 0.00px, 0.00px 3.68px);
+	transform: translateX(-81.89px) translateY(-63.96px) translateZ(51.01px) rotateX(-46.03deg) rotateY(-24.23deg) rotateZ(-23.05deg)
+}
+.model3d-lotusmodel-model-circle-face105 {
+	background-color: rgb(197.13,197.13,197.13);
+	width: 50.36px;
+	height: 16.16px;
+	clip-path: polygon(3.96px 13.93px, 44.91px 16.16px, 50.36px 2.74px, 0.00px 0.00px);
+	transform: translateX(-97.91px) translateY(-63.17px) translateZ(15.57px) rotateX(261.60deg) rotateY(-47.90deg) rotateZ(258.75deg)
+}
+.model3d-lotusmodel-model-circle-face106 {
+	background-color: rgb(216.24,216.24,216.24);
+	width: 52.87px;
+	height: 31.60px;
+	clip-path: polygon(0.03px 29.54px, 50.42px 31.60px, 52.87px 2.16px, 0.00px 0.00px);
+	transform: translateX(-106.03px) translateY(-90.49px) translateZ(15.96px) rotateX(237.69deg) rotateY(-79.14deg) rotateZ(237.23deg)
+}
+.model3d-lotusmodel-model-circle-face107 {
+	background-color: rgb(229.24,229.24,229.24);
+	width: 53.24px;
+	height: 32.35px;
+	clip-path: polygon(2.88px 32.35px, 53.24px 29.54px, 52.83px 0.00px, 0.00px 2.95px);
+	transform: translateX(-88.20px) translateY(-91.26px) translateZ(55.66px) rotateX(-10.56deg) rotateY(-34.76deg) rotateZ(-6.06deg)
+}
+.model3d-lotusmodel-model-circle-face108 {
+	background-color: rgb(236.48,236.48,236.48);
+	width: 52.83px;
+	height: 36.31px;
+	clip-path: polygon(0.00px 36.31px, 52.83px 33.37px, 47.11px 0.00px, 1.99px 2.51px);
+	transform: translateX(-88.24px) translateY(-124.34px) translateZ(55.71px) rotateX(8.61deg) rotateY(-35.77deg) rotateZ(5.06deg)
+}
+.model3d-lotusmodel-model-circle-face109 {
+	background-color: rgb(223.71,223.71,223.71);
+	width: 52.87px;
+	height: 35.59px;
+	clip-path: polygon(0.00px 33.46px, 52.87px 35.59px, 50.37px 1.82px, 5.22px 0.00px);
+	transform: translateX(-106.50px) translateY(-123.65px) translateZ(15.84px) rotateX(128.60deg) rotateY(-81.69deg) rotateZ(128.90deg)
+}
+.model3d-lotusmodel-model-circle-face110 {
+	background-color: rgb(195.47,195.47,195.47);
+	width: 44.50px;
+	height: 51.22px;
+	clip-path: polygon(0.00px 51.22px, 44.50px 43.41px, 13.95px 0.00px);
+	transform: translateX(36.00px) translateY(-162.34px) translateZ(26.53px) rotateX(91.49deg) rotateY(47.68deg) rotateZ(267.99deg)
+}
+.model3d-lotusmodel-model-circle-face111 {
+	background-color: rgb(214.64,214.64,214.64);
+	width: 44.68px;
+	height: 50.87px;
+	clip-path: polygon(0.00px 44.13px, 44.68px 50.87px, 29.50px 0.00px);
+	transform: translateX(25.99px) translateY(-162.14px) translateZ(52.16px) rotateX(51.88deg) rotateY(32.01deg) rotateZ(-34.04deg)
+}
+.model3d-lotusmodel-model-circle-face112 {
+	background-color: rgb(177.43,177.43,177.43);
+	width: 36.96px;
+	height: 34.21px;
+	clip-path: polygon(0.86px 27.40px, 15.04px 34.21px, 36.96px 17.76px, 0.00px 0.00px);
+	transform: translateX(19.94px) translateY(-64.80px) translateZ(44.99px) rotateX(-75.61deg) rotateY(3.73deg) rotateZ(14.24deg)
+}
+.model3d-lotusmodel-model-circle-face113 {
+	background-color: rgb(163.03,163.03,163.03);
+	width: 36.50px;
+	height: 34.84px;
+	clip-path: polygon(22.64px 34.84px, 36.50px 27.41px, 36.13px 0.00px, 0.00px 19.39px);
+	transform: translateX(28.84px) translateY(-65.48px) translateZ(23.73px) rotateX(260.66deg) rotateY(12.84deg) rotateZ(126.52deg)
+}
+.model3d-lotusmodel-model-circle-face114 {
+	background-color: rgb(157.05,157.05,157.05);
+	width: 49.49px;
+	height: 22.25px;
+	clip-path: polygon(7.27px 22.25px, 47.50px 14.34px, 49.49px 0.00px, 0.00px 9.73px);
+	transform: translateX(34.34px) translateY(-66.10px) translateZ(20.64px) rotateX(255.65deg) rotateY(40.05deg) rotateZ(111.68deg)
+}
+.model3d-lotusmodel-model-circle-face115 {
+	background-color: rgb(183.59,183.59,183.59);
+	width: 49.72px;
+	height: 21.17px;
+	clip-path: polygon(2.35px 14.29px, 42.77px 21.17px, 49.72px 8.47px, 0.00px 0.00px);
+	transform: translateX(20.39px) translateY(-65.11px) translateZ(55.98px) rotateX(-53.30deg) rotateY(20.73deg) rotateZ(25.40deg)
+}
+.model3d-lotusmodel-model-circle-face116 {
+	background-color: rgb(194.75,194.75,194.75);
+	width: 54.75px;
+	height: 35.30px;
+	clip-path: polygon(0.00px 29.46px, 50.09px 35.30px, 54.75px 6.13px, 2.19px 0.00px);
+	transform: translateX(24.82px) translateY(-90.50px) translateZ(61.88px) rotateX(-20.48deg) rotateY(35.93deg) rotateZ(12.36deg)
+}
+.model3d-lotusmodel-model-circle-face117 {
+	background-color: rgb(161.78,161.78,161.78);
+	width: 55.17px;
+	height: 36.18px;
+	clip-path: polygon(5.19px 36.18px, 55.17px 29.41px, 52.44px 0.00px, 0.00px 7.10px);
+	transform: translateX(40.37px) translateY(-91.42px) translateZ(21.14px) rotateX(237.85deg) rotateY(71.19deg) rotateZ(123.59deg)
+}
+.model3d-lotusmodel-model-circle-face118 {
+	background-color: rgb(168.31,168.31,168.31);
+	width: 52.98px;
+	height: 39.69px;
+	clip-path: polygon(0.51px 39.69px, 52.98px 32.86px, 44.81px 0.00px, 0.00px 5.83px);
+	transform: translateX(45.75px) translateY(-123.59px) translateZ(22.00px) rotateX(182.21deg) rotateY(81.81deg) rotateZ(177.81deg)
+}
+.model3d-lotusmodel-model-circle-face119 {
+	background-color: rgb(200.70,200.70,200.70);
+	width: 52.59px;
+	height: 38.88px;
+	clip-path: polygon(0.00px 33.00px, 52.59px 38.88px, 52.48px 5.02px, 7.58px 0.00px);
+	transform: translateX(29.45px) translateY(-122.78px) translateZ(64.68px) rotateX(-1.16deg) rotateY(39.51deg) rotateZ(0.74deg)
+}
+.model3d-lotusmodel-model-circle-face120 {
+	background-color: rgb(181.63,181.63,181.63);
+	width: 23.45px;
+	height: 18.33px;
+	clip-path: polygon(9.14px 0.00px, 0.00px 18.33px, 23.45px 8.07px);
+	transform: translateX(-21.20px) translateY(-53.41px) translateZ(17.06px) rotateX(-81.32deg) rotateY(-11.54deg) rotateZ(-52.67deg)
+}
+.model3d-lotusmodel-model-circle-face121 {
+	background-color: rgb(169.87,169.87,169.87);
+	width: 23.17px;
+	height: 18.88px;
+	clip-path: polygon(0.00px 8.27px, 23.17px 18.88px, 14.19px 0.00px);
+	transform: translateX(-10.69px) translateY(-53.67px) translateZ(16.29px) rotateX(-83.59deg) rotateY(12.46deg) rotateZ(62.50deg)
+}
+.model3d-lotusmodel-model-circle-face122 {
+	background-color: rgb(174.39,174.39,174.39);
+	width: 7.25px;
+	height: 25.28px;
+	clip-path: polygon(4.02px 0.00px, 0.00px 25.28px, 7.25px 25.28px);
+	transform: translateX(-8.35px) translateY(-55.87px) translateZ(14.61px) rotateX(-84.21deg) rotateY(0.44deg) rotateZ(4.35deg)
+}
+.model3d-lotusmodel-model-circle-face123 {
+	background-color: rgb(170.87,170.87,170.87);
+	width: 37.40px;
+	height: 25.64px;
+	clip-path: polygon(0.00px 0.00px, 37.40px 25.64px, 35.39px 10.04px);
+	transform: translateX(-46.59px) translateY(-54.25px) translateZ(11.61px) rotateX(267.68deg) rotateY(-0.07deg) rotateZ(181.84deg)
+}
+.model3d-lotusmodel-model-circle-face124 {
+	background-color: rgb(171.47,171.47,171.47);
+	width: 39.77px;
+	height: 19.14px;
+	clip-path: polygon(0.95px 19.14px, 39.77px 0.00px, 0.00px 3.44px);
+	transform: translateX(-47.98px) translateY(-51.00px) translateZ(13.89px) rotateX(-88.30deg) rotateY(2.66deg) rotateZ(57.34deg)
+}
+.model3d-lotusmodel-model-circle-face125 {
+	background-color: rgb(171.13,171.13,171.13);
+	width: 13.76px;
+	height: 43.20px;
+	clip-path: polygon(9.71px 1.03px, 0.00px 43.20px, 13.76px 0.00px);
+	transform: translateX(-36.72px) translateY(-63.05px) translateZ(4.32px) rotateX(269.89deg) rotateY(1.54deg) rotateZ(94.25deg)
+}
+.model3d-lotusmodel-model-circle-face126 {
+	background-color: rgb(173.97,173.97,173.97);
+	width: 62.32px;
+	height: 15.79px;
+	clip-path: polygon(22.41px 15.79px, 62.32px 15.51px, 0.00px 0.00px);
+	transform: translateX(-54.28px) translateY(-54.44px) translateZ(30.94px) rotateX(-65.57deg) rotateY(28.91deg) rotateZ(46.78deg)
+}
+.model3d-lotusmodel-model-circle-face127 {
+	background-color: rgb(164.25,164.25,164.25);
+	width: 42.91px;
+	height: 14.81px;
+	clip-path: polygon(0.00px 8.91px, 42.91px 14.81px, 12.96px 0.00px);
+	transform: translateX(-3.83px) translateY(-51.05px) translateZ(12.95px) rotateX(261.11deg) rotateY(9.76deg) rotateZ(132.70deg)
+}
+.model3d-lotusmodel-model-circle-face128 {
+	background-color: rgb(222.31,222.31,222.31);
+	width: 38.05px;
+	height: 30.45px;
+	clip-path: polygon(38.05px 30.44px, 0.00px 0.00px, 30.81px 30.45px);
+	transform: translateX(-8.21px) translateY(-57.84px) translateZ(16.13px) rotateX(92.52deg) rotateY(-0.19deg) rotateZ(175.72deg)
+}
+.model3d-lotusmodel-model-circle-face129 {
+	background-color: rgb(191.12,191.12,191.12);
+	width: 69.06px;
+	height: 22.39px;
+	clip-path: polygon(46.48px 15.54px, 69.06px 0.00px, 0.00px 22.39px);
+	transform: translateX(-26.82px) translateY(-58.21px) translateZ(34.02px) rotateX(-70.47deg) rotateY(-18.86deg) rotateZ(-42.34deg)
+}
+.model3d-lotusmodel-model-circle-face130 {
+	background-color: rgb(162.73,162.73,162.73);
+	width: 36.88px;
+	height: 38.89px;
+	clip-path: polygon(5.73px 26.80px, 36.88px 38.89px, 0.00px 0.00px);
+	transform: translateX(5.70px) translateY(-66.83px) translateZ(0.64px) rotateX(257.97deg) rotateY(10.92deg) rotateZ(138.36deg)
+}
+.model3d-lotusmodel-model-circle-face131 {
+	background-color: rgb(173.75,173.75,173.75);
+	width: 33.78px;
+	height: 18.83px;
+	clip-path: polygon(33.78px 0.00px, 0.56px 3.11px, 0.00px 18.83px);
+	transform: translateX(-38.65px) translateY(-50.85px) translateZ(-16.84px) rotateX(-87.07deg) rotateY(-1.18deg) rotateZ(-21.93deg)
+}
+.model3d-lotusmodel-model-circle-face132 {
+	background-color: rgb(170.77,170.77,170.77);
+	width: 30.54px;
+	height: 27.72px;
+	clip-path: polygon(0.00px 0.00px, 27.75px 27.72px, 30.54px 12.24px);
+	transform: translateX(-36.60px) translateY(-55.31px) translateZ(-18.01px) rotateX(269.84deg) rotateY(2.31deg) rotateZ(93.98deg)
+}
+.model3d-lotusmodel-model-circle-face133 {
+	background-color: rgb(172.05,172.05,172.05);
+	width: 8.53px;
+	height: 38.42px;
+	clip-path: polygon(4.35px 0.00px, 0.00px 38.42px, 8.53px 0.14px);
+	transform: translateX(-24.80px) translateY(-60.67px) translateZ(-17.27px) rotateX(-88.72deg) rotateY(0.87deg) rotateZ(34.27deg)
+}
+.model3d-lotusmodel-model-circle-face134 {
+	background-color: rgb(158.86,158.86,158.86);
+	width: 53.02px;
+	height: 18.60px;
+	clip-path: polygon(32.89px 18.60px, 53.02px 0.00px, 0.00px 17.81px);
+	transform: translateX(-35.04px) translateY(-55.43px) translateZ(-31.61px) rotateX(258.74deg) rotateY(27.47deg) rotateZ(113.34deg)
+}
+.model3d-lotusmodel-model-circle-face135 {
+	background-color: rgb(194.75,194.75,194.75);
+	width: 54.39px;
+	height: 17.58px;
+	clip-path: polygon(21.03px 17.58px, 54.39px 17.26px, 0.00px 0.00px);
+	transform: translateX(-64.28px) translateY(-55.34px) translateZ(-7.78px) rotateX(-60.09deg) rotateY(-14.21deg) rotateZ(-23.11deg)
+}
+.model3d-lotusmodel-model-circle-face136 {
+	background-color: rgb(183.23,183.23,183.23);
+	width: 38.65px;
+	height: 35.85px;
+	clip-path: polygon(0.00px 0.00px, 0.97px 28.78px, 15.80px 35.85px, 38.65px 18.42px);
+	transform: translateX(-33.47px) translateY(-67.53px) translateZ(40.98px) rotateX(-79.11deg) rotateY(-12.46deg) rotateZ(-48.30deg)
+}
+.model3d-lotusmodel-model-circle-face137 {
+	background-color: rgb(170.49,170.49,170.49);
+	width: 37.74px;
+	height: 31.96px;
+	clip-path: polygon(22.95px 31.96px, 37.74px 24.81px, 34.68px 0.00px, 0.00px 14.66px);
+	transform: translateX(-11.28px) translateY(-65.10px) translateZ(38.60px) rotateX(-80.99deg) rotateY(14.38deg) rotateZ(57.44deg)
+}
+.model3d-lotusmodel-model-circle-face138 {
+	background-color: rgb(176.30,176.30,176.30);
+	width: 47.54px;
+	height: 24.52px;
+	clip-path: polygon(40.08px 0.00px, 0.00px 24.52px, 47.54px 13.84px);
+	transform: translateX(-15.54px) translateY(-55.76px) translateZ(22.50px) rotateX(-83.26deg) rotateY(-2.69deg) rotateZ(-21.69deg)
+}
+.model3d-lotusmodel-model-circle-face139 {
+	background-color: rgb(171.67,171.67,171.67);
+	width: 38.95px;
+	height: 38.17px;
+	clip-path: polygon(25.71px 38.17px, 38.95px 28.46px, 34.53px 0.00px, 0.00px 25.32px);
+	transform: translateX(-22.16px) translateY(-63.38px) translateZ(-32.22px) rotateX(258.38deg) rotateY(-9.13deg) rotateZ(217.64deg)
+}
+.model3d-lotusmodel-model-circle-face140 {
+	background-color: rgb(166.14,166.14,166.14);
+	width: 38.86px;
+	height: 37.94px;
+	clip-path: polygon(3.73px 0.00px, 0.00px 28.56px, 13.48px 37.94px, 38.86px 24.48px);
+	transform: translateX(3.22px) translateY(-63.23px) translateZ(-19.78px) rotateX(269.97deg) rotateY(14.74deg) rotateZ(90.12deg)
+}
+.model3d-lotusmodel-model-circle-face141 {
+	background-color: rgb(176.53,176.53,176.53);
+	width: 15.86px;
+	height: 16.53px;
+	clip-path: polygon(0.83px 0.00px, 0.00px 4.05px, 4.88px 16.53px, 15.86px 4.33px);
+	transform: translateX(-1.94px) translateY(-49.27px) translateZ(-5.48px) rotateX(-81.31deg) rotateY(-1.07deg) rotateZ(-6.98deg)
+}
+.model3d-lotusmodel-model-circle-face142 {
+	background-color: rgb(178.69,178.69,178.69);
+	width: 14.50px;
+	height: 14.26px;
+	clip-path: polygon(14.50px 1.44px, 10.58px 0.00px, 0.00px 1.70px, 10.58px 14.26px);
+	transform: translateX(-10.63px) translateY(-47.96px) translateZ(-11.45px) rotateX(-82.93deg) rotateY(-7.31deg) rotateZ(-45.76deg)
+}

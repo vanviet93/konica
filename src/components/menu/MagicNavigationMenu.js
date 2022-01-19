@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import "./MagicNavigationMenu.css";
-import { renderIntoDocument } from 'react-dom/cjs/react-dom-test-utils.production.min';
 const propTypes={
 	items: PropTypes.arrayOf(PropTypes.object),
 	values: PropTypes.object,
@@ -49,7 +48,10 @@ const MagicNavigationMenu = (props) => {
 			left: indicatorConfig.pos + "%", 
 			width: indicatorConfig.open? undefined: 0,
 			height: indicatorConfig.open? undefined: 0}}
-		className='magic-navigation-menu-indicator' />
+		className='magic-navigation-menu-indicator-container'>
+			<div className='magic-navigation-menu-indicator' />
+		</div>
+		
 	}
 	const renderTopFillers = () => {
 		const halfButton = 100/props.items.length/ 2;
@@ -76,6 +78,7 @@ const MagicNavigationMenu = (props) => {
 				onClick={(e)=>{onItemClick(item)}}
 				className={selected?'magic-navigation-menu-selected-button': 'magic-navigation-menu-button'}>
 					<i className={item.icon + (selected? " magic-navigation-menu-selected-icon": " magic-navigation-menu-icon")} />
+					{selected?<label className='magic-navigation-menu-selected-text'>{item.text}</label>: null}
 				</button>
 			})}
 		</div>

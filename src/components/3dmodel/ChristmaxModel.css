@@ -10,6 +10,11 @@
 	transform-origin: 50% 50%;
 	animation: rotate360 10s infinite linear;
 }
+.model3d-christmaxmodel-model-face {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
 @keyframes rotate360 {
 	from {
 		transform: translateY(-20px) rotateX(-10deg) rotateY(0deg);
@@ -19,1082 +24,758 @@
 	}
 }
 .model3d-christmaxmodel-model-pinestem-face0 {
-	position: absolute;
 	background-color: rgb(123.25,123.25,82.17);
 	width: 21.16px;
 	height: 36.00px;
 	clip-path: polygon(0.00px 0.00px, 0.00px 36.00px, 21.16px 36.00px, 21.16px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(87.27px) translateY(138.45px) translateZ(-77.74px) rotateX(-0.00deg) rotateY(32.64deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-pinestem-face1 {
-	position: absolute;
 	background-color: rgb(99.71,99.71,66.47);
 	width: 21.16px;
 	height: 36.00px;
 	clip-path: polygon(0.00px 0.00px, 0.00px 36.00px, 21.16px 36.00px, 21.16px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(93.55px) translateY(138.45px) translateZ(-93.63px) rotateX(180.00deg) rotateY(75.35deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-pinestem-face2 {
-	position: absolute;
 	background-color: rgb(102.24,102.24,68.16);
 	width: 21.16px;
 	height: 36.00px;
 	clip-path: polygon(0.00px 0.00px, 0.00px 36.00px, 21.16px 36.00px, 21.16px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(80.27px) translateY(138.45px) translateZ(-104.54px) rotateX(180.00deg) rotateY(3.35deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-pinestem-face3 {
-	position: absolute;
 	background-color: rgb(127.34,127.34,84.90);
 	width: 21.16px;
 	height: 36.00px;
 	clip-path: polygon(0.00px 0.00px, 0.00px 36.00px, 21.16px 36.00px, 21.16px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(65.80px) translateY(138.45px) translateZ(-95.35px) rotateX(180.00deg) rotateY(-68.64deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-pinestem-face4 {
-	position: absolute;
 	background-color: rgb(140.33,140.33,93.55);
 	width: 21.16px;
 	height: 36.00px;
 	clip-path: polygon(0.00px 0.00px, 0.00px 36.00px, 21.16px 36.00px, 21.16px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(70.19px) translateY(138.45px) translateZ(-78.73px) rotateX(-0.00deg) rotateY(-39.35deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face0 {
-	position: absolute;
 	background-color: rgb(38.47,115.42,76.95);
 	width: 127.34px;
 	height: 148.74px;
 	clip-path: polygon(127.34px 148.74px, 63.69px 0.00px, 0.00px 148.72px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(68.45px) translateY(19.73px) translateZ(-125.59px) rotateX(120.31deg) rotateY(30.81deg) rotateZ(221.23deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face1 {
-	position: absolute;
 	background-color: rgb(41.26,123.78,82.52);
 	width: 127.34px;
 	height: 148.73px;
 	clip-path: polygon(127.34px 148.72px, 63.66px 0.00px, 0.00px 148.73px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(78.21px) translateY(19.74px) translateZ(-71.39px) rotateX(72.99deg) rotateY(39.16deg) rotateZ(-64.15deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face2 {
-	position: absolute;
 	background-color: rgb(46.13,138.40,92.27);
 	width: 127.34px;
 	height: 148.73px;
 	clip-path: polygon(127.34px 148.72px, 63.66px 0.00px, 0.00px 148.73px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(36.13px) translateY(19.73px) translateZ(-35.74px) rotateX(48.32deg) rotateY(6.85deg) rotateZ(-7.62deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face3 {
-	position: absolute;
 	background-color: rgb(48.22,144.66,96.44);
 	width: 127.34px;
 	height: 148.74px;
 	clip-path: polygon(127.34px 148.74px, 63.69px 0.00px, 0.00px 148.72px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-15.76px) translateY(19.73px) translateZ(-54.38px) rotateX(59.69deg) rotateY(-30.81deg) rotateZ(41.23deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face4 {
-	position: absolute;
 	background-color: rgb(45.43,136.29,90.86);
 	width: 127.34px;
 	height: 148.73px;
 	clip-path: polygon(127.34px 148.72px, 63.66px 0.00px, 0.00px 148.73px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-25.57px) translateY(19.74px) translateZ(-108.64px) rotateX(107.01deg) rotateY(-39.16deg) rotateZ(115.85deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face5 {
-	position: absolute;
 	background-color: rgb(40.56,121.67,81.12);
 	width: 127.34px;
 	height: 148.73px;
 	clip-path: polygon(127.34px 148.72px, 63.66px 0.00px, 0.00px 148.73px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(16.52px) translateY(19.73px) translateZ(-144.26px) rotateX(131.68deg) rotateY(-6.85deg) rotateZ(172.38deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face6 {
-	position: absolute;
 	background-color: rgb(38.82,116.45,77.63);
 	width: 106.52px;
 	height: 135.94px;
 	clip-path: polygon(106.52px 135.94px, 53.37px 0.00px, 0.00px 135.85px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(82.67px) translateY(-29.88px) translateZ(-95.27px) rotateX(97.34deg) rotateY(46.81deg) rotateZ(259.99deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face7 {
-	position: absolute;
 	background-color: rgb(43.78,131.35,87.57);
 	width: 106.52px;
 	height: 135.90px;
 	clip-path: polygon(106.52px 135.89px, 53.25px 0.00px, 0.00px 135.90px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(64.39px) translateY(-29.87px) translateZ(-53.10px) rotateX(49.11deg) rotateY(26.12deg) rotateZ(-26.95deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face8 {
-	position: absolute;
 	background-color: rgb(47.99,143.97,95.98);
 	width: 106.52px;
 	height: 135.90px;
 	clip-path: polygon(106.52px 135.90px, 53.26px 0.00px, 0.00px 135.90px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(18.59px) translateY(-29.87px) translateZ(-47.59px) rotateX(45.16deg) rotateY(-16.79deg) rotateZ(16.20deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face9 {
-	position: absolute;
 	background-color: rgb(47.23,141.69,94.46);
 	width: 106.52px;
 	height: 135.94px;
 	clip-path: polygon(106.52px 135.94px, 53.37px 0.00px, 0.00px 135.85px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-8.98px) translateY(-29.88px) translateZ(-84.52px) rotateX(82.66deg) rotateY(-46.81deg) rotateZ(79.99deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face10 {
-	position: absolute;
 	background-color: rgb(42.26,126.79,84.52);
 	width: 106.52px;
 	height: 135.90px;
 	clip-path: polygon(106.52px 135.89px, 53.25px 0.00px, 0.00px 135.90px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(9.08px) translateY(-29.87px) translateZ(-126.92px) rotateX(130.89deg) rotateY(-26.12deg) rotateZ(153.05deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face11 {
-	position: absolute;
 	background-color: rgb(38.06,114.17,76.11);
 	width: 106.52px;
 	height: 135.90px;
 	clip-path: polygon(106.52px 135.90px, 53.26px 0.00px, 0.00px 135.90px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(54.90px) translateY(-29.87px) translateZ(-132.40px) rotateX(134.84deg) rotateY(16.79deg) rotateZ(196.20deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face12 {
-	position: absolute;
 	background-color: rgb(36.33,108.98,72.66);
 	width: 76.20px;
 	height: 130.21px;
 	clip-path: polygon(76.20px 130.21px, 38.13px 0.00px, 0.00px 130.19px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(82.39px) translateY(-92.38px) translateZ(-102.62px) rotateX(123.20deg) rotateY(52.72deg) rotateZ(230.57deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face13 {
-	position: absolute;
 	background-color: rgb(41.30,123.91,82.61);
 	width: 76.20px;
 	height: 130.21px;
 	clip-path: polygon(76.20px 130.20px, 38.09px 0.00px, 0.00px 130.21px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(78.11px) translateY(-92.38px) translateZ(-69.99px) rotateX(44.08deg) rotateY(43.24deg) rotateZ(-33.56deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face14 {
-	position: absolute;
 	background-color: rgb(47.11,141.34,94.22);
 	width: 76.20px;
 	height: 130.20px;
 	clip-path: polygon(76.20px 130.20px, 38.10px 0.00px, 0.00px 130.20px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(47.66px) translateY(-92.38px) translateZ(-57.28px) rotateX(30.66deg) rotateY(-6.36deg) rotateZ(3.75deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face15 {
-	position: absolute;
 	background-color: rgb(47.95,143.84,95.89);
 	width: 76.20px;
 	height: 130.21px;
 	clip-path: polygon(76.20px 130.21px, 38.13px 0.00px, 0.00px 130.19px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(21.46px) translateY(-92.38px) translateZ(-77.30px) rotateX(56.80deg) rotateY(-52.72deg) rotateZ(50.57deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face16 {
-	position: absolute;
 	background-color: rgb(42.97,128.91,85.94);
 	width: 76.20px;
 	height: 130.21px;
 	clip-path: polygon(76.20px 130.20px, 38.09px 0.00px, 0.00px 130.21px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(25.66px) translateY(-92.38px) translateZ(-110.04px) rotateX(135.92deg) rotateY(-43.24deg) rotateZ(146.44deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face17 {
-	position: absolute;
 	background-color: rgb(37.16,111.48,74.32);
 	width: 76.20px;
 	height: 130.20px;
 	clip-path: polygon(76.20px 130.20px, 38.10px 0.00px, 0.00px 130.20px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(56.14px) translateY(-92.38px) translateZ(-122.71px) rotateX(149.34deg) rotateY(6.36deg) rotateZ(183.75deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face18 {
-	position: absolute;
 	background-color: rgb(34.67,104.00,69.33);
 	width: 58.39px;
 	height: 136.48px;
 	clip-path: polygon(58.39px 136.48px, 29.20px 0.00px, 0.00px 136.48px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(78.78px) translateY(-162.95px) translateZ(-107.81px) rotateX(150.47deg) rotateY(41.27deg) rotateZ(200.49deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face19 {
-	position: absolute;
 	background-color: rgb(38.07,114.22,76.15);
 	width: 58.39px;
 	height: 136.48px;
 	clip-path: polygon(58.39px 136.47px, 29.17px 0.00px, 0.00px 136.48px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(85.16px) translateY(-162.94px) translateZ(-83.42px) rotateX(56.61deg) rotateY(63.65deg) rotateZ(-53.66deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face20 {
-	position: absolute;
 	background-color: rgb(44.84,134.53,89.69);
 	width: 58.39px;
 	height: 136.48px;
 	clip-path: polygon(58.39px 136.48px, 29.20px 0.00px, 0.00px 136.48px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(67.24px) translateY(-162.95px) translateZ(-65.55px) rotateX(22.42deg) rotateY(13.69deg) rotateZ(-5.57deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face21 {
-	position: absolute;
 	background-color: rgb(48.20,144.61,96.41);
 	width: 58.39px;
 	height: 136.48px;
 	clip-path: polygon(58.39px 136.48px, 29.20px 0.00px, 0.00px 136.48px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(42.86px) translateY(-162.95px) translateZ(-72.19px) rotateX(29.53deg) rotateY(-41.27deg) rotateZ(20.49deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face22 {
-	position: absolute;
 	background-color: rgb(44.79,134.38,89.59);
 	width: 58.39px;
 	height: 136.48px;
 	clip-path: polygon(58.39px 136.47px, 29.17px 0.00px, 0.00px 136.48px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(36.34px) translateY(-162.95px) translateZ(-96.67px) rotateX(123.39deg) rotateY(-63.65deg) rotateZ(126.34deg)
 }
 .model3d-christmaxmodel-model-pineleaf-face23 {
-	position: absolute;
 	background-color: rgb(38.03,114.08,76.05);
 	width: 58.39px;
 	height: 136.48px;
 	clip-path: polygon(58.39px 136.48px, 29.20px 0.00px, 0.00px 136.48px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(54.36px) translateY(-162.95px) translateZ(-114.46px) rotateX(157.58deg) rotateY(-13.69deg) rotateZ(174.43deg)
 }
 .model3d-christmaxmodel-model-giftbox1-face0 {
-	position: absolute;
 	background-color: rgb(228.52,45.70,23.30);
 	width: 72.00px;
 	height: 72.00px;
 	clip-path: polygon(0.00px 72.00px, 72.00px 72.00px, 72.00px 0.00px, 0.00px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(39.88px) translateY(102.45px) translateZ(79.70px) rotateX(-0.00deg) rotateY(-77.01deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftbox1-face1 {
-	position: absolute;
 	background-color: rgb(223.39,44.68,22.78);
 	width: 86.34px;
 	height: 86.34px;
 	clip-path: polygon(0.00px 16.18px, 16.18px 86.34px, 86.34px 70.16px, 70.16px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(67.83px) translateY(59.29px) translateZ(71.57px) rotateX(89.99deg) rotateY(-0.00deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftbox1-face2 {
-	position: absolute;
 	background-color: rgb(166.73,33.35,17.00);
 	width: 72.00px;
 	height: 72.00px;
 	clip-path: polygon(72.00px 0.00px, 0.00px 0.00px, 0.00px 72.00px, 72.00px 72.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(110.02px) translateY(102.45px) translateZ(63.59px) rotateX(180.00deg) rotateY(77.01deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftbox1-face3 {
-	position: absolute;
 	background-color: rgb(178.31,35.66,18.18);
 	width: 72.00px;
 	height: 72.00px;
 	clip-path: polygon(72.00px 0.00px, 0.00px 0.00px, 0.00px 72.00px, 72.00px 72.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(66.91px) translateY(102.45px) translateZ(36.49px) rotateX(180.00deg) rotateY(-12.99deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftbox1-face4 {
-	position: absolute;
 	background-color: rgb(216.94,43.39,22.12);
 	width: 72.00px;
 	height: 72.00px;
 	clip-path: polygon(72.00px 0.00px, 0.00px 0.00px, 0.00px 72.00px, 72.00px 72.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(83.09px) translateY(102.45px) translateZ(106.65px) rotateX(-0.00deg) rotateY(12.99deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon1-face0 {
-	position: absolute;
 	background-color: rgb(0.00,173.55,0.00);
 	width: 15.64px;
 	height: 75.36px;
 	clip-path: polygon(15.64px 0.00px, 0.00px 0.00px, 0.00px 75.36px, 15.64px 75.36px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(111.97px) translateY(98.92px) translateZ(109.68px) rotateX(-0.00deg) rotateY(12.99deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon1-face1 {
-	position: absolute;
 	background-color: rgb(0.00,142.65,0.00);
 	width: 15.64px;
 	height: 75.36px;
 	clip-path: polygon(15.64px 0.00px, 0.00px 0.00px, 0.00px 75.36px, 15.64px 75.36px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(94.39px) translateY(98.92px) translateZ(33.46px) rotateX(180.00deg) rotateY(-12.99deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon1-face2 {
-	position: absolute;
 	background-color: rgb(0.00,133.38,0.00);
 	width: 15.64px;
 	height: 75.36px;
 	clip-path: polygon(15.64px 0.00px, 0.00px 0.00px, 0.00px 75.36px, 15.64px 75.36px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(141.22px) translateY(98.92px) translateZ(62.89px) rotateX(180.00deg) rotateY(77.01deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon1-face3 {
-	position: absolute;
 	background-color: rgb(0.00,182.82,0.00);
 	width: 15.64px;
 	height: 75.36px;
 	clip-path: polygon(0.00px 75.36px, 15.64px 75.36px, 15.64px 0.00px, 0.00px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(65.04px) translateY(98.92px) translateZ(80.40px) rotateX(-0.00deg) rotateY(-77.01deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon1-face4 {
-	position: absolute;
 	background-color: rgb(0.00,178.71,0.00);
 	width: 79.72px;
 	height: 79.72px;
 	clip-path: polygon(23.45px 3.52px, 30.48px 34.00px, 0.00px 41.03px, 3.52px 56.27px, 34.00px 49.24px, 41.03px 79.72px, 56.27px 76.21px, 49.24px 45.72px, 79.72px 38.69px, 76.21px 23.45px, 45.72px 30.48px, 38.69px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(71.14px) translateY(59.06px) translateZ(71.57px) rotateX(89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftbox2-face0 {
-	position: absolute;
-	background-color: rgb(233.81,65.10,23.84);
+	background-color: rgb(231.06,189.80,2.75);
 	width: 62.94px;
 	height: 62.94px;
 	clip-path: polygon(0.00px 62.94px, 62.94px 62.94px, 62.94px 0.00px, 0.00px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-62.43px) translateY(110.95px) translateZ(100.39px) rotateX(-0.00deg) rotateY(-51.77deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftbox2-face1 {
-	position: absolute;
-	background-color: rgb(223.39,62.20,22.78);
+	background-color: rgb(220.76,181.34,2.63);
 	width: 88.39px;
 	height: 88.39px;
 	clip-path: polygon(0.00px 38.95px, 38.95px 88.39px, 88.39px 49.44px, 49.44px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-50.42px) translateY(66.76px) translateZ(80.90px) rotateX(89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftbox2-face2 {
-	position: absolute;
-	background-color: rgb(161.44,44.95,16.46);
+	background-color: rgb(159.54,131.05,1.90);
 	width: 62.94px;
 	height: 62.94px;
 	clip-path: polygon(62.94px 0.00px, 0.00px 0.00px, 0.00px 62.94px, 62.94px 62.94px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-12.98px) translateY(110.95px) translateZ(61.44px) rotateX(180.00deg) rotateY(51.77deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftbox2-face3 {
-	position: absolute;
-	background-color: rgb(193.33,53.83,19.71);
+	background-color: rgb(191.06,156.94,2.27);
 	width: 62.94px;
 	height: 62.94px;
 	clip-path: polygon(62.94px 0.00px, 0.00px 0.00px, 0.00px 62.94px, 62.94px 62.94px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-57.17px) translateY(110.95px) translateZ(56.20px) rotateX(180.00deg) rotateY(-38.24deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftbox2-face4 {
-	position: absolute;
-	background-color: rgb(201.92,56.22,20.59);
+	background-color: rgb(199.54,163.91,2.38);
 	width: 62.94px;
 	height: 62.94px;
 	clip-path: polygon(62.94px 0.00px, 0.00px 0.00px, 0.00px 62.94px, 62.94px 62.94px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-18.21px) translateY(110.95px) translateZ(105.63px) rotateX(-0.00deg) rotateY(38.24deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon2-face0 {
-	position: absolute;
-	background-color: rgb(0.00,161.53,0.00);
+	background-color: rgb(199.54,61.76,2.38);
 	width: 13.80px;
 	height: 64.76px;
 	clip-path: polygon(13.80px 0.00px, 0.00px 0.00px, 0.00px 64.76px, 13.80px 64.76px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(8.24px) translateY(109.59px) translateZ(108.02px) rotateX(-0.00deg) rotateY(38.24deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon2-face1 {
-	position: absolute;
-	background-color: rgb(0.00,154.67,0.00);
+	background-color: rgb(191.06,59.14,2.27);
 	width: 13.80px;
 	height: 64.76px;
 	clip-path: polygon(13.80px 0.00px, 0.00px 0.00px, 0.00px 64.76px, 13.80px 64.76px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-34.48px) translateY(109.59px) translateZ(53.81px) rotateX(180.00deg) rotateY(-38.24deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon2-face2 {
-	position: absolute;
-	background-color: rgb(0.00,129.15,0.00);
+	background-color: rgb(159.54,49.38,1.90);
 	width: 13.80px;
 	height: 64.76px;
 	clip-path: polygon(13.80px 0.00px, 0.00px 0.00px, 0.00px 64.76px, 13.80px 64.76px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(13.97px) translateY(109.59px) translateZ(59.56px) rotateX(180.00deg) rotateY(51.77deg) rotateZ(180.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon2-face3 {
-	position: absolute;
-	background-color: rgb(0.00,187.05,0.00);
+	background-color: rgb(231.06,71.52,2.75);
 	width: 13.80px;
 	height: 64.76px;
 	clip-path: polygon(0.00px 64.76px, 13.80px 64.76px, 13.80px 0.00px, 0.00px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-40.24px) translateY(109.59px) translateZ(102.27px) rotateX(-0.00deg) rotateY(-51.77deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-giftboxribbon2-face4 {
-	position: absolute;
-	background-color: rgb(0.00,178.71,0.00);
+	background-color: rgb(220.76,68.33,2.63);
 	width: 62.75px;
 	height: 62.75px;
 	clip-path: polygon(4.60px 8.54px, 21.68px 30.23px, 0.00px 47.31px, 8.54px 58.15px, 30.23px 41.07px, 47.31px 62.75px, 58.15px 54.21px, 41.07px 32.53px, 62.75px 15.44px, 54.21px 4.60px, 32.53px 21.68px, 15.44px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-37.60px) translateY(78.22px) translateZ(80.90px) rotateX(89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face0 {
-	position: absolute;
 	background-color: rgb(187.08,187.08,187.08);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(0.00px 0.00px, 13.14px 56.78px, 76.58px 56.78px, 89.72px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-102.43px) translateY(118.99px) translateZ(46.59px) rotateX(-31.91deg) rotateY(40.69deg) rotateZ(22.10deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face1 {
-	position: absolute;
 	background-color: rgb(207.73,207.73,207.73);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(13.14px 0.00px, 0.00px 56.78px, 89.72px 56.78px, 76.58px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-102.43px) translateY(66.97px) translateZ(46.60px) rotateX(31.91deg) rotateY(40.69deg) rotateZ(-22.10deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face2 {
-	position: absolute;
 	background-color: rgb(158.28,158.28,158.28);
 	width: 89.72px;
 	height: 56.79px;
 	clip-path: polygon(0.00px 0.01px, 13.15px 56.79px, 76.59px 56.78px, 89.72px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-85.68px) translateY(118.98px) translateZ(-17.59px) rotateX(238.79deg) rotateY(62.06deg) rotateZ(124.44deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face3 {
-	position: absolute;
 	background-color: rgb(178.94,178.94,178.94);
 	width: 89.72px;
 	height: 56.79px;
 	clip-path: polygon(13.15px 0.00px, 0.00px 56.78px, 89.72px 56.79px, 76.59px 0.01px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-85.67px) translateY(66.97px) translateZ(-17.59px) rotateX(121.21deg) rotateY(62.06deg) rotateZ(235.56deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face4 {
-	position: absolute;
 	background-color: rgb(158.50,158.50,158.50);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(0.00px 0.00px, 13.14px 56.78px, 76.58px 56.78px, 89.72px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-132.88px) translateY(118.99px) translateZ(-64.18px) rotateX(204.33deg) rotateY(13.38deg) rotateZ(174.03deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face5 {
-	position: absolute;
 	background-color: rgb(179.15,179.15,179.15);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(13.14px 0.00px, 0.00px 56.78px, 89.72px 56.78px, 76.58px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-132.88px) translateY(66.97px) translateZ(-64.17px) rotateX(155.67deg) rotateY(13.38deg) rotateZ(185.97deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face6 {
-	position: absolute;
 	background-color: rgb(171.86,171.86,171.86);
 	width: 122.77px;
 	height: 122.34px;
 	clip-path: polygon(78.20px 0.00px, 16.82px 16.02px, 0.00px 77.19px, 44.57px 122.34px, 105.95px 106.32px, 122.77px 45.15px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-166.16px) translateY(112.22px) translateZ(0.02px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face7 {
-	position: absolute;
 	background-color: rgb(187.52,187.52,187.52);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(0.00px 0.00px, 13.14px 56.78px, 76.58px 56.78px, 89.72px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-196.83px) translateY(118.98px) translateZ(-46.56px) rotateX(211.91deg) rotateY(-40.69deg) rotateZ(202.10deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face8 {
-	position: absolute;
 	background-color: rgb(208.17,208.17,208.17);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(13.14px 0.00px, 0.00px 56.78px, 89.72px 56.78px, 76.58px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-196.83px) translateY(66.97px) translateZ(-46.57px) rotateX(148.09deg) rotateY(-40.69deg) rotateZ(157.90deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face9 {
-	position: absolute;
 	background-color: rgb(223.39,223.39,223.39);
 	width: 122.77px;
 	height: 122.34px;
 	clip-path: polygon(78.20px 122.34px, 122.77px 77.19px, 105.95px 16.02px, 44.57px 0.00px, 0.00px 45.15px, 16.82px 106.32px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-166.16px) translateY(8.18px) translateZ(-0.01px) rotateX(89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face10 {
-	position: absolute;
 	background-color: rgb(216.31,216.31,216.31);
 	width: 89.72px;
 	height: 56.79px;
 	clip-path: polygon(0.00px 0.01px, 13.15px 56.79px, 76.59px 56.78px, 89.72px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-213.58px) translateY(118.98px) translateZ(17.51px) rotateX(-58.79deg) rotateY(-62.06deg) rotateZ(-55.56deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face11 {
-	position: absolute;
 	background-color: rgb(236.97,236.97,236.97);
 	width: 89.72px;
 	height: 56.79px;
 	clip-path: polygon(13.15px 0.00px, 0.00px 56.78px, 89.72px 56.79px, 76.59px 0.01px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-213.59px) translateY(66.97px) translateZ(17.51px) rotateX(58.79deg) rotateY(-62.06deg) rotateZ(55.56deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face12 {
-	position: absolute;
 	background-color: rgb(216.10,216.10,216.10);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(0.00px 0.00px, 13.14px 56.78px, 76.58px 56.78px, 89.72px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-166.38px) translateY(118.99px) translateZ(64.17px) rotateX(-24.33deg) rotateY(-13.38deg) rotateZ(-5.97deg)
 }
 .model3d-christmaxmodel-model-snowmanbelly-face13 {
-	position: absolute;
 	background-color: rgb(236.75,236.75,236.75);
 	width: 89.72px;
 	height: 56.78px;
 	clip-path: polygon(13.14px 0.00px, 0.00px 56.78px, 89.72px 56.78px, 76.58px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-166.38px) translateY(66.97px) translateZ(64.16px) rotateX(24.33deg) rotateY(-13.38deg) rotateZ(5.97deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face0 {
-	position: absolute;
 	background-color: rgb(224.10,224.10,224.10);
 	width: 50.01px;
 	height: 51.44px;
 	clip-path: polygon(15.86px 0.00px, 0.00px 51.44px, 50.01px 41.61px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-113.38px) translateY(-51.67px) translateZ(14.80px) rotateX(74.89deg) rotateY(10.31deg) rotateZ(-33.53deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face1 {
-	position: absolute;
 	background-color: rgb(185.22,185.22,185.22);
 	width: 71.92px;
 	height: 60.77px;
 	clip-path: polygon(0.00px 4.82px, 20.87px 60.77px, 59.88px 58.15px, 71.92px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-105.36px) translateY(15.90px) translateZ(35.61px) rotateX(-35.29deg) rotateY(41.34deg) rotateZ(25.05deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face2 {
-	position: absolute;
 	background-color: rgb(210.09,210.09,210.09);
 	width: 71.91px;
 	height: 49.69px;
 	clip-path: polygon(7.43px 3.46px, 0.00px 49.69px, 71.91px 44.80px, 58.28px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-103.51px) translateY(-23.71px) translateZ(36.49px) rotateX(35.28deg) rotateY(37.96deg) rotateZ(-23.52deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face3 {
-	position: absolute;
 	background-color: rgb(158.34,158.34,158.34);
 	width: 72.06px;
 	height: 58.47px;
 	clip-path: polygon(0.00px 0.00px, 14.85px 57.50px, 53.93px 58.47px, 72.06px 1.79px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-92.12px) translateY(16.31px) translateZ(-13.60px) rotateX(240.65deg) rotateY(61.80deg) rotateZ(122.54deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face4 {
-	position: absolute;
 	background-color: rgb(181.83,181.83,181.83);
 	width: 72.06px;
 	height: 47.20px;
 	clip-path: polygon(11.74px 0.00px, 0.00px 45.33px, 72.06px 47.20px, 62.69px 1.32px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-91.19px) translateY(-23.82px) translateZ(-13.58px) rotateX(117.06deg) rotateY(57.75deg) rotateZ(238.87deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face5 {
-	position: absolute;
 	background-color: rgb(212.83,212.83,212.83);
 	width: 50.81px;
 	height: 49.30px;
 	clip-path: polygon(29.19px 0.00px, 0.00px 45.23px, 50.81px 49.30px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-111.75px) translateY(-51.55px) translateZ(-4.44px) rotateX(95.77deg) rotateY(15.71deg) rotateZ(249.53deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face6 {
-	position: absolute;
 	background-color: rgb(212.32,212.32,212.32);
 	width: 49.54px;
 	height: 52.08px;
 	clip-path: polygon(35.93px 0.00px, 0.00px 40.08px, 49.54px 52.08px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-122.65px) translateY(-50.82px) translateZ(-23.97px) rotateX(110.69deg) rotateY(0.68deg) rotateZ(181.79deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face7 {
-	position: absolute;
 	background-color: rgb(157.03,157.03,157.03);
 	width: 71.76px;
 	height: 62.32px;
 	clip-path: polygon(0.00px 0.00px, 10.20px 58.63px, 49.12px 62.32px, 71.76px 6.80px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-128.84px) translateY(16.83px) translateZ(-47.86px) rotateX(209.36deg) rotateY(15.14deg) rotateZ(171.64deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face8 {
-	position: absolute;
 	background-color: rgb(180.53,180.53,180.53);
 	width: 71.78px;
 	height: 51.06px;
 	clip-path: polygon(14.69px 0.00px, 0.00px 44.46px, 71.78px 51.06px, 65.44px 4.67px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-126.97px) translateY(-22.17px) translateZ(-51.30px) rotateX(154.69deg) rotateY(11.31deg) rotateZ(185.30deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face9 {
-	position: absolute;
 	background-color: rgb(223.07,223.07,223.07);
 	width: 50.45px;
 	height: 50.55px;
 	clip-path: polygon(31.95px 0.00px, 0.00px 43.32px, 50.45px 50.55px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-149.27px) translateY(-48.52px) translateZ(-19.15px) rotateX(105.82deg) rotateY(-19.81deg) rotateZ(129.90deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face10 {
-	position: absolute;
 	background-color: rgb(182.34,182.34,182.34);
 	width: 71.89px;
 	height: 61.65px;
 	clip-path: polygon(0.00px 0.00px, 11.67px 58.81px, 50.66px 61.65px, 71.89px 5.24px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-174.27px) translateY(21.36px) translateZ(-32.43px) rotateX(222.48deg) rotateY(-34.67deg) rotateZ(207.51deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face11 {
-	position: absolute;
 	background-color: rgb(207.51,207.51,207.51);
 	width: 71.93px;
 	height: 49.48px;
 	clip-path: polygon(13.47px 0.00px, 0.00px 44.84px, 71.93px 49.48px, 64.33px 3.28px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-179.41px) translateY(-17.09px) translateZ(-38.58px) rotateX(151.92deg) rotateY(-43.16deg) rotateZ(159.95deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face12 {
-	position: absolute;
 	background-color: rgb(234.34,234.34,234.34);
 	width: 50.90px;
 	height: 48.67px;
 	clip-path: polygon(23.00px 0.00px, 0.00px 48.67px, 50.90px 46.03px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-156.08px) translateY(-47.57px) translateZ(7.20px) rotateX(83.84deg) rotateY(-25.52deg) rotateZ(75.94deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face13 {
-	position: absolute;
 	background-color: rgb(208.86,208.86,208.86);
 	width: 72.05px;
 	height: 59.44px;
 	clip-path: polygon(0.00px 2.02px, 18.33px 59.44px, 57.41px 58.35px, 72.05px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-184.88px) translateY(23.80px) translateZ(11.87px) rotateX(-68.39deg) rotateY(-51.67deg) rotateZ(-63.20deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face14 {
-	position: absolute;
 	background-color: rgb(235.78,235.78,235.78);
 	width: 72.06px;
 	height: 47.08px;
 	clip-path: polygon(9.46px 1.22px, 0.00px 47.08px, 72.06px 45.35px, 60.41px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-193.69px) translateY(-14.93px) translateZ(14.60px) rotateX(53.10deg) rotateY(-66.15deg) rotateZ(50.62deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face15 {
-	position: absolute;
 	background-color: rgb(234.85,234.85,234.85);
 	width: 49.81px;
 	height: 51.73px;
 	clip-path: polygon(14.87px 0.00px, 0.00px 51.73px, 49.81px 40.95px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-136.15px) translateY(-49.69px) translateZ(25.77px) rotateX(68.98deg) rotateY(-9.90deg) rotateZ(24.11deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face16 {
-	position: absolute;
 	background-color: rgb(210.43,210.43,210.43);
 	width: 71.74px;
 	height: 62.66px;
 	clip-path: polygon(0.00px 7.00px, 22.81px 62.66px, 61.72px 58.87px, 71.74px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-153.41px) translateY(18.75px) translateZ(46.33px) rotateX(-31.64deg) rotateY(-10.08deg) rotateZ(-6.16deg)
 }
 .model3d-christmaxmodel-model-snowmanchest-face17 {
-	position: absolute;
 	background-color: rgb(237.07,237.07,237.07);
 	width: 71.79px;
 	height: 50.96px;
 	clip-path: polygon(6.41px 4.58px, 0.00px 50.96px, 71.79px 44.48px, 57.17px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-153.96px) translateY(-19.81px) translateZ(52.31px) rotateX(23.17deg) rotateY(-15.37deg) rotateZ(6.47deg)
 }
-.model3d-christmaxmodel-model-snowmanrighthand-face0 {
-	position: absolute;
-	background-color: rgb(76.57,38.29,0.00);
-	width: 84.71px;
-	height: 23.48px;
-	clip-path: polygon(84.71px 12.20px, 1.66px 0.00px, 0.00px 11.28px, 83.06px 23.48px);
-	top: 50%;
-	left: 50%;
-	transform: translateX(-202.29px) translateY(-12.54px) translateZ(78.12px) rotateX(31.14deg) rotateY(62.07deg) rotateZ(-28.09deg)
-}
-.model3d-christmaxmodel-model-snowmanrighthand-face1 {
-	position: absolute;
-	background-color: rgb(72.38,36.19,0.00);
-	width: 79.17px;
-	height: 50.16px;
-	clip-path: polygon(5.45px 50.16px, 79.17px 10.01px, 73.72px 0.00px, 0.00px 40.15px);
-	top: 50%;
-	left: 50%;
-	transform: translateX(-204.84px) translateY(-21.97px) translateZ(73.75px) rotateX(-89.99deg) rotateY(-17.75deg) rotateZ(-90.00deg)
-}
-.model3d-christmaxmodel-model-snowmanrighthand-face2 {
-	position: absolute;
-	background-color: rgb(88.20,44.10,0.00);
-	width: 84.53px;
-	height: 28.01px;
-	clip-path: polygon(2.29px 28.01px, 84.53px 11.17px, 82.24px 0.00px, 0.00px 16.84px);
-	top: 50%;
-	left: 50%;
-	transform: translateX(-207.02px) translateY(-16.34px) translateZ(75.48px) rotateX(119.44deg) rotateY(-35.36deg) rotateZ(134.29deg)
-}
 .model3d-christmaxmodel-model-snowmanhead-face0 {
-	position: absolute;
 	background-color: rgb(220.41,220.41,220.41);
 	width: 36.23px;
 	height: 34.88px;
 	clip-path: polygon(20.31px 0.00px, 0.00px 32.52px, 36.23px 34.88px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-108.21px) translateY(-111.40px) translateZ(12.24px) rotateX(74.44deg) rotateY(17.06deg) rotateZ(-46.48deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face1 {
-	position: absolute;
 	background-color: rgb(184.72,184.72,184.72);
 	width: 51.32px;
 	height: 41.92px;
 	clip-path: polygon(0.00px 0.00px, 10.95px 41.10px, 38.78px 41.92px, 51.32px 1.52px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-103.54px) translateY(-61.13px) translateZ(23.88px) rotateX(-39.82deg) rotateY(37.06deg) rotateZ(26.68deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face2 {
-	position: absolute;
 	background-color: rgb(206.76,206.76,206.76);
 	width: 51.32px;
 	height: 33.68px;
 	clip-path: polygon(8.41px 0.00px, 0.00px 32.27px, 51.32px 33.68px, 44.69px 0.99px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-100.68px) translateY(-89.32px) translateZ(27.02px) rotateX(30.35deg) rotateY(41.77deg) rotateZ(-21.31deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face3 {
-	position: absolute;
 	background-color: rgb(157.11,157.11,157.11);
 	width: 51.34px;
 	height: 41.13px;
 	clip-path: polygon(0.00px 0.58px, 12.05px 41.13px, 39.90px 40.81px, 51.34px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-95.17px) translateY(-60.33px) translateZ(-8.98px) rotateX(245.84deg) rotateY(55.54deg) rotateZ(118.55deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face4 {
-	position: absolute;
 	background-color: rgb(177.75,177.75,177.75);
 	width: 51.34px;
 	height: 32.93px;
 	clip-path: polygon(7.19px 0.37px, 0.00px 32.93px, 51.34px 32.41px, 43.49px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-90.85px) translateY(-88.66px) translateZ(-10.25px) rotateX(123.37deg) rotateY(63.81deg) rotateZ(233.72deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face5 {
-	position: absolute;
 	background-color: rgb(208.84,208.84,208.84);
 	width: 36.29px;
 	height: 34.18px;
 	clip-path: polygon(17.38px 0.00px, 0.00px 34.18px, 36.29px 33.35px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-103.87px) translateY(-111.04px) translateZ(-4.70px) rotateX(96.02deg) rotateY(22.67deg) rotateZ(254.70deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face6 {
-	position: absolute;
 	background-color: rgb(209.16,209.16,209.16);
 	width: 36.14px;
 	height: 35.31px;
 	clip-path: polygon(14.93px 0.00px, 0.00px 35.31px, 36.14px 31.93px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-116.29px) translateY(-111.78px) translateZ(-16.48px) rotateX(110.86deg) rotateY(7.23deg) rotateZ(198.27deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face7 {
-	position: absolute;
 	background-color: rgb(157.83,157.83,157.83);
 	width: 51.30px;
 	height: 42.48px;
 	clip-path: polygon(0.00px 2.08px, 12.82px 42.48px, 40.64px 41.35px, 51.30px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-119.06px) translateY(-62.04px) translateZ(-33.17px) rotateX(210.80deg) rotateY(11.63deg) rotateZ(173.15deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face8 {
-	position: absolute;
 	background-color: rgb(178.56,178.56,178.56);
 	width: 51.30px;
 	height: 34.13px;
 	clip-path: polygon(6.28px 1.38px, 0.00px 34.13px, 51.30px 32.18px, 42.55px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-118.38px) translateY(-90.14px) translateZ(-36.95px) rotateX(156.13deg) rotateY(14.22deg) rotateZ(186.20deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face9 {
-	position: absolute;
 	background-color: rgb(221.05,221.05,221.05);
 	width: 36.20px;
 	height: 35.02px;
 	clip-path: polygon(15.59px 0.00px, 0.00px 35.02px, 36.20px 32.33px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-131.62px) translateY(-112.28px) translateZ(-10.71px) rotateX(105.27deg) rotateY(-13.06deg) rotateZ(140.37deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face10 {
-	position: absolute;
 	background-color: rgb(185.87,185.87,185.87);
 	width: 51.32px;
 	height: 42.31px;
 	clip-path: polygon(0.00px 1.48px, 12.52px 42.31px, 40.35px 41.51px, 51.32px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-152.45px) translateY(-63.09px) translateZ(-24.41px) rotateX(218.46deg) rotateY(-39.22deg) rotateZ(206.67deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face11 {
-	position: absolute;
 	background-color: rgb(208.38,208.38,208.38);
 	width: 51.32px;
 	height: 33.71px;
 	clip-path: polygon(6.60px 1.02px, 0.00px 33.71px, 51.32px 32.27px, 42.89px 0.00px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-154.74px) translateY(-91.28px) translateZ(-26.35px) rotateX(146.62deg) rotateY(-39.58deg) rotateZ(157.23deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face12 {
-	position: absolute;
 	background-color: rgb(232.62,232.62,232.62);
 	width: 36.29px;
 	height: 34.28px;
 	clip-path: polygon(19.12px 0.00px, 0.00px 33.23px, 36.29px 34.28px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-134.65px) translateY(-112.18px) translateZ(3.76px) rotateX(84.14deg) rotateY(-18.55deg) rotateZ(72.12deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face13 {
-	position: absolute;
 	background-color: rgb(213.10,213.10,213.10);
 	width: 51.34px;
 	height: 41.67px;
 	clip-path: polygon(0.00px 0.00px, 11.47px 41.37px, 39.31px 41.67px, 51.34px 0.54px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-161.32px) translateY(-62.98px) translateZ(9.16px) rotateX(-64.39deg) rotateY(-58.08deg) rotateZ(-60.55deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face14 {
-	position: absolute;
 	background-color: rgb(237.39,237.39,237.39);
 	width: 51.34px;
 	height: 32.96px;
 	clip-path: polygon(7.87px 0.00px, 0.00px 32.41px, 51.34px 32.96px, 44.17px 0.39px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-164.03px) translateY(-91.32px) translateZ(9.83px) rotateX(60.69deg) rotateY(-60.26deg) rotateZ(57.12deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face15 {
-	position: absolute;
 	background-color: rgb(232.29,232.29,232.29);
 	width: 36.13px;
 	height: 35.38px;
 	clip-path: polygon(21.36px 0.00px, 0.00px 31.83px, 36.13px 35.38px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-124.77px) translateY(-112.10px) translateZ(15.76px) rotateX(69.27deg) rotateY(-3.35deg) rotateZ(8.79deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face16 {
-	position: absolute;
 	background-color: rgb(212.66,212.66,212.66);
 	width: 51.30px;
 	height: 42.62px;
 	clip-path: polygon(0.00px 0.00px, 10.66px 41.50px, 38.49px 42.62px, 51.30px 2.06px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-136.43px) translateY(-62.73px) translateZ(33.43px) rotateX(-30.37deg) rotateY(-13.69deg) rotateZ(-7.90deg)
 }
 .model3d-christmaxmodel-model-snowmanhead-face17 {
-	position: absolute;
 	background-color: rgb(236.58,236.58,236.58);
 	width: 51.30px;
 	height: 34.15px;
 	clip-path: polygon(8.76px 0.00px, 0.00px 32.18px, 51.30px 34.15px, 45.04px 1.39px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-137.58px) translateY(-90.84px) translateZ(36.63px) rotateX(24.76deg) rotateY(-12.52deg) rotateZ(5.71deg)
 }
 .model3d-christmaxmodel-model-snowmanlefthand-face0 {
-	position: absolute;
 	background-color: rgb(69.07,34.54,0.00);
 	width: 84.71px;
 	height: 23.49px;
 	clip-path: polygon(84.71px 12.21px, 1.66px 0.00px, 0.00px 11.28px, 83.05px 23.49px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-59.06px) translateY(-12.54px) translateZ(10.43px) rotateX(165.38deg) rotateY(16.38deg) rotateZ(184.21deg)
 }
 .model3d-christmaxmodel-model-snowmanlefthand-face1 {
-	position: absolute;
 	background-color: rgb(71.94,35.97,0.00);
 	width: 79.69px;
 	height: 48.95px;
 	clip-path: polygon(5.28px 48.95px, 79.69px 10.11px, 74.42px 0.00px, 0.00px 38.85px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-57.35px) translateY(-21.34px) translateZ(14.48px) rotateX(-72.40deg) rotateY(2.28deg) rotateZ(7.15deg)
 }
 .model3d-christmaxmodel-model-snowmanlefthand-face2 {
-	position: absolute;
 	background-color: rgb(96.14,48.07,0.00);
 	width: 84.53px;
 	height: 27.99px;
 	clip-path: polygon(2.28px 27.99px, 84.53px 11.17px, 82.25px 0.00px, 0.00px 16.82px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-60.96px) translateY(-16.33px) translateZ(15.54px) rotateX(48.60deg) rotateY(-18.77deg) rotateZ(20.05deg)
 }
 .model3d-christmaxmodel-model-snowmannose-face0 {
-	position: absolute;
 	background-color: rgb(184.65,110.79,0.00);
 	width: 51.90px;
 	height: 36.37px;
 	clip-path: polygon(10.50px 36.37px, 51.90px 0.00px, 0.00px 19.02px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-109.04px) translateY(-71.83px) translateZ(58.61px) rotateX(-75.80deg) rotateY(-11.84deg) rotateZ(-39.05deg)
 }
 .model3d-christmaxmodel-model-snowmannose-face1 {
-	position: absolute;
 	background-color: rgb(174.49,104.69,0.00);
 	width: 56.03px;
 	height: 20.17px;
 	clip-path: polygon(53.81px 20.17px, 56.03px 0.00px, 0.00px 8.28px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-108.39px) translateY(-67.73px) translateZ(61.21px) rotateX(129.84deg) rotateY(70.24deg) rotateZ(228.44deg)
 }
 .model3d-christmaxmodel-model-snowmannose-face2 {
-	position: absolute;
 	background-color: rgb(239.71,143.83,0.00);
 	width: 55.44px;
 	height: 20.27px;
 	clip-path: polygon(0.00px 0.00px, 0.84px 20.27px, 55.44px 11.60px);
-	top: 50%;
-	left: 50%;
 	transform: translateX(-112.47px) translateY(-70.53px) translateZ(62.81px) rotateX(68.97deg) rotateY(-39.18deg) rotateZ(58.67deg)
+}
+.model3d-christmaxmodel-model-snowmanrighthand-face0 {
+	background-color: rgb(72.79,36.40,0.00);
+	width: 84.71px;
+	height: 23.47px;
+	clip-path: polygon(84.71px 12.19px, 1.66px 0.00px, 0.00px 11.28px, 83.06px 23.47px);
+	transform: translateX(-183.31px) translateY(-12.53px) translateZ(79.34px) rotateX(64.79deg) rotateY(74.47deg) rotateZ(-63.96deg)
+}
+.model3d-christmaxmodel-model-snowmanrighthand-face1 {
+	background-color: rgb(73.18,36.59,0.00);
+	width: 79.66px;
+	height: 49.02px;
+	clip-path: polygon(5.29px 49.02px, 79.66px 10.10px, 74.38px 0.00px, 0.00px 38.92px);
+	transform: translateX(-185.05px) translateY(-21.38px) translateZ(79.02px) rotateX(-84.45deg) rotateY(-16.89deg) rotateZ(-71.51deg)
+}
+.model3d-christmaxmodel-model-snowmanrighthand-face2 {
+	background-color: rgb(91.18,45.59,0.00);
+	width: 84.53px;
+	height: 28.03px;
+	clip-path: polygon(2.29px 28.03px, 84.53px 11.17px, 82.24px 0.00px, 0.00px 16.87px);
+	transform: translateX(-188.62px) translateY(-16.35px) translateZ(78.25px) rotateX(106.21deg) rotateY(-42.30deg) rotateZ(113.37deg)
 }

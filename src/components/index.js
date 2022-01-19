@@ -5,6 +5,7 @@ import ErrorDialog from "./dialog/ErrorDialog";
 import InfoDialog from "./dialog/InfoDialog";
 import Toast from "./dialog/Toast";
 import FoldingEffect from "./effect/FoldingEffect";
+import BookOpenEffect from "./effect/BookOpenEffect";
 import ImageBoard from "./grid/ImageBoard";
 import DateInput from "./input/DateInput";
 import TimeInput from "./input/TimeInput";
@@ -28,9 +29,9 @@ import FloatView from "./page/FloatView";
 import DropDownSelect from "./select/DropDownSelect";
 import DropDownMultiSelect from "./select/DropDownMultiSelect";
 import VirtualKey from "./input/VirtualKey";
-import PyramidModel from "./3dmodel/PyramidModel";
-import Plane from "./3dmodel/Plane";
 import ChristmaxModel from "./3dmodel/ChristmaxModel";
+import PageSlide from "./list/PageSlide";
+import SakuraModel from "./3dmodel/SakuraModel"
 import "./ComponentStyle.css";
 
 export {
@@ -56,6 +57,7 @@ export {
   Checkbox,
   RadioButtonGroup,
   ScatteredFloatingEffect,
+  BookOpenEffect,
   InfoComment,
   FloatingPointer,
   DistanceStrictButton,
@@ -64,7 +66,8 @@ export {
   VirtualKey,
   DropDownMultiSelect,
   MagicNavigationMenu,
-  PyramidModel,
-  Plane,
-  ChristmaxModel
+  ChristmaxModel,
+  SakuraModel,
+  PageSlide,
+
 }

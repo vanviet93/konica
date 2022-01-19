@@ -12,6 +12,7 @@
   background-color: var(--base-red);
   position: absolute;
   bottom: 0px;
+  border-radius: 0px 0px 12px 12px;
 }
 .magic-navigation-menu-top-left-filler, 
 .magic-navigation-menu-top-right-filler {
@@ -19,16 +20,18 @@
   bottom: 12px;
   height: 36px;
   width: 10px;
-  background-color: var(--base-red);
   transition: width 200ms;
+  background-color: var(--base-red);
 }
 .magic-navigation-menu-top-left-filler {
   left: 0px;
-  clip-path: polygon(0% 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, calc(100% - 28px) 0%, calc(100% - 14px) 100%, 0% 100%);
+  border-top-left-radius: 12px;
 }
 .magic-navigation-menu-top-right-filler {
   right: 0px;
-  clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(28px 0%, 100% 0%, 100% 100%, 14px 100%);
+  border-top-right-radius: 12px;
 }
 .magic-navigation-menu-buttons-container {
   width: 100%;
@@ -54,8 +57,9 @@
   padding-bottom: 0px;
   bottom: 0px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .magic-navigation-menu-button {
   height: 48px;
@@ -64,32 +68,52 @@
 }
 .magic-navigation-menu-selected-button {
   height: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 8px;
   bottom: 0px;
+}
+.magic-navigation-menu-indicator-container {
+  position: absolute;
+  border-radius: 12px;
+  transition: all 200ms;
+  transform: translateX(-50%);
+  height: 49px;
+  width: 80px;
+  display: flex;
+  align-items: flex-start;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
 }
 .magic-navigation-menu-indicator {
   position: absolute;
+  top: -39px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: transparent;
-  transition: all 200ms;
-  bottom: 8px;
-  transform: translateX(-50%);
   border: solid 15px var(--base-red);
   clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
-  transition: all 200ms;
 }
 .magic-navigation-menu-icon,
 .magic-navigation-menu-selected-icon {
+  position: absolute;
   width: 40px;
-  height: 40px;
   border-radius: 50%;
   display: flex !important;
   justify-content: center;
   align-items: center;
   color: #FFF;
 }
+.magic-navigation-menu-icon {
+  height: 48px;
+}
 .magic-navigation-menu-selected-icon {
   background-color: var(--base-red);
+  top: -8px;
+  height: 40px;
+}
+.magic-navigation-menu-selected-text {
+  height: 12px;
+  font-size: 12px;
+  color: #FFF;
 }

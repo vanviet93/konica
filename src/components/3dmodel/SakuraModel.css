@@ -1,0 +1,1376 @@
+.model3d-sakuramodel-model-container {
+	width: 360.00px;
+	height: 360.00px;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	perspective-origin: 50% 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-origin: 50% 50%;
+	animation: rotate360 10s infinite linear;
+}
+.model3d-sakuramodel-model-face {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+@keyframes rotate360 {
+	from {
+		transform: translateY(-20px) rotateX(-10deg) rotateY(0deg);
+	}
+	to {
+		transform: translateY(-20px) rotateX(-10deg) rotateY(360deg);
+	}
+}
+.model3d-sakuramodel-model-flowera00-face0 {
+	background-color: rgb(231.88,171.86,216.42);
+	width: 7.05px;
+	height: 14.87px;
+	clip-path: polygon(1.03px 2.18px, 0.00px 7.43px, 1.57px 12.69px, 3.52px 14.87px, 5.48px 12.69px, 7.05px 7.43px, 6.02px 2.18px, 3.52px 0.00px);
+	transform: translateX(-57.92px) translateY(-70.13px) translateZ(-123.15px) rotateX(37.51deg) rotateY(3.97deg) rotateZ(-3.05deg)
+}
+.model3d-sakuramodel-model-flowera00-face1 {
+	background-color: rgb(227.10,168.32,211.96);
+	width: 13.15px;
+	height: 8.84px;
+	clip-path: polygon(0.76px 4.41px, 4.93px 7.77px, 10.31px 8.84px, 13.15px 8.13px, 12.14px 5.38px, 8.22px 1.54px, 3.09px 0.00px, 0.00px 1.19px);
+	transform: translateX(-67.74px) translateY(-63.83px) translateZ(-118.90px) rotateX(45.27deg) rotateY(13.40deg) rotateZ(-13.16deg)
+}
+.model3d-sakuramodel-model-flowera00-face2 {
+	background-color: rgb(228.92,169.67,213.66);
+	width: 10.68px;
+	height: 10.80px;
+	clip-path: polygon(3.55px 10.80px, 7.98px 7.77px, 10.54px 2.92px, 10.68px 0.00px, 7.75px 0.18px, 2.95px 2.83px, 0.00px 7.30px, 0.25px 10.60px);
+	transform: translateX(-63.32px) translateY(-59.00px) translateZ(-112.73px) rotateX(56.74deg) rotateY(8.84deg) rotateZ(-13.18deg)
+}
+.model3d-sakuramodel-model-flowera00-face3 {
+	background-color: rgb(234.82,174.05,219.17);
+	width: 10.68px;
+	height: 10.80px;
+	clip-path: polygon(10.68px 7.30px, 7.73px 2.83px, 2.92px 0.18px, 0.00px 0.00px, 0.13px 2.92px, 2.70px 7.77px, 7.12px 10.80px, 10.43px 10.60px);
+	transform: translateX(-54.39px) translateY(-59.01px) translateZ(-113.52px) rotateX(55.85deg) rotateY(-3.27deg) rotateZ(4.81deg)
+}
+.model3d-sakuramodel-model-flowera00-face4 {
+	background-color: rgb(236.65,175.40,220.88);
+	width: 13.15px;
+	height: 8.84px;
+	clip-path: polygon(10.06px 0.00px, 4.93px 1.54px, 1.01px 5.38px, 0.00px 8.13px, 2.84px 8.84px, 8.22px 7.77px, 12.39px 4.41px, 13.15px 1.19px);
+	transform: translateX(-53.57px) translateY(-63.84px) translateZ(-120.14px) rotateX(44.05deg) rotateY(-6.27deg) rotateZ(6.03deg)
+}
+.model3d-sakuramodel-model-tree-face0 {
+	background-color: rgb(143.14,107.36,71.57);
+	width: 24.29px;
+	height: 73.77px;
+	clip-path: polygon(24.29px 18.74px, 9.00px 0.00px, 0.00px 73.77px);
+	transform: translateX(118.23px) translateY(5.50px) translateZ(-137.67px) rotateX(76.50deg) rotateY(77.93deg) rotateZ(-76.21deg)
+}
+.model3d-sakuramodel-model-tree-face1 {
+	background-color: rgb(149.53,112.14,74.76);
+	width: 23.77px;
+	height: 70.51px;
+	clip-path: polygon(0.00px 70.51px, 23.77px 2.55px, 6.29px 0.00px);
+	transform: translateX(92.11px) translateY(8.39px) translateZ(-152.19px) rotateX(190.46deg) rotateY(-33.63deg) rotateZ(185.84deg)
+}
+.model3d-sakuramodel-model-tree-face2 {
+	background-color: rgb(187.22,140.41,93.61);
+	width: 19.87px;
+	height: 67.40px;
+	clip-path: polygon(12.28px 67.40px, 19.87px 8.15px, 0.00px 0.00px);
+	transform: translateX(90.76px) translateY(11.20px) translateZ(-125.22px) rotateX(5.18deg) rotateY(-25.74deg) rotateZ(2.25deg)
+}
+.model3d-sakuramodel-model-tree-face3 {
+	background-color: rgb(167.70,125.78,83.85);
+	width: 23.33px;
+	height: 60.64px;
+	clip-path: polygon(23.33px 60.64px, 0.00px 0.00px, 2.51px 60.64px);
+	transform: translateX(112.36px) translateY(18.64px) translateZ(-123.84px) rotateX(15.87deg) rotateY(33.97deg) rotateZ(-9.02deg)
+}
+.model3d-sakuramodel-model-tree-face4 {
+	background-color: rgb(132.56,99.42,66.28);
+	width: 28.69px;
+	height: 155.78px;
+	clip-path: polygon(0.00px 155.68px, 28.69px 155.78px, 25.23px 53.83px, 13.53px 0.00px);
+	transform: translateX(113.48px) translateY(24.58px) translateZ(-152.69px) rotateX(176.96deg) rotateY(20.79deg) rotateZ(181.08deg)
+}
+.model3d-sakuramodel-model-tree-face5 {
+	background-color: rgb(177.93,133.45,88.97);
+	width: 17.67px;
+	height: 67.62px;
+	clip-path: polygon(7.85px 67.62px, 17.67px 0.00px, 0.00px 0.00px);
+	transform: translateX(87.32px) translateY(11.09px) translateZ(-141.08px) rotateX(-52.82deg) rotateY(-81.77deg) rotateZ(-52.53deg)
+}
+.model3d-sakuramodel-model-tree-face6 {
+	background-color: rgb(135.38,101.53,67.69);
+	width: 23.76px;
+	height: 107.71px;
+	clip-path: polygon(23.76px 91.39px, 21.50px 0.00px, 0.00px 107.71px);
+	transform: translateX(98.49px) translateY(-81.45px) translateZ(-145.45px) rotateX(163.10deg) rotateY(32.91deg) rotateZ(189.38deg)
+}
+.model3d-sakuramodel-model-tree-face7 {
+	background-color: rgb(178.87,134.15,89.44);
+	width: 19.53px;
+	height: 77.59px;
+	clip-path: polygon(19.53px 51.55px, 11.10px 0.00px, 0.00px 77.59px);
+	transform: translateX(78.48px) translateY(-65.98px) translateZ(-139.18px) rotateX(-39.39deg) rotateY(-78.81deg) rotateZ(-38.85deg)
+}
+.model3d-sakuramodel-model-tree-face8 {
+	background-color: rgb(139.60,104.70,69.80);
+	width: 13.58px;
+	height: 74.37px;
+	clip-path: polygon(13.58px 0.00px, 0.00px 4.04px, 0.73px 74.37px);
+	transform: translateX(100.30px) translateY(-81.36px) translateZ(-136.24px) rotateX(132.26deg) rotateY(67.43deg) rotateZ(225.46deg)
+}
+.model3d-sakuramodel-model-tree-face9 {
+	background-color: rgb(148.92,111.69,74.46);
+	width: 13.39px;
+	height: 14.23px;
+	clip-path: polygon(11.62px 14.23px, 13.39px 2.59px, 0.00px 0.00px);
+	transform: translateX(81.81px) translateY(-79.88px) translateZ(-138.28px) rotateX(173.08deg) rotateY(-21.48deg) rotateZ(177.45deg)
+}
+.model3d-sakuramodel-model-tree-face10 {
+	background-color: rgb(128.88,96.66,64.44);
+	width: 51.39px;
+	height: 42.80px;
+	clip-path: polygon(51.39px 42.80px, 12.33px 0.00px, 0.00px 13.71px);
+	transform: translateX(102.24px) translateY(-15.47px) translateZ(-97.10px) rotateX(269.16deg) rotateY(38.95deg) rotateZ(91.34deg)
+}
+.model3d-sakuramodel-model-tree-face11 {
+	background-color: rgb(166.04,124.53,83.02);
+	width: 37.19px;
+	height: 31.46px;
+	clip-path: polygon(37.19px 0.00px, 0.50px 13.51px, 0.00px 31.46px);
+	transform: translateX(96.17px) translateY(-8.02px) translateZ(-101.83px) rotateX(-53.84deg) rotateY(-34.37deg) rotateZ(-37.68deg)
+}
+.model3d-sakuramodel-model-tree-face12 {
+	background-color: rgb(150.06,112.54,75.03);
+	width: 26.91px;
+	height: 86.40px;
+	clip-path: polygon(13.52px 83.80px, 26.91px 86.40px, 0.00px 0.00px);
+	transform: translateX(83.98px) translateY(-163.15px) translateZ(-134.24px) rotateX(170.47deg) rotateY(-21.81deg) rotateZ(176.43deg)
+}
+.model3d-sakuramodel-model-tree-face13 {
+	background-color: rgb(190.38,142.79,95.19);
+	width: 20.09px;
+	height: 88.40px;
+	clip-path: polygon(0.00px 83.44px, 8.50px 88.40px, 20.09px 0.00px);
+	transform: translateX(88.51px) translateY(-163.82px) translateZ(-129.63px) rotateX(15.44deg) rotateY(-30.23deg) rotateZ(7.91deg)
+}
+.model3d-sakuramodel-model-tree-face14 {
+	background-color: rgb(162.61,121.95,81.30);
+	width: 23.28px;
+	height: 86.71px;
+	clip-path: polygon(0.00px 86.06px, 9.56px 86.71px, 23.28px 0.00px);
+	transform: translateX(90.53px) translateY(-162.65px) translateZ(-127.45px) rotateX(-1.92deg) rotateY(34.96deg) rotateZ(1.10deg)
+}
+.model3d-sakuramodel-model-tree-face15 {
+	background-color: rgb(187.20,140.40,93.60);
+	width: 8.58px;
+	height: 90.21px;
+	clip-path: polygon(0.00px 90.21px, 8.58px 85.81px, 7.08px 0.00px);
+	transform: translateX(93.35px) translateY(-165.06px) translateZ(-133.44px) rotateX(64.36deg) rotateY(-68.99deg) rotateZ(62.79deg)
+}
+.model3d-sakuramodel-model-tree-face16 {
+	background-color: rgb(128.14,96.10,64.07);
+	width: 13.61px;
+	height: 87.79px;
+	clip-path: polygon(0.00px 87.79px, 13.61px 83.86px, 0.50px 0.00px);
+	transform: translateX(96.75px) translateY(-163.19px) translateZ(-136.19px) rotateX(202.28deg) rotateY(65.29deg) rotateZ(159.59deg)
+}
+.model3d-sakuramodel-model-tree-face17 {
+	background-color: rgb(139.08,104.31,69.54);
+	width: 64.24px;
+	height: 21.48px;
+	clip-path: polygon(4.38px 21.48px, 64.24px 0.00px, 0.00px 12.30px);
+	transform: translateX(28.32px) translateY(-76.98px) translateZ(-114.92px) rotateX(255.47deg) rotateY(-14.82deg) rotateZ(224.62deg)
+}
+.model3d-sakuramodel-model-tree-face18 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 3.21px;
+	height: 9.09px;
+	clip-path: polygon(3.21px 0.00px, 0.00px 9.09px, 0.00px 9.09px);
+	transform: translateX(83.64px) translateY(-69.14px) translateZ(-132.66px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face19 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 2.81px;
+	height: 8.23px;
+	clip-path: polygon(0.00px 8.23px, 2.81px 0.00px, 2.81px 0.00px);
+	transform: translateX(82.47px) translateY(-84.14px) translateZ(-131.22px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face20 {
+	background-color: rgb(178.54,133.90,89.27);
+	width: 63.05px;
+	height: 9.53px;
+	clip-path: polygon(60.59px 0.00px, 0.00px 8.46px, 63.05px 9.53px);
+	transform: translateX(32.13px) translateY(-83.78px) translateZ(-107.24px) rotateX(64.22deg) rotateY(16.70deg) rotateZ(-30.75deg)
+}
+.model3d-sakuramodel-model-tree-face21 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 6.89px;
+	height: 6.08px;
+	clip-path: polygon(6.89px 0.00px, 0.00px 6.08px, 0.00px 6.08px);
+	transform: translateX(86.85px) translateY(-67.20px) translateZ(-125.07px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face22 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 6.68px;
+	height: 5.37px;
+	clip-path: polygon(0.00px 5.37px, 6.68px 0.00px, 6.68px 0.00px);
+	transform: translateX(85.28px) translateY(-80.89px) translateZ(-124.42px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face23 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 1.77px;
+	height: 0.30px;
+	clip-path: polygon(0.00px 0.00px, 1.77px 0.30px, 1.77px 0.30px);
+	transform: translateX(91.97px) translateY(-70.74px) translateZ(-121.89px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face24 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 1.17px;
+	height: 1.87px;
+	clip-path: polygon(1.17px 1.87px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(82.47px) translateY(-74.32px) translateZ(-136.27px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face25 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 88.52px;
+	height: 18.93px;
+	clip-path: polygon(88.52px 18.93px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-126.14px) translateZ(-82.04px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face26 {
+	background-color: rgb(175.53,131.65,87.77);
+	width: 93.18px;
+	height: 64.02px;
+	clip-path: polygon(93.18px 56.89px, 0.00px 0.00px, 92.19px 64.02px);
+	transform: translateX(-53.09px) translateY(-134.04px) translateZ(-79.52px) rotateX(1.81deg) rotateY(9.81deg) rotateZ(-0.31deg)
+}
+.model3d-sakuramodel-model-tree-face27 {
+	background-color: rgb(165.73,124.29,82.86);
+	width: 65.69px;
+	height: 9.04px;
+	clip-path: polygon(64.04px 0.00px, 0.00px 6.59px, 65.69px 9.04px);
+	transform: translateX(33.18px) translateY(-76.62px) translateZ(-104.39px) rotateX(5.44deg) rotateY(32.99deg) rotateZ(-2.97deg)
+}
+.model3d-sakuramodel-model-tree-face28 {
+	background-color: rgb(174.89,131.17,87.45);
+	width: 60.83px;
+	height: 7.45px;
+	clip-path: polygon(0.00px 1.41px, 59.64px 7.45px, 60.83px 0.00px);
+	transform: translateX(28.60px) translateY(-84.23px) translateZ(-111.59px) rotateX(109.73deg) rotateY(-13.11deg) rotateZ(147.68deg)
+}
+.model3d-sakuramodel-model-tree-face29 {
+	background-color: rgb(142.72,107.04,71.36);
+	width: 64.46px;
+	height: 21.63px;
+	clip-path: polygon(64.46px 21.63px, 3.93px 0.00px, 0.00px 7.25px);
+	transform: translateX(28.67px) translateY(-77.06px) translateZ(-106.47px) rotateX(-70.91deg) rotateY(7.68deg) rotateZ(21.12deg)
+}
+.model3d-sakuramodel-model-tree-face30 {
+	background-color: rgb(158.03,118.52,79.01);
+	width: 63.21px;
+	height: 9.15px;
+	clip-path: polygon(0.00px 1.78px, 63.21px 9.15px, 62.06px 0.00px);
+	transform: translateX(25.26px) translateY(-79.10px) translateZ(-116.79px) rotateX(166.23deg) rotateY(-36.09deg) rotateZ(171.79deg)
+}
+.model3d-sakuramodel-model-tree-face31 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-134.01px) translateZ(-72.58px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face32 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-134.01px) translateZ(-72.58px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face33 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 84.96px;
+	height: 18.52px;
+	clip-path: polygon(84.96px 18.52px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-121.10px) translateZ(-81.84px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face34 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 85.63px;
+	height: 25.24px;
+	clip-path: polygon(85.63px 25.24px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-128.29px) translateZ(-85.20px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face35 {
+	background-color: rgb(170.62,127.96,85.31);
+	width: 66.49px;
+	height: 87.98px;
+	clip-path: polygon(66.49px 80.50px, 0.00px 0.00px, 64.65px 87.98px);
+	transform: translateX(-39.25px) translateY(-149.58px) translateZ(-80.39px) rotateX(63.99deg) rotateY(31.88deg) rotateZ(-47.26deg)
+}
+.model3d-sakuramodel-model-tree-face36 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 83.65px;
+	height: 25.96px;
+	clip-path: polygon(83.65px 25.96px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-125.66px) translateZ(-85.55px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face37 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 11.78px;
+	height: 8.16px;
+	clip-path: polygon(0.00px 8.16px, 11.78px 0.00px, 11.78px 0.00px);
+	transform: translateX(92.94px) translateY(-8.10px) translateZ(-127.94px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face38 {
+	background-color: rgb(164.72,123.54,82.36);
+	width: 9.56px;
+	height: 9.04px;
+	clip-path: polygon(9.56px 0.66px, 0.00px 0.00px, 1.61px 9.04px);
+	transform: translateX(91.30px) translateY(-76.62px) translateZ(-124.19px) rotateX(6.10deg) rotateY(35.27deg) rotateZ(-3.53deg)
+}
+.model3d-sakuramodel-model-tree-face39 {
+	background-color: rgb(134.50,100.87,67.25);
+	width: 19.73px;
+	height: 12.79px;
+	clip-path: polygon(19.73px 3.78px, 2.93px 0.00px, 0.00px 12.79px);
+	transform: translateX(129.14px) translateY(-20.21px) translateZ(-92.61px) rotateX(158.23deg) rotateY(60.65deg) rotateZ(199.19deg)
+}
+.model3d-sakuramodel-model-tree-face40 {
+	background-color: rgb(146.69,110.02,73.35);
+	width: 25.50px;
+	height: 81.71px;
+	clip-path: polygon(16.12px 81.71px, 25.50px 1.20px, 0.00px 0.00px);
+	transform: translateX(42.46px) translateY(-43.85px) translateZ(-131.07px) rotateX(-87.87deg) rotateY(-20.38deg) rotateZ(-83.89deg)
+}
+.model3d-sakuramodel-model-tree-face41 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 4.18px;
+	height: 1.34px;
+	clip-path: polygon(4.18px 1.34px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(118.83px) translateY(-4.25px) translateZ(-133.99px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face42 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 17.60px;
+	height: 9.25px;
+	clip-path: polygon(0.00px 9.25px, 17.60px 0.00px, 17.60px 0.00px);
+	transform: translateX(92.94px) translateY(12.11px) translateZ(-127.39px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face43 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 12.47px;
+	height: 11.89px;
+	clip-path: polygon(0.00px 0.00px, 12.47px 11.89px, 12.47px 11.89px);
+	transform: translateX(110.53px) translateY(4.73px) translateZ(-128.71px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face44 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 14.11px;
+	height: 9.45px;
+	clip-path: polygon(0.00px 0.00px, 14.11px 9.45px, 14.11px 9.45px);
+	transform: translateX(104.71px) translateY(-14.30px) translateZ(-128.59px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face45 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.77px;
+	height: 65.03px;
+	clip-path: polygon(0.77px 65.03px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-75.05px) translateZ(-45.86px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face46 {
+	background-color: rgb(144.81,108.61,72.41);
+	width: 73.16px;
+	height: 45.60px;
+	clip-path: polygon(73.16px 32.55px, 0.00px 0.00px, 71.82px 45.60px);
+	transform: translateX(99.99px) translateY(-52.30px) translateZ(-49.75px) rotateX(79.35deg) rotateY(74.22deg) rotateZ(-78.94deg)
+}
+.model3d-sakuramodel-model-tree-face47 {
+	background-color: rgb(166.93,125.20,83.47);
+	width: 17.82px;
+	height: 79.60px;
+	clip-path: polygon(17.82px 68.06px, 0.00px 0.00px, 8.71px 79.60px);
+	transform: translateX(121.64px) translateY(-75.59px) translateZ(-50.93px) rotateX(112.35deg) rotateY(6.46deg) rotateZ(195.30deg)
+}
+.model3d-sakuramodel-model-tree-face48 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 5.52px;
+	height: 58.52px;
+	clip-path: polygon(5.52px 58.52px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-63.22px) translateZ(-42.60px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face49 {
+	background-color: rgb(169.67,127.25,84.84);
+	width: 25.59px;
+	height: 34.31px;
+	clip-path: polygon(13.56px 0.00px, 0.00px 8.38px, 25.59px 34.31px);
+	transform: translateX(112.23px) translateY(-30.89px) translateZ(-113.46px) rotateX(106.58deg) rotateY(6.18deg) rotateZ(199.89deg)
+}
+.model3d-sakuramodel-model-tree-face50 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-51.49px) translateZ(-13.35px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face51 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-51.49px) translateZ(-13.35px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face52 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-51.49px) translateZ(-13.35px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face53 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-51.49px) translateZ(-13.35px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face54 {
+	background-color: rgb(166.76,125.07,83.38);
+	width: 54.70px;
+	height: 69.34px;
+	clip-path: polygon(17.15px 69.34px, 54.70px 0.00px, 0.00px 62.62px);
+	transform: translateX(98.01px) translateY(-59.88px) translateZ(-48.66px) rotateX(-50.63deg) rotateY(-32.48deg) rotateZ(-33.20deg)
+}
+.model3d-sakuramodel-model-tree-face55 {
+	background-color: rgb(159.60,119.70,79.80);
+	width: 39.75px;
+	height: 69.05px;
+	clip-path: polygon(0.00px 69.05px, 39.75px 8.01px, 28.35px 0.00px);
+	transform: translateX(88.72px) translateY(-73.60px) translateZ(-73.05px) rotateX(118.64deg) rotateY(17.85deg) rotateZ(209.30deg)
+}
+.model3d-sakuramodel-model-tree-face56 {
+	background-color: rgb(158.39,118.79,79.19);
+	width: 19.87px;
+	height: 56.63px;
+	clip-path: polygon(0.00px 47.57px, 12.18px 56.63px, 19.87px 0.00px);
+	transform: translateX(59.15px) translateY(-100.05px) translateZ(-60.37px) rotateX(216.74deg) rotateY(-54.91deg) rotateZ(211.42deg)
+}
+.model3d-sakuramodel-model-tree-face57 {
+	background-color: rgb(157.19,117.89,78.59);
+	width: 54.97px;
+	height: 50.63px;
+	clip-path: polygon(15.56px 47.17px, 54.97px 0.00px, 0.00px 50.63px);
+	transform: translateX(79.39px) translateY(-60.33px) translateZ(-83.45px) rotateX(137.40deg) rotateY(-0.86deg) rotateZ(179.21deg)
+}
+.model3d-sakuramodel-model-tree-face58 {
+	background-color: rgb(164.61,123.46,82.31);
+	width: 58.14px;
+	height: 42.76px;
+	clip-path: polygon(58.14px 21.31px, 0.00px 0.00px, 49.12px 42.76px);
+	transform: translateX(72.91px) translateY(-45.96px) translateZ(-68.77px) rotateX(-16.76deg) rotateY(18.57deg) rotateZ(5.48deg)
+}
+.model3d-sakuramodel-model-tree-face59 {
+	background-color: rgb(155.67,116.75,77.83);
+	width: 60.37px;
+	height: 37.92px;
+	clip-path: polygon(0.00px 37.92px, 60.37px 9.29px, 48.37px 0.00px);
+	transform: translateX(65.69px) translateY(-55.24px) translateZ(-77.09px) rotateX(219.40deg) rotateY(-50.69deg) rotateZ(212.44deg)
+}
+.model3d-sakuramodel-model-tree-face60 {
+	background-color: rgb(142.93,107.19,71.46);
+	width: 19.74px;
+	height: 51.11px;
+	clip-path: polygon(0.00px 46.07px, 12.99px 51.11px, 19.74px 0.00px);
+	transform: translateX(61.74px) translateY(-101.55px) translateZ(-55.88px) rotateX(136.85deg) rotateY(44.72deg) rotateZ(213.41deg)
+}
+.model3d-sakuramodel-model-tree-face61 {
+	background-color: rgb(180.20,135.15,90.10);
+	width: 29.80px;
+	height: 53.22px;
+	clip-path: polygon(20.82px 53.22px, 29.80px 40.30px, 0.00px 0.00px);
+	transform: translateX(55.70px) translateY(-98.35px) translateZ(-54.90px) rotateX(2.33deg) rotateY(-1.89deg) rotateZ(0.08deg)
+}
+.model3d-sakuramodel-model-tree-face62 {
+	background-color: rgb(146.59,109.94,73.29);
+	width: 17.67px;
+	height: 81.97px;
+	clip-path: polygon(17.67px 81.92px, 2.66px 0.00px, 0.00px 81.97px);
+	transform: translateX(45.53px) translateY(-43.98px) translateZ(-137.19px) rotateX(-88.14deg) rotateY(-20.37deg) rotateZ(-84.66deg)
+}
+.model3d-sakuramodel-model-tree-face63 {
+	background-color: rgb(185.24,138.93,92.62);
+	width: 9.18px;
+	height: 53.26px;
+	clip-path: polygon(2.30px 53.26px, 9.18px 0.00px, 0.00px 5.16px);
+	transform: translateX(86.98px) translateY(-67.69px) translateZ(-126.64px) rotateX(-6.18deg) rotateY(-38.57deg) rotateZ(-3.86deg)
+}
+.model3d-sakuramodel-model-tree-face64 {
+	background-color: rgb(190.55,142.92,95.28);
+	width: 28.76px;
+	height: 26.53px;
+	clip-path: polygon(7.37px 26.53px, 28.76px 0.00px, 0.00px 7.67px);
+	transform: translateX(94.33px) translateY(-19.71px) translateZ(-109.89px) rotateX(42.05deg) rotateY(-59.81deg) rotateZ(37.94deg)
+}
+.model3d-sakuramodel-model-tree-face65 {
+	background-color: rgb(183.48,137.61,91.74);
+	width: 85.12px;
+	height: 41.73px;
+	clip-path: polygon(75.43px 41.73px, 85.12px 31.29px, 0.00px 0.00px);
+	transform: translateX(-56.75px) translateY(-57.47px) translateZ(-120.22px) rotateX(18.83deg) rotateY(2.12deg) rotateZ(-0.72deg)
+}
+.model3d-sakuramodel-model-tree-face66 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 85.45px;
+	height: 6.76px;
+	clip-path: polygon(85.45px 0.00px, 85.45px 0.00px, 0.00px 6.76px);
+	transform: translateX(-56.98px) translateY(-39.98px) translateZ(-121.91px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face67 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 76.24px;
+	height: 5.34px;
+	clip-path: polygon(76.24px 5.34px, 0.00px 0.00px, 76.24px 5.34px);
+	transform: translateX(28.47px) translateY(-19.37px) translateZ(-121.20px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face68 {
+	background-color: rgb(182.11,136.59,91.06);
+	width: 82.61px;
+	height: 34.23px;
+	clip-path: polygon(82.61px 34.23px, 9.82px 0.00px, 0.00px 10.32px);
+	transform: translateX(18.94px) translateY(-27.46px) translateZ(-116.16px) rotateX(16.75deg) rotateY(4.42deg) rotateZ(-1.33deg)
+}
+.model3d-sakuramodel-model-tree-face69 {
+	background-color: rgb(174.72,131.04,87.36);
+	width: 18.75px;
+	height: 76.54px;
+	clip-path: polygon(18.75px 62.11px, 0.00px 0.00px, 14.45px 76.54px);
+	transform: translateX(55.61px) translateY(-57.50px) translateZ(-124.31px) rotateX(88.80deg) rotateY(11.23deg) rotateZ(-83.84deg)
+}
+.model3d-sakuramodel-model-tree-face70 {
+	background-color: rgb(149.82,112.37,74.91);
+	width: 145.61px;
+	height: 50.18px;
+	clip-path: polygon(0.00px 50.18px, 76.70px 46.83px, 145.61px 0.00px);
+	transform: translateX(-55.70px) translateY(-60.53px) translateZ(-127.57px) rotateX(146.14deg) rotateY(7.51deg) rotateZ(185.01deg)
+}
+.model3d-sakuramodel-model-tree-face71 {
+	background-color: rgb(150.63,112.98,75.32);
+	width: 25.51px;
+	height: 84.04px;
+	clip-path: polygon(0.00px 83.08px, 25.51px 84.04px, 6.33px 0.00px);
+	transform: translateX(-31.99px) translateY(-78.63px) translateZ(-123.20px) rotateX(-86.53deg) rotateY(-27.83deg) rotateZ(-82.59deg)
+}
+.model3d-sakuramodel-model-tree-face72 {
+	background-color: rgb(180.23,135.17,90.12);
+	width: 133.92px;
+	height: 76.07px;
+	clip-path: polygon(72.96px 53.86px, 133.92px 76.07px, 0.00px 0.00px);
+	transform: translateX(-49.88px) translateY(-73.47px) translateZ(-127.56px) rotateX(59.64deg) rotateY(14.52deg) rotateZ(-23.18deg)
+}
+.model3d-sakuramodel-model-tree-face73 {
+	background-color: rgb(149.87,112.40,74.94);
+	width: 23.60px;
+	height: 68.02px;
+	clip-path: polygon(0.00px 68.02px, 20.82px 68.02px, 23.60px 0.00px);
+	transform: translateX(92.30px) translateY(10.89px) translateZ(-152.03px) rotateX(190.96deg) rotateY(-34.51deg) rotateZ(186.26deg)
+}
+.model3d-sakuramodel-model-tree-face74 {
+	background-color: rgb(187.04,140.28,93.52);
+	width: 20.82px;
+	height: 59.25px;
+	clip-path: polygon(0.00px 59.25px, 20.82px 59.25px, 7.66px 0.00px);
+	transform: translateX(101.62px) translateY(19.34px) translateZ(-119.47px) rotateX(5.02deg) rotateY(-24.91deg) rotateZ(2.12deg)
+}
+.model3d-sakuramodel-model-tree-face75 {
+	background-color: rgb(168.15,126.11,84.08);
+	width: 23.62px;
+	height: 74.02px;
+	clip-path: polygon(23.62px 74.02px, 16.97px 0.00px, 0.00px 13.49px);
+	transform: translateX(111.39px) translateY(5.37px) translateZ(-125.06px) rotateX(15.09deg) rotateY(32.84deg) rotateZ(-8.32deg)
+}
+.model3d-sakuramodel-model-tree-face76 {
+	background-color: rgb(130.75,98.06,65.37);
+	width: 24.09px;
+	height: 69.70px;
+	clip-path: polygon(11.72px 69.70px, 24.09px 0.00px, 0.00px 15.83px);
+	transform: translateX(104.54px) translateY(8.79px) translateZ(-154.65px) rotateX(180.19deg) rotateY(24.44deg) rotateZ(179.92deg)
+}
+.model3d-sakuramodel-model-tree-face77 {
+	background-color: rgb(177.93,133.45,88.97);
+	width: 20.82px;
+	height: 67.62px;
+	clip-path: polygon(0.00px 67.62px, 20.82px 67.62px, 9.82px 0.00px);
+	transform: translateX(86.56px) translateY(11.09px) translateZ(-131.69px) rotateX(-52.82deg) rotateY(-81.77deg) rotateZ(-52.53deg)
+}
+.model3d-sakuramodel-model-tree-face78 {
+	background-color: rgb(181.87,136.40,90.93);
+	width: 9.63px;
+	height: 51.40px;
+	clip-path: polygon(9.31px 51.40px, 9.63px 3.25px, 0.00px 0.00px);
+	transform: translateX(82.68px) translateY(-65.81px) translateZ(-133.33px) rotateX(-17.78deg) rotateY(-71.57deg) rotateZ(-16.92deg)
+}
+.model3d-sakuramodel-model-tree-face79 {
+	background-color: rgb(143.07,107.30,71.53);
+	width: 15.97px;
+	height: 34.49px;
+	clip-path: polygon(0.00px 0.00px, 1.13px 15.38px, 15.97px 34.49px);
+	transform: translateX(115.55px) translateY(-9.19px) translateZ(-141.22px) rotateX(99.09deg) rotateY(73.82deg) rotateZ(260.54deg)
+}
+.model3d-sakuramodel-model-tree-face80 {
+	background-color: rgb(142.58,106.93,71.29);
+	width: 15.26px;
+	height: 109.69px;
+	clip-path: polygon(15.26px 109.69px, 9.45px 0.00px, 0.00px 74.88px);
+	transform: translateX(104.31px) translateY(-82.44px) translateZ(-140.12px) rotateX(110.22deg) rotateY(71.03deg) rotateZ(248.72deg)
+}
+.model3d-sakuramodel-model-tree-face81 {
+	background-color: rgb(151.10,113.33,75.55);
+	width: 29.37px;
+	height: 89.66px;
+	clip-path: polygon(17.85px 0.00px, 0.00px 89.66px, 29.37px 14.31px);
+	transform: translateX(80.40px) translateY(-80.35px) translateZ(-147.49px) rotateX(170.45deg) rotateY(-24.14deg) rotateZ(176.06deg)
+}
+.model3d-sakuramodel-model-tree-face82 {
+	background-color: rgb(154.99,116.24,77.49);
+	width: 31.06px;
+	height: 77.20px;
+	clip-path: polygon(0.00px 74.67px, 17.49px 77.20px, 31.06px 0.00px);
+	transform: translateX(79.05px) translateY(-65.78px) translateZ(-148.55px) rotateX(174.95deg) rotateY(-35.83deg) rotateZ(177.04deg)
+}
+.model3d-sakuramodel-model-tree-face83 {
+	background-color: rgb(127.19,95.39,63.60);
+	width: 52.70px;
+	height: 39.27px;
+	clip-path: polygon(42.61px 39.27px, 52.70px 20.08px, 0.00px 0.00px);
+	transform: translateX(100.63px) translateY(-13.68px) translateZ(-108.48px) rotateX(262.78deg) rotateY(42.84deg) rotateZ(100.56deg)
+}
+.model3d-sakuramodel-model-tree-face84 {
+	background-color: rgb(166.04,124.53,83.02);
+	width: 19.00px;
+	height: 17.95px;
+	clip-path: polygon(19.00px 0.00px, 0.00px 7.06px, 18.51px 17.95px);
+	transform: translateX(90.63px) translateY(3.77px) translateZ(-125.66px) rotateX(-53.80deg) rotateY(-34.33deg) rotateZ(-37.62deg)
+}
+.model3d-sakuramodel-model-tree-face85 {
+	background-color: rgb(164.85,123.64,82.43);
+	width: 53.29px;
+	height: 32.51px;
+	clip-path: polygon(0.00px 32.51px, 53.29px 7.06px, 36.28px 0.00px);
+	transform: translateX(93.94px) translateY(-8.55px) translateZ(-95.63px) rotateX(-54.50deg) rotateY(-31.74deg) rotateZ(-36.41deg)
+}
+.model3d-sakuramodel-model-tree-face86 {
+	background-color: rgb(139.02,104.27,69.51);
+	width: 64.70px;
+	height: 19.96px;
+	clip-path: polygon(0.00px 19.96px, 64.70px 6.69px, 60.38px 0.00px);
+	transform: translateX(25.03px) translateY(-76.21px) translateZ(-111.82px) rotateX(253.84deg) rotateY(-15.55deg) rotateZ(222.76deg)
+}
+.model3d-sakuramodel-model-tree-face87 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 3.21px;
+	height: 9.09px;
+	clip-path: polygon(3.21px 0.00px, 3.21px 0.00px, 0.00px 9.09px);
+	transform: translateX(83.64px) translateY(-68.06px) translateZ(-132.66px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face88 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 2.81px;
+	height: 8.23px;
+	clip-path: polygon(0.00px 8.23px, 0.00px 8.23px, 2.81px 0.00px);
+	transform: translateX(82.47px) translateY(-82.75px) translateZ(-131.22px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face89 {
+	background-color: rgb(176.86,132.65,88.43);
+	width: 60.84px;
+	height: 7.70px;
+	clip-path: polygon(60.84px 0.89px, 0.00px 0.00px, 0.04px 7.70px);
+	transform: translateX(31.75px) translateY(-83.42px) translateZ(-107.18px) rotateX(57.06deg) rotateY(21.89deg) rotateZ(-29.92deg)
+}
+.model3d-sakuramodel-model-tree-face90 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 6.89px;
+	height: 6.08px;
+	clip-path: polygon(6.89px 0.00px, 6.89px 0.00px, 0.00px 6.08px);
+	transform: translateX(86.85px) translateY(-68.91px) translateZ(-125.07px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face91 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 6.68px;
+	height: 5.37px;
+	clip-path: polygon(0.00px 5.37px, 0.00px 5.37px, 6.68px 0.00px);
+	transform: translateX(85.28px) translateY(-82.50px) translateZ(-124.42px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face92 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 1.77px;
+	height: 0.30px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 1.77px 0.30px);
+	transform: translateX(91.97px) translateY(-73.74px) translateZ(-121.89px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face93 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 1.17px;
+	height: 1.87px;
+	clip-path: polygon(1.17px 1.87px, 1.17px 1.87px, 0.00px 0.00px);
+	transform: translateX(82.47px) translateY(-70.46px) translateZ(-136.27px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face94 {
+	background-color: rgb(156.19,117.14,78.10);
+	width: 63.65px;
+	height: 87.50px;
+	clip-path: polygon(0.00px 82.76px, 5.88px 87.50px, 63.65px 0.00px);
+	transform: translateX(-39.13px) translateY(-150.25px) translateZ(-83.55px) rotateX(124.05deg) rotateY(20.16deg) rotateZ(207.02deg)
+}
+.model3d-sakuramodel-model-tree-face95 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 92.12px;
+	height: 14.13px;
+	clip-path: polygon(92.12px 14.13px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-122.12px) translateZ(-79.64px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face96 {
+	background-color: rgb(163.22,122.42,81.61);
+	width: 64.05px;
+	height: 7.12px;
+	clip-path: polygon(64.05px 0.55px, 0.99px 0.00px, 0.00px 7.12px);
+	transform: translateX(33.26px) translateY(-77.16px) translateZ(-104.02px) rotateX(-1.90deg) rotateY(33.72deg) rotateZ(1.06deg)
+}
+.model3d-sakuramodel-model-tree-face97 {
+	background-color: rgb(174.07,130.56,87.04);
+	width: 61.96px;
+	height: 9.37px;
+	clip-path: polygon(2.26px 0.00px, 0.00px 9.37px, 61.96px 5.42px);
+	transform: translateX(28.12px) translateY(-84.03px) translateZ(-114.56px) rotateX(112.39deg) rotateY(-14.38deg) rotateZ(148.91deg)
+}
+.model3d-sakuramodel-model-tree-face98 {
+	background-color: rgb(144.38,108.29,72.19);
+	width: 65.56px;
+	height: 14.88px;
+	clip-path: polygon(62.53px 14.88px, 65.56px 4.79px, 0.00px 0.00px);
+	transform: translateX(31.25px) translateY(-73.69px) translateZ(-107.96px) rotateX(-62.66deg) rotateY(14.48deg) rotateZ(25.81deg)
+}
+.model3d-sakuramodel-model-tree-face99 {
+	background-color: rgb(155.05,116.29,77.52);
+	width: 65.26px;
+	height: 11.60px;
+	clip-path: polygon(2.04px 0.00px, 0.00px 11.60px, 65.26px 7.25px);
+	transform: translateX(24.86px) translateY(-77.28px) translateZ(-117.65px) rotateX(174.97deg) rotateY(-35.97deg) rotateZ(177.04deg)
+}
+.model3d-sakuramodel-model-tree-face100 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-134.01px) translateZ(-72.58px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face101 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-134.01px) translateZ(-72.58px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face102 {
+	background-color: rgb(167.18,125.38,83.59);
+	width: 78.35px;
+	height: 83.57px;
+	clip-path: polygon(70.74px 83.57px, 78.35px 80.37px, 0.00px 0.00px);
+	transform: translateX(-45.77px) translateY(-142.54px) translateZ(-80.32px) rotateX(-39.61deg) rotateY(-18.32deg) rotateZ(-14.58deg)
+}
+.model3d-sakuramodel-model-tree-face103 {
+	background-color: rgb(144.90,108.67,72.45);
+	width: 89.01px;
+	height: 64.48px;
+	clip-path: polygon(0.00px 55.43px, 1.78px 64.48px, 89.01px 0.00px);
+	transform: translateX(-54.39px) translateY(-134.27px) translateZ(-85.74px) rotateX(172.77deg) rotateY(-11.95deg) rotateZ(178.50deg)
+}
+.model3d-sakuramodel-model-tree-face104 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 88.52px;
+	height: 18.93px;
+	clip-path: polygon(88.52px 18.93px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(-52.58px) translateY(-126.14px) translateZ(-82.04px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face105 {
+	background-color: rgb(152.29,114.22,76.15);
+	width: 44.56px;
+	height: 102.82px;
+	clip-path: polygon(0.00px 98.89px, 6.93px 102.82px, 44.56px 0.00px);
+	transform: translateX(-31.67px) translateY(-152.15px) translateZ(-85.19px) rotateX(258.97deg) rotateY(-39.01deg) rotateZ(252.79deg)
+}
+.model3d-sakuramodel-model-tree-face106 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 11.78px;
+	height: 8.16px;
+	clip-path: polygon(0.00px 8.16px, 0.00px 8.16px, 11.78px 0.00px);
+	transform: translateX(92.94px) translateY(-0.43px) translateZ(-127.94px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face107 {
+	background-color: rgb(165.02,123.77,82.51);
+	width: 27.06px;
+	height: 59.29px;
+	clip-path: polygon(0.00px 0.00px, 10.07px 56.09px, 27.06px 59.29px);
+	transform: translateX(92.75px) translateY(-67.70px) translateZ(-127.68px) rotateX(5.90deg) rotateY(34.58deg) rotateZ(-3.36deg)
+}
+.model3d-sakuramodel-model-tree-face108 {
+	background-color: rgb(164.83,123.62,82.42);
+	width: 27.00px;
+	height: 67.70px;
+	clip-path: polygon(27.00px 67.70px, 7.95px 0.00px, 0.00px 8.39px);
+	transform: translateX(92.56px) translateY(-76.09px) translateZ(-127.98px) rotateX(6.25deg) rotateY(35.13deg) rotateZ(-3.60deg)
+}
+.model3d-sakuramodel-model-tree-face109 {
+	background-color: rgb(135.68,101.76,67.84);
+	width: 54.59px;
+	height: 23.23px;
+	clip-path: polygon(0.00px 9.08px, 54.59px 23.23px, 19.69px 0.00px);
+	transform: translateX(105.62px) translateY(-16.67px) translateZ(-109.07px) rotateX(153.13deg) rotateY(60.79deg) rotateZ(203.86deg)
+}
+.model3d-sakuramodel-model-tree-face110 {
+	background-color: rgb(136.96,102.72,68.48);
+	width: 35.50px;
+	height: 23.60px;
+	clip-path: polygon(34.65px 23.60px, 35.50px 8.19px, 0.00px 0.00px);
+	transform: translateX(110.56px) translateY(-16.85px) translateZ(-118.21px) rotateX(148.99deg) rotateY(57.18deg) rotateZ(206.81deg)
+}
+.model3d-sakuramodel-model-tree-face111 {
+	background-color: rgb(152.99,114.74,76.49);
+	width: 70.36px;
+	height: 60.82px;
+	clip-path: polygon(53.58px 60.82px, 70.36px 49.45px, 0.00px 0.00px);
+	transform: translateX(27.88px) translateY(-33.19px) translateZ(-118.93px) rotateX(-66.12deg) rotateY(-14.24deg) rotateZ(-29.05deg)
+}
+.model3d-sakuramodel-model-tree-face112 {
+	background-color: rgb(151.70,113.77,75.85);
+	width: 76.69px;
+	height: 35.92px;
+	clip-path: polygon(0.00px 3.50px, 2.96px 35.92px, 76.69px 0.00px);
+	transform: translateX(16.38px) translateY(-20.97px) translateZ(-144.60px) rotateX(142.49deg) rotateY(7.34deg) rotateZ(185.60deg)
+}
+.model3d-sakuramodel-model-tree-face113 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 4.18px;
+	height: 1.34px;
+	clip-path: polygon(4.18px 1.34px, 4.18px 1.34px, 0.00px 0.00px);
+	transform: translateX(118.83px) translateY(0.68px) translateZ(-133.99px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face114 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 17.60px;
+	height: 9.25px;
+	clip-path: polygon(0.00px 9.25px, 0.00px 9.25px, 17.60px 0.00px);
+	transform: translateX(92.94px) translateY(9.41px) translateZ(-127.39px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face115 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 12.47px;
+	height: 11.89px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 12.47px 11.89px);
+	transform: translateX(110.53px) translateY(9.11px) translateZ(-128.71px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face116 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 14.11px;
+	height: 9.45px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 14.11px 9.45px);
+	transform: translateX(104.71px) translateY(-15.36px) translateZ(-128.59px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face117 {
+	background-color: rgb(181.29,135.97,90.64);
+	width: 63.61px;
+	height: 53.55px;
+	clip-path: polygon(0.11px 30.28px, 0.00px 53.55px, 63.61px 0.00px);
+	transform: translateX(91.98px) translateY(-54.53px) translateZ(-47.18px) rotateX(113.49deg) rotateY(-59.72deg) rotateZ(116.72deg)
+}
+.model3d-sakuramodel-model-tree-face118 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 12.52px;
+	height: 72.59px;
+	clip-path: polygon(12.52px 72.59px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-77.32px) translateZ(-49.64px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face119 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.77px;
+	height: 65.03px;
+	clip-path: polygon(0.77px 65.03px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-75.05px) translateZ(-45.86px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face120 {
+	background-color: rgb(141.94,106.46,70.97);
+	width: 70.53px;
+	height: 56.88px;
+	clip-path: polygon(54.61px 56.88px, 70.53px 47.58px, 0.00px 0.00px);
+	transform: translateX(99.75px) translateY(-53.65px) translateZ(-49.72px) rotateX(-42.23deg) rotateY(55.37deg) rotateZ(36.76deg)
+}
+.model3d-sakuramodel-model-tree-face121 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 14.11px;
+	height: 9.45px;
+	clip-path: polygon(14.11px 9.45px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(104.71px) translateY(-15.36px) translateZ(-128.59px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face122 {
+	background-color: rgb(171.44,128.58,85.72);
+	width: 15.92px;
+	height: 36.26px;
+	clip-path: polygon(15.92px 25.15px, 0.00px 0.00px, 2.67px 36.26px);
+	transform: translateX(104.11px) translateY(-31.86px) translateZ(-116.47px) rotateX(106.62deg) rotateY(1.42deg) rotateZ(184.75deg)
+}
+.model3d-sakuramodel-model-tree-face123 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 0.00px;
+	height: 0.00px;
+	clip-path: polygon(0.00px 0.00px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-51.49px) translateZ(-13.35px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face124 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 5.52px;
+	height: 58.52px;
+	clip-path: polygon(5.52px 58.52px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(128.65px) translateY(-63.22px) translateZ(-42.60px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face125 {
+	background-color: rgb(166.23,124.67,83.11);
+	width: 63.88px;
+	height: 38.60px;
+	clip-path: polygon(49.93px 33.97px, 63.88px 38.60px, 0.00px 0.00px);
+	transform: translateX(81.37px) translateY(-58.38px) translateZ(-69.90px) rotateX(12.94deg) rotateY(35.53deg) rotateZ(-7.60deg)
+}
+.model3d-sakuramodel-model-tree-face126 {
+	background-color: rgb(160.97,120.73,80.48);
+	width: 31.30px;
+	height: 73.06px;
+	clip-path: polygon(0.00px 65.77px, 15.60px 73.06px, 31.30px 0.00px);
+	transform: translateX(96.95px) translateY(-71.55px) translateZ(-78.12px) rotateX(113.49deg) rotateY(20.31deg) rotateZ(218.61deg)
+}
+.model3d-sakuramodel-model-tree-face127 {
+	background-color: rgb(165.33,124.00,82.66);
+	width: 58.24px;
+	height: 34.25px;
+	clip-path: polygon(58.24px 34.25px, 8.51px 0.00px, 0.00px 13.24px);
+	transform: translateX(74.34px) translateY(-58.48px) translateZ(-64.63px) rotateX(-13.64deg) rotateY(19.95deg) rotateZ(4.73deg)
+}
+.model3d-sakuramodel-model-tree-face128 {
+	background-color: rgb(154.74,116.05,77.37);
+	width: 59.48px;
+	height: 47.76px;
+	clip-path: polygon(0.00px 30.44px, 15.21px 47.76px, 59.48px 0.00px);
+	transform: translateX(71.59px) translateY(-48.46px) translateZ(-73.98px) rotateX(231.04deg) rotateY(-49.16deg) rotateZ(223.09deg)
+}
+.model3d-sakuramodel-model-tree-face129 {
+	background-color: rgb(183.01,137.26,91.50);
+	width: 14.79px;
+	height: 56.24px;
+	clip-path: polygon(0.00px 53.41px, 14.79px 56.24px, 5.62px 0.00px);
+	transform: translateX(89.29px) translateY(-67.78px) translateZ(-124.13px) rotateX(-7.10deg) rotateY(-24.84deg) rotateZ(-2.99deg)
+}
+.model3d-sakuramodel-model-tree-face130 {
+	background-color: rgb(190.42,142.82,95.21);
+	width: 37.57px;
+	height: 26.84px;
+	clip-path: polygon(0.00px 26.84px, 37.57px 16.02px, 21.00px 0.00px);
+	transform: translateX(94.36px) translateY(-19.86px) translateZ(-98.77px) rotateX(47.65deg) rotateY(-60.34deg) rotateZ(43.63deg)
+}
+.model3d-sakuramodel-model-tree-face131 {
+	background-color: rgb(137.49,103.12,68.74);
+	width: 76.24px;
+	height: 5.34px;
+	clip-path: polygon(76.24px 5.34px, 0.00px 0.00px, 0.00px 0.00px);
+	transform: translateX(28.47px) translateY(-24.38px) translateZ(-121.20px) rotateX(-89.99deg) rotateY(0.00deg) rotateZ(0.00deg)
+}
+.model3d-sakuramodel-model-tree-face132 {
+	background-color: rgb(182.35,136.76,91.18);
+	width: 76.08px;
+	height: 36.50px;
+	clip-path: polygon(71.67px 36.50px, 76.08px 16.73px, 0.00px 0.00px);
+	transform: translateX(29.27px) translateY(-28.59px) translateZ(-116.92px) rotateX(26.36deg) rotateY(8.55deg) rotateZ(-4.21deg)
+}
+.model3d-sakuramodel-model-tree-face133 {
+	background-color: rgb(181.77,136.33,90.88);
+	width: 28.76px;
+	height: 101.96px;
+	clip-path: polygon(3.98px 0.00px, 0.00px 101.96px, 28.76px 101.96px, 24.80px 0.00px);
+	transform: translateX(83.04px) translateY(78.37px) translateZ(-131.70px) rotateX(37.77deg) rotateY(-83.67deg) rotateZ(37.60deg)
+}
+.model3d-sakuramodel-model-tree-face134 {
+	background-color: rgb(164.54,123.40,82.27);
+	width: 28.76px;
+	height: 101.96px;
+	clip-path: polygon(0.00px 101.96px, 28.76px 101.96px, 24.79px 0.00px, 3.97px 0.00px);
+	transform: translateX(116.58px) translateY(78.38px) translateZ(-116.11px) rotateX(4.71deg) rotateY(34.91deg) rotateZ(-2.70deg)
+}
+.model3d-sakuramodel-model-tree-face135 {
+	background-color: rgb(136.44,102.33,68.22);
+	width: 30.43px;
+	height: 156.26px;
+	clip-path: polygon(0.00px 156.11px, 28.71px 156.26px, 30.43px 0.00px, 4.39px 54.19px);
+	transform: translateX(121.91px) translateY(24.29px) translateZ(-135.64px) rotateX(150.86deg) rotateY(80.30deg) rotateZ(208.79deg)
+}
+.model3d-sakuramodel-model-tree-face136 {
+	background-color: rgb(154.44,115.83,77.22);
+	width: 28.76px;
+	height: 101.96px;
+	clip-path: polygon(0.00px 101.96px, 28.76px 101.96px, 24.79px 0.00px, 3.97px 0.00px);
+	transform: translateX(91.94px) translateY(78.37px) translateZ(-151.28px) rotateX(175.29deg) rotateY(-34.91deg) rotateZ(177.30deg)
+}
+.model3d-sakuramodel-model-tree-face137 {
+	background-color: rgb(186.82,140.11,93.41);
+	width: 28.76px;
+	height: 101.96px;
+	clip-path: polygon(0.00px 101.96px, 28.76px 101.96px, 24.79px 0.00px, 3.97px 0.00px);
+	transform: translateX(95.21px) translateY(78.37px) translateZ(-114.22px) rotateX(4.26deg) rotateY(-24.94deg) rotateZ(1.80deg)
+}
+.model3d-sakuramodel-model-flowera01-face0 {
+	background-color: rgb(224.08,166.09,209.15);
+	width: 7.05px;
+	height: 14.87px;
+	clip-path: polygon(1.03px 2.18px, 0.00px 7.43px, 1.57px 12.69px, 3.52px 14.87px, 5.48px 12.69px, 7.05px 7.43px, 6.02px 2.18px, 3.52px 0.00px);
+	transform: translateX(-17.07px) translateY(-48.84px) translateZ(-117.40px) rotateX(7.22deg) rotateY(4.96deg) rotateZ(-0.63deg)
+}
+.model3d-sakuramodel-model-flowera01-face1 {
+	background-color: rgb(221.49,164.16,206.72);
+	width: 13.90px;
+	height: 7.89px;
+	clip-path: polygon(1.15px 4.66px, 5.70px 7.49px, 11.17px 7.89px, 13.90px 6.83px, 12.56px 4.23px, 8.20px 0.90px, 2.92px 0.00px, 0.00px 1.56px);
+	transform: translateX(-27.43px) translateY(-40.69px) translateZ(-115.30px) rotateX(14.60deg) rotateY(14.70deg) rotateZ(-3.78deg)
+}
+.model3d-sakuramodel-model-flowera01-face2 {
+	background-color: rgb(226.83,168.12,211.71);
+	width: 10.03px;
+	height: 11.64px;
+	clip-path: polygon(3.90px 11.48px, 7.98px 8.01px, 10.03px 2.92px, 9.85px 0.00px, 6.96px 0.49px, 2.47px 3.62px, 0.00px 8.38px, 0.59px 11.64px);
+	transform: translateX(-22.77px) translateY(-34.40px) translateZ(-112.93px) rotateX(26.30deg) rotateY(10.56deg) rotateZ(-5.18deg)
+}
+.model3d-sakuramodel-model-flowera01-face3 {
+	background-color: rgb(232.73,172.50,217.22);
+	width: 10.03px;
+	height: 11.64px;
+	clip-path: polygon(10.03px 8.38px, 7.56px 3.62px, 3.06px 0.49px, 0.18px 0.00px, 0.00px 2.92px, 2.05px 8.01px, 6.13px 11.48px, 9.43px 11.64px);
+	transform: translateX(-13.65px) translateY(-34.40px) translateZ(-113.73px) rotateX(25.83deg) rotateY(-1.57deg) rotateZ(0.76deg)
+}
+.model3d-sakuramodel-model-flowera01-face4 {
+	background-color: rgb(231.04,171.24,215.64);
+	width: 13.90px;
+	height: 7.89px;
+	clip-path: polygon(10.98px 0.00px, 5.70px 0.90px, 1.34px 4.23px, 0.00px 6.83px, 2.73px 7.89px, 8.20px 7.49px, 12.75px 4.66px, 13.90px 1.56px);
+	transform: translateX(-13.31px) translateY(-40.69px) translateZ(-116.53px) rotateX(14.17deg) rotateY(-5.00deg) rotateZ(1.26deg)
+}
+.model3d-sakuramodel-model-flowerb00-face0 {
+	background-color: rgb(231.53,171.60,216.09);
+	width: 28.05px;
+	height: 26.24px;
+	clip-path: polygon(11.53px 2.18px, 10.50px 7.43px, 12.27px 12.55px, 8.04px 9.19px, 2.81px 8.41px, 0.00px 10.02px, 1.27px 13.08px, 5.87px 15.79px, 11.19px 15.82px, 6.81px 18.63px, 4.60px 23.17px, 5.36px 26.24px, 8.63px 26.05px, 12.51px 22.70px, 14.03px 17.85px, 15.55px 22.70px, 19.42px 26.05px, 22.70px 26.24px, 23.45px 23.17px, 21.25px 18.63px, 16.86px 15.82px, 22.19px 15.79px, 26.79px 13.08px, 28.05px 10.02px, 25.25px 8.41px, 20.01px 9.19px, 15.78px 12.55px, 17.55px 7.43px, 16.52px 2.18px, 14.03px 0.00px);
+	transform: translateX(-67.97px) translateY(-147.94px) translateZ(-71.89px) rotateX(34.68deg) rotateY(4.12deg) rotateZ(-2.84deg)
+}
+.model3d-sakuramodel-model-flowerb01-face0 {
+	background-color: rgb(210.33,155.89,196.31);
+	width: 26.67px;
+	height: 27.64px;
+	clip-path: polygon(18.14px 24.80px, 17.49px 19.48px, 14.22px 15.17px, 19.28px 17.05px, 24.50px 16.16px, 26.67px 13.76px, 24.52px 11.25px, 19.30px 10.10px, 14.23px 11.72px, 17.53px 7.69px, 18.21px 2.69px, 16.54px 0.00px, 13.49px 1.20px, 10.84px 5.59px, 10.90px 10.67px, 7.96px 6.53px, 3.23px 4.55px, 0.06px 5.38px, 0.29px 8.54px, 3.80px 12.17px, 8.84px 13.48px, 3.79px 15.17px, 0.26px 19.17px, 0.00px 22.46px, 3.17px 23.12px, 7.91px 20.76px, 10.89px 16.26px, 10.79px 21.67px, 13.40px 26.34px, 16.45px 27.64px);
+	transform: translateX(34.59px) translateY(-95.71px) translateZ(-111.63px) rotateX(123.69deg) rotateY(-12.87deg) rotateZ(161.52deg)
+}
+.model3d-sakuramodel-model-flowerb02-face0 {
+	background-color: rgb(185.06,137.17,172.73);
+	width: 27.75px;
+	height: 27.23px;
+	clip-path: polygon(17.49px 24.71px, 17.74px 19.36px, 15.24px 14.57px, 19.91px 17.26px, 25.21px 17.26px, 27.75px 15.25px, 26.04px 12.42px, 21.10px 10.42px, 15.82px 11.16px, 19.75px 7.75px, 21.26px 2.93px, 20.06px 0.00px, 16.85px 0.67px, 13.51px 4.56px, 12.72px 9.58px, 10.51px 5.00px, 6.18px 2.26px, 2.91px 2.55px, 2.62px 5.70px, 5.46px 9.87px, 10.22px 12.00px, 4.95px 12.82px, 0.80px 16.18px, 0.00px 19.38px, 3.01px 20.56px, 8.08px 19.02px, 11.77px 15.08px, 10.77px 20.40px, 12.56px 25.45px, 15.35px 27.23px);
+	transform: translateX(28.40px) translateY(-40.94px) translateZ(-133.85px) rotateX(150.07deg) rotateY(7.04deg) rotateZ(184.03deg)
+}
+.model3d-sakuramodel-model-flowera02-face0 {
+	background-color: rgb(183.73,136.17,171.48);
+	width: 9.97px;
+	height: 11.73px;
+	clip-path: polygon(6.04px 0.19px, 1.99px 3.70px, 0.00px 8.81px, 0.21px 11.73px, 3.09px 11.22px, 7.55px 8.03px, 9.97px 3.25px, 9.34px 0.00px);
+	transform: translateX(145.91px) translateY(-17.23px) translateZ(-87.25px) rotateX(-14.52deg) rotateY(61.65deg) rotateZ(12.84deg)
+}
+.model3d-sakuramodel-model-flowera02-face1 {
+	background-color: rgb(176.52,130.83,164.75);
+	width: 9.64px;
+	height: 12.23px;
+	clip-path: polygon(0.00px 3.21px, 2.14px 8.12px, 6.42px 11.55px, 9.27px 12.23px, 9.64px 9.32px, 7.94px 4.11px, 4.10px 0.37px, 0.81px 0.00px);
+	transform: translateX(142.74px) translateY(-17.72px) translateZ(-78.74px) rotateX(-25.45deg) rotateY(73.10deg) rotateZ(24.48deg)
+}
+.model3d-sakuramodel-model-flowera02-face2 {
+	background-color: rgb(179.35,132.93,167.40);
+	width: 14.30px;
+	height: 7.23px;
+	clip-path: polygon(2.78px 7.23px, 8.12px 6.78px, 12.74px 3.83px, 14.30px 1.35px, 11.67px 0.07px, 6.18px 0.00px, 1.41px 2.43px, 0.00px 5.43px);
+	transform: translateX(139.60px) translateY(-6.76px) translateZ(-76.16px) rotateX(20.90deg) rotateY(77.99deg) rotateZ(-20.48deg)
+}
+.model3d-sakuramodel-model-flowera02-face3 {
+	background-color: rgb(188.31,139.57,175.76);
+	width: 7.05px;
+	height: 14.86px;
+	clip-path: polygon(5.86px 12.76px, 7.05px 7.53px, 5.63px 2.23px, 3.73px 0.00px, 1.72px 2.12px, 0.00px 7.33px, 0.88px 12.62px, 3.31px 14.86px);
+	transform: translateX(145.85px) translateY(-5.47px) translateZ(-82.54px) rotateX(30.17deg) rotateY(66.13deg) rotateZ(-28.00deg)
+}
+.model3d-sakuramodel-model-flowera02-face4 {
+	background-color: rgb(191.01,141.57,178.28);
+	width: 14.05px;
+	height: 7.64px;
+	clip-path: polygon(12.81px 2.93px, 8.18px 0.24px, 2.70px 0.00px, 0.00px 1.14px, 1.42px 3.70px, 5.88px 6.90px, 11.18px 7.64px, 14.05px 6.00px);
+	transform: translateX(144.87px) translateY(-6.54px) translateZ(-89.28px) rotateX(9.27deg) rotateY(58.65deg) rotateZ(-7.93deg)
+}
+.model3d-sakuramodel-model-flowera03-face0 {
+	background-color: rgb(216.83,160.71,202.38);
+	width: 9.97px;
+	height: 11.73px;
+	clip-path: polygon(6.04px 0.19px, 1.99px 3.70px, 0.00px 8.81px, 0.21px 11.73px, 3.09px 11.22px, 7.55px 8.03px, 9.97px 3.25px, 9.34px 0.00px);
+	transform: translateX(78.16px) translateY(-56.78px) translateZ(-52.45px) rotateX(-6.89deg) rotateY(6.95deg) rotateZ(0.84deg)
+}
+.model3d-sakuramodel-model-flowera03-face1 {
+	background-color: rgb(210.12,155.74,196.12);
+	width: 9.64px;
+	height: 12.23px;
+	clip-path: polygon(0.00px 3.21px, 2.14px 8.12px, 6.43px 11.55px, 9.27px 12.23px, 9.64px 9.32px, 7.94px 4.11px, 4.10px 0.37px, 0.81px 0.00px);
+	transform: translateX(69.40px) translateY(-57.27px) translateZ(-50.34px) rotateX(-7.59deg) rotateY(19.07deg) rotateZ(2.49deg)
+}
+.model3d-sakuramodel-model-flowera03-face2 {
+	background-color: rgb(212.97,157.84,198.77);
+	width: 14.30px;
+	height: 7.23px;
+	clip-path: polygon(2.78px 7.23px, 8.12px 6.78px, 12.74px 3.83px, 14.30px 1.35px, 11.67px 0.07px, 6.18px 0.00px, 1.41px 2.43px, 0.00px 5.43px);
+	transform: translateX(64.48px) translateY(-46.32px) translateZ(-49.53px) rotateX(4.64deg) rotateY(23.25deg) rotateZ(-1.83deg)
+}
+.model3d-sakuramodel-model-flowera03-face3 {
+	background-color: rgb(221.43,164.12,206.67);
+	width: 7.05px;
+	height: 14.86px;
+	clip-path: polygon(5.86px 12.76px, 7.05px 7.53px, 5.63px 2.23px, 3.73px 0.00px, 1.72px 2.12px, 0.00px 7.33px, 0.88px 12.62px, 3.31px 14.86px);
+	transform: translateX(74.87px) translateY(-45.03px) translateZ(-51.02px) rotateX(12.06deg) rotateY(13.35deg) rotateZ(-2.82deg)
+}
+.model3d-sakuramodel-model-flowera03-face4 {
+	background-color: rgb(223.82,165.89,208.90);
+	width: 14.05px;
+	height: 7.64px;
+	clip-path: polygon(12.81px 2.93px, 8.18px 0.24px, 2.70px 0.00px, 0.00px 1.14px, 1.42px 3.70px, 5.88px 6.90px, 11.18px 7.64px, 14.05px 6.00px);
+	transform: translateX(78.36px) translateY(-46.10px) translateZ(-52.78px) rotateX(4.82deg) rotateY(3.54deg) rotateZ(-0.30deg)
+}
+.model3d-sakuramodel-model-flowera04-face0 {
+	background-color: rgb(192.33,142.55,179.50);
+	width: 6.98px;
+	height: 14.55px;
+	clip-path: polygon(0.00px 2.65px, 0.08px 8.00px, 2.70px 12.82px, 5.07px 14.55px, 6.53px 12.01px, 6.98px 6.54px, 4.88px 1.61px, 1.99px 0.00px);
+	transform: translateX(106.70px) translateY(-69.07px) translateZ(-129.97px) rotateX(-8.05deg) rotateY(49.38deg) rotateZ(6.12deg)
+}
+.model3d-sakuramodel-model-flowera04-face1 {
+	background-color: rgb(191.22,141.73,178.47);
+	width: 14.76px;
+	height: 7.00px;
+	clip-path: polygon(1.87px 5.35px, 6.96px 7.00px, 12.37px 6.07px, 14.76px 4.38px, 12.83px 2.18px, 7.80px 0.00px, 2.46px 0.40px, 0.00px 2.62px);
+	transform: translateX(99.28px) translateY(-58.83px) translateZ(-125.31px) rotateX(7.02deg) rotateY(57.66deg) rotateZ(-5.94deg)
+}
+.model3d-sakuramodel-model-flowera04-face2 {
+	background-color: rgb(199.79,148.08,186.47);
+	width: 8.45px;
+	height: 13.50px;
+	clip-path: polygon(4.53px 12.57px, 7.67px 8.23px, 8.45px 2.80px, 7.58px 0.00px, 4.89px 1.16px, 1.27px 5.27px, 0.00px 10.48px, 1.35px 13.50px);
+	transform: translateX(105.72px) translateY(-54.54px) translateZ(-127.90px) rotateX(22.52deg) rotateY(49.64deg) rotateZ(-17.53deg)
+}
+.model3d-sakuramodel-model-flowera04-face3 {
+	background-color: rgb(206.20,152.83,192.45);
+	width: 11.24px;
+	height: 10.25px;
+	clip-path: polygon(11.22px 6.48px, 7.93px 2.26px, 2.93px 0.00px, 0.00px 0.05px, 0.36px 2.96px, 3.31px 7.58px, 7.96px 10.25px, 11.24px 9.79px);
+	transform: translateX(110.17px) translateY(-54.52px) translateZ(-134.47px) rotateX(15.18deg) rotateY(38.68deg) rotateZ(-9.62deg)
+}
+.model3d-sakuramodel-model-flowera04-face4 {
+	background-color: rgb(201.58,149.41,188.14);
+	width: 12.84px;
+	height: 9.15px;
+	clip-path: polygon(9.70px 0.00px, 4.64px 1.76px, 0.89px 5.77px, 0.00px 8.56px, 2.87px 9.15px, 8.20px 7.85px, 12.21px 4.30px, 12.84px 1.05px);
+	transform: translateX(109.41px) translateY(-63.06px) translateZ(-135.68px) rotateX(-0.38deg) rotateY(38.55deg) rotateZ(0.24deg)
+}
+.model3d-sakuramodel-model-flowera05-face0 {
+	background-color: rgb(184.12,136.47,171.85);
+	width: 7.12px;
+	height: 14.42px;
+	clip-path: polygon(0.00px 2.72px, 0.28px 8.07px, 3.08px 12.79px, 5.51px 14.42px, 6.88px 11.83px, 7.12px 6.35px, 4.83px 1.51px, 1.89px 0.00px);
+	transform: translateX(95.82px) translateY(-65.20px) translateZ(-151.76px) rotateX(182.79deg) rotateY(-25.11deg) rotateZ(181.18deg)
+}
+.model3d-sakuramodel-model-flowera05-face1 {
+	background-color: rgb(193.13,143.14,180.26);
+	width: 14.81px;
+	height: 7.02px;
+	clip-path: polygon(1.95px 5.53px, 7.09px 7.02px, 12.47px 5.93px, 14.81px 4.17px, 12.82px 2.03px, 7.72px 0.00px, 2.39px 0.56px, 0.00px 2.85px);
+	transform: translateX(96.67px) translateY(-54.85px) translateZ(-154.67px) rotateX(171.99deg) rotateY(-32.76deg) rotateZ(175.64deg)
+}
+.model3d-sakuramodel-model-flowera05-face2 {
+	background-color: rgb(194.23,143.96,181.28);
+	width: 8.15px;
+	height: 13.72px;
+	clip-path: polygon(4.60px 12.67px, 7.58px 8.22px, 8.15px 2.76px, 7.19px 0.00px, 4.54px 1.26px, 1.07px 5.50px, 0.00px 10.75px, 1.46px 13.72px);
+	transform: translateX(95.55px) translateY(-50.86px) translateZ(-153.89px) rotateX(160.98deg) rotateY(-25.34deg) rotateZ(171.61deg)
+}
+.model3d-sakuramodel-model-flowera05-face3 {
+	background-color: rgb(185.90,137.78,173.51);
+	width: 11.68px;
+	height: 10.00px;
+	clip-path: polygon(11.51px 6.09px, 8.02px 2.02px, 2.92px 0.00px, 0.00px 0.19px, 0.50px 3.07px, 3.66px 7.56px, 8.42px 10.00px, 11.68px 9.39px);
+	transform: translateX(85.84px) translateY(-50.93px) translateZ(-150.31px) rotateX(165.49deg) rotateY(-13.96deg) rotateZ(176.43deg)
+}
+.model3d-sakuramodel-model-flowera05-face4 {
+	background-color: rgb(179.65,133.16,167.68);
+	width: 12.48px;
+	height: 9.45px;
+	clip-path: polygon(9.30px 0.00px, 4.32px 1.99px, 0.76px 6.17px, 0.00px 8.99px, 2.89px 9.45px, 8.16px 7.91px, 12.01px 4.18px, 12.48px 0.91px);
+	transform: translateX(85.36px) translateY(-59.72px) translateZ(-148.96px) rotateX(178.00deg) rotateY(-13.83deg) rotateZ(179.52deg)
+}
+.model3d-sakuramodel-model-flowerb04-face0 {
+	background-color: rgb(208.38,154.45,194.49);
+	width: 27.64px;
+	height: 27.34px;
+	clip-path: polygon(10.03px 2.57px, 9.91px 7.93px, 12.52px 12.66px, 7.79px 10.08px, 2.49px 10.20px, 0.00px 12.27px, 1.77px 15.06px, 6.76px 16.94px, 12.02px 16.08px, 8.17px 19.59px, 6.77px 24.44px, 8.04px 27.34px, 11.24px 26.59px, 14.48px 22.63px, 15.15px 17.59px, 17.48px 22.11px, 21.87px 24.75px, 25.13px 24.38px, 25.35px 21.22px, 22.40px 17.12px, 17.60px 15.11px, 22.84px 14.16px, 26.91px 10.71px, 27.64px 7.49px, 24.60px 6.38px, 19.57px 8.04px, 15.98px 12.06px, 16.85px 6.73px, 14.94px 1.72px, 12.11px 0.00px);
+	transform: translateX(23.44px) translateY(-93.06px) translateZ(-79.42px) rotateX(-24.78deg) rotateY(4.02deg) rotateZ(1.85deg)
+}
+.model3d-sakuramodel-model-flowera06-face0 {
+	background-color: rgb(231.09,171.27,215.68);
+	width: 7.04px;
+	height: 14.86px;
+	clip-path: polygon(0.83px 2.27px, 0.00px 7.56px, 1.77px 12.76px, 3.81px 14.86px, 5.68px 12.61px, 7.04px 7.29px, 5.81px 2.08px, 3.24px 0.00px);
+	transform: translateX(90.81px) translateY(-10.75px) translateZ(-110.10px) rotateX(6.77deg) rotateY(-12.32deg) rotateZ(1.45deg)
+}
+.model3d-sakuramodel-model-flowera06-face1 {
+	background-color: rgb(229.91,170.40,214.58);
+	width: 14.10px;
+	height: 7.55px;
+	clip-path: polygon(1.28px 4.73px, 5.94px 7.37px, 11.42px 7.55px, 14.10px 6.38px, 12.66px 3.84px, 8.17px 0.69px, 2.85px 0.00px, 0.00px 1.67px);
+	transform: translateX(80.24px) translateY(-2.17px) translateZ(-110.15px) rotateX(13.92deg) rotateY(-2.46deg) rotateZ(0.61deg)
+}
+.model3d-sakuramodel-model-flowera06-face2 {
+	background-color: rgb(234.44,173.76,218.81);
+	width: 9.78px;
+	height: 12.02px;
+	clip-path: polygon(4.03px 11.73px, 7.96px 8.09px, 9.78px 2.91px, 9.48px 0.00px, 6.62px 0.61px, 2.26px 3.94px, 0.00px 8.80px, 0.73px 12.02px);
+	transform: translateX(84.61px) translateY(3.68px) translateZ(-107.11px) rotateX(25.62deg) rotateY(-5.83deg) rotateZ(2.79deg)
+}
+.model3d-sakuramodel-model-flowera06-face3 {
+	background-color: rgb(238.41,176.70,222.52);
+	width: 10.24px;
+	height: 11.25px;
+	clip-path: polygon(10.24px 7.98px, 7.58px 3.32px, 2.96px 0.37px, 0.06px 0.00px, 0.00px 2.93px, 2.25px 7.93px, 6.47px 11.23px, 9.78px 11.25px);
+	transform: translateX(93.33px) translateY(3.74px) translateZ(-105.17px) rotateX(26.35deg) rotateY(-17.96deg) rotateZ(8.68deg)
+}
+.model3d-sakuramodel-model-flowera06-face4 {
+	background-color: rgb(236.33,175.16,220.58);
+	width: 13.70px;
+	height: 8.19px;
+	clip-path: polygon(10.73px 0.00px, 5.48px 1.09px, 1.25px 4.58px, 0.00px 7.23px, 2.77px 8.19px, 8.22px 7.59px, 12.66px 4.59px, 13.70px 1.45px);
+	transform: translateX(94.28px) translateY(-3.01px) translateZ(-107.16px) rotateX(14.21deg) rotateY(-22.17deg) rotateZ(5.46deg)
+}
+.model3d-sakuramodel-model-flowerb03-face0 {
+	background-color: rgb(207.00,153.42,193.20);
+	width: 27.86px;
+	height: 27.08px;
+	clip-path: polygon(10.53px 2.46px, 10.12px 7.80px, 12.49px 12.67px, 7.89px 9.83px, 2.60px 9.68px, 0.00px 11.61px, 1.62px 14.49px, 6.51px 16.64px, 11.80px 16.05px, 7.77px 19.35px, 6.12px 24.12px, 7.24px 27.08px, 10.46px 26.51px, 13.92px 22.72px, 14.85px 17.73px, 16.93px 22.36px, 21.18px 25.23px, 24.45px 25.04px, 24.84px 21.89px, 22.11px 17.64px, 17.43px 15.38px, 22.71px 14.71px, 26.96px 11.48px, 27.86px 8.30px, 24.88px 7.03px, 19.77px 8.42px, 15.97px 12.25px, 17.12px 6.97px, 15.48px 1.87px, 12.74px 0.00px);
+	transform: translateX(86.91px) translateY(-123.79px) translateZ(-123.94px) rotateX(10.63deg) rotateY(35.72deg) rotateZ(-6.25deg)
+}
+.model3d-sakuramodel-model-flowera08-face0 {
+	background-color: rgb(230.97,171.19,215.57);
+	width: 7.04px;
+	height: 14.85px;
+	clip-path: polygon(1.27px 2.06px, 0.00px 7.26px, 1.32px 12.59px, 3.18px 14.85px, 5.23px 12.77px, 7.04px 7.59px, 6.25px 2.29px, 3.86px 0.00px);
+	transform: translateX(12.12px) translateY(-48.15px) translateZ(-125.87px) rotateX(33.55deg) rotateY(4.96deg) rotateZ(-3.28deg)
+}
+.model3d-sakuramodel-model-flowera08-face1 {
+	background-color: rgb(226.24,167.69,211.16);
+	width: 12.95px;
+	height: 9.04px;
+	clip-path: polygon(0.67px 4.34px, 4.75px 7.82px, 10.10px 9.04px, 12.95px 8.40px, 12.02px 5.63px, 8.21px 1.68px, 3.12px 0.00px, 0.00px 1.10px);
+	transform: translateX(2.20px) translateY(-41.99px) translateZ(-121.90px) rotateX(40.93deg) rotateY(14.70deg) rotateZ(-12.41deg)
+}
+.model3d-sakuramodel-model-flowera08-face2 {
+	background-color: rgb(228.40,169.29,213.18);
+	width: 10.96px;
+	height: 10.50px;
+	clip-path: polygon(3.41px 10.50px, 7.95px 7.66px, 10.71px 2.92px, 10.96px 0.00px, 8.03px 0.06px, 3.13px 2.52px, 0.00px 6.87px, 0.12px 10.18px);
+	transform: translateX(6.13px) translateY(-36.34px) translateZ(-116.07px) rotateX(52.63deg) rotateY(10.56deg) rotateZ(-13.50deg)
+}
+.model3d-sakuramodel-model-flowera08-face3 {
+	background-color: rgb(234.47,173.78,218.84);
+	width: 10.15px;
+	height: 11.43px;
+	clip-path: polygon(10.15px 8.16px, 7.58px 3.46px, 3.01px 0.42px, 0.11px 0.00px, 0.00px 2.93px, 2.16px 7.97px, 6.31px 11.35px, 9.62px 11.43px);
+	transform: translateX(15.48px) translateY(-36.58px) translateZ(-116.89px) rotateX(52.16deg) rotateY(-1.57deg) rotateZ(2.02deg)
+}
+.model3d-sakuramodel-model-flowera08-face4 {
+	background-color: rgb(236.05,174.96,220.32);
+	width: 13.61px;
+	height: 8.31px;
+	clip-path: polygon(10.61px 0.00px, 5.38px 1.18px, 1.20px 4.73px, 0.00px 7.40px, 2.78px 8.31px, 8.22px 7.63px, 12.62px 4.56px, 13.61px 1.40px);
+	transform: translateX(16.03px) translateY(-41.08px) translateZ(-123.02px) rotateX(40.50deg) rotateY(-5.00deg) rotateZ(4.26deg)
+}
+.model3d-sakuramodel-model-flowera09-face0 {
+	background-color: rgb(175.31,129.93,163.62);
+	width: 6.94px;
+	height: 14.65px;
+	clip-path: polygon(6.83px 12.07px, 6.94px 6.72px, 4.50px 1.81px, 2.19px 0.00px, 0.64px 2.48px, 0.00px 7.93px, 1.92px 12.93px, 4.75px 14.65px);
+	transform: translateX(11.42px) translateY(-22.22px) translateZ(-141.23px) rotateX(186.18deg) rotateY(-12.18deg) rotateZ(181.31deg)
+}
+.model3d-sakuramodel-model-flowera09-face1 {
+	background-color: rgb(167.76,124.34,156.57);
+	width: 14.62px;
+	height: 6.93px;
+	clip-path: polygon(12.93px 1.98px, 7.96px 0.00px, 2.50px 0.58px, 0.00px 2.10px, 1.78px 4.42px, 6.66px 6.93px, 12.02px 6.88px, 14.62px 4.83px);
+	transform: translateX(1.29px) translateY(-24.43px) translateZ(-141.46px) rotateX(194.62deg) rotateY(-3.36deg) rotateZ(180.88deg)
+}
+.model3d-sakuramodel-model-flowera09-face2 {
+	background-color: rgb(167.25,123.96,156.10);
+	width: 8.80px;
+	height: 13.19px;
+	clip-path: polygon(4.38px 0.78px, 1.04px 4.97px, 0.00px 10.35px, 0.73px 13.19px, 3.47px 12.16px, 7.29px 8.22px, 8.80px 3.08px, 7.60px 0.00px);
+	transform: translateX(7.45px) translateY(-34.94px) translateZ(-144.55px) rotateX(205.81deg) rotateY(-8.22deg) rotateZ(183.96deg)
+}
+.model3d-sakuramodel-model-flowera09-face3 {
+	background-color: rgb(174.49,129.33,162.86);
+	width: 11.23px;
+	height: 10.25px;
+	clip-path: polygon(0.01px 3.76px, 3.30px 7.99px, 8.30px 10.25px, 11.23px 10.21px, 10.86px 7.30px, 7.92px 2.67px, 3.28px 0.00px, 0.00px 0.45px);
+	transform: translateX(14.89px) translateY(-32.17px) translateZ(-146.34px) rotateX(204.89deg) rotateY(-20.33deg) rotateZ(189.16deg)
+}
+.model3d-sakuramodel-model-flowera09-face4 {
+	background-color: rgb(179.47,133.02,167.51);
+	width: 12.82px;
+	height: 9.17px;
+	clip-path: polygon(3.14px 9.17px, 8.20px 7.39px, 11.93px 3.37px, 12.82px 0.58px, 9.95px 0.00px, 4.62px 1.31px, 0.61px 4.87px, 0.00px 8.12px);
+	transform: translateX(15.88px) translateY(-22.90px) translateZ(-144.14px) rotateX(192.13deg) rotateY(-22.92deg) rotateZ(184.78deg)
+}
+.model3d-sakuramodel-model-flowera07-face0 {
+	background-color: rgb(190.59,141.26,177.88);
+	width: 9.11px;
+	height: 12.87px;
+	clip-path: polygon(4.80px 0.64px, 1.27px 4.67px, 0.00px 10.01px, 0.60px 12.87px, 3.39px 11.97px, 7.38px 8.20px, 9.11px 3.13px, 8.05px 0.00px);
+	transform: translateX(132.51px) translateY(-47.12px) translateZ(-38.61px) rotateX(17.36deg) rotateY(61.21deg) rotateZ(-15.32deg)
+}
+.model3d-sakuramodel-model-flowera07-face1 {
+	background-color: rgb(184.01,136.38,171.74);
+	width: 10.09px;
+	height: 11.52px;
+	clip-path: polygon(0.00px 3.26px, 2.52px 7.99px, 7.06px 11.07px, 9.95px 11.52px, 10.09px 8.60px, 7.98px 3.53px, 3.86px 0.11px, 0.55px 0.00px);
+	transform: translateX(128.76px) translateY(-45.75px) translateZ(-30.08px) rotateX(31.44deg) rotateY(72.08deg) rotateZ(-30.19deg)
+}
+.model3d-sakuramodel-model-flowera07-face2 {
+	background-color: rgb(188.31,139.57,175.75);
+	width: 14.02px;
+	height: 7.69px;
+	clip-path: polygon(2.88px 7.69px, 8.18px 6.92px, 12.62px 3.69px, 14.02px 1.12px, 11.32px 0.00px, 5.84px 0.27px, 1.22px 2.99px, 0.00px 6.07px);
+	transform: translateX(128.50px) translateY(-35.47px) translateZ(-27.49px) rotateX(61.42deg) rotateY(65.99deg) rotateZ(-59.19deg)
+}
+.model3d-sakuramodel-model-flowera07-face3 {
+	background-color: rgb(197.54,146.41,184.37);
+	width: 7.02px;
+	height: 14.81px;
+	clip-path: polygon(6.46px 12.42px, 7.02px 7.09px, 4.99px 1.99px, 2.84px 0.00px, 1.09px 2.34px, 0.00px 7.72px, 1.50px 12.86px, 4.18px 14.81px);
+	transform: translateX(135.99px) translateY(-34.93px) translateZ(-33.88px) rotateX(52.88deg) rotateY(54.59deg) rotateZ(-47.12deg)
+}
+.model3d-sakuramodel-model-flowera07-face4 {
+	background-color: rgb(198.95,147.46,185.69);
+	width: 14.65px;
+	height: 6.94px;
+	clip-path: polygon(12.93px 1.92px, 7.93px 0.00px, 2.48px 0.64px, 0.00px 2.20px, 1.81px 4.50px, 6.72px 6.94px, 12.08px 6.83px, 14.65px 4.75px);
+	transform: translateX(133.13px) translateY(-36.45px) translateZ(-40.63px) rotateX(32.73deg) rotateY(52.38deg) rotateZ(-26.98deg)
+}

@@ -36,14 +36,13 @@ import {
 	DropDownSelect,
 	VirtualKey,
 	DropDownMultiSelect,
-	PyramidModel,
-	Plane,
 	MagicNavigationMenu,
-	ChristmaxModel
+	PageSlide,
+	BookOpenEffect
 } from '../../components';
-import "./TestPage.css";
+import "./ComponentPage.css";
 
-function TestPage() {
+function ComponentPage() {
 	/*** Sub Components ***/
 	///// Render Page Menu /////
 	const [pageMenuOpen, setPageMenuOpen] = React.useState(false);
@@ -117,8 +116,8 @@ function TestPage() {
 	const [selectedImages, setSelectedImages] = React.useState([]);
 	const renderImageBoard = () => {
 		return <>
-			<label className="test-page-label">IMAGE BOARD</label>
-			<div className="test-page-image-board-container">
+			<label className="component-page-label">IMAGE BOARD</label>
+			<div className="component-page-image-board-container">
 				<ImageBoard 
 				images={images}
 				selectedImages={selectedImages}
@@ -138,8 +137,8 @@ function TestPage() {
 	///// Render Keyword Search /////
 	const renderKeywordSearchBox = () => {
 		return <>
-			<label className="test-page-label">KEYWORD SEARCH BOX</label>
-			<div className="test-page-keyword-searchbox-container">
+			<label className="component-page-label">KEYWORD SEARCH BOX</label>
+			<div className="component-page-keyword-searchbox-container">
 				<KeywordSearchBox onSearch={(e)=>{console.log(e)}}/>
 			</div>
 		</>
@@ -149,9 +148,9 @@ function TestPage() {
 	const [scatteredFloatingEffectActive, setScatteredFloatingEffectActive] = React.useState(false)
 	const renderScatterFloatingEffect = () => {
 		return <>
-			<label className="test-page-label">SCATTERED FLOATING EFFECT</label>
+			<label className="component-page-label">SCATTERED FLOATING EFFECT</label>
 			<button 
-			className="test-page-button"
+			className="component-page-button"
 			onClick={(e)=>{setScatteredFloatingEffectActive(true)}}>ACTIVATE</button>
 			<div style={{width: "200px", height: "200px", minHeight: "200px", position: "relative"}}>
 				<div style={{width: 0, height: 0, position: "relative", top: 150, left: 100}}>
@@ -169,7 +168,7 @@ function TestPage() {
 	////// Render Folding Effect //////
 	const renderFoldingEffect = () => {
 		return <>
-			<label className="test-page-label">FOLDING EFFECT</label>
+			<label className="component-page-label">FOLDING EFFECT</label>
 			<div style={{width:"480px", height: "360px", minHeight: "360px", backgroundColor:"gray"}}>
 				<FoldingEffect>
 					<button>OK</button>
@@ -182,11 +181,11 @@ function TestPage() {
 	const [datePickerOpen, setDatePickerOpen] = React.useState(false);
 	const renderDatePicker = () => {
 		return <>
-		<label className="test-page-label">DATE PICKER</label>
+		<label className="component-page-label">DATE PICKER</label>
 		<DatePicker isOpen={datePickerOpen}
 		onClose={(e)=>{setDatePickerOpen(false)}}/>
 		<button 
-		className="test-page-button"
+		className="component-page-button"
 		onClick={(e)=>{setDatePickerOpen(true)}}>
 			SHOW DATE
 		</button>
@@ -197,12 +196,12 @@ function TestPage() {
 	const [timePickerOpen, setTimePickerOpen] = React.useState(false);
 	const renderTimePicker = () => {
 		return <>
-		<label className="test-page-label">TIME PICKER</label>
+		<label className="component-page-label">TIME PICKER</label>
 		<TimePicker isOpen={timePickerOpen}
 		onClose={(e)=>{setTimePickerOpen(false)}}/>
 		<button 
 		onClick={(e)=>{setTimePickerOpen(true)}}
-		className="test-page-button">
+		className="component-page-button">
 			SHOW TIME
 		</button>
 		</>
@@ -213,7 +212,7 @@ function TestPage() {
 	const [radioValue, setRadioValue] = React.useState("LABEL1");
 	const renderRadioButtonGroup = () => {
 		return <>
-		<label className="test-page-label">RADIO BUTTON GROUP</label>
+		<label className="component-page-label">RADIO BUTTON GROUP</label>
 		<RadioButtonGroup 
 			labels={radioLabels}
 			onChange={(e)=>{setRadioValue(e)}}
@@ -225,10 +224,10 @@ function TestPage() {
 	const [toastOpen, setToastOpen] = React.useState(false);
 	const renderToast = () => {
 		return <>
-			<label className="test-page-label">TOAST</label>
+			<label className="component-page-label">TOAST</label>
 			<button 
 			onClick={(e)=>{setToastOpen(true)}}
-			className="test-page-button">SHOW TOAST</button>
+			className="component-page-button">SHOW TOAST</button>
 			<Toast 
 			duration={3000}
 			content="This is toast content"
@@ -241,7 +240,7 @@ function TestPage() {
 	const [dateTime, setDateTime] = React.useState(new Date());
 	const renderDateTimeInput = () => {
 		return <>
-			<label className="test-page-label">DATE/TIME INPUT</label>
+			<label className="component-page-label">DATE/TIME INPUT</label>
 			<DateInput 
 			date={dateTime }
 			onClick={(e)=>{setDatePickerOpen(true)}}/>
@@ -253,7 +252,7 @@ function TestPage() {
 	///// Render Progress Bar /////
 	const renderProgressBar = () => {
 		return <>
-			<label className="test-page-label">PROGRESS BAR</label>
+			<label className="component-page-label">PROGRESS BAR</label>
 			<ProgressBar progress={30}/>
 		</>
 	}
@@ -262,7 +261,7 @@ function TestPage() {
 	const [checked, setChecked] = React.useState(false);
 	const renderCheckbox = () => {
 		return <>
-			<label className="test-page-label">CHECKBOX</label>
+			<label className="component-page-label">CHECKBOX</label>
 			<Checkbox 
 			label="CHECKBOX"
 			onCheck={()=>{setChecked(!checked)}}
@@ -272,7 +271,7 @@ function TestPage() {
 	///// Render Loading Icon /////
 	const renderLoadingIcon = () => {
 		return <>
-			<label className="test-page-label">LOADING ICON</label>
+			<label className="component-page-label">LOADING ICON</label>
 			<FanLoadingIcon />
 			<DottedLoadingIcon />
 		</>
@@ -284,8 +283,8 @@ function TestPage() {
 	}
 	const renderFloatingPointer = () => {
 		return <>
-			<label className="test-page-label">FLOATING POINTER</label>
-			<div className="test-page-floating-pointer-container">
+			<label className="component-page-label">FLOATING POINTER</label>
+			<div className="component-page-floating-pointer-container">
 				<FloatingPointer 
 				position={floatingPointerPosition}
 				onMoving={onFloatingPointerMove}
@@ -304,8 +303,8 @@ function TestPage() {
 	const [infoMessages, setInfoMessages] = React.useState([]);
 	const renderInfoComment = () => {
 		return <>
-			<label className="test-page-label">INFO COMMENT</label>
-			<div className="test-page-info-comment-container">
+			<label className="component-page-label">INFO COMMENT</label>
+			<div className="component-page-info-comment-container">
 				<InfoComment 
 				id={1}
 				isOpen={infoCommentOpen}
@@ -331,7 +330,7 @@ function TestPage() {
 	}, [])
 	const renderDistanceStrictButton = () => {
 		return <>
-			<label className="test-page-label">DISTANCE STRICT BUTTON</label>
+			<label className="component-page-label">DISTANCE STRICT BUTTON</label>
 			<DistanceStrictButton 
 			onClick={onButtonDistanceStrictClick}>
 				CLICK ME
@@ -344,8 +343,8 @@ function TestPage() {
 	const [floatViewMinimized, setFloatViewMinimized] = React.useState(false);
 	const renderFloatingView = () => {
 		return <>
-			<label className="test-page-label">FLOATING VIEW</label>
-			<div className="test-page-floating-view-container">
+			<label className="component-page-label">FLOATING VIEW</label>
+			<div className="component-page-floating-view-container">
 				<button onClick={(e)=>{setFloatViewOpen(true)}}>SHOW</button>
 				<FloatView 
 				isOpen={floatViewOpen}
@@ -373,8 +372,8 @@ function TestPage() {
 	const [selectedDropdownItem, setSelectedDropDownItem] = React.useState("Item 1");
 	const renderDropDownSelect = () => {
 		return <>
-		<label className='test-page-label'>DROP DOWN SELECT</label>
-		<div className='test-page-drop-down-select-container'>
+		<label className='component-page-label'>DROP DOWN SELECT</label>
+		<div className='component-page-drop-down-select-container'>
 			<DropDownSelect 
 			items={dropdownSelectItems}
 			value={selectedDropdownItem}
@@ -386,8 +385,8 @@ function TestPage() {
 	const [selectedDropdownItems, setSelectedDropdownItems] = React.useState([]);
 	const renderDropDownMultiSelect = () => {
 		return <>
-		<label className='test-page-label'>DROP DOWN  MULTI SELECT</label>
-		<div className='test-page-drop-down-select-container'>
+		<label className='component-page-label'>DROP DOWN  MULTI SELECT</label>
+		<div className='component-page-drop-down-select-container'>
 			<DropDownMultiSelect 
 				items={dropdownSelectItems}
 				values={selectedDropdownItems}
@@ -400,8 +399,8 @@ function TestPage() {
 	///// Render Virtual Key /////
 	const renderVirtualKey = () => {
 		return <>
-			<label className='test-page-label'>VIRTUAL KEY</label>
-			<div className='test-page-virtual-keys-container'>
+			<label className='component-page-label'>VIRTUAL KEY</label>
+			<div className='component-page-virtual-keys-container'>
 				<VirtualKey 
 				inputKey="C"
 				onClick={()=>{console.log("CLICK")}}/>
@@ -415,21 +414,7 @@ function TestPage() {
 		</>
 	}
 
-	///// Render Pyramid Model /////
-	const renderPyramidModel = () => {
-		return <>
-			<label className='test-page-label'>PYRAMID MODEL</label>
-			<Plane />
-		</>
-	}
-
-	///// Render Pyramid Model /////
-	const renderChristmaxModel = () => {
-		return <>
-			<label className='test-page-label'>CHRISTMAX MODEL</label>
-			<ChristmaxModel />
-		</>
-	}
+	
 	///// MAGIC NAVIGATION MENU /////
 	const [magicNavigationMenuItems, setMagicNavigationMenuItems] = React.useState([
 		{
@@ -452,8 +437,8 @@ function TestPage() {
 	const [magicNavigationMenuValues, setMagicNavigationMenuValues] = React.useState([]);
 	const renderMagicNavigationMenu = () => {
 		return <>
-			<label className='test-page-label'>MAGIC NAVIGATION MENU</label>
-			<div className='test-page-magic-navigation-menu-container'>
+			<label className='component-page-label'>MAGIC NAVIGATION MENU</label>
+			<div className='component-page-magic-navigation-menu-container'>
 				<MagicNavigationMenu 
 				items={magicNavigationMenuItems}
 				values={magicNavigationMenuValues}
@@ -461,10 +446,80 @@ function TestPage() {
 			</div>
 		</>
 	}
+	///// Render Page Slide /////
+	const [slides, setSlides] = React.useState([1,2,3,4]);
+	const [currentSlide, setCurrentSlide] = React.useState(1);
+	const renderSlide = (slide) => {
+		if(!slide) return null;
+		return <div style={{
+			height: "calc(100% - 16px)",
+			padding: "8px",
+			borderRadius: "4px",
+			border: "solid 1px #AAA"
+		}}
+			onClick={(e)=>{onSlideClick(slide)}}>
+			<label >{slide}</label>
+		</div>
+	}
+	const onSlideClick = (slide) => {
+		if(slide!==currentSlide){
+			setCurrentSlide(slide);
+		}
+	}
+	const renderPageSlide = () => {
+		return <>
+			<label className='component-page-label'>PAGE SLIDE</label>
+			<div className='component-page-page-slide-container'>
+				<PageSlide 
+				slides={slides}
+				currentSlide={currentSlide}
+				renderSlide={renderSlide}/>
+			</div>
+		</>
+	}
+
+	///// Render Book Open Effect /////
+	const [bookPages, setBookPages] = React.useState([0,1,2,3,4]);
+	const [currentBookPage, setCurrentBookPage] = React.useState(3);
+	const onBookPageClick = (page, left) => {
+		if(left) {
+			console.log("PAGE", left, (currentBookPage+4)%5)
+			setCurrentBookPage((currentBookPage+4)%5)
+		}
+		else {
+			console.log("PAGE", left, (currentBookPage+1)%5)
+			setCurrentBookPage((currentBookPage+1)%5)
+		}
+		
+	}
+	const renderBookPage = (page, left) => {
+		return <div style={{
+			borderRadius: "4px",
+			height: "calc(100% - 18px)",
+			padding: "8px",
+			backgroundColor:"#FFF",
+			border: "solid 1px #AAA"
+		}}
+		onClick={(e)=>{onBookPageClick(page, left)}}>
+			<label >{page + " --------------------------------------------------------- " + page}</label>
+		</div>
+	}
+	const renderBookOpenEffect = () => {
+		return <>
+			<label className='component-page-label'>BOOK OPEN EFFECT</label>
+			<div className='component-page-book-open-effect-container'>
+			<BookOpenEffect 
+			pages={bookPages}
+			currentPage={currentBookPage}
+			renderPage={renderBookPage}/>
+			</div>
+		</>
+	}
+
 	/*** Main Render ***/
-	return <div className="test-page-page-container">
+	return <div className="component-page-page-container">
 		{renderPageMenu()}
-		<div className="test-page-page-subcontainer">
+		<div className="component-page-page-subcontainer">
 			{renderImageBoard()}
 			{renderScatterFloatingEffect()}
 			{renderKeywordSearchBox()}
@@ -483,10 +538,11 @@ function TestPage() {
 			{renderDropDownSelect()}
 			{renderDropDownMultiSelect()}
 			{renderVirtualKey()}
-			{renderChristmaxModel()}
 			{renderMagicNavigationMenu()}
+			{renderPageSlide()}
+			{renderBookOpenEffect()}
 		</div>
 	</div>
 }
 
-export default TestPage;
+export default ComponentPage;
