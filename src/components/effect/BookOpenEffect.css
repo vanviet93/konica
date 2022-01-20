@@ -10,7 +10,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	transition: all 2000ms;
+	transition: all 300ms;
 }
 .book-open-effect-left-page {
 	left: 0%;

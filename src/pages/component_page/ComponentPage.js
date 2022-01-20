@@ -501,7 +501,7 @@ function ComponentPage() {
 			border: "solid 1px #AAA"
 		}}
 		onClick={(e)=>{onBookPageClick(page, left)}}>
-			<label >{page + " --------------------------------------------------------- " + page}</label>
+			<label >{page + " Hom nay la ngay dep troi be hua co gang cham ngoan " + page}</label>
 		</div>
 	}
 	const renderBookOpenEffect = () => {
