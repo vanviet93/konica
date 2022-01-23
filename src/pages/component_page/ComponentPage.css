@@ -71,3 +71,21 @@
 	width: 480px;
 	height: 360px;
 }
+.component-page-rotation-page-container {
+	width: 480px;
+	height: 360px;
+}
+.component-page-rotation-content-container {
+	width: calc(100% - 18px);
+	height: calc(100% - 18px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #FFF;
+	border-radius: 4px;
+	border: 1px solid #AAA;
+	padding: 8px;
+}
+.component-page-rotation-button-container {
+
+}

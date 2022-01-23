@@ -32,6 +32,7 @@ import VirtualKey from "./input/VirtualKey";
 import ChristmaxModel from "./3dmodel/ChristmaxModel";
 import PageSlide from "./list/PageSlide";
 import SakuraModel from "./3dmodel/SakuraModel"
+import RotationPage from "./list/RotationPage";
 import "./ComponentStyle.css";
 
 export {
@@ -69,5 +70,5 @@ export {
   ChristmaxModel,
   SakuraModel,
   PageSlide,
-
+  RotationPage
 }

@@ -38,7 +38,8 @@ import {
 	DropDownMultiSelect,
 	MagicNavigationMenu,
 	PageSlide,
-	BookOpenEffect
+	BookOpenEffect,
+	RotationPage
 } from '../../components';
 import "./ComponentPage.css";
 
@@ -516,6 +517,29 @@ function ComponentPage() {
 		</>
 	}
 
+	///// Render Rotation Page /////
+	const [rotationPages, setRotationPages] = React.useState([0,1,2,3]);
+	const [currentRotationPage, setCurrentRotationPage] = React.useState(0);
+	const renderRotPage = (page) => {
+		return <div className='component-page-rotation-content-container'>
+			<label>{"This is page " + page}</label>
+			<div className='component-page-rotation-button-container'>
+				<button onClick={(e)=>{setCurrentRotationPage((currentRotationPage+3)%4)}}>PREV</button>
+				<button onClick={(e)=>{setCurrentRotationPage((currentRotationPage+1)%4)}}>NEXT</button>
+			</div>
+		</div> 
+	}
+	const renderRotationPage = () => {
+		return <>
+			<label className='component-page-label'>ROTATION PAGE</label>
+			<div className='component-page-rotation-page-container'>
+				<RotationPage 
+				pages={rotationPages}
+				currentPage={currentRotationPage}
+				renderPage={renderRotPage}/>
+			</div>
+		</>
+	}
 	/*** Main Render ***/
 	return <div className="component-page-page-container">
 		{renderPageMenu()}
@@ -541,6 +565,7 @@ function ComponentPage() {
 			{renderMagicNavigationMenu()}
 			{renderPageSlide()}
 			{renderBookOpenEffect()}
+			{renderRotationPage()}
 		</div>
 	</div>
 }
