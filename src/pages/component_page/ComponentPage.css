@@ -68,11 +68,11 @@
 	height: 360px;
 }
 .component-page-book-open-effect-container {
-	width: 480px;
+	width: 520px;
 	height: 360px;
 }
 .component-page-rotation-page-container {
-	width: 480px;
+	width: 520px;
 	height: 360px;
 }
 .component-page-rotation-content-container {
@@ -86,6 +86,7 @@
 	border: 1px solid #AAA;
 	padding: 8px;
 }
-.component-page-rotation-button-container {
-
+.component-page-globe-menu-container {
+	height: 520px;
+	width: 100%;
 }

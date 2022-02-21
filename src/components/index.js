@@ -33,6 +33,9 @@ import ChristmaxModel from "./3dmodel/ChristmaxModel";
 import PageSlide from "./list/PageSlide";
 import SakuraModel from "./3dmodel/SakuraModel"
 import RotationPage from "./list/RotationPage";
+import GlobeMenu from "./menu/GlobeMenu";
+import RoundPageOpenEffect from "./effect/RoundPageOpenEffect";
+import Calendar from "./grid/Calendar";
 import "./ComponentStyle.css";
 
 export {
@@ -70,5 +73,8 @@ export {
   ChristmaxModel,
   SakuraModel,
   PageSlide,
-  RotationPage
+  RotationPage,
+  GlobeMenu,
+  RoundPageOpenEffect,
+  Calendar
 }

@@ -145,7 +145,11 @@ const DatePicker = (props) => {
 		}
 	}
 	const onDateClick = (year, month, date) => {
-		setSelectedDate(new Date(year, month, date));
+		const newDate = new Date(selectedDate);
+		newDate.setFullYear(year);
+		newDate.setMonth(month);
+		newDate.setDate(date);
+		setSelectedDate(newDate);
 	}
 	
 	const onYearClick = (year) => {

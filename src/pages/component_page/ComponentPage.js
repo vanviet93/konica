@@ -39,7 +39,9 @@ import {
 	MagicNavigationMenu,
 	PageSlide,
 	BookOpenEffect,
-	RotationPage
+	RotationPage,
+	GlobeMenu,
+	Calendar
 } from '../../components';
 import "./ComponentPage.css";
 
@@ -540,6 +542,29 @@ function ComponentPage() {
 			</div>
 		</>
 	}
+
+	///// Render Globe Menu /////
+	const renderGlobeMenu = () => {
+		return <>
+			<label className='component-page-label'>GLOBE MENU</label>
+			<div className='component-page-globe-menu-container'>
+				<GlobeMenu />
+			</div>
+		</>
+	}
+
+	///// Render Calendar /////
+	const [calendarRanges, setCalendarRanges] = React.useState([]);
+	const renderCalendar = () => {
+		return <>
+			<label className='component-page-label'>CALENDAR</label>
+			<div className='component-page-globe-menu-container'>
+				<Calendar 
+				ranges={calendarRanges}
+				onRangesChange={setCalendarRanges}/>
+			</div>
+		</>
+	}
 	/*** Main Render ***/
 	return <div className="component-page-page-container">
 		{renderPageMenu()}
@@ -566,6 +591,8 @@ function ComponentPage() {
 			{renderPageSlide()}
 			{renderBookOpenEffect()}
 			{renderRotationPage()}
+			{renderGlobeMenu()}
+			{renderCalendar()}
 		</div>
 	</div>
 }

@@ -1,0 +1,53 @@
+.effect-page-container {
+	height: 100vh;
+	overflow: auto;
+}
+.effect-page-subcontainer {
+	padding: 8px;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+}
+.effect-page-label {
+	padding: 8px;
+}
+.effect-page-effect-container {
+	height: 360px;
+	width: 480px;
+}
+.effect-page-effect-content-container {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 18px);
+	justify-content: space-between;
+	padding: 8px;
+	border: solid 1px #AAA;
+	border-radius: 4px;
+	background-color: #FFF;
+	
+}
+.effect-page-effect-buttons-container {
+	display: flex;
+	flex-direction: row;
+}
+.effect-page-effect-button,
+.effect-page-effect-selected-button	{
+	margin: 0px 4px;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	cursor: pointer;
+}
+.effect-page-effect-button {
+	color: #444;
+	background-color: #DDD;
+	border: solid 1px #AAA;
+}
+.effect-page-effect-selected-button {
+	color: #FFF;
+	background-color: #000;
+	border: solid 1px #000;
+}

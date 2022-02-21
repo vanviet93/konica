@@ -1,0 +1,27 @@
+.globe-menu-container {
+	background-color: #FFF;
+	padding: 16px 8px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.globe-menu-subcontainer {
+	border-radius: 0px 4px 4px 0px;
+}
+.globe-menu-globe-background {
+	background-color: #DDD;
+	border-radius: 50%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+}
+.globe-menu-globe-background::after{
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}

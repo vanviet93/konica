@@ -26,6 +26,7 @@ const RotationPage = (props) => {
 	React.useEffect(()=>{
 		const container = containerRef.current;
 		const onContainerResized = () => {
+			console.log("VANVIET RESIZE");
 			const containerSize = container.getBoundingClientRect();
 			if(containerSize.width!==widthRef.current){
 				widthRef.current = containerSize.width;
