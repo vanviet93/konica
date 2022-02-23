@@ -13,7 +13,6 @@ const GlobeMenu = (props) => {
   /*** Sub Components ***/
   /*** Event Handlers ***/
   /*** Main Render ***/
-  console.log("VANVIET", props.size + "px");
   return <div 
   className='globe-menu-container'>
     <div 

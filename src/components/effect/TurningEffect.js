@@ -46,7 +46,6 @@ const TurningEffect = (props) => {
 						endY = Math.ceil(endY);
 						startX = Math.floor(startX);
 						endX  = Math.ceil(endX);
-						console.log("CONFIGS", startX, endX)
 						bounds.push({bound: "polygon(0px -1px," + endX + "px " + height + "px," + startX + "px " + height + "px, -1px 0px)"});
 					}
 					else {
@@ -70,7 +69,6 @@ const TurningEffect = (props) => {
 				bounds.push({bound: "polygon(0px -1px," + endX + "px " + height + "px, 0px " + height + "px, -1px 0px)"})
 			}
 		}
-		console.log("CONFIGS", bounds)
 		setConfigs(bounds)
 	}
 	const turn = (progress) => {
@@ -79,7 +77,6 @@ const TurningEffect = (props) => {
 	/*** Sub Components ***/
 	const renderParts = () => {
 		const parts = [];
-		console.log("CONFIGS", configs)
 		for(let i=0;i<12;i++){
 			parts.push(<div 
 			style={{clipPath:configs[i].bound}}

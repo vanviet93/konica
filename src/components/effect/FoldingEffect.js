@@ -28,10 +28,8 @@ const FoldingEffect = (props) => {
 		progress = progress>100? 100: progress;
 		const angle = progress * 0.9; // *90 / 100
 		const paperAngle = Math.atan(width/height) / DEG2RAD;
-		console.log("ANGLE", angle, paperAngle);
 		if(angle>paperAngle){
 			const splitY = width * Math.tan((90 - angle) * DEG2RAD);
-			console.log("ANGLE", splitY);
 			const splitYPercentage = splitY / height * 100;
 			const boundBack = "polygon(0% 0%, 100% " + splitYPercentage + "%, 100% 100%, 0% 100%)";
 			const boundFront = "polygon(0% 0%, 100% 0%, 100% " + splitYPercentage + "%)";

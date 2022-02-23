@@ -486,11 +486,9 @@ function ComponentPage() {
 	const [currentBookPage, setCurrentBookPage] = React.useState(3);
 	const onBookPageClick = (page, left) => {
 		if(left) {
-			console.log("PAGE", left, (currentBookPage+4)%5)
 			setCurrentBookPage((currentBookPage+4)%5)
 		}
 		else {
-			console.log("PAGE", left, (currentBookPage+1)%5)
 			setCurrentBookPage((currentBookPage+1)%5)
 		}
 		
@@ -554,14 +552,17 @@ function ComponentPage() {
 	}
 
 	///// Render Calendar /////
-	const [calendarRanges, setCalendarRanges] = React.useState([]);
+	const [calendarDayRanges, setCalendarDayRanges] = React.useState([]);
+	const [calendarHourRanges, setCalendarHourRanges] = React.useState([]);
 	const renderCalendar = () => {
 		return <>
 			<label className='component-page-label'>CALENDAR</label>
-			<div className='component-page-globe-menu-container'>
+			<div className='component-page-calendar-container'>
 				<Calendar 
-				ranges={calendarRanges}
-				onRangesChange={setCalendarRanges}/>
+				dayRanges={calendarDayRanges}
+				onDayRangesChange={setCalendarDayRanges}
+				hourRanges={calendarHourRanges}
+				onHourRangesChange={setCalendarHourRanges}/>
 			</div>
 		</>
 	}
