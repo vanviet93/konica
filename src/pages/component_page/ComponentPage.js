@@ -44,6 +44,7 @@ import {
 	Calendar
 } from '../../components';
 import "./ComponentPage.css";
+import MultiImageChooser from '../../components/list/MultiImageChooser';
 
 function ComponentPage() {
 	/*** Sub Components ***/
@@ -566,6 +567,21 @@ function ComponentPage() {
 			</div>
 		</>
 	}
+
+	///// Render Multi Image Chooser /////
+	const [multiImageChooserSources, setMultiImageChooserSources] = React.useState([]);
+	const renderMultiImageChooser = () => {
+		return <>
+			<label className='component-page-label'>MULTI IMAGE CHOOSER</label>
+			<div className='component-page-multi-image-chooser-container'>
+				<MultiImageChooser 
+					srcs={multiImageChooserSources}
+					onChange={setMultiImageChooserSources} />
+			</div>
+			<label className='component-page-label'>MULTI IMAGE CHOOSER</label>
+		</>
+	}
+
 	/*** Main Render ***/
 	return <div className="component-page-page-container">
 		{renderPageMenu()}
@@ -594,6 +610,7 @@ function ComponentPage() {
 			{renderRotationPage()}
 			{renderGlobeMenu()}
 			{renderCalendar()}
+			{renderMultiImageChooser()}
 		</div>
 	</div>
 }

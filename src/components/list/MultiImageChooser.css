@@ -1,0 +1,65 @@
+.multi-image-chooser-container {
+  width: 100%;
+  height: 100%;
+}
+.multi-image-chooser-image-list-container {
+  display: flex;
+  flex-direction: column;
+}
+.multi-image-chooser-empty-image-container,
+.multi-image-chooser-image-container {
+  position: relative;
+  background-color: #AAA;
+}
+.multi-image-chooser-empty-image-container {
+  height: 100%;
+  min-height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 48px;
+}
+.multi-image-chooser-move-up-button, 
+.multi-image-chooser-move-down-button, 
+.multi-image-chooser-remove-button, 
+.multi-image-chooser-add-button {
+  border: none;
+  background-color: var(--base-red);
+  color: #FFF;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.multi-image-chooser-move-up-button, 
+.multi-image-chooser-move-down-button, 
+.multi-image-chooser-add-button {
+  bottom: 8px
+}
+.multi-image-chooser-remove-button {
+  top:8px;
+}
+.multi-image-chooser-add-button, 
+.multi-image-chooser-remove-button {
+  right: 8px;
+}
+.multi-image-chooser-move-up-button {
+  right: 44px;
+}
+.multi-image-chooser-move-down-button {
+  right: 80px;
+}
+.multi-image-chooser-input {
+  position: absolute;
+	width: 100%;
+  height: 100%;
+	opacity: 0;
+}
+.multi-image-chooser-image-container {
+  width: 100%;
+}
+.multi-image-chooser-image {
+  width: 100%;
+}
