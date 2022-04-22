@@ -45,6 +45,7 @@ import {
 } from '../../components';
 import "./ComponentPage.css";
 import MultiImageChooser from '../../components/list/MultiImageChooser';
+import MultiImageViewer from '../../components/list/MultiImageViewer';
 
 function ComponentPage() {
 	/*** Sub Components ***/
@@ -578,7 +579,20 @@ function ComponentPage() {
 					srcs={multiImageChooserSources}
 					onChange={setMultiImageChooserSources} />
 			</div>
-			<label className='component-page-label'>MULTI IMAGE CHOOSER</label>
+		</>
+	}
+
+	///// Render Multi Image Viewer /////
+	const [currenImagePos, setCurrentImagePos] = React.useState(0);
+	const renderMultiImageViewer = () => {
+		return <>
+			<label className='component-page-label'>MULTI IMAGE VIEWER</label>
+			<div className='component-page-multi-image-viewer-container'>
+				<MultiImageViewer 
+					currentPos={currenImagePos}
+					srcs={multiImageChooserSources}
+					onChange={setCurrentImagePos} />
+			</div>
 		</>
 	}
 
@@ -611,6 +625,7 @@ function ComponentPage() {
 			{renderGlobeMenu()}
 			{renderCalendar()}
 			{renderMultiImageChooser()}
+			{renderMultiImageViewer()}
 		</div>
 	</div>
 }

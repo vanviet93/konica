@@ -23,15 +23,17 @@ const MultiImageChooser = (props) => {
 			onDrop={onDrop}
 			className='multi-image-chooser-empty-image-container'>
 				<i className='far fa-image'/>
-				<button className='multi-image-chooser-add-button'>
-					<input 
-					type="file" 
-					multiple={true}
-					onChange={(e)=>{onImagesChange(e, 0)}}
-					accept={props.inputExtensions.map(item=>'.'+item).join(',')}
-					className='multi-image-chooser-input'/>
-					<i className='fas fa-folder-open' />
-				</button>
+				<div className='multi-image-chooser-bottom-actions-container'>
+					<button className='multi-image-chooser-add-button'>
+						<input 
+						type="file" 
+						multiple={true}
+						onChange={(e)=>{onImagesChange(e, 0)}}
+						accept={props.inputExtensions.map(item=>'.'+item).join(',')}
+						className='multi-image-chooser-input'/>
+						<i className='fas fa-folder-open' />
+					</button>
+				</div>
 			</div>
 		}
 		return <div className='multi-image-chooser-image-list-container'>
@@ -42,31 +44,33 @@ const MultiImageChooser = (props) => {
 					<img 
 					className='multi-image-chooser-image'
 					src={src} />
-					{props.srcs.length!==pos+1? 
-					<button 
-					onClick={(e)=>{onImageMoveDown(pos)}}
-					className='multi-image-chooser-move-down-button'>
-						<i className="fas fa-chevron-down" />
-					</button>: null}
-					{pos!==0? 
-					<button 
-					onClick={(e)=>{onImageMoveUp(pos)}}
-					className='multi-image-chooser-move-up-button'>
-						<i className="fas fa-chevron-up" />
-					</button>: null}
+					<div className='multi-image-chooser-bottom-actions-container'>
+						{props.srcs.length!==pos+1? 
+						<button 
+						onClick={(e)=>{onImageMoveDown(pos)}}
+						className='multi-image-chooser-move-right-button'>
+							<i className="fas fa-chevron-right" />
+						</button>: null}
+						{pos!==0? 
+						<button 
+						onClick={(e)=>{onImageMoveUp(pos)}}
+						className='multi-image-chooser-move-left-button'>
+							<i className="fas fa-chevron-left" />
+						</button>: null}
+						<button className='multi-image-chooser-add-button'>
+							<input 
+							type="file" 
+							multiple={true}
+							onChange={(e)=>{onImagesChange(e, pos)}}
+							accept={props.inputExtensions.map(item=>'.'+item).join(',')}
+							className='multi-image-chooser-input'/>
+							<i className='fas fa-folder-open' />
+						</button>
+					</div>
 					<button 
 					onClick={(e)=>{onImageRemove(pos)}}
 					className='multi-image-chooser-remove-button'>
 						<i className="fas fa-trash-alt"/>
-					</button>
-					<button className='multi-image-chooser-add-button'>
-						<input 
-						type="file" 
-						multiple={true}
-						onChange={(e)=>{onImagesChange(e, pos)}}
-						accept={props.inputExtensions.map(item=>'.'+item).join(',')}
-						className='multi-image-chooser-input'/>
-						<i className='fas fa-folder-open' />
 					</button>
 				</div>
 			})}

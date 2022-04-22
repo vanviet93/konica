@@ -1,10 +1,15 @@
 .multi-image-chooser-container {
   width: 100%;
   height: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  position: relative;
 }
 .multi-image-chooser-image-list-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 100%;
+  width: max-content;
 }
 .multi-image-chooser-empty-image-container,
 .multi-image-chooser-image-container {
@@ -20,46 +25,48 @@
   color: #FFF;
   font-size: 48px;
 }
-.multi-image-chooser-move-up-button, 
-.multi-image-chooser-move-down-button, 
+.multi-image-chooser-bottom-actions-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  bottom: 8px;
+  right: 8px;
+}
+.multi-image-chooser-move-right-button, 
+.multi-image-chooser-move-left-button, 
 .multi-image-chooser-remove-button, 
 .multi-image-chooser-add-button {
   border: none;
-  background-color: var(--base-red);
+  background-color: #6666;
   color: #FFF;
-  position: absolute;
   width: 28px;
   height: 28px;
   font-size: 16px;
   border-radius: 8px;
 }
-.multi-image-chooser-move-up-button, 
-.multi-image-chooser-move-down-button, 
-.multi-image-chooser-add-button {
-  bottom: 8px
-}
 .multi-image-chooser-remove-button {
-  top:8px;
-}
-.multi-image-chooser-add-button, 
-.multi-image-chooser-remove-button {
+  position: absolute;
+  top: 8px;
   right: 8px;
 }
-.multi-image-chooser-move-up-button {
-  right: 44px;
-}
-.multi-image-chooser-move-down-button {
-  right: 80px;
+.multi-image-chooser-move-right-button, 
+.multi-image-chooser-move-left-button, 
+.multi-image-chooser-add-button {
+  margin-left: 8px;
+  position: relative;
 }
 .multi-image-chooser-input {
   position: absolute;
 	width: 100%;
   height: 100%;
 	opacity: 0;
+  top: 0px;
+  left: 0px;
 }
 .multi-image-chooser-image-container {
-  width: 100%;
+  height: 100%;
 }
 .multi-image-chooser-image {
-  width: 100%;
+  height: 100%;
 }
