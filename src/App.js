@@ -6,6 +6,7 @@ import ComponentPage from "./pages/component_page/ComponentPage";
 import ModelPage from "./pages/model_page/ModelPage";
 import TopPage from "./pages/top_page/TopPage";
 import EffectPage from "./pages/effect_page/EffectPage";
+import ProductPage from "./pages/prod_page/ProductPage";
 const App = () => {
 	return <BrowserRouter>
 		<Switch>
@@ -13,6 +14,7 @@ const App = () => {
 			<Route path="/comp" exact render={(props)=><ComponentPage {...props}/>} />
 			<Route path="/model" exact render={(props)=><ModelPage {...props}/>} />
 			<Route path="/effect" exact render={(props)=><EffectPage {...props}/>} />
+			<Route path="/prod" exact render={(props)=><ProductPage {...props}/>} />
 		</Switch>
 	</BrowserRouter>
 }

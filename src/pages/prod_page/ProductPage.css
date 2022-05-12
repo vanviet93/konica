@@ -1,0 +1,27 @@
+.product-page-container {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.product-page-subcontainer {
+	display: flex;
+	flex-direction: column;
+}
+.product-page-votebox-effect-container {
+	width: 100vw;
+	height: calc(100vh - 35px);
+	background-color: #DDD;
+}
+.product-page-ticket-container {
+	padding: 16px;
+	height: calc(100% - 32px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.product-page-ticket-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
