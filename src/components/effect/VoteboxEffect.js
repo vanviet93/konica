@@ -76,7 +76,9 @@ const VoteboxEffect = (props) => {
 			<div className='votebox-effect-box-top'>
 				<div className='votebox-effect-box-hole' />
 			</div>
-			<div className='votebox-effect-box-front' />
+			<div className='votebox-effect-box-front'>
+				<label>投票箱</label>
+			</div>
 		</div>
 	</div>;
 }
