@@ -15,6 +15,7 @@
 }
 .floating-pointer-children-anchor {
   position: relative;
+  /* prod */
   width: 0px;
   height: 0px;
 }

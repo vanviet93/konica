@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./ProductPage.css";
 import VoteboxEffect from '../../components/effect/VoteboxEffect';
+import UnboxGiftEffect from '../../components/effect/UnboxGiftEffect';
 const propTypes={};
 const defaultProps={};
 const ProductPage = (props) => {
 	/*** States and Variables ***/
 	/*** Processing ***/
 	/*** Sub Components ***/
+	////// RENDER VOTEBOX EFFECT //////
 	const [tickets, setTickets] = React.useState([0,1,2,3,4,5]);
 	const [currentTicketPosition, setCurrentTicketPosition] = React.useState(0);
 	const renderTicket = (ticket) => {
@@ -44,10 +46,20 @@ const ProductPage = (props) => {
 			</div>
 		</>
 	}
+	////// RENDER UNBOX GIFT EFFECT //////
+	const renderUnboxGiftEffect = () => {
+		return <>
+			<label className='component-page-label'>UNBOX GIFT EFFECT</label>
+			<div className='product-page-votebox-effect-container'>
+				<UnboxGiftEffect />
+			</div>
+		</>
+	}
 	/*** Event Handlers ***/
 	/*** Main Render ***/
 	return <div className='product-page-container'>
 		<div className='product-page-subcontainer'>
+			{renderUnboxGiftEffect()}
 			{renderVotebox()}
 		</div>
 	</div>;

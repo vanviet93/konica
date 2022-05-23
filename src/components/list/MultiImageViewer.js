@@ -2,21 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MultiImageViewer.css'
 import { isBrowser, isMobile } from 'react-device-detect';
+import FloatingPointer from '../dialog/FloatingPointer';
 
 const propTypes={
 	srcs: PropTypes.arrayOf(PropTypes.any),
-	currentSource: PropTypes.number,
+	currentPos: PropTypes.number,
 	onChange: PropTypes.func,
-	isFullscreen: PropTypes.bool,
+	isFullScreen: PropTypes.bool,
 	isButtonFullscreenVisible: PropTypes.bool,
 	onButtonFullscreenClick: PropTypes.func
-
 };
 const defaultProps={
 	srcs: [],
 	currentPos: 0,
 	onChange: (newPos) => {},
-	isFullscreen: false,
+	isFullScreen: false,
 	isButtonFullscreenVisible: true,
 	onButtonFullscreenClick: () => {}
 };
@@ -67,7 +67,7 @@ const MultiImageViewer = (props) => {
 	}
 	/*** Main Render ***/
 	return <div className='multi-image-viewer-container'>
-		{renderImages()}
+			{renderImages()}
 		<div 
 		onClick={onMoveBack}
 		className={isBrowser?'multi-image-viewer-browser-left-swiper': 'multi-image-viewer-mobile-left-swiper'}>
@@ -78,8 +78,15 @@ const MultiImageViewer = (props) => {
 		className={isBrowser?'multi-image-viewer-browser-right-swiper': 'multi-image-viewer-mobile-right-swiper'}>
 			<i className="fas fa-chevron-right" />
 		</div>
-		
 		{renderImageSelector()}
+		{props.isButtonFullscreenVisible?
+		<button 
+		onClick={props.onButtonFullscreenClick}
+		className='multi-image-viewer-button-fullscreen'>
+			{props.isFullScreen?
+			<i className="fas fa-compress" />:
+			<i className="fas fa-expand" />}	
+		</button>: null}
 	</div>;
 }
 MultiImageViewer.propTypes = propTypes;

@@ -13,63 +13,74 @@ const defaultProps={
 	renderTicket: (ticket) => null,
 };
 
-const STEP_MOVE_VOTEBOX = 0;
-const STEP_DROP_TICKET = 1;
-const STEP_FIRST_TOUCH_TICKET = 2;
-const STEP_TOUCH_TICKET = 3;
+const STATE_VOTEBOX_MOVING = 0;
+const STATE_VOTEBOX_STOPPED = 1;
+const STATE_TICKET_ENTERING = 2;
+const STATE_TICKET_STAY_STILL = 3;
+const STATE_TICKET_MOVING_DOWN = 4;
+const STATE_TICKET_MOVING_UP = 5;
 const VoteboxEffect = (props) => {
 	/*** States and Variables ***/
-	const [step, setStep] = React.useState(STEP_MOVE_VOTEBOX);
-	const containerRef = React.useRef(null);
+	const [boxState, setBoxState] = React.useState(STATE_VOTEBOX_MOVING);
+	const [ticketStates, setTicketStates] = React.useState([]);
 	/*** Processing ***/
 	React.useEffect(()=>{
-		if(step===STEP_DROP_TICKET){
-			setStep(STEP_FIRST_TOUCH_TICKET)
-		}
-		return ()=>{
-			if(props.currentTicketPosition===props.tickets.length-1){
-				setStep(STEP_TOUCH_TICKET);
+		const newStates = ticketStates.map((ticketState, count)=>{
+			// move next to a new ticket
+			if(ticketStates[props.currentTicketPosition]===STATE_TICKET_STAY_STILL){
+				if(count<props.currentTicketPosition){
+					return STATE_TICKET_MOVING_DOWN
+				}
 			}
-		}
+			// move next to a visited ticket
+			else if(ticketStates[props.currentTicketPosition]===STATE_TICKET_MOVING_UP){
+				if(count===props.currentTicketPosition-1){
+					return STATE_TICKET_MOVING_DOWN
+				}
+			}
+			// back
+			else if(ticketStates[props.currentTicketPosition+1]===STATE_TICKET_MOVING_UP || ticketStates[props.currentTicketPosition+1]===STATE_TICKET_STAY_STILL){
+				if(count===props.currentTicketPosition) {
+					return STATE_TICKET_MOVING_UP;
+				}
+			}
+			return ticketState;
+		});
+		console.log("VANVIET 1", newStates);
+		setTicketStates(newStates);
 	}, [props.currentTicketPosition])
 	/*** Sub Components ***/
 	const renderTickets = () => {
-		if (!props.tickets || step===STEP_MOVE_VOTEBOX) return null;
+		if (!props.tickets || boxState===STATE_VOTEBOX_MOVING) return null;
 		const resultViews = [];
 		for(let i=props.tickets.length-1; i>=0; i--){
-			if(i>=props.currentTicketPosition){
-				resultViews.push(
-					<div 
-					key={i} 
-					className={(step===STEP_DROP_TICKET && 'votebox-effect-init-ticket-container') || 
-					((step===STEP_FIRST_TOUCH_TICKET||i===props.tickets.length-1) && 'votebox-effect-init-outside-ticket-container') || 
-					(step===STEP_TOUCH_TICKET && 'votebox-effect-outside-ticket-container')}>
-						{props.renderTicket(props.tickets[i])}
-					</div>);
-			}
-			else {
-				resultViews.push(
-					<div 
-					key={i} 
-					className={(step===STEP_DROP_TICKET && 'votebox-effect-init-ticket-container') || 
-					((step===STEP_FIRST_TOUCH_TICKET || step===STEP_TOUCH_TICKET) && 'votebox-effect-inside-ticket-container')}>
-						{props.renderTicket(props.tickets[i])}
-					</div>);
-			}
+			const ticketState = ticketStates[i];
+			resultViews.push(
+				<div 
+				key={i} 
+				id={i} 
+				className={(ticketState===STATE_TICKET_ENTERING && 'votebox-effect-entering-ticket-container') || 
+				(ticketState===STATE_TICKET_STAY_STILL && 'votebox-effect-stay-still-ticket-container') || 
+				(ticketState===STATE_TICKET_MOVING_UP && 'votebox-effect-moving-up-ticket-container') ||
+				(ticketState===STATE_TICKET_MOVING_DOWN && 'votebox-effect-moving-down-ticket-container')}>
+					{props.renderTicket(props.tickets[i])}
+				</div>);
 		}
 		return resultViews;
 	}
-	console.log("VANVIET CUR", step, props.currentTicketPosition);
 	/*** Event Handlers ***/
 	const onAnimationEnd = (e)=>{
 		if(e.target===e.currentTarget){
-			setStep(STEP_DROP_TICKET);
+			setBoxState(STATE_VOTEBOX_STOPPED);
+			setTicketStates(props.tickets.map(ticket=>STATE_TICKET_ENTERING));
+		}
+		else if(e.target===e.currentTarget.children[0] && ticketStates[0]===STATE_TICKET_ENTERING){
+			setTicketStates(props.tickets.map(ticket=>STATE_TICKET_STAY_STILL))
 		}
 	}
 	/*** Main Render ***/
 	return <div className='votebox-effect-container'>
 		<div 
-		ref={containerRef}
 		onAnimationEnd={onAnimationEnd}
 		className='votebox-effect-subcontainer'>
 			{renderTickets()}

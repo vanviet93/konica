@@ -41,11 +41,14 @@ import {
 	BookOpenEffect,
 	RotationPage,
 	GlobeMenu,
-	Calendar
+	Calendar,
+	MultiImageChooser,
+	MultiImageViewer,
+	SwipeableMultiImageViewer,
+	MouseEventReactor
 } from '../../components';
 import "./ComponentPage.css";
-import MultiImageChooser from '../../components/list/MultiImageChooser';
-import MultiImageViewer from '../../components/list/MultiImageViewer';
+
 
 function ComponentPage() {
 	/*** Sub Components ***/
@@ -568,6 +571,20 @@ function ComponentPage() {
 			</div>
 		</>
 	}
+	///// Render Multi Image Chooser /////
+	const renderMouseEventReactor = () => {
+		return <>
+			<label className='component-page-label'>MOUSE EVENT REACTOR</label>
+			<div className='component-page-multi-image-chooser-container'>
+				<MouseEventReactor 
+				onMouseMoving={(x,y)=>{console.log("MOUSE MOVING", x, y)}}>
+					<button onClick={(e)=>{console.log("MOUSE OK")}}>
+						OK
+					</button>
+				</MouseEventReactor>
+			</div>
+		</>
+	}
 
 	///// Render Multi Image Chooser /////
 	const [multiImageChooserSources, setMultiImageChooserSources] = React.useState([]);
@@ -576,6 +593,7 @@ function ComponentPage() {
 			<label className='component-page-label'>MULTI IMAGE CHOOSER</label>
 			<div className='component-page-multi-image-chooser-container'>
 				<MultiImageChooser 
+				currentPos={currenImagePos}
 					srcs={multiImageChooserSources}
 					onChange={setMultiImageChooserSources} />
 			</div>
@@ -592,6 +610,19 @@ function ComponentPage() {
 					currentPos={currenImagePos}
 					srcs={multiImageChooserSources}
 					onChange={setCurrentImagePos} />
+			</div>
+		</>
+	}
+
+	///// Render Swipeable Multi Image Viewer /////
+	const renderSwipeableMultiImageViewer = () => {
+		return <>
+			<label className='component-page-label'>SWIPEABLE MULTI IMAGE VIEWER</label>
+			<div className='component-page-multi-image-viewer-container'>
+				<SwipeableMultiImageViewer 
+					currentPos={currenImagePos}
+					srcs={multiImageChooserSources}
+					onChange={setCurrentImagePos}/>
 			</div>
 		</>
 	}
@@ -624,8 +655,10 @@ function ComponentPage() {
 			{renderRotationPage()}
 			{renderGlobeMenu()}
 			{renderCalendar()}
+			{renderMouseEventReactor()}
 			{renderMultiImageChooser()}
 			{renderMultiImageViewer()}
+			{renderSwipeableMultiImageViewer()}
 		</div>
 	</div>
 }
