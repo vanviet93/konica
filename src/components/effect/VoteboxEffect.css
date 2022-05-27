@@ -18,7 +18,8 @@
 .votebox-effect-moving-up-ticket-container,
 .votebox-effect-moving-down-ticket-container,
 .votebox-effect-entering-ticket-container,
-.votebox-effect-stay-still-ticket-container {
+.votebox-effect-stay-still-up-ticket-container,
+.votebox-effect-stay-still-down-ticket-container {
 	position: absolute;
 	left: 5%;
 	background-color: #FFF;
@@ -38,8 +39,11 @@
 	top: 100%;
 	animation: votebox-effect-moving-down-ticket-keyframes 800ms ease;
 }
-.votebox-effect-stay-still-ticket-container {
+.votebox-effect-stay-still-up-ticket-container {
 	top: 0%;
+}
+.votebox-effect-stay-still-down-ticket-container {
+	top: 100%;
 }
 .votebox-effect-box-top {
 	position: absolute;

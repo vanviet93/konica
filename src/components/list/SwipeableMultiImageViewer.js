@@ -63,23 +63,29 @@ const SwipeableMultiImageViewer = (props) => {
 		if(props.currentPos<props.srcs.length-1){
 			props.onChange(props.currentPos+1);
 		}
+		else {
+			props.onChange(0);
+		}
 	}
 	const  onMoveBack = () => {
 		if(props.currentPos>0){
 			props.onChange(props.currentPos-1);
 		}
+		else {
+			props.onChange(props.srcs.length-1);
+		}
 	}
 	const onSwipingImage = (e) => {
 		setImageState({
 			swiping: true,
-			progress: e.x/40
+			progress: e.dx/40
 		});
 	}
 	const onSwipedImage = (e) => {
-		if(e.x>=40){
+		if(e.dx>=40){
 			onMoveBack();
 		}
-		else if(e.x<=-40){
+		else if(e.dx<=-40){
 			onMoveForward();
 		}
 		setImageState({
@@ -87,11 +93,20 @@ const SwipeableMultiImageViewer = (props) => {
 			progress: 0
 		});
 	}
+	const onClickImage = (e)=>{
+		if(e.x<e.w/2) {
+			onMoveBack();
+		}
+		else {
+			onMoveForward();
+		}
+	}
 	/*** Main Render ***/
 	return <div className='swipeable-multi-image-viewer-container'>
 		<MouseEventReactor
 		onMouseMoving={onSwipingImage}
-		onMouseMoved={onSwipedImage}>
+		onMouseMoved={onSwipedImage}
+		onClick={onClickImage}>
 			{renderImages()}
 			<button 
 			onClick={onMoveBack}

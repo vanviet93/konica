@@ -5,11 +5,13 @@ import './MouseEventReactor.css';
 
 const propTypes={
 	onMouseMoving: PropTypes.func,
-	onMouseMoved: PropTypes.func
+	onMouseMoved: PropTypes.func,
+	onClick: PropTypes.func
 };
 const defaultProps={
-	onMouseMoving: (x, y) => {},
-	onMouseMoved: (x, y) => {}
+	onMouseMoving: ({x, y, dx, dy, w, h}) => {},
+	onMouseMoved: ({x, y, dx, dy, w, h}) => {},
+	onClick: ({x, y, w, h}) => {}
 };
 const MouseEventReactor = (props) => {
 	/*** States and Variables ***/
@@ -24,7 +26,7 @@ const MouseEventReactor = (props) => {
 		const container = containerRef.current;
 		const onMouseDown = (e)=> {
 			const targetName = e.target?.tagName?.toLowerCase();
-			if(targetName==='button' || targetName==='label') return;
+			if(targetName==='button' || targetName==='input') return;
 			startMouseRef.current = {
 				x: e.clientX,
 				y: e.clientY
@@ -43,7 +45,7 @@ const MouseEventReactor = (props) => {
 		}
 		const onTouchStart = (e) => {
 			const targetName = e.target?.tagName?.toLowerCase();
-			if(targetName==='button' || targetName==='label') return;
+			if(targetName==='button' || targetName==='input') return;
 			startMouseRef.current = {
 				x: e.touches[0].clientX,
 				y: e.touches[0].clientY
@@ -69,12 +71,17 @@ const MouseEventReactor = (props) => {
 	}, [])
 	React.useEffect(()=>{
 		const container = containerRef.current;
+		const containerBounds = container.getBoundingClientRect();
 		const onMouseMove = (e) => {
 			e.preventDefault();
 			if(pointerInfoRef.current.moving){
 				props.onMouseMoving({
-					x: e.clientX - startMouseRef.current.x + startPosRef.current.x,
-					y: e.clientY - startMouseRef.current.y + startPosRef.current.y
+					x: e.clientX,
+					y: e.clientY,
+					dx: e.clientX - startMouseRef.current.x + startPosRef.current.x,
+					dy: e.clientY - startMouseRef.current.y + startPosRef.current.y,
+					w: containerBounds.width,
+					h: containerBounds.height
 				})
 			}
 		}
@@ -82,8 +89,12 @@ const MouseEventReactor = (props) => {
 			e.preventDefault();
 			if(pointerInfoRef.current.moving){
 				props.onMouseMoving({
-					x: e.touches[0].clientX - startMouseRef.current.x + startPosRef.current.x,
-					y: e.touches[0].clientY - startMouseRef.current.y + startPosRef.current.y
+					x: e.touches[0].clientX,
+					y: e.touches[0].clientY,
+					dx: e.touches[0].clientX - startMouseRef.current.x + startPosRef.current.x,
+					dy: e.touches[0].clientY - startMouseRef.current.y + startPosRef.current.y,
+					w: containerBounds.width,
+					h: containerBounds.height
 				});
 			}
 		}
@@ -97,17 +108,52 @@ const MouseEventReactor = (props) => {
 
 	React.useEffect(()=>{
 		const container = containerRef.current;
+		const containerBounds = container.getBoundingClientRect();
 		const onMouseUp = (e) => {
 			pointerInfoRef.current.moving = false;
 			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
 			setPointerInfo(pointerInfoRef.current);
-			props.onMouseMoved({x: e.clientX - startMouseRef.current.x + startPosRef.current.x, y: e.clientY - startMouseRef.current.y + startPosRef.current.y});
+			const dx = e.clientX - startMouseRef.current.x + startPosRef.current.x;
+			const dy = e.clientY - startMouseRef.current.y + startPosRef.current.y;
+			props.onMouseMoved({
+				x: e.clientX,
+				y: e.clientY,
+				dx: dx, 
+				dy: dy,
+				w: containerBounds.width,
+				h: containerBounds.height
+			});
+			if(dx<10 && dy<10){
+				props.onClick({
+					x: e.clientX,
+					y: e.clientY,
+					w: containerBounds.width,
+					h: containerBounds.height
+				});
+			}
 		}
 		const onTouchEnd = (e) => {
 			pointerInfoRef.current.moving = false;
 			pointerInfoRef.current = Object.assign({}, pointerInfoRef.current);
 			setPointerInfo(pointerInfoRef.current);
-			props.onMouseMoved({x: e.changedTouches[0].clientX - startMouseRef.current.x + startPosRef.current.x, y: e.changedTouches[0].clientY - startMouseRef.current.y + startPosRef.current.y});
+			const dx = e.changedTouches[0].clientX - startMouseRef.current.x + startPosRef.current.x;
+			const dy = e.changedTouches[0].clientY - startMouseRef.current.y + startPosRef.current.y;
+			props.onMouseMoved({
+				x: e.changedTouches[0].clientX,
+				y: e.changedTouches[0].clientY,
+				dx: dx, 
+				dy: dy,
+				w: containerBounds.width,
+				h: containerBounds.height
+			});
+			if(dx<10 && dy<10){
+				props.onClick({
+					x: e.clientX,
+					y: e.clientY,
+					w: containerBounds.width,
+					h: containerBounds.height
+				});
+			}
 		}
 		if(isBrowser) container.addEventListener('mouseup', onMouseUp);
 		else container.addEventListener('touchend', onTouchEnd);
@@ -115,9 +161,10 @@ const MouseEventReactor = (props) => {
 			if(isBrowser) container.removeEventListener('mouseup', onMouseUp);
 			else container.removeEventListener('touchend', onTouchEnd);
 		}
-	}, [props.onMouseMoved])
+	}, [props.onMouseMoved, props.onClick])
 	/*** Sub Components ***/
 	/*** Event Handlers ***/
+	
 	/*** Main Render ***/
 	return <div 
 	ref={containerRef}
